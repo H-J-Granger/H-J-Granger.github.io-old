@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffb8f0;
+  background: #ff65d4;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3015,19 +3015,12 @@ a:hover {
   color: #ffc0cb;
   background: #fff;
 }
-code {
-  color: #ff7600;
-  background: #fbf7f8;
-  margin: 2px;
-}
-.highlight,
-pre {
-  margin: 5px 0;
-  padding: 5px;
-  border-radius: 3px;
+.highlight pre {
+  padding: 0px 0;
 }
 .highlight,
 code,
 pre {
   border: 1px solid #d6d6d6;
 }
+*
