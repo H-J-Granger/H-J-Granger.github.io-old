@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="OI," />
+  <meta name="keywords" content="数学,学习笔记," />
 
 
 
@@ -79,15 +79,13 @@
 
 
 
-<meta name="description" content="CSP2019游记 CSP2019总结 CSP2019题解">
-<meta name="keywords" content="OI">
+<meta name="keywords" content="数学,学习笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSP2019合辑">
-<meta property="og:url" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;2019&#x2F;11&#x2F;20&#x2F;CSP2019&#x2F;index.html">
+<meta property="og:title" content="Möbius反演&amp;Dirichlet卷积学习笔记">
+<meta property="og:url" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;2019&#x2F;12&#x2F;07&#x2F;Mobius-inversion-for-beginner&#x2F;index.html">
 <meta property="og:site_name" content="Granger&#39;s Blog">
-<meta property="og:description" content="CSP2019游记 CSP2019总结 CSP2019题解">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-30T04:00:47.632Z">
+<meta property="og:updated_time" content="2019-12-08T08:48:53.715Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -118,13 +116,13 @@
 
 
 
-  <link rel="canonical" href="http://H-J-Granger.github.io/2019/11/20/CSP2019/"/>
+  <link rel="canonical" href="http://H-J-Granger.github.io/2019/12/07/Mobius-inversion-for-beginner/"/>
 
 
 
 
 
-  <title>CSP2019合辑 | Granger's Blog</title>
+  <title>Möbius反演&Dirichlet卷积学习笔记 | Granger's Blog</title>
   
 
 
@@ -272,7 +270,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://H-J-Granger.github.io/2019/11/20/CSP2019/">
+    <link itemprop="mainEntityOfPage" href="http://H-J-Granger.github.io/2019/12/07/Mobius-inversion-for-beginner/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hermione Granger">
@@ -289,7 +287,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CSP2019合辑</h1>
+          <h1 class="post-title" itemprop="name headline">Möbius反演&Dirichlet卷积学习笔记</h1>
         
 
         <div class="post-meta">
@@ -301,8 +299,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-20T00:00:00+08:00">
-                2019-11-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-07T00:00:00+08:00">
+                2019-12-07
               </time>
             
 
@@ -324,8 +322,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSP2019/" itemprop="url" rel="index">
-                    <span itemprop="name">CSP2019</span>
+                  <a href="/categories/%E6%95%B0%E5%AD%A6/" itemprop="url" rel="index">
+                    <span itemprop="name">数学</span>
                   </a>
                 </span>
 
@@ -361,11 +359,56 @@
       
 
       
-        <ol>
-<li><a href="/2019/11/18/CSP2019-diary">CSP2019游记</a></li>
-<li><a href="/2019/11/25/CSP2019-summary">CSP2019总结</a></li>
-<li><a href="/2019/11/30/CSP2019-solution">CSP2019题解</a></li>
-</ol>
+        <!--comment-->
+<a id="more"></a>
+<h1 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h1><h2 id="0-0-先-一下大数学家"><a href="#0-0-先-一下大数学家" class="headerlink" title="0.0 先%一下大数学家"></a>0.0 先%一下大数学家</h2><p><a href="https://baike.baidu.com/item/%E5%A5%A5%E5%8F%A4%E6%96%AF%E7%89%B9%C2%B7%E8%B4%B9%E8%BF%AA%E5%8D%97%E5%BE%B7%C2%B7%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF" target="_blank" rel="noopener">August Ferdinand Möbius - 百度百科</a></p>
+<p><a href="https://en.wikipedia.org/wiki/August_Ferdinand_M%C3%B6bius" target="_blank" rel="noopener">August Ferdinand Möbius - Wikipedia</a></p>
+<p><a href="https://baike.baidu.com/item/%E7%BA%A6%E7%BF%B0%C2%B7%E5%BD%BC%E5%BE%97%C2%B7%E5%8F%A4%E6%96%AF%E5%A1%94%E5%A4%AB%C2%B7%E5%8B%92%E7%83%AD%E7%BA%B3%C2%B7%E7%8B%84%E5%88%A9%E5%85%8B%E9%9B%B7" target="_blank" rel="noopener">Johann Peter Gustav Lejeune Dirichlet - 百度百科</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Peter_Gustav_Lejeune_Dirichlet" target="_blank" rel="noopener">Johann Peter Gustav Lejeune Dirichlet - Wikipedia</a></p>
+<h2 id="0-1-在本文可能会出现的记号"><a href="#0-1-在本文可能会出现的记号" class="headerlink" title="0.1 在本文可能会出现的记号"></a>0.1 在本文可能会出现的记号</h2><ul>
+<li>$(a,b)$：$a$ 和 $b$ 的最大公约数，即 $\gcd(a,b)$</li>
+<li>$a|b$：$a$ 整除 $b$</li>
+<li>$\mathbb P$：素数集合</li>
+<li>$\binom n m$：在 $n$ 个不同的元素内无序地选出 $m$ 个元素的方案数，为了方便起见，定义当 $n&lt;0$ 或 $m &lt; 0$ 或 $n &lt; m$ 时 $\binom n m=0$。有时候 $\binom n m$ 也记作 $\text C_n^m$。（注意 $n$ 和 $m$ 的位置对调了！）</li>
+<li>$[\text P]$：若命题 $\text P$ 成立，则 $[\text P]=1$，否则 $[\text P]=0$。或者说， <script type="math/tex; mode=display">[\text P]=\begin{cases}1&\operatorname{if  \;P}\\0&\operatorname{otherwise}\end{cases}</script></li>
+<li>$\omega(n)$：$n$ 的不同的质因子个数，特别地，$\omega(1)=0$</li>
+<li>$\nu_p(n)$：$n$ 质因数分解后质数 $p$ 的幂次，即 $\nu_p(n)=\max\limits_{j}\left\{p^j|n\right\}$</li>
+<li>$\Omega(n)$ ：$n$ 质因数分解后所有质数幂次之和，即 $\Omega(n)=\sum\limits_p\nu_p(n)$</li>
+</ul>
+<h2 id="0-2-定义"><a href="#0-2-定义" class="headerlink" title="0.2 定义"></a>0.2 定义</h2><ul>
+<li>数论函数（Arithmetic function）：定义域为 $\mathbb Z^+$ ，值域 $A\subset \mathbb C$ 的函数</li>
+<li>积性函数（Multipicative function）：对于任意正整数 $a,b$，当 $\gcd(a,b)=1$ 时，满足 $f(ab)=f(a)f(b)$ 的一类数论函数</li>
+<li>完全积性函数（Completely Multipicative function）：对于任意正整数 $a,b$，满足 $f(ab)=f(a)f(b)$ 的一类数论函数</li>
+</ul>
+<h2 id="0-3-其他"><a href="#0-3-其他" class="headerlink" title="0.3 其他"></a>0.3 其他</h2><ul>
+<li>$\sum$ 和 $\prod$ 如果不是在括号内部（比如 $\cdots(\sum\cdots)\cdots$），优先级最低。</li>
+<li>在推式子的时候末尾可能会有一些注释，一般在式子的右边，用中文括号或英文括号括起来，譬如：<script type="math/tex; mode=display">\begin{aligned}f(x)&=x^2-1\\&=(x+1)(x-1)&\text{（平方差公式）}\end{aligned}</script></li>
+</ul>
+<h1 id="1-Mobius函数"><a href="#1-Mobius函数" class="headerlink" title="1. Möbius函数"></a>1. Möbius函数</h1><h2 id="1-0-定义"><a href="#1-0-定义" class="headerlink" title="1.0 定义"></a>1.0 定义</h2><p>Möbius函数，记作 $\mu(n)$，定义为：</p>
+<script type="math/tex; mode=display">\mu(n)=\begin{cases}(-1)^{\omega(n)}&\nexists \,p\in\mathbb P:p^2|n\\0&\operatorname{otherwise}\end{cases}</script><p><strong>定理1-1</strong> $\mu(n)$ 是积性函数。</p>
+<p><strong>证明</strong></p>
+<blockquote>
+<p>设正整数 $a,b$ 满足 $\gcd(a,b)=1$。</p>
+<p>如果存在一个 $p$ 使得 $p^2|a$ 或 $p^2|b$，则 $\mu(a)=0$ 或 $\mu(b)=0$。<br>$\because p^2|a$ 或 $p^2|b$<br>$\therefore p^2|ab$<br>$\therefore \mu(ab)=0=\mu(a)\mu(b)$</p>
+<p>如果不存在这样的 $p$，则：<br>$\begin{aligned}\mu(ab)&amp;=(-1)^{\omega(ab)}\\&amp;=(-1)^{\omega(a)+\omega(b)}\\&amp;=(-1)^{\omega(a)}(-1)^{\omega(b)}&amp;(\gcd(a,b)=1)\\&amp;=\mu(a)\mu(b)\end{aligned}$</p>
+<p>证毕~</p>
+</blockquote>
+<p><strong>定理1-2</strong> $\mu(n)$ 不是完全积性函数。</p>
+<p><strong>证明</strong></p>
+<blockquote>
+<p>$\because \mu(2\times2)=0\neq 1=\mu(2)\times\mu(2)$<br>$\therefore\mu(n)$ 不是完全积性函数。<br>证毕~</p>
+</blockquote>
+<h2 id="2-1-性质"><a href="#2-1-性质" class="headerlink" title="2.1 性质"></a>2.1 性质</h2><p><strong>定理2</strong> </p>
+<script type="math/tex; mode=display">\sum\limits_{d|n}\mu(d)=\begin{cases}1&n=1\\0&n>1\end{cases}</script><p>也可以记作：</p>
+<script type="math/tex; mode=display">\sum\limits_{d|n}\mu(d)=[n=1]</script><p><strong>证明</strong></p>
+<blockquote>
+<p>考虑 $n$ 和其因数 $d$ 的质因数分解：</p>
+<script type="math/tex; mode=display">n=\prod\limits_{i=1}^{\omega(n)}p_i^{k_i}</script><script type="math/tex; mode=display">d=\prod\limits_{i=1}^{\omega(n)}p_i^{k_i'}\quad(k_i'\leqslant k_i)</script><p>因为当任何一个 $k_i’$ 取值 $&gt;1$ 时，$\mu(d)=0$，因此我们只考虑 $k_i’\leqslant 1$ 的情况。考虑枚举 $k_i’$ 为 $1$ 的个数，因为当 $k_i’$ 中有 $j$ 个为 $1$ 的 $d$ 有 $\binom {\omega(n)} j$ 个，并且 $\omega(d)=j$，又因为 $\binom n m=\binom {n-1}{m-1}+\binom {n-1}m$，因此有</p>
+<script type="math/tex; mode=display">\begin{aligned}\sum\limits_{d|n}\mu(d)&=\sum\limits_{i=0}^{\omega(n)}(-1)^i\binom{ \omega(n)}i\\&=\left(\sum\limits_{i=0}^{\omega(n)}(-1)^i\binom {\omega(n)-1} {i - 1}\right)+\left(\sum\limits_{i=0}^{\omega(n)}(-1)^i\binom {\omega(n)-1} i\right)\\&=(-1)^0\binom {\omega(n)-1} {0-1}+\left(\sum\limits_{i=1}^{\omega(n)}(-1)^i\binom {\omega(n)-1}{i-1}\right)+\left(\sum\limits_{i=0}^{\omega(n)-1}(-1)^i\binom {\omega(n)-1} i\right)+(-1)^{\omega(n)}\binom {\omega(n)-1}{\omega(n)}\\&=0+\left(\sum\limits_{i=1}^{\omega(n)}(-1)^i\binom {\omega(n)-1}{i-1}\right)+\left(\sum\limits_{i=0}^{\omega(n)-1}(-1)^i\binom {\omega(n)-1} i\right)+0\\&=\left(\sum\limits_{i=1}^{\omega(n)}(-1)^i\binom {\omega(n)-1}{i-1}\right)+\left(\sum\limits_{i=0}^{\omega(n)-1}(-1)^i\binom {\omega(n)-1} i\right)\\&=\left(\sum\limits_{i=0}^{\omega(n)-1}(-1)^{i+1}\binom {\omega(n)-1}i\right)+\left(\sum\limits_{i=0}^{\omega(n)-1}(-1)^i\binom {\omega(n)-1} i\right)\\&=\sum\limits_{i=0}^{\omega(n)-1}\left((-1)^i+(-1)^{i+1}\right)\binom {\omega(n)-1} i\\&=\sum\limits_{i=0}^{\omega(n)-1}0\binom {\omega(n)-1}i\\&=0\end{aligned}</script><p>那为什么当 $n=1$ 时 $\sum\limits_{d|n}\mu(d)=1$ 呢？<br>因为 $\binom n m = \binom {n-1}{m-1}+\binom{n-1}m$ 成立的一个必要条件为 $n^2+m^2\neq0$（显然 $\binom 0 0=1 \neq 0=\binom {-1}{-1} + \binom{-1}0$），而当 $n=1$ 时 $\begin{aligned}\sum\limits_{d|n}\mu(d)&amp;=\sum\limits_{i=0}^{\omega(n)}(-1)^i\binom {\omega(i)}i\\&amp;=(-1)^0\binom00\end{aligned}$，而 $\binom00$ 是无法被分解为 $\binom {-1}{-1} + \binom{-1}0$ 的，从而该式当 $n=1$ 时不成立。</p>
+<p>我们需要特殊处理 $n=1$ 的情况，这很容易解决，因为只有 $d=1$ 的时候才有 $d|n$，从而此时</p>
+<script type="math/tex; mode=display">\begin{aligned}\sum\limits_{d|n}\mu(d)&=\sum\limits_{i=0}^{\omega(n)}(-1)^i\binom {\omega(i)}i\\&=(-1)^0\binom00\\&=1\times1\\&=1\end{aligned}</script><p>综上，当 $n\neq1$ 时原式的值为 $0$，否则原式等于 $1$。故有</p>
+<script type="math/tex; mode=display">\sum\limits_{d|n}\mu(d)=\begin{cases}1&n=1\\0&n>1\end{cases}</script><p>。证毕~</p>
+</blockquote>
 
       
     </div>
@@ -383,7 +426,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/OI/" rel="tag"># OI</a>
+            <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
+          
+            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"># 学习笔记</a>
           
         </div>
       
@@ -396,8 +441,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/18/CSP2019-diary/" rel="next" title="CSP2019游记">
-                <i class="fa fa-chevron-left"></i> CSP2019游记
+              <a href="/2019/11/30/CSP2019-solution/" rel="next" title="CSP2019题解">
+                <i class="fa fa-chevron-left"></i> CSP2019题解
               </a>
             
           </div>
@@ -405,10 +450,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/11/25/CSP2019-summary/" rel="prev" title="CSP2019总结">
-                CSP2019总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -460,8 +501,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -541,6 +591,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0-前言"><span class="nav-number">1.</span> <span class="nav-text">0. 前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-0-先-一下大数学家"><span class="nav-number">1.1.</span> <span class="nav-text">0.0 先%一下大数学家</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0-1-在本文可能会出现的记号"><span class="nav-number">1.2.</span> <span class="nav-text">0.1 在本文可能会出现的记号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0-2-定义"><span class="nav-number">1.3.</span> <span class="nav-text">0.2 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0-3-其他"><span class="nav-number">1.4.</span> <span class="nav-text">0.3 其他</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Mobius函数"><span class="nav-number">2.</span> <span class="nav-text">1. Möbius函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-0-定义"><span class="nav-number">2.1.</span> <span class="nav-text">1.0 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-性质"><span class="nav-number">2.2.</span> <span class="nav-text">2.1 性质</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
