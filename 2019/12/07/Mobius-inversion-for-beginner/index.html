@@ -85,7 +85,7 @@
 <meta property="og:url" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;2019&#x2F;12&#x2F;07&#x2F;Mobius-inversion-for-beginner&#x2F;index.html">
 <meta property="og:site_name" content="Granger&#39;s Blog">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-08T08:48:53.715Z">
+<meta property="og:updated_time" content="2019-12-10T15:31:03.042Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -361,11 +361,11 @@
       
         <!--comment-->
 <a id="more"></a>
-<h1 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h1><h2 id="0-0-先-一下大数学家"><a href="#0-0-先-一下大数学家" class="headerlink" title="0.0 先%一下大数学家"></a>0.0 先%一下大数学家</h2><p><a href="https://baike.baidu.com/item/%E5%A5%A5%E5%8F%A4%E6%96%AF%E7%89%B9%C2%B7%E8%B4%B9%E8%BF%AA%E5%8D%97%E5%BE%B7%C2%B7%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF" target="_blank" rel="noopener">August Ferdinand Möbius - 百度百科</a></p>
+<h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h2><h3 id="0-0-先-一下大数学家"><a href="#0-0-先-一下大数学家" class="headerlink" title="0.0 先%一下大数学家"></a>0.0 先%一下大数学家</h3><p><a href="https://baike.baidu.com/item/%E5%A5%A5%E5%8F%A4%E6%96%AF%E7%89%B9%C2%B7%E8%B4%B9%E8%BF%AA%E5%8D%97%E5%BE%B7%C2%B7%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF" target="_blank" rel="noopener">August Ferdinand Möbius - 百度百科</a></p>
 <p><a href="https://en.wikipedia.org/wiki/August_Ferdinand_M%C3%B6bius" target="_blank" rel="noopener">August Ferdinand Möbius - Wikipedia</a></p>
 <p><a href="https://baike.baidu.com/item/%E7%BA%A6%E7%BF%B0%C2%B7%E5%BD%BC%E5%BE%97%C2%B7%E5%8F%A4%E6%96%AF%E5%A1%94%E5%A4%AB%C2%B7%E5%8B%92%E7%83%AD%E7%BA%B3%C2%B7%E7%8B%84%E5%88%A9%E5%85%8B%E9%9B%B7" target="_blank" rel="noopener">Johann Peter Gustav Lejeune Dirichlet - 百度百科</a></p>
 <p><a href="https://en.wikipedia.org/wiki/Peter_Gustav_Lejeune_Dirichlet" target="_blank" rel="noopener">Johann Peter Gustav Lejeune Dirichlet - Wikipedia</a></p>
-<h2 id="0-1-在本文可能会出现的记号"><a href="#0-1-在本文可能会出现的记号" class="headerlink" title="0.1 在本文可能会出现的记号"></a>0.1 在本文可能会出现的记号</h2><ul>
+<h3 id="0-1-在本文可能会出现的记号"><a href="#0-1-在本文可能会出现的记号" class="headerlink" title="0.1 在本文可能会出现的记号"></a>0.1 在本文可能会出现的记号</h3><ul>
 <li>$(a,b)$：$a$ 和 $b$ 的最大公约数，即 $\gcd(a,b)$</li>
 <li>$a|b$：$a$ 整除 $b$</li>
 <li>$\mathbb P$：素数集合</li>
@@ -375,16 +375,16 @@
 <li>$\nu_p(n)$：$n$ 质因数分解后质数 $p$ 的幂次，即 $\nu_p(n)=\max\limits_{j}\left\{p^j|n\right\}$</li>
 <li>$\Omega(n)$ ：$n$ 质因数分解后所有质数幂次之和，即 $\Omega(n)=\sum\limits_p\nu_p(n)$</li>
 </ul>
-<h2 id="0-2-定义"><a href="#0-2-定义" class="headerlink" title="0.2 定义"></a>0.2 定义</h2><ul>
+<h3 id="0-2-定义"><a href="#0-2-定义" class="headerlink" title="0.2 定义"></a>0.2 定义</h3><ul>
 <li>数论函数（Arithmetic function）：定义域为 $\mathbb Z^+$ ，值域 $A\subset \mathbb C$ 的函数</li>
 <li>积性函数（Multipicative function）：对于任意正整数 $a,b$，当 $\gcd(a,b)=1$ 时，满足 $f(ab)=f(a)f(b)$ 的一类数论函数</li>
 <li>完全积性函数（Completely Multipicative function）：对于任意正整数 $a,b$，满足 $f(ab)=f(a)f(b)$ 的一类数论函数</li>
 </ul>
-<h2 id="0-3-其他"><a href="#0-3-其他" class="headerlink" title="0.3 其他"></a>0.3 其他</h2><ul>
+<h3 id="0-3-其他"><a href="#0-3-其他" class="headerlink" title="0.3 其他"></a>0.3 其他</h3><ul>
 <li>$\sum$ 和 $\prod$ 如果不是在括号内部（比如 $\cdots(\sum\cdots)\cdots$），优先级最低。</li>
 <li>在推式子的时候末尾可能会有一些注释，一般在式子的右边，用中文括号或英文括号括起来，譬如：<script type="math/tex; mode=display">\begin{aligned}f(x)&=x^2-1\\&=(x+1)(x-1)&\text{（平方差公式）}\end{aligned}</script></li>
 </ul>
-<h1 id="1-Mobius函数"><a href="#1-Mobius函数" class="headerlink" title="1. Möbius函数"></a>1. Möbius函数</h1><h2 id="1-0-定义"><a href="#1-0-定义" class="headerlink" title="1.0 定义"></a>1.0 定义</h2><p>Möbius函数，记作 $\mu(n)$，定义为：</p>
+<h2 id="1-Mobius函数"><a href="#1-Mobius函数" class="headerlink" title="1. Möbius函数"></a>1. Möbius函数</h2><h3 id="1-0-定义"><a href="#1-0-定义" class="headerlink" title="1.0 定义"></a>1.0 定义</h3><p>Möbius函数，记作 $\mu(n)$，定义为：</p>
 <script type="math/tex; mode=display">\mu(n)=\begin{cases}(-1)^{\omega(n)}&\nexists \,p\in\mathbb P:p^2|n\\0&\operatorname{otherwise}\end{cases}</script><p><strong>定理1-1</strong> $\mu(n)$ 是积性函数。</p>
 <p><strong>证明</strong></p>
 <blockquote>
@@ -398,7 +398,7 @@
 <blockquote>
 <p>$\because \mu(2\times2)=0\neq 1=\mu(2)\times\mu(2)$<br>$\therefore\mu(n)$ 不是完全积性函数。<br>证毕~</p>
 </blockquote>
-<h2 id="2-1-性质"><a href="#2-1-性质" class="headerlink" title="2.1 性质"></a>2.1 性质</h2><p><strong>定理2</strong> </p>
+<h3 id="2-1-性质"><a href="#2-1-性质" class="headerlink" title="2.1 性质"></a>2.1 性质</h3><p><strong>定理2</strong> </p>
 <script type="math/tex; mode=display">\sum\limits_{d|n}\mu(d)=\begin{cases}1&n=1\\0&n>1\end{cases}</script><p>也可以记作：</p>
 <script type="math/tex; mode=display">\sum\limits_{d|n}\mu(d)=[n=1]</script><p><strong>证明</strong></p>
 <blockquote>
@@ -601,7 +601,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0-前言"><span class="nav-number">1.</span> <span class="nav-text">0. 前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-0-先-一下大数学家"><span class="nav-number">1.1.</span> <span class="nav-text">0.0 先%一下大数学家</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0-1-在本文可能会出现的记号"><span class="nav-number">1.2.</span> <span class="nav-text">0.1 在本文可能会出现的记号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0-2-定义"><span class="nav-number">1.3.</span> <span class="nav-text">0.2 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0-3-其他"><span class="nav-number">1.4.</span> <span class="nav-text">0.3 其他</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Mobius函数"><span class="nav-number">2.</span> <span class="nav-text">1. Möbius函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-0-定义"><span class="nav-number">2.1.</span> <span class="nav-text">1.0 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-性质"><span class="nav-number">2.2.</span> <span class="nav-text">2.1 性质</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-前言"><span class="nav-number">1.</span> <span class="nav-text">0. 前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#0-0-先-一下大数学家"><span class="nav-number">1.1.</span> <span class="nav-text">0.0 先%一下大数学家</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0-1-在本文可能会出现的记号"><span class="nav-number">1.2.</span> <span class="nav-text">0.1 在本文可能会出现的记号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0-2-定义"><span class="nav-number">1.3.</span> <span class="nav-text">0.2 定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0-3-其他"><span class="nav-number">1.4.</span> <span class="nav-text">0.3 其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Mobius函数"><span class="nav-number">2.</span> <span class="nav-text">1. Möbius函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-0-定义"><span class="nav-number">2.1.</span> <span class="nav-text">1.0 定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-性质"><span class="nav-number">2.2.</span> <span class="nav-text">2.1 性质</span></a></li></ol></li></ol></div>
             
 
           </div>
