@@ -85,7 +85,7 @@
 <meta property="og:url" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;2019&#x2F;12&#x2F;07&#x2F;Mobius-inversion-for-beginner&#x2F;index.html">
 <meta property="og:site_name" content="Granger&#39;s Blog">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-10T15:31:03.042Z">
+<meta property="og:updated_time" content="2019-12-18T13:38:45.628Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -239,9 +239,43 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -361,11 +395,11 @@
       
         <!--comment-->
 <a id="more"></a>
-<h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h2><h3 id="0-0-先-一下大数学家"><a href="#0-0-先-一下大数学家" class="headerlink" title="0.0 先%一下大数学家"></a>0.0 先%一下大数学家</h3><p><a href="https://baike.baidu.com/item/%E5%A5%A5%E5%8F%A4%E6%96%AF%E7%89%B9%C2%B7%E8%B4%B9%E8%BF%AA%E5%8D%97%E5%BE%B7%C2%B7%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF" target="_blank" rel="noopener">August Ferdinand Möbius - 百度百科</a></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="先-一下大数学家"><a href="#先-一下大数学家" class="headerlink" title="先%一下大数学家"></a>先%一下大数学家</h3><p><a href="https://baike.baidu.com/item/%E5%A5%A5%E5%8F%A4%E6%96%AF%E7%89%B9%C2%B7%E8%B4%B9%E8%BF%AA%E5%8D%97%E5%BE%B7%C2%B7%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF" target="_blank" rel="noopener">August Ferdinand Möbius - 百度百科</a></p>
 <p><a href="https://en.wikipedia.org/wiki/August_Ferdinand_M%C3%B6bius" target="_blank" rel="noopener">August Ferdinand Möbius - Wikipedia</a></p>
 <p><a href="https://baike.baidu.com/item/%E7%BA%A6%E7%BF%B0%C2%B7%E5%BD%BC%E5%BE%97%C2%B7%E5%8F%A4%E6%96%AF%E5%A1%94%E5%A4%AB%C2%B7%E5%8B%92%E7%83%AD%E7%BA%B3%C2%B7%E7%8B%84%E5%88%A9%E5%85%8B%E9%9B%B7" target="_blank" rel="noopener">Johann Peter Gustav Lejeune Dirichlet - 百度百科</a></p>
 <p><a href="https://en.wikipedia.org/wiki/Peter_Gustav_Lejeune_Dirichlet" target="_blank" rel="noopener">Johann Peter Gustav Lejeune Dirichlet - Wikipedia</a></p>
-<h3 id="0-1-在本文可能会出现的记号"><a href="#0-1-在本文可能会出现的记号" class="headerlink" title="0.1 在本文可能会出现的记号"></a>0.1 在本文可能会出现的记号</h3><ul>
+<h3 id="在本文可能会出现的记号"><a href="#在本文可能会出现的记号" class="headerlink" title="在本文可能会出现的记号"></a>在本文可能会出现的记号</h3><ul>
 <li>$(a,b)$：$a$ 和 $b$ 的最大公约数，即 $\gcd(a,b)$</li>
 <li>$a|b$：$a$ 整除 $b$</li>
 <li>$\mathbb P$：素数集合</li>
@@ -375,17 +409,17 @@
 <li>$\nu_p(n)$：$n$ 质因数分解后质数 $p$ 的幂次，即 $\nu_p(n)=\max\limits_{j}\left\{p^j|n\right\}$</li>
 <li>$\Omega(n)$ ：$n$ 质因数分解后所有质数幂次之和，即 $\Omega(n)=\sum\limits_p\nu_p(n)$</li>
 </ul>
-<h3 id="0-2-定义"><a href="#0-2-定义" class="headerlink" title="0.2 定义"></a>0.2 定义</h3><ul>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><ul>
 <li>数论函数（Arithmetic function）：定义域为 $\mathbb Z^+$ ，值域 $A\subset \mathbb C$ 的函数</li>
 <li>积性函数（Multipicative function）：对于任意正整数 $a,b$，当 $\gcd(a,b)=1$ 时，满足 $f(ab)=f(a)f(b)$ 的一类数论函数</li>
 <li>完全积性函数（Completely Multipicative function）：对于任意正整数 $a,b$，满足 $f(ab)=f(a)f(b)$ 的一类数论函数</li>
 </ul>
-<h3 id="0-3-其他"><a href="#0-3-其他" class="headerlink" title="0.3 其他"></a>0.3 其他</h3><ul>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
 <li>$\sum$ 和 $\prod$ 如果不是在括号内部（比如 $\cdots(\sum\cdots)\cdots$），优先级最低。</li>
 <li>在推式子的时候末尾可能会有一些注释，一般在式子的右边，用中文括号或英文括号括起来，譬如：<script type="math/tex; mode=display">\begin{aligned}f(x)&=x^2-1\\&=(x+1)(x-1)&\text{（平方差公式）}\end{aligned}</script></li>
 </ul>
-<h2 id="1-Mobius函数"><a href="#1-Mobius函数" class="headerlink" title="1. Möbius函数"></a>1. Möbius函数</h2><h3 id="1-0-定义"><a href="#1-0-定义" class="headerlink" title="1.0 定义"></a>1.0 定义</h3><p>Möbius函数，记作 $\mu(n)$，定义为：</p>
-<script type="math/tex; mode=display">\mu(n)=\begin{cases}(-1)^{\omega(n)}&\nexists \,p\in\mathbb P:p^2|n\\0&\operatorname{otherwise}\end{cases}</script><p><strong>定理1-1</strong> $\mu(n)$ 是积性函数。</p>
+<h2 id="Mobius函数"><a href="#Mobius函数" class="headerlink" title="Möbius函数"></a>Möbius函数</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p>Möbius函数，记作 $\mu(n)$，定义为：</p>
+<script type="math/tex; mode=display">\mu(n)=\begin{cases}(-1)^{\omega(n)}&\nexists p\in\mathbb P:p^2|n\\0&\operatorname{otherwise}\end{cases}</script><p><strong>定理1-1</strong> $\mu(n)$ 是积性函数。</p>
 <p><strong>证明</strong></p>
 <blockquote>
 <p>设正整数 $a,b$ 满足 $\gcd(a,b)=1$。</p>
@@ -398,7 +432,7 @@
 <blockquote>
 <p>$\because \mu(2\times2)=0\neq 1=\mu(2)\times\mu(2)$<br>$\therefore\mu(n)$ 不是完全积性函数。<br>证毕~</p>
 </blockquote>
-<h3 id="2-1-性质"><a href="#2-1-性质" class="headerlink" title="2.1 性质"></a>2.1 性质</h3><p><strong>定理2</strong> </p>
+<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><p><strong>定理2</strong> </p>
 <script type="math/tex; mode=display">\sum\limits_{d|n}\mu(d)=\begin{cases}1&n=1\\0&n>1\end{cases}</script><p>也可以记作：</p>
 <script type="math/tex; mode=display">\sum\limits_{d|n}\mu(d)=[n=1]</script><p><strong>证明</strong></p>
 <blockquote>
@@ -409,7 +443,31 @@
 <script type="math/tex; mode=display">\begin{aligned}\sum\limits_{d|n}\mu(d)&=\sum\limits_{i=0}^{\omega(n)}(-1)^i\binom {\omega(i)}i\\&=(-1)^0\binom00\\&=1\times1\\&=1\end{aligned}</script><p>综上，当 $n\neq1$ 时原式的值为 $0$，否则原式等于 $1$。故有</p>
 <script type="math/tex; mode=display">\sum\limits_{d|n}\mu(d)=\begin{cases}1&n=1\\0&n>1\end{cases}</script><p>。证毕~</p>
 </blockquote>
-
+<h3 id="例1-完全平方数"><a href="#例1-完全平方数" class="headerlink" title="例1 完全平方数"></a>例1 完全平方数</h3><h4 id="题目地址"><a href="#题目地址" class="headerlink" title="题目地址"></a>题目地址</h4><ol>
+<li><a href="https://vjudge.net/problem/HYSBZ-2440" target="_blank" rel="noopener">vjudge - bzoj</a></li>
+<li><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=2440" target="_blank" rel="noopener">bzoj</a></li>
+<li><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=2440" target="_blank" rel="noopener">lg</a></li>
+<li><a href="http://hoj.free.idcfengye.com/problem/227" target="_blank" rel="noopener">hoj</a></li>
+</ol>
+<h4 id="题意简述"><a href="#题意简述" class="headerlink" title="题意简述"></a>题意简述</h4><blockquote>
+<p>定义“无平方因子数”为质因数分解后所有质因数次数均为 $1$ 的数，即满足</p>
+<script type="math/tex; mode=display">\prod\limits_{i=1}^{\omega(n)}\nu(p_i)=1</script><p>的 $n$ 值。</p>
+<p>给你 $K$ 组询问，每组询问给定一个数 $k$，请你求出第 $k$ 小的无平方因子数。</p>
+<p> 对于每组数据，有 $1\leqslant K\leqslant50$，且所有的 $k$ 都满足 $1\leqslant k\leqslant 10^5$。</p>
+</blockquote>
+<h4 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h4><p>首先我们需要先求出 $n$ 以内有多少无平方因子数，这样子就可以二分答案惹</p>
+<p>首先我们根据容斥原理<del>容易</del>得到：</p>
+<script type="math/tex; mode=display">\begin{aligned}&n\text{以内的无平方因子数个数}\\=&n\text{以内每0个质数乘积的平方的倍数数量}\\-&n\text{以内每0个质数乘积的平方的倍数数量}\\+&n\text{以内每0个质数乘积的平方的倍数数量}\\-&\dots\end{aligned}</script><p><del>容易得到</del>正整数 $i$ 的平方的倍数数量前的符号为 $(-1)^{\omega (i)}=\mu(i)$。</p>
+<p>我们又知道 $n$ 以内 $i^2$ 的倍数共有 $\left\lfloor\frac {n}{i^2}\right\rfloor$ 个，故 $n$ 以内的非平方因子数个数为：</p>
+<script type="math/tex; mode=display">\sum\limits_{i=1}^{\left\lfloor\sqrt x\right\rfloor}\mu(i)\left\lfloor\dfrac n {i^2}\right\rfloor</script><p>预处理 $\mu(i)$ 的值，然后二分答案就可以惹~</p>
+<p>每组数据时间复杂度为 $O(\sqrt k\log k)$</p>
+<p>那怎么预处理 $\mu(i)$ 的值呢？</p>
+<p>这里给出一个C++代码，其中 <code>mu(x)</code> 是一个宏定义，定义为</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mu(n) mobius[n]</span></span></pre></td></tr></table></figure>
+<p>而 <code>mobius</code> 数组是存储 $\mu(x)$ 的值的。</p>
+<p>代码如下，注意它仅计算了 $[1,\text{MaxN})$ 里的所有的 $x$ 的 $\mu(x)$ 的值。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	mu(<span class="number">1</span>) = <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; MaxN; ++i) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">if</span> (!vst[i]) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">			mu(i) = <span class="number">-1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">			prm[++prm_cnt] = i;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= prm_cnt &amp;&amp; i * prm[j] &lt; MaxN; ++j) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">			vst[i * prm[j]] = <span class="literal">true</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">			</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">if</span> (i % prm[j] == <span class="number">0</span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">				<span class="keyword">break</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">			&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">			mu(i * prm[j]) = -mu(i);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MaxN 80009</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> mobius[MaxN];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> prm[MaxN];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">bool</span> vst[MaxN];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> prm_cnt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mu(n) mobius[n]</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">	mu(<span class="number">1</span>) = <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; MaxN; ++i) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">if</span> (!vst[i]) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">			mu(i) = <span class="number">-1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">			prm[++prm_cnt] = i;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= prm_cnt &amp;&amp; i * prm[j] &lt; MaxN; ++j) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">			vst[i * prm[j]] = <span class="literal">true</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">			</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">if</span> (i % prm[j] == <span class="number">0</span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">				<span class="keyword">break</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">			&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">			mu(i * prm[j]) = -mu(i);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">long</span> <span class="keyword">long</span> <span class="title">check</span><span class="params">(<span class="keyword">const</span> <span class="keyword">long</span> <span class="keyword">long</span>&amp; tmp)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> res = <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; (<span class="keyword">long</span> <span class="keyword">long</span>)i * i &lt;= tmp; ++i) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">		res += mu(i) * (tmp / (i * i));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> res;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">find</span><span class="params">(<span class="keyword">const</span> <span class="keyword">long</span> <span class="keyword">long</span>&amp; l, <span class="keyword">const</span> <span class="keyword">long</span> <span class="keyword">long</span>&amp; r, <span class="keyword">const</span> <span class="keyword">int</span>&amp; k)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">if</span> (l == r) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">41</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">return</span> l;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">42</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">43</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">44</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">if</span> (check(mid) &lt; k) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">45</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">return</span> find(mid + <span class="number">1</span>, r, k);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">46</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">47</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> find(l, mid, k);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">48</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">49</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">50</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">(<span class="keyword">signed</span> argc, <span class="keyword">char</span>** argv)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">51</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">int</span> t;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">52</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">std</span>::<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;t);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">53</span></pre></td><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">54</span></pre></td><td class="code"><pre><span class="line">	init();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">55</span></pre></td><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">56</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; t; ++i) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">57</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">long</span> <span class="keyword">long</span> tmp;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">58</span></pre></td><td class="code"><pre><span class="line">		<span class="built_in">std</span>::<span class="built_in">scanf</span>(<span class="string">"%lld"</span>, &amp;tmp);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">59</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">long</span> <span class="keyword">long</span> l = <span class="number">1</span>, r = <span class="number">8000000000l</span>l;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">60</span></pre></td><td class="code"><pre><span class="line">		</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">61</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">while</span> (l &lt; r) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">62</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">long</span> <span class="keyword">long</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">63</span></pre></td><td class="code"><pre><span class="line">			</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">64</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">if</span> (check(mid) &gt;= tmp) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">65</span></pre></td><td class="code"><pre><span class="line">				r = mid;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">66</span></pre></td><td class="code"><pre><span class="line">			&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">67</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">else</span> &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">68</span></pre></td><td class="code"><pre><span class="line">				l = mid + <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">69</span></pre></td><td class="code"><pre><span class="line">			&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">70</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">71</span></pre></td><td class="code"><pre><span class="line">		<span class="built_in">std</span>::<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, l);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">72</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">73</span></pre></td><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">74</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">75</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
       
     </div>
     
@@ -441,8 +499,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/30/CSP2019-solution/" rel="next" title="CSP2019题解">
-                <i class="fa fa-chevron-left"></i> CSP2019题解
+              <a href="/2019/11/30/Sperners-theorem/" rel="next" title="Sperner定理">
+                <i class="fa fa-chevron-left"></i> Sperner定理
               </a>
             
           </div>
@@ -601,7 +659,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-前言"><span class="nav-number">1.</span> <span class="nav-text">0. 前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#0-0-先-一下大数学家"><span class="nav-number">1.1.</span> <span class="nav-text">0.0 先%一下大数学家</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0-1-在本文可能会出现的记号"><span class="nav-number">1.2.</span> <span class="nav-text">0.1 在本文可能会出现的记号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0-2-定义"><span class="nav-number">1.3.</span> <span class="nav-text">0.2 定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0-3-其他"><span class="nav-number">1.4.</span> <span class="nav-text">0.3 其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Mobius函数"><span class="nav-number">2.</span> <span class="nav-text">1. Möbius函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-0-定义"><span class="nav-number">2.1.</span> <span class="nav-text">1.0 定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-性质"><span class="nav-number">2.2.</span> <span class="nav-text">2.1 性质</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#先-一下大数学家"><span class="nav-number">1.1.</span> <span class="nav-text">先%一下大数学家</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在本文可能会出现的记号"><span class="nav-number">1.2.</span> <span class="nav-text">在本文可能会出现的记号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">1.3.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">1.4.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mobius函数"><span class="nav-number">2.</span> <span class="nav-text">Möbius函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-1"><span class="nav-number">2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质"><span class="nav-number">2.2.</span> <span class="nav-text">性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例1-完全平方数"><span class="nav-number">2.3.</span> <span class="nav-text">例1 完全平方数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目地址"><span class="nav-number">2.3.1.</span> <span class="nav-text">题目地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题意简述"><span class="nav-number">2.3.2.</span> <span class="nav-text">题意简述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解法"><span class="nav-number">2.3.3.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码实现"><span class="nav-number">2.3.4.</span> <span class="nav-text">代码实现</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -799,7 +857,340 @@
 
 
 
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: 'a7099bbe4e2d99bc965b',
+      clientSecret: 'a7305ebbc8eed8c56917b6ba673835dff67dac88',
+      repo: 'blog-comment',
+      owner: 'H-J-Granger',
+      admin: ['H-J-Granger'],
+      id: location.pathname,
+      distractionFreeMode: 'false'
+    })
+    gitalk.render('gitalk-container')
+  </script>
+
   
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
 
 
 
