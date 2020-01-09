@@ -395,19 +395,14 @@
 
       
         
-          
-            <h2 id="多项式求值"><a href="#多项式求值" class="headerlink" title="多项式求值"></a>多项式求值</h2><p>给定一个多项式 $f(x)=\sum\limits_{i=0}^na_ix^i$，请求出 $f(b)$ 的值。</p>
-<h3 id="朴素算法"><a href="#朴素算法" class="headerlink" title="朴素算法"></a>朴素算法</h3><p>最朴素的做法就是暴力计算每一项了吧~</p>
-<p>这个算法的时间复杂度为 $\Theta(n^2)$，<strong>额外</strong>的空间复杂度为 $\Theta(1)$。</p>
-<p>给一份伪代码：</p>
-<script type="math/tex; mode=display">\begin{array}{ll}1&sum\gets0\\2&\mathbf{for}\text{ each } 0\leqslant i\leqslant n\\3&\qquad prod\gets1\\4&\qquad \mathbf{for}\text{ each }1\leqslant j\leqslant i\\5&\qquad\qquad prod\gets prod\times b\\6&\qquad sum\gets sum+prod\times a_i\end{array}</script><h3 id="保存幂值"><a href="#保存幂值" class="headerlink" title="保存幂值"></a>保存幂值</h3><p>这个做法时间复杂度为 $\Theta(n)$，<strong>额外</strong>空间复杂度为 $\Theta(1)$。</p>
-<script type="math/tex; mode=display">\begin{array}{ll}1&sum\gets0\\2&pow\gets1\\3&\mathbf{for}\text{ each }0\leqslant i\leqslant n\\4&\quad sum\gets sum+a_i\times pow\\5&\quad pow\gets pow\times b\end{array}</script><h2 id="多项式加法"><a href="#多项式加法" class="headerlink" title="多项式加法"></a>多项式加法</h2><p>给定多项式函数 $f(x),g(x)$，请求出一多项式函数 $h(x)$ 使得 $h(x)=f(x)+g(x)$ 恒成立。</p>
-<p>首先先将 $f(x),g(x)$ 中次数小的那个不断添加系数为 $0$ 的高次项使得两者次数相等（比如 $f(x)=x^2+x+2,g(x)=x+1$，则将 $g(x)$ 化为 $0x^2+x+1$）。令，最终 $f(x)$ 与 $g(x)$ 的次数为 $n$，于是 $f(x)=\sum\limits_{i=0}^na_ix^i$ 且 $g(x)=\sum\limits_{i=0}^nb_ix^i$，则</p>
-<script type="math/tex; mode=display">\begin{aligned}h(x)&=f(x)+g(x)\\&=\sum\limits_{i=0}^na_ix^i+\sum\limits_{i=0}^nb_ix^i\\&=\sum\limits_{i=0}^n(a_i+b_i)x^i\end{aligned}</script><p>这个做法的时间复杂度为 $\Theta(n)$。</p>
-<h2 id="多项式减法"><a href="#多项式减法" class="headerlink" title="多项式减法"></a>多项式减法</h2><p>给定多项式函数 $f(x),g(x)$，请求出一多项式函数 $h(x)$ 使得 $h(x)=f(x)-g(x)$ 恒成立。</p>
-<p>解决方案同多项式加法。时间复杂度也为 $\Theta(n)$。</p>
-
-          
+          <p>在谈论多项式之道之前，我们先看看一些最基础的内容。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/01/08/polynomial-i/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

@@ -3,7 +3,8 @@
   <entry>
     <title>多项式详解I——多项式基础</title>
     <url>/2020/01/08/polynomial-i/</url>
-    <content><![CDATA[<h2 id="多项式求值"><a href="#多项式求值" class="headerlink" title="多项式求值"></a>多项式求值</h2><p>给定一个多项式 $f(x)=\sum\limits_{i=0}^na_ix^i$，请求出 $f(b)$ 的值。</p>
+    <content><![CDATA[<p>在谈论多项式之道之前，我们先看看一些最基础的内容。<br><a id="more"></a></p>
+<h2 id="多项式求值"><a href="#多项式求值" class="headerlink" title="多项式求值"></a>多项式求值</h2><p>给定一个多项式 $f(x)=\sum\limits_{i=0}^na_ix^i$，请求出 $f(b)$ 的值。</p>
 <h3 id="朴素算法"><a href="#朴素算法" class="headerlink" title="朴素算法"></a>朴素算法</h3><p>最朴素的做法就是暴力计算每一项了吧~</p>
 <p>这个算法的时间复杂度为 $\Theta(n^2)$，<strong>额外</strong>的空间复杂度为 $\Theta(1)$。</p>
 <p>给一份伪代码：</p>
