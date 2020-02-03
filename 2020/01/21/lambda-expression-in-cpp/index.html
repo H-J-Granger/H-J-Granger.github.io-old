@@ -79,12 +79,14 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="schedule">
-<meta property="og:url" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;schedule&#x2F;index.html">
+<meta name="description" content="说在前面建议遇到不理解的地方多多利用 OI-wiki、中文 C++ Reference、维基百科 等资料，或者联系笔者。 本文略长，且部分内容在日常 OI&#x2F;ACM 中鲜有用到，不过，对于 C++ 这种语言来讲，学习是永远的归宿。 为什么要使用 lambda 表达式？假设你现在要实现一个程序，其中有一个维护函数，维护函数中需要排序一个 node 数组： 假设你已经定义了 node::operator">
+<meta property="og:type" content="article">
+<meta property="og:title" content="lambda-expression-in-cpp">
+<meta property="og:url" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;2020&#x2F;01&#x2F;21&#x2F;lambda-expression-in-cpp&#x2F;index.html">
 <meta property="og:site_name" content="Granger&#39;s Blog">
+<meta property="og:description" content="说在前面建议遇到不理解的地方多多利用 OI-wiki、中文 C++ Reference、维基百科 等资料，或者联系笔者。 本文略长，且部分内容在日常 OI&#x2F;ACM 中鲜有用到，不过，对于 C++ 这种语言来讲，学习是永远的归宿。 为什么要使用 lambda 表达式？假设你现在要实现一个程序，其中有一个维护函数，维护函数中需要排序一个 node 数组： 假设你已经定义了 node::operator">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-23T11:11:55.608Z">
+<meta property="og:updated_time" content="2020-01-22T10:13:24.456Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -115,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="http://H-J-Granger.github.io/schedule/"/>
+  <link rel="canonical" href="http://H-J-Granger.github.io/2020/01/21/lambda-expression-in-cpp/"/>
 
 
 
 
 
-  <title>schedule | Granger's Blog</title>
+  <title>lambda-expression-in-cpp | Granger's Blog</title>
   
 
 
@@ -291,33 +293,173 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://H-J-Granger.github.io/2020/01/21/lambda-expression-in-cpp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hermione Granger">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://i.loli.net/2019/11/26/QgsOwr4oqUe53Bb.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Granger's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">schedule</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">lambda-expression-in-cpp</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-21T00:59:18+08:00">
+                2020-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-      </div>
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h2><p>建议遇到不理解的地方多多利用 <a href="https://oi-wiki.org/" target="_blank" rel="noopener">OI-wiki</a>、<a href="https://zh.cppreference.com/w/" target="_blank" rel="noopener">中文 C++ Reference</a>、<a href="https://wikipedia.org/" target="_blank" rel="noopener">维基百科</a> 等资料，或者联系笔者。</p>
+<p>本文略长，且部分内容在日常 OI/ACM 中鲜有用到，不过，对于 C++ 这种语言来讲，学习是永远的归宿。</p>
+<h2 id="为什么要使用-lambda-表达式？"><a href="#为什么要使用-lambda-表达式？" class="headerlink" title="为什么要使用 lambda 表达式？"></a>为什么要使用 lambda 表达式？</h2><p>假设你现在要实现一个程序，其中有一个维护函数，维护函数中需要排序一个 <code>node</code> 数组：</p>
+<p>假设你已经定义了 <code>node::operator&lt;</code> 另做他用，所以你在 <code>std::sort</code> 的时候得要新建一个 <code>cmp</code> 函数。</p>
+<p>看看这种写法：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">node</span> &#123;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span>:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">// 很多变量</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125; arr[<span class="number">100</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// 很多代码</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">const</span> node&amp; a, <span class="keyword">const</span> node&amp; b)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">// 比较函数</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">work</span><span class="params">()</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">// ...</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">    <span class="built_in">std</span>::sort(arr, arr + <span class="number">100</span>, cmp);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">// ...</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<p>这个时候，你发现 <code>cmp</code> 函数仅在一条语句中使用过，万一以后又有一个语句需要另一个 <code>cmp</code> 函数呢？来一个 <code>cmp2</code> ？这样子，当其他人看你的代码的时候，会感到很困惑不解<del>，这人怎么定义这么多 <code>cmp</code></del>。就算是你自己维护自己的代码，也会觉得很烦，因为 <code>cmp</code> 函数与语句 <code>std::sort(arr, arr + 100, cmp);</code> 距离太远了，维护难度很大。</p>
+<p>就没有什么办法了吗？</p>
+<p>有一种叫 <strong>匿名函数</strong> （anonymous function）的东西，可以不把函数与函数名“绑定”在一起，而是使用一种表达式来表示一个函数，这个表达式的值即为一个匿名函数，我们只需要 <code>auto func = /* 这个表达式 */</code> 便可以将 <code>func</code> 调用多次。如果像上文一样，函数只用定义一次，那我们就直接 <code>std::sort(arr, arr + 100, /* 这个表达式 */);</code> 即可。</p>
+<p>C++ 标准将其称为 lambda 表达式（lambda expression）。</p>
+<p>称其为 <strong>lambda</strong> 表达式实际上是源自 20 世纪 30 年代 Alonzo Church 提出的 <a href="https://en.wikipedia.org/wiki/Lambda_calculus" target="_blank" rel="noopener"><strong>lambda calculus</strong></a>（也作 $\lambda$-calculus）的。匿名函数与计算机设计语言相结合最早是在 1958 年，LISP 语言，而 C++ 也在 C++11 标准中加入了原生 lambda 表达式。</p>
+<h2 id="lambda-表达式的基础用法"><a href="#lambda-表达式的基础用法" class="headerlink" title="lambda 表达式的基础用法"></a>lambda 表达式的基础用法</h2><h3 id="从最最基础的-lambda-表达式讲起"><a href="#从最最基础的-lambda-表达式讲起" class="headerlink" title="从最最基础的 lambda 表达式讲起"></a>从最最基础的 lambda 表达式讲起</h3><p>我们先从下面这份判断奇偶性的 lambda 表达式看起：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">[](<span class="keyword">int</span> x) -&gt; <span class="keyword">bool</span> &#123;<span class="keyword">return</span> x % <span class="number">2</span> == <span class="number">0</span>;&#125;</span></pre></td></tr></table></figure>
+<p>我们来分析一下这个 lambda 表达式的各个元素：</p>
+<ol>
+<li><code>[]</code>：捕获；</li>
+<li><code>(int x)</code>：形式参数列表；</li>
+<li><code>-&gt;</code>：标识符；</li>
+<li><code>bool</code>：类型声明；</li>
+<li><code>{return x % 2 == 0;}</code>：函数体。</li>
+</ol>
+<p>除去我们暂时不知道的“捕获”和一个大家都见过的标识符以外，其他的东西和普通函数的定义并无二样。</p>
+<p>我们可以理解为，这个表达式返回一个函数，这个函数的形参列表是 <code>(int x)</code>，返回值类型是 <code>bool</code>，函数体是 <code>{return x % 2 == 0;}</code>。至于普通函数里的函数名，那只是个标识罢了。我们来看一个例子：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">bool is_even(int x) -&gt; bool &#123;return x % 2 == 0;&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">is_even(a); <span class="comment">// 这段代码是和下面等价的</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">[](<span class="keyword">int</span> x) &#123;<span class="keyword">return</span> x % <span class="number">2</span>;&#125;(a);</span></pre></td></tr></table></figure>
+<p>当然，你也可以定义一个变量来储存 lambda 表达式的值，以便多次调用：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> is_even = [](<span class="keyword">int</span> x) -&gt; <span class="keyword">bool</span> &#123;<span class="keyword">return</span> x % <span class="number">2</span> == <span class="number">0</span>;&#125;;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">is_even(<span class="number">2</span>); <span class="comment">// return true</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">is_even(<span class="number">3</span>); <span class="comment">// return false</span></span></pre></td></tr></table></figure>
+<h3 id="来看看捕获"><a href="#来看看捕获" class="headerlink" title="来看看捕获"></a>来看看捕获</h3><p>我们现在来讲讲这个捕获。何为捕获呢？一个 lambda 表达式可能会使用到外部的变量，这个时候我们就需要使用捕获（capture）来捕获这些变量。</p>
+<p>捕获由一个可选的默认捕获符，以及任意多个捕获符组成：</p>
+<p>我们先看看这两个常用的捕获符格式：</p>
+<ul>
+<li><code>&amp;var</code>：<strong>引用</strong>传递变量 <code>var</code> ，以供函数体使用，函数体可以改变 <code>var</code> 的值。</li>
+<li><code>var</code>：<strong>按值</strong>传递变量 <code>var</code>。</li>
+</ul>
+<p>如果你还是不理解，你可以参考这份代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x = <span class="number">2</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">[]() -&gt; <span class="keyword">void</span> &#123;x = <span class="number">2</span>;&#125;(); <span class="comment">// 编译错误，lambda 表达式内不能使用 x（没有捕获，没有形参）</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">[](<span class="keyword">int</span> x) -&gt; <span class="keyword">void</span> &#123;x = <span class="number">3</span>;&#125;(x); <span class="built_in">std</span>::<span class="built_in">printf</span>(<span class="string">"%d"</span>, x);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// 编译通过，但是并没有改变 lambda 表达式外部</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">                                     </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">int</span> x = <span class="number">2</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	[]() -&gt; <span class="keyword">void</span> &#123;x = <span class="number">3</span>;&#125;(); <span class="comment">// 编译错误，lambda 表达式内不能使用 x（没有捕获，没有形参）</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    [](<span class="keyword">int</span> x) -&gt; <span class="keyword">void</span> &#123;x = <span class="number">3</span>;&#125;(x); </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    <span class="built_in">std</span>::<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, x); <span class="comment">// 输出 2，因为 x 只是被当作参数</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/01/08/polynomial/" rel="next" title="多项式游玩全攻略">
+                <i class="fa fa-chevron-left"></i> 多项式游玩全攻略
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -350,8 +492,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -431,6 +582,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#说在前面"><span class="nav-number">1.</span> <span class="nav-text">说在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么要使用-lambda-表达式？"><span class="nav-number">2.</span> <span class="nav-text">为什么要使用 lambda 表达式？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lambda-表达式的基础用法"><span class="nav-number">3.</span> <span class="nav-text">lambda 表达式的基础用法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#从最最基础的-lambda-表达式讲起"><span class="nav-number">3.1.</span> <span class="nav-text">从最最基础的 lambda 表达式讲起</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#来看看捕获"><span class="nav-number">3.2.</span> <span class="nav-text">来看看捕获</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
