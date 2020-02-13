@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Granger&#39;s Blog">
 <meta property="og:description" content="多项式是一种非常好玩的东西，有无数种玩法，本文就是多项式这款休闲小游戏的全攻略。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-03T05:54:31.640Z">
+<meta property="og:updated_time" content="2020-02-08T04:13:53.190Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -409,6 +409,9 @@
 <script type="math/tex; mode=display">\begin{aligned}h(x)&=f(x)+g(x)\\&=\sum\limits_{i=0}^na_ix^i+\sum\limits_{i=0}^nb_ix^i\\&=\sum\limits_{i=0}^n(a_i+b_i)x^i\end{aligned}</script><p>这个做法的时间复杂度为 $\Theta(n)$。</p>
 <h2 id="多项式减法"><a href="#多项式减法" class="headerlink" title="多项式减法"></a>多项式减法</h2><p>给定多项式函数 $f(x),g(x)$，请求出一多项式函数 $h(x)$ 使得 $h(x)=f(x)-g(x)$ 恒成立。</p>
 <p>解决方案同多项式加法。时间复杂度也为 $\Theta(n)$。</p>
+<h2 id="多项式乘法"><a href="#多项式乘法" class="headerlink" title="多项式乘法"></a>多项式乘法</h2><p>给定多项式函数 $f(x),g(x)$，请求出一多项式函数 $h(x)$ 使得 $h(x)=f(x)g(x)$ 恒成立。</p>
+<h3 id="朴素解法"><a href="#朴素解法" class="headerlink" title="朴素解法"></a>朴素解法</h3><p>直接用列竖式相乘。具体而言，若 $f(x)=\sum\limits_{j=0}^{n-1}a_jx^j,g(x)=\sum\limits_{j=0}^{n-1}b_jx^j$，则有 $h(x)=\sum\limits_{j=0}^{2n-2}\left(\sum\limits_{k=0}^ja_kb_{j-k}\right)x^j$。</p>
+<p>时间复杂度 $\Theta(n^2)$。</p>
 
       
     </div>
@@ -605,7 +608,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#多项式求值"><span class="nav-number">1.</span> <span class="nav-text">多项式求值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#朴素算法"><span class="nav-number">1.1.</span> <span class="nav-text">朴素算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#保存幂值"><span class="nav-number">1.2.</span> <span class="nav-text">保存幂值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多项式加法"><span class="nav-number">2.</span> <span class="nav-text">多项式加法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多项式减法"><span class="nav-number">3.</span> <span class="nav-text">多项式减法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#多项式求值"><span class="nav-number">1.</span> <span class="nav-text">多项式求值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#朴素算法"><span class="nav-number">1.1.</span> <span class="nav-text">朴素算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#保存幂值"><span class="nav-number">1.2.</span> <span class="nav-text">保存幂值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多项式加法"><span class="nav-number">2.</span> <span class="nav-text">多项式加法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多项式减法"><span class="nav-number">3.</span> <span class="nav-text">多项式减法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多项式乘法"><span class="nav-number">4.</span> <span class="nav-text">多项式乘法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#朴素解法"><span class="nav-number">4.1.</span> <span class="nav-text">朴素解法</span></a></li></ol></li></ol></div>
             
 
           </div>
