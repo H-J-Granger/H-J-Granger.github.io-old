@@ -1,6 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>「2020专题训练笔记」0-目录</title>
+    <url>/2020/02/19/2020%E4%B8%93%E9%A2%98%E8%AE%AD%E7%BB%83-%E7%9B%AE%E5%BD%95/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>初一的时候，我“学习”了很多 OI 知识，不乏有数据结构、图论、数学的内容。不过，在学习的时候我比较急于求成，基本是都只知道个大概，数据结构的思想都大致明白，图论的内容一知半解。一到做题，就只会做模板题，甚至模板题都不能自己实现，得靠面向代码编程的方法来混个 AC。</p>
+<p>这种相当错误的学习方式，在 CSP-J/S2019 中就立刻显出了弱点：代码能力不行，知识点不会灵活运用，就算想到了用什么知识点也很难写出来。当然，成绩是非常凄惨的，GD 省选资格都没有。</p>
+<p>为了不重蹈旧辙，我决定在写这个学期的专题训练的时候，顺便简单地写写题解，做题想不出来才看题解，希望这种方式能够帮到自己。</p>
+<a id="more"></a>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><h3 id="最大流"><a href="#最大流" class="headerlink" title="最大流"></a>最大流</h3><p><del>待更</del></p>
+]]></content>
+      <categories>
+        <category>2020专题训练</category>
+      </categories>
+      <tags>
+        <tag>专题训练</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>「2020专题训练」1-网络流</title>
+    <url>/2020/02/09/2020%E4%B8%93%E9%A2%98%E8%AE%AD%E7%BB%83-%E7%BD%91%E7%BB%9C%E6%B5%81/</url>
+    <content><![CDATA[<!--less-->
+<a id="more"></a>
+<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>概念这种东西，我怕讲不清楚，还是参考算导之类的专业书籍好了。</p>
+<p>考虑一个自来水系统，这个系统包含一个自来水厂，一个用水处（比如你家），还有很多个中转站，现在要将水厂的水运输到用水处。有很多条单向的水管连接自来水厂、用水处和中转站。每条水管在一个单位时间最多只能流通一定量的水，而每个中转站不能储存水或增加水（也就是说流进来多少水就得流出去多少水）。我们考虑如何将其抽象化。</p>
+<p>一个<strong>流网络</strong> $G=(V,E)$ 是一个无自环、无反向边的有向图，图中每条边 $(u,v)\in E$ 有一个非负的<strong>容量值</strong> $c(u,v)\geqslant0$（为方便起见，如果 $(u,v)\notin E$，则定义 $c(u,v)=0$）。我们钦定两个结点：<strong>源点</strong> $s$ 和<strong>汇点</strong> $t$（$s\ne q$）。</p>
+<p>设 $G=(V,E)$ 为一个流网络，$c$ 为 $G$ 的容量函数，$G$ 的源点为 $s$，汇点为 $t$，则 $G$ 的<strong>流</strong>是一个实值函数 $f:V\times V\rightarrow\mathbb R$，满足以下两条限制：</p>
+<ol>
+<li><strong>容量限制</strong>：对于所有的结点 $u,v\in V$，$0\leqslant f(u,v)\leqslant c(u,v)$。（水管的容量限制）</li>
+<li><strong>流量守恒</strong>：对于所有的结点 $u\in V-\{s, t\}$，有 $\sum\limits_{v\in V}f(v,u)=\sum\limits_{v\in V}f(u,v)$。（中转站不能存储水或增加水）</li>
+</ol>
+<p>我们称非负值 $f(u,v)$ 为从结点 $u$ 到结点 $v$ 的流。定义一个流 $f$ 的值 $|f|$ 如下：</p>
+<script type="math/tex; mode=display">|f|=\sum\limits_{u\in V}f(u,s)-\sum\limits_{u\in V}f(s,u)</script><p>也就是说，水厂流出来的水减去流入水厂的水。</p>
+<h3 id="最大流问题"><a href="#最大流问题" class="headerlink" title="最大流问题"></a>最大流问题</h3><p>最大流问题是求一个流网络内值最大的一个流。</p>
+<p>我们先引入几个概念，残余容量、增广路和残余网络：</p>
+<p>直观地，给定流网络 $G$ 和 $G$ 上的一个流 $f$，残存网络 $G_f$ 就是 $G$ 上还能够增加流量的边所构成的图。若 $G=(V,E)$，并且 $G$ 的容量函数为 $c$，那么若 $(u,v)\in E$，则定义<strong>残存容量</strong> $c_f(u,v)=c(u,v)-f(u,v)$。如果 $c_f(u,v)=0$，则说明这条边无法再增加流量，这条边将不属于图 $G_f$。</p>
+<p>定义<strong>增广路</strong>为一条在残存网络上从源点 $s$ 到汇点 $t$ 的路径，因为残存网络上所有的边的残存容量都为正数，所以我们一定可以经过这条增广路流一些流量，流量的值为增广路经过的边的残存容量的最小值。</p>
+<p>最大流的思想就是不断地寻找增广路，每次寻找到一条增广路就流流量，直到无法寻找为止。</p>
+<p>我们考虑下图所示的流网络，其中结点 $1$ 为源点，结点 $4$ 为汇点，边的容量标记在了边上：</p>
+<p><img src="/pict/2020专题训练-网络流/image-20200222121755442.png" alt="image-20200222121755442"></p>
+<p>如果我们一开始选择了 $1\xrightarrow12\xrightarrow13\xrightarrow14$ 这条增广路，则我们会发现流完之后每条边的残余容量长这个样子：</p>
+<p><img src="/pict/2020专题训练-网络流/image-20200222122143849.png" alt="image-20200222122143849"></p>
+<p>然后我们就一条增广路都找不到了。</p>
+<p>这个例子告诉我们，贪心策略在最大流问题行不通（实际上好像什么问题都行不通），于是我们要引入反悔机制。</p>
+<p>我们发现，问题出在我们找增广路只会导致每条边的流都增加，而不会减少。我们想让每条边的流减少，只需要在残量网络新建<strong>反向边</strong>即可。怎么建呢？我们对于边 $(u,v)$，建立一条反向边 $(v,u)$ 并令其残余容量 $c_f(v,u)$ 为 $f(u,v)$，令其“容量” $c(v,u)=c(u,v)$。如果要将 $f(u,v)$ 减少 $\Delta$，则只需要将 $f(v,u)$ 增加 $\Delta$ 即可。感性理解一下：从 $u$ 到 $v$ 流了 $f(u,v)$ 的水，现在我们发现这个流量太多了，会影响整体的值，于是我们就希望让流量减少 $\Delta$。可是现在水已经流过来了，我们只好铺一条从 $v$ 到 $u$ 的水管，因为残余容量就是指还能流多少水，因为已经流过来 $f(u,v)$ 的水了，最多就全部流回去，不能更多了，所以 $c_f(v,u)=f(u,v)$。</p>
+<p>我们现在来定义一下<strong>残余容量</strong>：</p>
+<p>假设有一个流网络 $G=(V,E)$ 和 $G$ 中的一个流 $f$，那么我们定义<strong>残余容量</strong>函数 $c_f:V\times V\rightarrow \mathbb R$ 如下：</p>
+<script type="math/tex; mode=display">c_f(u,v)=\begin{cases}c(u,v)-f(u,v)&\text{if }(u,v)\in E\\f(v,u)&\text{if }(v,u)\in E\\0&\text{otherwise}\end{cases}</script><p>因为 $(u,v)\in E\Rightarrow (v,u)\in E$（参见流网络定义），所以对于每个 $u,v\in V$，上式有且仅有一种情况成立。</p>
+<p>形式化地，对于流网络 $G=(V,E)$ 和 $G$ 里的一个流 $f$，则由 $f$ 构成的<strong>残存网络</strong> $G_f=(V,E_f)$，其中</p>
+<script type="math/tex; mode=display">E_f=\{(u,v)\in V\times V:c_f(u,v)>0\}</script><p>举个例子，这里是一个流网络 $G=(V,E)$，源点为 $1$，汇点为 $5$，每条边的容量标记在了图上：</p>
+<p><img src="/pict/2020专题训练-网络流/image-20200222205503532.png" alt="image-20200222205503532"></p>
+<p>我们把一个流 $f$ 也标记上去，每条边 $(u,v)$ 上斜杠前面的数值为 $f(u,v)$，后面的数值为 $c(u,v)$，如果 $f(u,v)=0$ 则省略 $f(u,v)$ 和斜杠：</p>
+<p><img src="/pict/2020专题训练-网络流/image-20200222212916695.png" alt="image-20200222212916695"></p>
+<p>我们构建这个流网络由流 $f$ 所诱导的 $G$ 的残存网络 $G_f$：</p>
+<p><img src="/pict/2020专题训练-网络流/image-20200222213940537.png" alt="image-20200222213940537"></p>
+<p>我们会发现，残存网络 $G_f$ 非常像一个容量为残存容量 $c_f$ 的流网络，可惜它不满足一个条件：如果 $(u,v)\in E$，则 $(v,u)\in E$。除了这个区别以外，残存网络和流网络有着相同的性质。我们可以在残存网络中用残存容量定义一个流。</p>
+<p>残存网络的流告诉我们：原来的流网络中还能再多流多少的流量。我们假设 $f$ 是 $G$ 的一个流，$f’$ 是残存网络 $G_f$ 的一个流，则定义 $f\uparrow f’$ 为流 $f’$ 对流 $f$ 的<strong>递增</strong>，它和流 $f,f’$ 一样，也是一个从 $V\times V$ 到 $\mathbb R$ 的函数，定义如下：</p>
+<script type="math/tex; mode=display">(f\uparrow f')(u,v)=\begin{cases}f(u,v)+f'(u,v)-f'(v,u)&\text{if }(u,v)\in E\\0&\text{otherwise}\end{cases}</script><p>因为 $f’(v,u)$ 在直观上可以被理解为是将 $f’(u,v)$ 的流量“退回”的值，所以这里实际上从 $u$ 到 $v$ 只流了 $f’(u,v)-f’(v,u)$ 的流量。</p>
+<p>有一个很直观也很重要的结论：</p>
+<p><strong>结论 1</strong>   设 $G=(V,E)$ 为一个流网络，源点为 $s$，汇点为 $t$。设 $f$ 为 $G$ 的一个流，设 $G_f$ 为由流 $f$ 诱导的残存网络 $G_f$，则 $f\uparrow f’$ 为 $G$ 中的一个流，值 $|f\uparrow f’|=|f|+|f’|$。</p>
+<p>证明：首先证明 $f\uparrow f’$ 满足容量限制和流量守恒两条限制：</p>
+<script type="math/tex; mode=display">\begin{aligned}(f\uparrow f')(u,v)&=f(u,v)+f'(u,v)-f'(v,u)\\&\geqslant f(u,v)+f'(u,v)-c_f(v,u)\\&=f(u,v)+f'(u,v)-f(u,v)\\&=f'(u,v)\\&\geqslant0\end{aligned}</script><p>而且</p>
+<script type="math/tex; mode=display">\begin{aligned}(f\uparrow f')(u,v)&=f(u,v)+f'(u,v)-f'(v,u)\\&\leqslant f(u,v)+f'(u,v)\\&\leqslant f(u,v)+c_f(u,v)\\&=f(u,v)+c(u,v)-f(u,v)\\&=c(u,v)\end{aligned}</script><p>因为 $f$ 和 $f’$ 均满足流量守恒性质，所以对于所有 $u\in V-\{s,t\}$，有：</p>
+<script type="math/tex; mode=display">\begin{aligned}\sum\limits_{v\in V}(f\uparrow f')(u,v)&=\sum\limits_{u\in V}(f(u,v)+f'(u,v)-f'(v,u))\\&=\sum\limits_{u\in V}f(u,v)+\sum\limits_{u\in V}f'(u,v)-\sum\limits_{u\in V}f'(v,u)\\&=\sum\limits_{u\in V}f(v,u)+\sum\limits_{u\in V}f'(v,u)-\sum\limits_{u\in V}f'(u,v)\\&=\sum\limits_{u\in V}(f(v,u)+f'(v,u)-f'(u,v))\\&=\sum\limits_{u\in V}(f\uparrow f')(v,u)\end{aligned}</script><h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><h3 id="H-Drainage-Ditches"><a href="#H-Drainage-Ditches" class="headerlink" title="H - Drainage Ditches"></a>H - Drainage Ditches</h3><h4 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h4><blockquote>
+<p>一个 $m$ 个点，$n$ 条边的有向图，边有边权，点无点权，无任何特殊限制，请跑一遍最大流。</p>
+<p>$0\leqslant n\leqslant 200,2\leqslant m\leqslant 200$，边权 $\in[0, 10^7]$。</p>
+</blockquote>
+<p><a href="http://poj.org/problem?id=1273" target="_blank" rel="noopener">POJ 1273（多测）</a></p>
+<p><a href="https://www.luogu.com.cn/problem/P2740" target="_blank" rel="noopener">LG 2740（单测）</a></p>
+<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><p>LG 上直接 Edmonds-Karp 过了……</p>
+<p>吐槽：这题数据太良心了，要是 $n,m$ 稍微开大一点点就能爆 32 位有符号整数了……</p>
+<p>LG Edmonds-Karp 代码：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MaxN 205</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MaxM 405</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> head[MaxM], nxt[MaxM], val[MaxM], to[MaxM];</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> cnt = <span class="number">1</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> pre[MaxN], vst[MaxN], nowmin[MaxN];</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; que;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add_edge</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>&amp; x, <span class="keyword">const</span> <span class="keyword">int</span>&amp; y, <span class="keyword">const</span> <span class="keyword">int</span>&amp; v)</span> </span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	to[++cnt] = y;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	val[cnt] = v;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	nxt[cnt] = head[x];</span></pre></td></tr><tr><td class="code"><pre><span class="line">	head[x] = cnt;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">	to[++cnt] = x;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	val[cnt] = <span class="number">0</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	nxt[cnt] = head[y];</span></pre></td></tr><tr><td class="code"><pre><span class="line">	head[y] = cnt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">return</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">bfs</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>&amp; s, <span class="keyword">const</span> <span class="keyword">int</span>&amp; t)</span> </span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="built_in">std</span>::<span class="built_in">memset</span>(vst, <span class="number">0</span>, <span class="keyword">sizeof</span>(vst));</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">while</span> (!que.empty()) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		que.pop();</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	que.push(s);</span></pre></td></tr><tr><td class="code"><pre><span class="line">	vst[s] = <span class="literal">true</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	nowmin[s] = <span class="number">0x3f3f3f3f</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">while</span> (!que.empty()) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">int</span> x = que.front();</span></pre></td></tr><tr><td class="code"><pre><span class="line">		que.pop();</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = head[x]; i; i = nxt[i]) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">			<span class="keyword">if</span> (val[i]) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    			<span class="keyword">int</span> y = to[i];</span></pre></td></tr><tr><td class="code"><pre><span class="line">    			<span class="keyword">if</span> (vst[y]) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    				<span class="keyword">continue</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    			&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    			vst[y] = <span class="literal">true</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    			pre[y] = i;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    			nowmin[y] = <span class="built_in">std</span>::min(nowmin[x], val[i]);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    			que.push(y);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    			<span class="keyword">if</span> (y == t) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    				<span class="keyword">return</span> <span class="literal">true</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    			&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">			&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> maxflow;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>&amp; s, <span class="keyword">const</span> <span class="keyword">int</span>&amp; t)</span> </span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">int</span> x = t;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">while</span> (x != s) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">int</span> i = pre[x];</span></pre></td></tr><tr><td class="code"><pre><span class="line">		val[i] -= nowmin[t];</span></pre></td></tr><tr><td class="code"><pre><span class="line">		val[i ^ <span class="number">1</span>] += nowmin[t];</span></pre></td></tr><tr><td class="code"><pre><span class="line">		x = to[i ^ <span class="number">1</span>];</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	maxflow += nowmin[t];</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">return</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span> </span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">int</span> n, m;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="built_in">std</span>::<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;m, &amp;n);</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">int</span> x, y, v;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="built_in">std</span>::<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>, &amp;x, &amp;y, &amp;v);</span></pre></td></tr><tr><td class="code"><pre><span class="line">		add_edge(x, y, v);</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">while</span> (bfs(<span class="number">1</span>, n)) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		update(<span class="number">1</span>, n);</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="built_in">std</span>::<span class="built_in">printf</span>(<span class="string">"%d"</span>, maxflow);</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>专题训练</category>
+      </categories>
+      <tags>
+        <tag>专题训练</tag>
+        <tag>网络流</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++运算符优先级</title>
+    <url>/2020/02/05/operator_precedence_cpp/</url>
+    <content><![CDATA[<p>为了防止忘记还是记下来吧~从cppreference搬来的~</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">优先等级</th>
+<th style="text-align:center">运算符</th>
+<th style="text-align:center">结合顺序</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center"><code>::</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center"><code>var++</code>  <code>var--</code> <code>type()</code> <code>type{}</code> <code>func()</code> <code>arr[]</code> <code>.</code> <code>-&gt;</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center"><code>++var</code> <code>--var</code> <code>+var</code> <code>-var</code> <code>!</code> <code>~</code> <code>(type)</code> <code>*ptr</code> <code>&amp;var</code> <code>sizeof</code> <code>co_await</code> <code>new</code> <code>new[]</code> <code>delete</code> <code>delete[]</code></td>
+<td style="text-align:center"><strong>从右到左</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center"><code>.*</code> <code>-&gt;*</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center"><code>var1*var2</code> <code>var1/var2</code> <code>var1%var2</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center"><code>var1+var2</code> <code>var1-var2</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center"><code>&lt;&lt;</code> <code>&gt;&gt;</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center"><code>&lt;=&gt;</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center"><code>&lt;</code> <code>&lt;=</code> <code>&gt;</code> <code>&gt;=</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center"><code>==</code> <code>!=</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">11</td>
+<td style="text-align:center"><code>var1&amp;var2</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">12</td>
+<td style="text-align:center"><code>^</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">13</td>
+<td style="text-align:center">`</td>
+<td style="text-align:center">`</td>
+<td>从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">14</td>
+<td style="text-align:center"><code>&amp;&amp;</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">15</td>
+<td style="text-align:center">`</td>
+<td style="text-align:center"></td>
+<td>`</td>
+<td>从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">16</td>
+<td style="text-align:center"><code>?:</code> <code>throw</code> <code>co_yield</code> <code>=</code> <code>+=</code> <code>-=</code> <code>*=</code> <code>/=</code> <code>%=</code> <code>&lt;&lt;=</code> <code>&gt;&gt;=</code> <code>&amp;=</code> `</td>
+<td style="text-align:center">=<code>`^=</code></td>
+<td><strong>从右到左</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">17</td>
+<td style="text-align:center"><code>,</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>非旋Treap讲解</title>
     <url>/2020/02/03/fhq-treap/</url>
     <content><![CDATA[<p>非旋 Treap，又称FHQ-Treap，是一种好写<del>又好吃</del>，常数小，可拓展性强的弱平衡的二叉搜索树。</p>
@@ -138,26 +332,6 @@
       </tags>
   </entry>
   <entry>
-    <title>CSP2019题解</title>
-    <url>/2019/11/30/CSP2019-solution/</url>
-    <content><![CDATA[<!--dd-->
-<a id="more"></a>
-<h1 id="CSP-J"><a href="#CSP-J" class="headerlink" title="CSP-J"></a>CSP-J</h1><h2 id="T1-数字游戏"><a href="#T1-数字游戏" class="headerlink" title="T1 数字游戏"></a>T1 数字游戏</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a><a href="https://www.luogu.com.cn/problem/P5660" target="_blank" rel="noopener">描述</a></h3><p>小K给小P发了一个$8$位的$01$字符串，现在小P想知道这里有多少个$1$。</p>
-<h3 id="思路1"><a href="#思路1" class="headerlink" title="思路1"></a>思路1</h3><p>输入一个字符，判断是否为<code>&#39;1&#39;</code>。如果为<code>&#39;1&#39;</code>则<code>++cnt;</code>。</p>
-<h3 id="代码1"><a href="#代码1" class="headerlink" title="代码1"></a>代码1</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">int</span> ans = <span class="number">0</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; ++i) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">char</span> ch = getchar();</span></pre></td></tr><tr><td class="code"><pre><span class="line">		ans += ch - <span class="string">'0'</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="built_in">std</span>::<span class="built_in">printf</span>(<span class="string">"%d"</span>, ans);</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-<h3 id="思路2"><a href="#思路2" class="headerlink" title="思路2"></a>思路2</h3><p>输入整数$x$，输出$x\mod9$。</p>
-<h3 id="代码2"><a href="#代码2" class="headerlink" title="代码2"></a>代码2</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">(<span class="keyword">signed</span> argc, <span class="keyword">char</span> **argv)</span> </span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">int</span> a;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="built_in">std</span>::<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="built_in">std</span>::<span class="built_in">printf</span>(<span class="string">"%d"</span>, a % <span class="number">9</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-<h2 id="T2-公交换乘"><a href="#T2-公交换乘" class="headerlink" title="T2 公交换乘"></a>T2 公交换乘</h2><h3 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h3><p>小轩乘坐了$n$次公共交通工具，给出每次交通工具的类型（公交车或地铁），还有上车时间，以及票价。坐车的时间忽略不计。如果他在$t$时刻乘坐了一辆票价为$x$的地铁，则若有一次公交车的乘坐时间为</p>
-]]></content>
-      <categories>
-        <category>CSP2019</category>
-      </categories>
-      <tags>
-        <tag>OI</tag>
-        <tag>题解</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Sperner定理</title>
     <url>/2019/11/30/Sperners-theorem/</url>
     <content><![CDATA[<h2 id="定理内容"><a href="#定理内容" class="headerlink" title="定理内容"></a>定理内容</h2><p>Sperner定理：对于任意一个包含$n$个元素的集合$U$，我们最多能选择$\dbinom n {\left\lfloor\frac {n} 2\right\rfloor}$个子集，使得这些子集中没有包含关系。<br><a id="more"></a></p>
@@ -207,6 +381,26 @@
       <tags>
         <tag>OI</tag>
         <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSP2019题解</title>
+    <url>/2019/11/30/CSP2019-solution/</url>
+    <content><![CDATA[<!--dd-->
+<a id="more"></a>
+<h1 id="CSP-J"><a href="#CSP-J" class="headerlink" title="CSP-J"></a>CSP-J</h1><h2 id="T1-数字游戏"><a href="#T1-数字游戏" class="headerlink" title="T1 数字游戏"></a>T1 数字游戏</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a><a href="https://www.luogu.com.cn/problem/P5660" target="_blank" rel="noopener">描述</a></h3><p>小K给小P发了一个$8$位的$01$字符串，现在小P想知道这里有多少个$1$。</p>
+<h3 id="思路1"><a href="#思路1" class="headerlink" title="思路1"></a>思路1</h3><p>输入一个字符，判断是否为<code>&#39;1&#39;</code>。如果为<code>&#39;1&#39;</code>则<code>++cnt;</code>。</p>
+<h3 id="代码1"><a href="#代码1" class="headerlink" title="代码1"></a>代码1</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">int</span> ans = <span class="number">0</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; ++i) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">char</span> ch = getchar();</span></pre></td></tr><tr><td class="code"><pre><span class="line">		ans += ch - <span class="string">'0'</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="built_in">std</span>::<span class="built_in">printf</span>(<span class="string">"%d"</span>, ans);</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h3 id="思路2"><a href="#思路2" class="headerlink" title="思路2"></a>思路2</h3><p>输入整数$x$，输出$x\mod9$。</p>
+<h3 id="代码2"><a href="#代码2" class="headerlink" title="代码2"></a>代码2</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">(<span class="keyword">signed</span> argc, <span class="keyword">char</span> **argv)</span> </span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">int</span> a;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="built_in">std</span>::<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="built_in">std</span>::<span class="built_in">printf</span>(<span class="string">"%d"</span>, a % <span class="number">9</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h2 id="T2-公交换乘"><a href="#T2-公交换乘" class="headerlink" title="T2 公交换乘"></a>T2 公交换乘</h2><h3 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h3><p>小轩乘坐了$n$次公共交通工具，给出每次交通工具的类型（公交车或地铁），还有上车时间，以及票价。坐车的时间忽略不计。如果他在$t$时刻乘坐了一辆票价为$x$的地铁，则若有一次公交车的乘坐时间为</p>
+]]></content>
+      <categories>
+        <category>CSP2019</category>
+      </categories>
+      <tags>
+        <tag>OI</tag>
+        <tag>题解</tag>
       </tags>
   </entry>
   <entry>
