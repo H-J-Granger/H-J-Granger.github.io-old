@@ -81,7 +81,7 @@
 
 <meta name="keywords" content="专题训练,网络流">
 <meta property="og:type" content="article">
-<meta property="og:title" content="「2020专题训练」1-网络流">
+<meta property="og:title" content="「2020专题训练笔记」1-网络流">
 <meta property="og:url" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;2020&#x2F;02&#x2F;09&#x2F;2020%E4%B8%93%E9%A2%98%E8%AE%AD%E7%BB%83-%E7%BD%91%E7%BB%9C%E6%B5%81&#x2F;index.html">
 <meta property="og:site_name" content="Granger&#39;s Blog">
 <meta property="og:locale" content="en">
@@ -90,7 +90,7 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;pict&#x2F;2020专题训练-网络流&#x2F;image-20200222205503532.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;pict&#x2F;2020专题训练-网络流&#x2F;image-20200222212916695.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;pict&#x2F;2020专题训练-网络流&#x2F;image-20200222213940537.png">
-<meta property="og:updated_time" content="2020-02-22T15:49:21.096Z">
+<meta property="og:updated_time" content="2020-02-22T15:55:55.634Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;pict&#x2F;2020专题训练-网络流&#x2F;image-20200222121755442.png">
 
@@ -128,7 +128,7 @@
 
 
 
-  <title>「2020专题训练」1-网络流 | Granger's Blog</title>
+  <title>「2020专题训练笔记」1-网络流 | Granger's Blog</title>
   
 
 
@@ -327,7 +327,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">「2020专题训练」1-网络流</h1>
+          <h1 class="post-title" itemprop="name headline">「2020专题训练笔记」1-网络流</h1>
         
 
         <div class="post-meta">
@@ -441,7 +441,7 @@
 <p>证明：首先证明 $f\uparrow f’$ 满足容量限制和流量守恒两条限制：</p>
 <script type="math/tex; mode=display">\begin{aligned}(f\uparrow f')(u,v)&=f(u,v)+f'(u,v)-f'(v,u)\\&\geqslant f(u,v)+f'(u,v)-c_f(v,u)\\&=f(u,v)+f'(u,v)-f(u,v)\\&=f'(u,v)\\&\geqslant0\end{aligned}</script><p>而且</p>
 <script type="math/tex; mode=display">\begin{aligned}(f\uparrow f')(u,v)&=f(u,v)+f'(u,v)-f'(v,u)\\&\leqslant f(u,v)+f'(u,v)\\&\leqslant f(u,v)+c_f(u,v)\\&=f(u,v)+c(u,v)-f(u,v)\\&=c(u,v)\end{aligned}</script><p>因为 $f$ 和 $f’$ 均满足流量守恒性质，所以对于所有 $u\in V-\{s,t\}$，有：</p>
-<script type="math/tex; mode=display">\begin{aligned}\sum\limits_{v\in V}(f\uparrow f')(u,v)&=\sum\limits_{u\in V}(f(u,v)+f'(u,v)-f'(v,u))\\&=\sum\limits_{u\in V}f(u,v)+\sum\limits_{u\in V}f'(u,v)-\sum\limits_{u\in V}f'(v,u)\\&=\sum\limits_{u\in V}f(v,u)+\sum\limits_{u\in V}f'(v,u)-\sum\limits_{u\in V}f'(u,v)\\&=\sum\limits_{u\in V}(f(v,u)+f'(v,u)-f'(u,v))\\&=\sum\limits_{u\in V}(f\uparrow f')(v,u)\end{aligned}</script><h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><h3 id="H-Drainage-Ditches"><a href="#H-Drainage-Ditches" class="headerlink" title="H - Drainage Ditches"></a>H - Drainage Ditches</h3><h4 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h4><blockquote>
+<script type="math/tex; mode=display">\begin{aligned}\sum\limits_{v\in V}(f\uparrow f')(u,v)&=\sum\limits_{u\in V}(f(u,v)+f'(u,v)-f'(v,u))\\&=\sum\limits_{u\in V}f(u,v)+\sum\limits_{u\in V}f'(u,v)-\sum\limits_{u\in V}f'(v,u)\\&=\sum\limits_{u\in V}f(v,u)+\sum\limits_{u\in V}f'(v,u)-\sum\limits_{u\in V}f'(u,v)\\&=\sum\limits_{u\in V}(f(v,u)+f'(v,u)-f'(u,v))\\&=\sum\limits_{u\in V}(f\uparrow f')(v,u)\end{aligned}</script><h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><h3 id="Drainage-Ditches"><a href="#Drainage-Ditches" class="headerlink" title="Drainage Ditches"></a>Drainage Ditches</h3><h4 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h4><blockquote>
 <p>一个 $m$ 个点，$n$ 条边的有向图，边有边权，点无点权，无任何特殊限制，请跑一遍最大流。</p>
 <p>$0\leqslant n\leqslant 200,2\leqslant m\leqslant 200$，边权 $\in[0, 10^7]$。</p>
 </blockquote>
@@ -647,7 +647,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#知识点"><span class="nav-number">1.</span> <span class="nav-text">知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本概念"><span class="nav-number">1.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最大流问题"><span class="nav-number">1.2.</span> <span class="nav-text">最大流问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题"><span class="nav-number">2.</span> <span class="nav-text">例题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#H-Drainage-Ditches"><span class="nav-number">2.1.</span> <span class="nav-text">H - Drainage Ditches</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#题面"><span class="nav-number">2.1.1.</span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题解"><span class="nav-number">2.1.2.</span> <span class="nav-text">题解</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#知识点"><span class="nav-number">1.</span> <span class="nav-text">知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本概念"><span class="nav-number">1.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最大流问题"><span class="nav-number">1.2.</span> <span class="nav-text">最大流问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题"><span class="nav-number">2.</span> <span class="nav-text">例题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Drainage-Ditches"><span class="nav-number">2.1.</span> <span class="nav-text">Drainage Ditches</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#题面"><span class="nav-number">2.1.1.</span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题解"><span class="nav-number">2.1.2.</span> <span class="nav-text">题解</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

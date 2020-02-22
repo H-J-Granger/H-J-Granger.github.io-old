@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="为了防止忘记还是记下来吧~从cppreference搬来的~     优先等级 运算符 结合顺序     1 :: 从左到右   2 var++  var-- type() type{} func() arr[] . -&amp;gt; 从左到右   3 ++var --var +var -var ! ~ (type) *ptr &amp;amp;var sizeof co_await new new[] del">
+<meta name="description" content="为了防止忘记还是记下来吧~从cppreference搬来的~">
 <meta name="keywords" content="C++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++运算符优先级">
 <meta property="og:url" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;2020&#x2F;02&#x2F;05&#x2F;operator_precedence_cpp&#x2F;index.html">
 <meta property="og:site_name" content="Granger&#39;s Blog">
-<meta property="og:description" content="为了防止忘记还是记下来吧~从cppreference搬来的~     优先等级 运算符 结合顺序     1 :: 从左到右   2 var++  var-- type() type{} func() arr[] . -&amp;gt; 从左到右   3 ++var --var +var -var ! ~ (type) *ptr &amp;amp;var sizeof co_await new new[] del">
+<meta property="og:description" content="为了防止忘记还是记下来吧~从cppreference搬来的~">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-15T11:32:22.382Z">
+<meta property="og:updated_time" content="2020-02-22T16:05:27.692Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -396,6 +396,8 @@
 
       
         <p>为了防止忘记还是记下来吧~从cppreference搬来的~</p>
+<a id="more"></a>
+<p>由于 <code>|</code> 符号很难在表格里打出来，所以在打 <code>|</code> 的时候使用了公式来代替单行代码。</p>
 <div class="table-container">
 <table>
 <thead>
@@ -468,9 +470,8 @@
 </tr>
 <tr>
 <td style="text-align:center">13</td>
-<td style="text-align:center">`</td>
-<td style="text-align:center">`</td>
-<td>从左到右</td>
+<td style="text-align:center">$\mid$</td>
+<td style="text-align:center">从左到右</td>
 </tr>
 <tr>
 <td style="text-align:center">14</td>
@@ -479,16 +480,13 @@
 </tr>
 <tr>
 <td style="text-align:center">15</td>
-<td style="text-align:center">`</td>
-<td style="text-align:center"></td>
-<td>`</td>
-<td>从左到右</td>
+<td style="text-align:center">$\mid\mid$</td>
+<td style="text-align:center">从左到右</td>
 </tr>
 <tr>
 <td style="text-align:center">16</td>
-<td style="text-align:center"><code>?:</code> <code>throw</code> <code>co_yield</code> <code>=</code> <code>+=</code> <code>-=</code> <code>*=</code> <code>/=</code> <code>%=</code> <code>&lt;&lt;=</code> <code>&gt;&gt;=</code> <code>&amp;=</code> `</td>
-<td style="text-align:center">=<code>`^=</code></td>
-<td><strong>从右到左</strong></td>
+<td style="text-align:center"><code>?:</code> <code>throw</code> <code>co_yield</code> <code>=</code> <code>+=</code> <code>-=</code> <code>*=</code> <code>/=</code> <code>%=</code> <code>&lt;&lt;=</code> <code>&gt;&gt;=</code> <code>&amp;=</code> $\mid=$ <code>^=</code></td>
+<td style="text-align:center"><strong>从右到左</strong></td>
 </tr>
 <tr>
 <td style="text-align:center">17</td>
@@ -538,8 +536,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/02/09/2020%E4%B8%93%E9%A2%98%E8%AE%AD%E7%BB%83-%E7%BD%91%E7%BB%9C%E6%B5%81/" rel="prev" title="「2020专题训练」1-网络流">
-                「2020专题训练」1-网络流 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/02/09/2020%E4%B8%93%E9%A2%98%E8%AE%AD%E7%BB%83-%E7%BD%91%E7%BB%9C%E6%B5%81/" rel="prev" title="「2020专题训练笔记」1-网络流">
+                「2020专题训练笔记」1-网络流 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
