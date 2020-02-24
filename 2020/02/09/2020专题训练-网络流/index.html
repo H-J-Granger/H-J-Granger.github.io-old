@@ -79,22 +79,16 @@
 
 
 
-<meta name="description" content="网络流是图论中非常重要的一个知识点，常常在省选、NOI 中出现。">
+<meta name="description" content="网络流是图论里的一个博大精深的分支，通常重点考察建模，常常出现在省选、NOI 等大型赛事中。或许由于网络流建模对于联赛选手难度过大，NOIP、CSP-J&#x2F;S 从来没有考察过网络流。 知识点参见 网络流学习笔记。">
 <meta name="keywords" content="专题训练,网络流">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「2020专题训练笔记」1-网络流">
 <meta property="og:url" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;2020&#x2F;02&#x2F;09&#x2F;2020%E4%B8%93%E9%A2%98%E8%AE%AD%E7%BB%83-%E7%BD%91%E7%BB%9C%E6%B5%81&#x2F;index.html">
 <meta property="og:site_name" content="Granger&#39;s Blog">
-<meta property="og:description" content="网络流是图论中非常重要的一个知识点，常常在省选、NOI 中出现。">
+<meta property="og:description" content="网络流是图论里的一个博大精深的分支，通常重点考察建模，常常出现在省选、NOI 等大型赛事中。或许由于网络流建模对于联赛选手难度过大，NOIP、CSP-J&#x2F;S 从来没有考察过网络流。 知识点参见 网络流学习笔记。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;pict&#x2F;2020专题训练-网络流&#x2F;image-20200222121755442.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;pict&#x2F;2020专题训练-网络流&#x2F;image-20200222122143849.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;pict&#x2F;2020专题训练-网络流&#x2F;image-20200222205503532.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;pict&#x2F;2020专题训练-网络流&#x2F;image-20200222212916695.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;pict&#x2F;2020专题训练-网络流&#x2F;image-20200222213940537.png">
-<meta property="og:updated_time" content="2020-02-24T12:38:45.680Z">
+<meta property="og:updated_time" content="2020-02-24T14:13:17.195Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;pict&#x2F;2020专题训练-网络流&#x2F;image-20200222121755442.png">
 
 
 
@@ -401,53 +395,9 @@
       
 
       
-        <!--less-->
-<p>网络流是图论中非常重要的一个知识点，常常在省选、NOI 中出现。</p>
+        <p>网络流是图论里的一个博大精深的分支，通常重点考察建模，常常出现在省选、NOI 等大型赛事中。或许由于网络流建模对于联赛选手难度过大，NOIP、CSP-J/S 从来没有考察过网络流。</p>
+<p>知识点参见 <a href="/2020/02/24/网络流学习笔记">网络流学习笔记</a>。</p>
 <a id="more"></a>
-<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>概念这种东西，我怕讲不清楚，还是参考算导之类的专业书籍好了。</p>
-<p>考虑一个自来水系统，这个系统包含一个自来水厂，一个用水处（比如你家），还有很多个中转站，现在要将水厂的水运输到用水处。有很多条单向的水管连接自来水厂、用水处和中转站。每条水管在一个单位时间最多只能流通一定量的水，而每个中转站不能储存水或增加水（也就是说流进来多少水就得流出去多少水）。我们考虑如何将其抽象化。</p>
-<p>一个<strong>流网络</strong> $G=(V,E)$ 是一个无自环、无反向边的有向图，图中每条边 $(u,v)\in E$ 有一个非负的<strong>容量值</strong> $c(u,v)\geqslant0$（为方便起见，如果 $(u,v)\notin E$，则定义 $c(u,v)=0$）。我们钦定两个结点：<strong>源点</strong> $s$ 和<strong>汇点</strong> $t$（$s\ne q$）。</p>
-<p>设 $G=(V,E)$ 为一个流网络，$c$ 为 $G$ 的容量函数，$G$ 的源点为 $s$，汇点为 $t$，则 $G$ 的<strong>流</strong>是一个实值函数 $f:V\times V\rightarrow\mathbb R$，满足以下两条限制：</p>
-<ol>
-<li><strong>容量限制</strong>：对于所有的结点 $u,v\in V$，$0\leqslant f(u,v)\leqslant c(u,v)$。（水管的容量限制）</li>
-<li><strong>流量守恒</strong>：对于所有的结点 $u\in V-\{s, t\}$，有 $\sum\limits_{v\in V}f(v,u)=\sum\limits_{v\in V}f(u,v)$。（中转站不能存储水或增加水）</li>
-</ol>
-<p>我们称非负值 $f(u,v)$ 为从结点 $u$ 到结点 $v$ 的流。定义一个流 $f$ 的值 $|f|$ 如下：</p>
-<script type="math/tex; mode=display">|f|=\sum\limits_{u\in V}f(u,s)-\sum\limits_{u\in V}f(s,u)</script><p>也就是说，水厂流出来的水减去流入水厂的水。</p>
-<h3 id="最大流问题"><a href="#最大流问题" class="headerlink" title="最大流问题"></a>最大流问题</h3><p>最大流问题是求一个流网络内值最大的一个流。</p>
-<p>我们先引入几个概念，残余容量、增广路和残余网络：</p>
-<p>直观地，给定流网络 $G$ 和 $G$ 上的一个流 $f$，残存网络 $G_f$ 就是 $G$ 上还能够增加流量的边所构成的图。若 $G=(V,E)$，并且 $G$ 的容量函数为 $c$，那么若 $(u,v)\in E$，则定义<strong>残存容量</strong> $c_f(u,v)=c(u,v)-f(u,v)$。如果 $c_f(u,v)=0$，则说明这条边无法再增加流量，这条边将不属于图 $G_f$。</p>
-<p>定义<strong>增广路</strong>为一条在残存网络上从源点 $s$ 到汇点 $t$ 的路径，因为残存网络上所有的边的残存容量都为正数，所以我们一定可以经过这条增广路流一些流量，流量的值为增广路经过的边的残存容量的最小值。</p>
-<p>最大流的思想就是不断地寻找增广路，每次寻找到一条增广路就流流量，直到无法寻找为止。</p>
-<p>我们考虑下图所示的流网络，其中结点 $1$ 为源点，结点 $4$ 为汇点，边的容量标记在了边上：</p>
-<p><img src="/pict/2020专题训练-网络流/image-20200222121755442.png" alt="image-20200222121755442"></p>
-<p>如果我们一开始选择了 $1\xrightarrow12\xrightarrow13\xrightarrow14$ 这条增广路，则我们会发现流完之后每条边的残余容量长这个样子：</p>
-<p><img src="/pict/2020专题训练-网络流/image-20200222122143849.png" alt="image-20200222122143849"></p>
-<p>然后我们就一条增广路都找不到了。</p>
-<p>这个例子告诉我们，贪心策略在最大流问题行不通（实际上好像什么问题都行不通），于是我们要引入反悔机制。</p>
-<p>我们发现，问题出在我们找增广路只会导致每条边的流都增加，而不会减少。我们想让每条边的流减少，只需要在残量网络新建<strong>反向边</strong>即可。怎么建呢？我们对于边 $(u,v)$，建立一条反向边 $(v,u)$ 并令其残余容量 $c_f(v,u)$ 为 $f(u,v)$，令其“容量” $c(v,u)=c(u,v)$。如果要将 $f(u,v)$ 减少 $\Delta$，则只需要将 $f(v,u)$ 增加 $\Delta$ 即可。感性理解一下：从 $u$ 到 $v$ 流了 $f(u,v)$ 的水，现在我们发现这个流量太多了，会影响整体的值，于是我们就希望让流量减少 $\Delta$。可是现在水已经流过来了，我们只好铺一条从 $v$ 到 $u$ 的水管，因为残余容量就是指还能流多少水，因为已经流过来 $f(u,v)$ 的水了，最多就全部流回去，不能更多了，所以 $c_f(v,u)=f(u,v)$。</p>
-<p>我们现在来定义一下<strong>残余容量</strong>：</p>
-<p>假设有一个流网络 $G=(V,E)$ 和 $G$ 中的一个流 $f$，那么我们定义<strong>残余容量</strong>函数 $c_f:V\times V\rightarrow \mathbb R$ 如下：</p>
-<script type="math/tex; mode=display">c_f(u,v)=\begin{cases}c(u,v)-f(u,v)&\text{if }(u,v)\in E\\f(v,u)&\text{if }(v,u)\in E\\0&\text{otherwise}\end{cases}</script><p>因为 $(u,v)\in E\Rightarrow (v,u)\in E$（参见流网络定义），所以对于每个 $u,v\in V$，上式有且仅有一种情况成立。</p>
-<p>形式化地，对于流网络 $G=(V,E)$ 和 $G$ 里的一个流 $f$，则由 $f$ 构成的<strong>残存网络</strong> $G_f=(V,E_f)$，其中</p>
-<script type="math/tex; mode=display">E_f=\{(u,v)\in V\times V:c_f(u,v)>0\}</script><p>举个例子，这里是一个流网络 $G=(V,E)$，源点为 $1$，汇点为 $5$，每条边的容量标记在了图上：</p>
-<p><img src="/pict/2020专题训练-网络流/image-20200222205503532.png" alt="image-20200222205503532"></p>
-<p>我们把一个流 $f$ 也标记上去，每条边 $(u,v)$ 上斜杠前面的数值为 $f(u,v)$，后面的数值为 $c(u,v)$，如果 $f(u,v)=0$ 则省略 $f(u,v)$ 和斜杠：</p>
-<p><img src="/pict/2020专题训练-网络流/image-20200222212916695.png" alt="image-20200222212916695"></p>
-<p>我们构建这个流网络由流 $f$ 所诱导的 $G$ 的残存网络 $G_f$：</p>
-<p><img src="/pict/2020专题训练-网络流/image-20200222213940537.png" alt="image-20200222213940537"></p>
-<p>我们会发现，残存网络 $G_f$ 非常像一个容量为残存容量 $c_f$ 的流网络，可惜它不满足一个条件：如果 $(u,v)\in E$，则 $(v,u)\in E$。除了这个区别以外，残存网络和流网络有着相同的性质。我们可以在残存网络中用残存容量定义一个流。</p>
-<p>残存网络的流告诉我们：原来的流网络中还能再多流多少的流量。我们假设 $f$ 是 $G$ 的一个流，$f’$ 是残存网络 $G_f$ 的一个流，则定义 $f\uparrow f’$ 为流 $f’$ 对流 $f$ 的<strong>递增</strong>，它和流 $f,f’$ 一样，也是一个从 $V\times V$ 到 $\mathbb R$ 的函数，定义如下：</p>
-<script type="math/tex; mode=display">(f\uparrow f')(u,v)=\begin{cases}f(u,v)+f'(u,v)-f'(v,u)&\text{if }(u,v)\in E\\0&\text{otherwise}\end{cases}</script><p>因为 $f’(v,u)$ 在直观上可以被理解为是将 $f’(u,v)$ 的流量“退回”的值，所以这里实际上从 $u$ 到 $v$ 只流了 $f’(u,v)-f’(v,u)$ 的流量。</p>
-<p>有一个很直观也很重要的结论：</p>
-<p><strong>结论 1</strong>   设 $G=(V,E)$ 为一个流网络，源点为 $s$，汇点为 $t$。设 $f$ 为 $G$ 的一个流，设 $G_f$ 为由流 $f$ 诱导的残存网络 $G_f$，则 $f\uparrow f’$ 为 $G$ 中的一个流，值 $|f\uparrow f’|=|f|+|f’|$。</p>
-<p>证明：首先证明 $f\uparrow f’$ 满足容量限制和流量守恒两条限制：</p>
-<script type="math/tex; mode=display">\begin{aligned}(f\uparrow f')(u,v)&=f(u,v)+f'(u,v)-f'(v,u)\\&\geqslant f(u,v)+f'(u,v)-c_f(v,u)\\&=f(u,v)+f'(u,v)-f(u,v)\\&=f'(u,v)\\&\geqslant0\end{aligned}</script><p>而且</p>
-<script type="math/tex; mode=display">\begin{aligned}(f\uparrow f')(u,v)&=f(u,v)+f'(u,v)-f'(v,u)\\&\leqslant f(u,v)+f'(u,v)\\&\leqslant f(u,v)+c_f(u,v)\\&=f(u,v)+c(u,v)-f(u,v)\\&=c(u,v)\end{aligned}</script><p>因为 $f$ 和 $f’$ 均满足流量守恒性质，所以对于所有 $u\in V-\{s,t\}$，有：</p>
-<script type="math/tex; mode=display">\begin{aligned}\sum\limits_{v\in V}(f\uparrow f')(u,v)&=\sum\limits_{u\in V}(f(u,v)+f'(u,v)-f'(v,u))\\&=\sum\limits_{u\in V}f(u,v)+\sum\limits_{u\in V}f'(u,v)-\sum\limits_{u\in V}f'(v,u)\\&=\sum\limits_{u\in V}f(v,u)+\sum\limits_{u\in V}f'(v,u)-\sum\limits_{u\in V}f'(u,v)\\&=\sum\limits_{u\in V}(f(v,u)+f'(v,u)-f'(u,v))\\&=\sum\limits_{u\in V}(f\uparrow f')(v,u)\end{aligned}</script><p>我们回顾前面的内容，会发现我们不允许图 $G$ 包含反向边（不过 $G_f$ 无所谓），所以对于每个结点 $u\in V$，可能有 $(s,u)\in E$ 或 $(u,s)\in E$，不过不能两者同时成立。定义 $V_1=\{v\in V:(v,s)\in E\}$ 为有从 $s$ 连出的边的结点的集合，$V_2=\{v\in V:(s,v)\in E\}$ 为有从连到 $s$ 的边的结点的集合。因为不允许有反向边，所以 $V_1\cap V_2=\varnothing$。所以：</p>
-<script type="math/tex; mode=display">\begin{aligned}|f\uparrow f'|&=\sum\limits_{v\in V}(f\uparrow f')(s,v)-\sum\limits_{v\in V}(f\uparrow f')(v,s)\\&=\sum\limits_{v\in V_1}(f\uparrow f')(s,v)-\sum\limits_{v\in V_2}(f\uparrow f')(v,s)\\&=\sum\limits_{v\in V_1}(f(s,v)+f'(s,v)-f'(v,s))-\sum\limits_{v\in V_2}(f(v,s)+f'(v,s)-f'(s,v))\\&=\sum\limits_{v\in V_1}f(s,v)+\sum\limits_{v\in V_1}f'(s,v)-\sum\limits_{v\in V_1}f'(v,s)-\sum\limits_{v\in V_2}f(v,s)-\sum\limits_{v\in V_2}f'(v,s)+\sum\limits_{v\in V_2}f'(s,v)&\text{根据 }f\uparrow f'\text{ 的定义}\\&=\sum\limits_{v\in V_1}f(s,v)-\sum\limits_{v\in V_2}f(v,s)+\left(\sum\limits_{v\in V_1}f'(s,v)+\sum\limits_{v\in V_2}f'(s,v)\right)-\left(\sum\limits_{v\in V_1}f'(v,s)+\sum\limits_{v\in V_2}f'(v,s)\right)\\&=\sum\limits_{v\in V_1}f(s,v)-\sum\limits_{v\in V_2}f(v,s)+\sum\limits_{v\in V_1\cup V_2}f'(s,v)-\sum\limits_{v\in V_1\cup V_2}f'(v,s)&V_1\cup V_2=\varnothing\\&=\sum\limits_{v\in V}f(s,v)-\sum\limits_{v\in V}f(v,s)+\sum\limits_{v\in V}f'(s,v)-\sum\limits_{v\in V}f'(v,s)\\&=|f|+|f'|\end{aligned}</script><p>上面第 6 行能推导到第 7 行，是因为 $(u,v)\notin E\Rightarrow f(u,v)=0$，$(u,v)\notin E\wedge (v,u)\notin E\Rightarrow f’(u,v)=0$。</p>
-<p>证毕。</p>
-<p>结论 1 告诉我们，我们可以通过在残存网络上找流的方式来增加原图的流的值。</p>
 <h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><h3 id="Drainage-Ditches"><a href="#Drainage-Ditches" class="headerlink" title="Drainage Ditches"></a>Drainage Ditches</h3><h4 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h4><blockquote>
 <p>一个 $m$ 个点，$n$ 条边的有向图，边有边权，点无点权，无任何特殊限制，请跑一遍最大流。</p>
 <p>$0\leqslant n\leqslant 200,2\leqslant m\leqslant 200$，边权 $\in[0, 10^7]$。</p>
@@ -582,7 +532,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -593,7 +543,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -604,7 +554,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -653,7 +603,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#知识点"><span class="nav-number">1.</span> <span class="nav-text">知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本概念"><span class="nav-number">1.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最大流问题"><span class="nav-number">1.2.</span> <span class="nav-text">最大流问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题"><span class="nav-number">2.</span> <span class="nav-text">例题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Drainage-Ditches"><span class="nav-number">2.1.</span> <span class="nav-text">Drainage Ditches</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#题面"><span class="nav-number">2.1.1.</span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题解"><span class="nav-number">2.1.2.</span> <span class="nav-text">题解</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#例题"><span class="nav-number">1.</span> <span class="nav-text">例题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Drainage-Ditches"><span class="nav-number">1.1.</span> <span class="nav-text">Drainage Ditches</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#题面"><span class="nav-number">1.1.1.</span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题解"><span class="nav-number">1.1.2.</span> <span class="nav-text">题解</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

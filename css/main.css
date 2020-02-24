@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #abff67;
+  background: #94a15b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3024,6 +3024,9 @@ pre {
   border: 1px solid #d6d6d6;
 }
 *
+p {
+  text-align: left;
+}
 /* normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif; /* 1 */

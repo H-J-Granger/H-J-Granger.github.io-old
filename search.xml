@@ -1,28 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>「2020专题训练笔记」0-目录</title>
-    <url>/2020/02/19/2020%E4%B8%93%E9%A2%98%E8%AE%AD%E7%BB%83-%E7%9B%AE%E5%BD%95/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>初一的时候，我“学习”了很多 OI 知识，不乏有数据结构、图论、数学的内容。不过，在学习的时候我比较急于求成，基本是都只知道个大概，数据结构的思想都大致明白，图论的内容一知半解。一到做题，就只会做模板题，甚至模板题都不能自己实现，得靠面向代码编程的方法来混个 AC。</p>
-<p>这种相当错误的学习方式，在 CSP-J/S2019 中就立刻显出了弱点：代码能力不行，知识点不会灵活运用，就算想到了用什么知识点也很难写出来。当然，成绩是非常凄惨的，GD 省选资格都没有。</p>
-<p>为了不重蹈旧辙，我决定在写这个学期的专题训练的时候，学习时归纳知识点，顺便简单地写写题解，做题想不出来才看题解，希望这种方式能够帮到自己。</p>
-<a id="more"></a>
-<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><h3 id="最大流"><a href="#最大流" class="headerlink" title="最大流"></a>最大流</h3><ul>
-<li><a href="/2020/02/09/2020专题训练-网络流/">「2020专题训练笔记」1-网络流</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>2020专题训练</category>
-      </categories>
-      <tags>
-        <tag>专题训练</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>「2020专题训练笔记」1-网络流</title>
-    <url>/2020/02/09/2020%E4%B8%93%E9%A2%98%E8%AE%AD%E7%BB%83-%E7%BD%91%E7%BB%9C%E6%B5%81/</url>
-    <content><![CDATA[<!--less-->
-<p>网络流是图论中非常重要的一个知识点，常常在省选、NOI 中出现。</p>
+    <title>网络流学习笔记</title>
+    <url>/2020/02/24/%E7%BD%91%E7%BB%9C%E6%B5%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>网络流是图论中非常重要的一个知识点，常常在省选、NOI 中出现。</p>
 <a id="more"></a>
 <h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>概念这种东西，我怕讲不清楚，还是参考算导之类的专业书籍好了。</p>
 <p>考虑一个自来水系统，这个系统包含一个自来水厂，一个用水处（比如你家），还有很多个中转站，现在要将水厂的水运输到用水处。有很多条单向的水管连接自来水厂、用水处和中转站。每条水管在一个单位时间最多只能流通一定量的水，而每个中转站不能储存水或增加水（也就是说流进来多少水就得流出去多少水）。我们考虑如何将其抽象化。</p>
@@ -68,6 +49,40 @@
 <script type="math/tex; mode=display">\begin{aligned}|f\uparrow f'|&=\sum\limits_{v\in V}(f\uparrow f')(s,v)-\sum\limits_{v\in V}(f\uparrow f')(v,s)\\&=\sum\limits_{v\in V_1}(f\uparrow f')(s,v)-\sum\limits_{v\in V_2}(f\uparrow f')(v,s)\\&=\sum\limits_{v\in V_1}(f(s,v)+f'(s,v)-f'(v,s))-\sum\limits_{v\in V_2}(f(v,s)+f'(v,s)-f'(s,v))\\&=\sum\limits_{v\in V_1}f(s,v)+\sum\limits_{v\in V_1}f'(s,v)-\sum\limits_{v\in V_1}f'(v,s)-\sum\limits_{v\in V_2}f(v,s)-\sum\limits_{v\in V_2}f'(v,s)+\sum\limits_{v\in V_2}f'(s,v)&\text{根据 }f\uparrow f'\text{ 的定义}\\&=\sum\limits_{v\in V_1}f(s,v)-\sum\limits_{v\in V_2}f(v,s)+\left(\sum\limits_{v\in V_1}f'(s,v)+\sum\limits_{v\in V_2}f'(s,v)\right)-\left(\sum\limits_{v\in V_1}f'(v,s)+\sum\limits_{v\in V_2}f'(v,s)\right)\\&=\sum\limits_{v\in V_1}f(s,v)-\sum\limits_{v\in V_2}f(v,s)+\sum\limits_{v\in V_1\cup V_2}f'(s,v)-\sum\limits_{v\in V_1\cup V_2}f'(v,s)&V_1\cup V_2=\varnothing\\&=\sum\limits_{v\in V}f(s,v)-\sum\limits_{v\in V}f(v,s)+\sum\limits_{v\in V}f'(s,v)-\sum\limits_{v\in V}f'(v,s)\\&=|f|+|f'|\end{aligned}</script><p>上面第 6 行能推导到第 7 行，是因为 $(u,v)\notin E\Rightarrow f(u,v)=0$，$(u,v)\notin E\wedge (v,u)\notin E\Rightarrow f’(u,v)=0$。</p>
 <p>证毕。</p>
 <p>结论 1 告诉我们，我们可以通过在残存网络上找流的方式来增加原图的流的值。</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>网络流</tag>
+        <tag>学习笔记</tag>
+        <tag>图论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>「2020专题训练笔记」0-目录</title>
+    <url>/2020/02/19/2020%E4%B8%93%E9%A2%98%E8%AE%AD%E7%BB%83-%E7%9B%AE%E5%BD%95/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>初一的时候，我“学习”了很多 OI 知识，不乏有数据结构、图论、数学的内容。不过，在学习的时候我比较急于求成，基本是都只知道个大概，数据结构的思想都大致明白，图论的内容一知半解。一到做题，就只会做模板题，甚至模板题都不能自己实现，得靠面向代码编程的方法来混个 AC。</p>
+<p>这种相当错误的学习方式，在 CSP-J/S2019 中就立刻显出了弱点：代码能力不行，知识点不会灵活运用，就算想到了用什么知识点也很难写出来。当然，成绩是非常凄惨的，GD 省选资格都没有。</p>
+<p>为了不重蹈旧辙，我决定在写这个学期的专题训练的时候，学习时归纳知识点，顺便简单地写写题解，做题想不出来才看题解，希望这种方式能够帮到自己。</p>
+<a id="more"></a>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><h3 id="最大流"><a href="#最大流" class="headerlink" title="最大流"></a>最大流</h3><ul>
+<li><a href="/2020/02/09/2020专题训练-网络流/">「2020专题训练笔记」1-网络流</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>2020专题训练</category>
+      </categories>
+      <tags>
+        <tag>专题训练</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>「2020专题训练笔记」1-网络流</title>
+    <url>/2020/02/09/2020%E4%B8%93%E9%A2%98%E8%AE%AD%E7%BB%83-%E7%BD%91%E7%BB%9C%E6%B5%81/</url>
+    <content><![CDATA[<p>网络流是图论里的一个博大精深的分支，通常重点考察建模，常常出现在省选、NOI 等大型赛事中。或许由于网络流建模对于联赛选手难度过大，NOIP、CSP-J/S 从来没有考察过网络流。</p>
+<p>知识点参见 <a href="/2020/02/24/网络流学习笔记">网络流学习笔记</a>。</p>
+<a id="more"></a>
 <h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><h3 id="Drainage-Ditches"><a href="#Drainage-Ditches" class="headerlink" title="Drainage Ditches"></a>Drainage Ditches</h3><h4 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h4><blockquote>
 <p>一个 $m$ 个点，$n$ 条边的有向图，边有边权，点无点权，无任何特殊限制，请跑一遍最大流。</p>
 <p>$0\leqslant n\leqslant 200,2\leqslant m\leqslant 200$，边权 $\in[0, 10^7]$。</p>
