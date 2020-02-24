@@ -79,18 +79,20 @@
 
 
 
+<meta name="description" content="网络流是图论中非常重要的一个知识点，常常在省选、NOI 中出现。">
 <meta name="keywords" content="专题训练,网络流">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「2020专题训练笔记」1-网络流">
 <meta property="og:url" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;2020&#x2F;02&#x2F;09&#x2F;2020%E4%B8%93%E9%A2%98%E8%AE%AD%E7%BB%83-%E7%BD%91%E7%BB%9C%E6%B5%81&#x2F;index.html">
 <meta property="og:site_name" content="Granger&#39;s Blog">
+<meta property="og:description" content="网络流是图论中非常重要的一个知识点，常常在省选、NOI 中出现。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;pict&#x2F;2020专题训练-网络流&#x2F;image-20200222121755442.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;pict&#x2F;2020专题训练-网络流&#x2F;image-20200222122143849.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;pict&#x2F;2020专题训练-网络流&#x2F;image-20200222205503532.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;pict&#x2F;2020专题训练-网络流&#x2F;image-20200222212916695.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;pict&#x2F;2020专题训练-网络流&#x2F;image-20200222213940537.png">
-<meta property="og:updated_time" content="2020-02-22T15:55:55.634Z">
+<meta property="og:updated_time" content="2020-02-24T12:38:45.680Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;pict&#x2F;2020专题训练-网络流&#x2F;image-20200222121755442.png">
 
@@ -400,6 +402,7 @@
 
       
         <!--less-->
+<p>网络流是图论中非常重要的一个知识点，常常在省选、NOI 中出现。</p>
 <a id="more"></a>
 <h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>概念这种东西，我怕讲不清楚，还是参考算导之类的专业书籍好了。</p>
 <p>考虑一个自来水系统，这个系统包含一个自来水厂，一个用水处（比如你家），还有很多个中转站，现在要将水厂的水运输到用水处。有很多条单向的水管连接自来水厂、用水处和中转站。每条水管在一个单位时间最多只能流通一定量的水，而每个中转站不能储存水或增加水（也就是说流进来多少水就得流出去多少水）。我们考虑如何将其抽象化。</p>
@@ -441,7 +444,11 @@
 <p>证明：首先证明 $f\uparrow f’$ 满足容量限制和流量守恒两条限制：</p>
 <script type="math/tex; mode=display">\begin{aligned}(f\uparrow f')(u,v)&=f(u,v)+f'(u,v)-f'(v,u)\\&\geqslant f(u,v)+f'(u,v)-c_f(v,u)\\&=f(u,v)+f'(u,v)-f(u,v)\\&=f'(u,v)\\&\geqslant0\end{aligned}</script><p>而且</p>
 <script type="math/tex; mode=display">\begin{aligned}(f\uparrow f')(u,v)&=f(u,v)+f'(u,v)-f'(v,u)\\&\leqslant f(u,v)+f'(u,v)\\&\leqslant f(u,v)+c_f(u,v)\\&=f(u,v)+c(u,v)-f(u,v)\\&=c(u,v)\end{aligned}</script><p>因为 $f$ 和 $f’$ 均满足流量守恒性质，所以对于所有 $u\in V-\{s,t\}$，有：</p>
-<script type="math/tex; mode=display">\begin{aligned}\sum\limits_{v\in V}(f\uparrow f')(u,v)&=\sum\limits_{u\in V}(f(u,v)+f'(u,v)-f'(v,u))\\&=\sum\limits_{u\in V}f(u,v)+\sum\limits_{u\in V}f'(u,v)-\sum\limits_{u\in V}f'(v,u)\\&=\sum\limits_{u\in V}f(v,u)+\sum\limits_{u\in V}f'(v,u)-\sum\limits_{u\in V}f'(u,v)\\&=\sum\limits_{u\in V}(f(v,u)+f'(v,u)-f'(u,v))\\&=\sum\limits_{u\in V}(f\uparrow f')(v,u)\end{aligned}</script><h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><h3 id="Drainage-Ditches"><a href="#Drainage-Ditches" class="headerlink" title="Drainage Ditches"></a>Drainage Ditches</h3><h4 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h4><blockquote>
+<script type="math/tex; mode=display">\begin{aligned}\sum\limits_{v\in V}(f\uparrow f')(u,v)&=\sum\limits_{u\in V}(f(u,v)+f'(u,v)-f'(v,u))\\&=\sum\limits_{u\in V}f(u,v)+\sum\limits_{u\in V}f'(u,v)-\sum\limits_{u\in V}f'(v,u)\\&=\sum\limits_{u\in V}f(v,u)+\sum\limits_{u\in V}f'(v,u)-\sum\limits_{u\in V}f'(u,v)\\&=\sum\limits_{u\in V}(f(v,u)+f'(v,u)-f'(u,v))\\&=\sum\limits_{u\in V}(f\uparrow f')(v,u)\end{aligned}</script><p>我们回顾前面的内容，会发现我们不允许图 $G$ 包含反向边（不过 $G_f$ 无所谓），所以对于每个结点 $u\in V$，可能有 $(s,u)\in E$ 或 $(u,s)\in E$，不过不能两者同时成立。定义 $V_1=\{v\in V:(v,s)\in E\}$ 为有从 $s$ 连出的边的结点的集合，$V_2=\{v\in V:(s,v)\in E\}$ 为有从连到 $s$ 的边的结点的集合。因为不允许有反向边，所以 $V_1\cap V_2=\varnothing$。所以：</p>
+<script type="math/tex; mode=display">\begin{aligned}|f\uparrow f'|&=\sum\limits_{v\in V}(f\uparrow f')(s,v)-\sum\limits_{v\in V}(f\uparrow f')(v,s)\\&=\sum\limits_{v\in V_1}(f\uparrow f')(s,v)-\sum\limits_{v\in V_2}(f\uparrow f')(v,s)\\&=\sum\limits_{v\in V_1}(f(s,v)+f'(s,v)-f'(v,s))-\sum\limits_{v\in V_2}(f(v,s)+f'(v,s)-f'(s,v))\\&=\sum\limits_{v\in V_1}f(s,v)+\sum\limits_{v\in V_1}f'(s,v)-\sum\limits_{v\in V_1}f'(v,s)-\sum\limits_{v\in V_2}f(v,s)-\sum\limits_{v\in V_2}f'(v,s)+\sum\limits_{v\in V_2}f'(s,v)&\text{根据 }f\uparrow f'\text{ 的定义}\\&=\sum\limits_{v\in V_1}f(s,v)-\sum\limits_{v\in V_2}f(v,s)+\left(\sum\limits_{v\in V_1}f'(s,v)+\sum\limits_{v\in V_2}f'(s,v)\right)-\left(\sum\limits_{v\in V_1}f'(v,s)+\sum\limits_{v\in V_2}f'(v,s)\right)\\&=\sum\limits_{v\in V_1}f(s,v)-\sum\limits_{v\in V_2}f(v,s)+\sum\limits_{v\in V_1\cup V_2}f'(s,v)-\sum\limits_{v\in V_1\cup V_2}f'(v,s)&V_1\cup V_2=\varnothing\\&=\sum\limits_{v\in V}f(s,v)-\sum\limits_{v\in V}f(v,s)+\sum\limits_{v\in V}f'(s,v)-\sum\limits_{v\in V}f'(v,s)\\&=|f|+|f'|\end{aligned}</script><p>上面第 6 行能推导到第 7 行，是因为 $(u,v)\notin E\Rightarrow f(u,v)=0$，$(u,v)\notin E\wedge (v,u)\notin E\Rightarrow f’(u,v)=0$。</p>
+<p>证毕。</p>
+<p>结论 1 告诉我们，我们可以通过在残存网络上找流的方式来增加原图的流的值。</p>
+<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><h3 id="Drainage-Ditches"><a href="#Drainage-Ditches" class="headerlink" title="Drainage Ditches"></a>Drainage Ditches</h3><h4 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h4><blockquote>
 <p>一个 $m$ 个点，$n$ 条边的有向图，边有边权，点无点权，无任何特殊限制，请跑一遍最大流。</p>
 <p>$0\leqslant n\leqslant 200,2\leqslant m\leqslant 200$，边权 $\in[0, 10^7]$。</p>
 </blockquote>
