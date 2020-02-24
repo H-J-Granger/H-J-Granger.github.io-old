@@ -818,15 +818,15 @@
 
   <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
   <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-  <div id="gitalk-container"></div>
+ <script src="/js/src/md5.min.js"></script>
   <script type="text/javascript">
     var gitalk = new Gitalk({
-      clientID: 'a87e5e8b4b5080a423a3',
-      clientSecret: 'e5583d1bd899567f786d975a7174cdae04a6e814',
+      clientID: '',
+      clientSecret: '',
       repo: 'blog-comment',
-      owner: 'H-J-Granger',
-      admin: ['H-J-Granger'],
-      id: location.pathname,
+      owner: '',
+      admin: ['['H-J-Granger']'],
+      id: md5(location.pathname),
       distractionFreeMode: 'false'
     })
     gitalk.render('gitalk-container')
