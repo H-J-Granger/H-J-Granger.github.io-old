@@ -303,6 +303,171 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://H-J-Granger.github.io/2020/03/04/solution-lg5278/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hermione Granger">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://i.loli.net/2019/11/26/QgsOwr4oqUe53Bb.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Granger's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/03/04/solution-lg5278/" itemprop="url">「题解」洛谷5278算术天才⑨与等差数列</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-04T00:00:00+08:00">
+                2020-03-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <a id="more"></a>
+<p>非正解过题~</p>
+<p>为方便起见，设 $b=\min\limits_{i\in[l,r]}\{a_i\}$，$b=\max\limits_{i\in[l,r]}\{a_i\}$。</p>
+<h2 id="min-amp-max"><a href="#min-amp-max" class="headerlink" title="$\min\&amp;\max$"></a>$\min\&amp;\max$</h2><p>具体而言，是用线段树维护区间 $\min$ 和区间 $\max$，只要 $b-a=k(r-l)$ 即认为正确。</p>
+<p>至少能过样例……</p>
+<p>真是佩服这数据，居然能过 #4, #6, #7, #8, #10，拿到 50 分的高分……</p>
+<p><a href="https://www.luogu.com.cn/record/31355286" target="_blank" rel="noopener">评测记录</a></p>
+<p>Hack：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">3 1</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">1 1 3</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">2 1 3 1</span></pre></td></tr></table></figure>
+<h2 id="min-amp-max-amp-sum-a-i"><a href="#min-amp-max-amp-sum-a-i" class="headerlink" title="$\min\&amp;\max\&amp;\sum a_i$"></a>$\min\&amp;\max\&amp;\sum a_i$</h2><p>多维护区间和，除了上述条件以外，还需 $\sum\limits_{i=l}^ra_i=\dfrac{(r-l+1)(a+b)}{2}$ 才认为正确。</p>
+<p>在代码里，我使用 <code>int</code> 自然溢出来完成。（取模效率低）</p>
+<p>你可能会问，怎么除以 $2$？很简单，直接看 <code>sum * 2</code> 是不是等于 <code>(r - l + 1) * (a + b)</code>  就行了。</p>
+<p>居然就过了……</p>
+<p><a href="https://www.luogu.com.cn/record/31355474" target="_blank" rel="noopener">评测记录</a></p>
+<p>Hack：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">4 1</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">1 1 4 4</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">2 1 4 1</span></pre></td></tr></table></figure>
+<h2 id="min-amp-max-amp-sum-a-i-amp-sum-a-i-2"><a href="#min-amp-max-amp-sum-a-i-amp-sum-a-i-2" class="headerlink" title="$\min\&amp;\max\&amp;\sum a_i\&amp;\sum a_i^2$"></a>$\min\&amp;\max\&amp;\sum a_i\&amp;\sum a_i^2$</h2><p>多维护区间平方和，除了上述条件以外，还需 $\sum\limits_{i=l}^ra_i^2=\sum\limits_{i=0}^{r-l}(a+ki)^2$ 才认为正确。</p>
+<script type="math/tex; mode=display">\begin{aligned}\sum\limits_{i=0}^{r-l}(a+ki)^2&=\sum\limits_{i=0}^{r-l}(a^2+2aki+k^2i^2)\\&=\sum\limits_{i=0}^{r-l}a^2+\sum\limits_{i=0}^{r-l}2aki+\sum\limits_{i=0}^{r-l}k^2i^2\\&=a^2(r-l+1)+2ak\sum\limits_{i=0}^{r-l}i+k^2\sum\limits_{i=0}^{r-l}i^2\\&=a^2(r-l+1)+ak(r-l)(r-l+1)+\frac 1 6k^2(r-l)(r-l+1)(2r-2l+1)\\&=\frac 1 6(6a^2(r-l+1)+6ak(r-l)(r-l+1)+k^2(r-l)(r-l+1)(2r-2l+1))\end{aligned}</script><p>我们依然可以用 <code>int</code> 自然溢出那个 trick。</p>
+<p>不会 hack……</p>
+<p>不过，如果只维护 $\min\&amp;\max\&amp;\sum a_i^2$ 的话，还是会 hack 的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">5 1</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">5 10 7 24 25</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">2 1 5 5</span></pre></td></tr></table></figure>
+<p>实际上，应该很容易能找到 hack 数据，只是我懒。</p>
+<h2 id="min-amp-max-amp-sum-a-i-amp-sum-a-i-2-amp-sum-a-i-3"><a href="#min-amp-max-amp-sum-a-i-amp-sum-a-i-2-amp-sum-a-i-3" class="headerlink" title="$\min\&amp;\max\&amp;\sum a_i\&amp;\sum a_i^2\&amp;\sum a_i^3$"></a>$\min\&amp;\max\&amp;\sum a_i\&amp;\sum a_i^2\&amp;\sum a_i^3$</h2><p>多维护区间立方和，除上述条件以外，还需  $\sum\limits_{i=l}^ra_i^3=\sum\limits_{i=0}^{r-l}(a+ki)^3$ 才认为正确。</p>
+<p>（实际上，如果维护的数据足够多，就能获得成就：<strong>在数据范围内都无法找到能 hack 你的数据</strong>，这下子这个非正解就秒变正解了，不过常数嘛……）</p>
+<script type="math/tex; mode=display">\begin{aligned}\sum\limits_{i=0}^{r-l}(a+ki)^3&=\sum\limits_{i=0}^{r-l}(a^3+3a^2ki+3ak^2i^2+k^3i^3)\\&=\sum\limits_{i=0}^{r-l}a^3+\sum\limits_{i=0}^{r-l}3a^2ki+\sum\limits_{i=0}^{r-l}3ak^2i^2+\sum\limits_{i=0}^{r-l}k^3i^3\\&=a^3(r-l+1)+3a^2k\sum\limits_{i=0}^{r-l}i+3ak^2\sum\limits_{i=0}^{r-l}i^2+k^3\sum\limits_{i=0}^{r-l}i^3\\&=a^3(r-l+1)+\frac32a^2k(r-l)(r-l+1)+\frac 12ak^2(r-l)(r-l+1)(2r-2l+1)+\frac14k^3(r-1)^2(r-l+1)^2\\&=\frac 14(4a^3(r-l+1)+6a^2k(r-l)(r-l+1)+2ak^2(r-l)(r-l+1)(2r-2l+1)+k^3(r-1)^2(r-l+1)^2)\end{aligned}</script>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://H-J-Granger.github.io/2020/02/24/%E7%BD%91%E7%BB%9C%E6%B5%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1609,152 +1774,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://H-J-Granger.github.io/2019/11/25/CSP2019-summary/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hermione Granger">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://i.loli.net/2019/11/26/QgsOwr4oqUe53Bb.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Granger's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/25/CSP2019-summary/" itemprop="url">CSP2019总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-25T00:00:00+08:00">
-                2019-11-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSP2019/" itemprop="url" rel="index">
-                    <span itemprop="name">CSP2019</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>一个初二OIer的总结~</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/11/25/CSP2019-summary/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1811,7 +1830,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1833,7 +1852,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
