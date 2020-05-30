@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>「积分表」0-目录</title>
+    <url>/2020/05/30/%E7%A7%AF%E5%88%86%E8%A1%A8/</url>
+    <content><![CDATA[<!--comment-->
+<a id="more"></a>
+<h2 id="有理函数积分表"><a href="#有理函数积分表" class="headerlink" title="有理函数积分表"></a>有理函数积分表</h2><h3 id="简单的有理函数"><a href="#简单的有理函数" class="headerlink" title="简单的有理函数"></a>简单的有理函数</h3><p>$\int a \mathrm dx=ax+C$</p>
+<p>$\int x^n \mathrm dx=\frac{x^{n+1}}{n+1}+C$</p>
+<p>$\int(ax+b)^n \mathrm dx=\frac{(ax+b)^{n+1}}{a(n+1)}+C$</p>
+<p>$\int \frac1x \mathrm dx=\ln|x|+C$</p>
+<p>$\int \frac{c}{ax+b} \mathrm dx=\frac ca\ln|ax+b|+C$</p>
+]]></content>
+      <tags>
+        <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>OI中数学常见结论证明</title>
     <url>/2020/04/03/OI%E4%B8%AD%E6%95%B0%E5%AD%A6%E5%B8%B8%E8%A7%81%E7%BB%93%E8%AE%BA%E8%AF%81%E6%98%8E/</url>
     <content><![CDATA[<p>由于最近在复习数学，所以会看到很多省略证明的结论……</p>
@@ -171,8 +186,8 @@
         <category>数据结构</category>
       </categories>
       <tags>
-        <tag>数据结构</tag>
         <tag>平衡树</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -223,8 +238,8 @@
         <category>数学</category>
       </categories>
       <tags>
-        <tag>OI</tag>
         <tag>数学</tag>
+        <tag>OI</tag>
       </tags>
   </entry>
   <entry>
