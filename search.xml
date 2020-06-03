@@ -1,228 +1,410 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>提高模板汇总</title>
-      <link href="/2020/06/03/%E6%8F%90%E9%AB%98%E6%A8%A1%E6%9D%BF%E6%B1%87%E6%80%BB/"/>
-      <url>/2020/06/03/%E6%8F%90%E9%AB%98%E6%A8%A1%E6%9D%BF%E6%B1%87%E6%80%BB/</url>
-      
-        <content type="html"><![CDATA[<!--comment--><a id="more"></a><h2 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h2><ul><li>Miller-Rabin 试除法 <a href="https://loj.ac/problem/143" target="_blank" rel="noopener">模板</a></li><li>埃氏筛、欧拉筛 <a href="https://www.luogu.com.cn/problem/P3383" target="_blank" rel="noopener">模板</a></li><li>*Pollard-$\rho$ 算法 <a href="https://www.luogu.com.cn/problem/P4718" target="_blank" rel="noopener">模板</a></li><li>整除分块 <a href="https://www.luogu.com.cn/problem/P2261" target="_blank" rel="noopener">模板</a></li><li>欧拉函数 $\varphi$ <a href="https://www.luogu.com.cn/problem/P2158" target="_blank" rel="noopener">模板（线性筛）</a></li><li>Bézout 定理（扩展 gcd）<a href="https://www.luogu.com.cn/problem/P4549" target="_blank" rel="noopener">模板</a></li><li>乘法逆元  <a href="https://loj.ac/problem/2605" target="_blank" rel="noopener">模板1</a> <a href="https://loj.ac/problem/110" target="_blank" rel="noopener">模板2</a></li><li>中国剩余定理 <a href="https://www.luogu.com.cn/problem/P1495" target="_blank" rel="noopener">模板1</a> <a href="https://www.luogu.com.cn/problem/P4777" target="_blank" rel="noopener">模板2（扩展 CRT）</a></li><li><em>BSGS 算法 <a href="">模板1（在造）</a> [*</em>模板2（扩展 BSGS）](<a href="https://www.luogu.com.cn/problem/P4777" target="_blank" rel="noopener">https://www.luogu.com.cn/problem/P4777</a>)</li><li>Lucas 定理 <a href="https://www.luogu.com.cn/problem/P3807" target="_blank" rel="noopener">模板1</a> <a href="https://www.luogu.com.cn/problem/P3807" target="_blank" rel="noopener">模板2（扩展 Lucas）</a></li><li>矩阵乘法 <a href="https://www.luogu.com.cn/problem/P3390" target="_blank" rel="noopener">模板1（矩阵快速幂）</a> <a href="https://www.luogu.com.cn/problem/P1939" target="_blank" rel="noopener">模板2（矩阵优化常系数齐次线性递推）</a></li><li>高斯消元 <a href="https://www.luogu.com.cn/problem/P3389" target="_blank" rel="noopener">模板</a> </li><li>线性基 <a href="https://www.luogu.com.cn/problem/P3812" target="_blank" rel="noopener">模板</a></li><li>01 分数规划 <a href="">模板（在造）</a></li></ul><h2 id="基础算法"><a href="#基础算法" class="headerlink" title="基础算法"></a>基础算法</h2><ul><li>A*，IDA*</li><li>字符串 hash <a href="https://www.luogu.com.cn/problem/P3370" target="_blank" rel="noopener">模板</a></li><li>KMP <a href="https://www.luogu.com.cn/problem/P3370" target="_blank" rel="noopener">模板</a></li><li>Trie <a href="https://www.luogu.com.cn/problem/P2580" target="_blank" rel="noopener">模板</a></li><li>*AC 自动机 <a href="https://www.luogu.com.cn/problem/P3808" target="_blank" rel="noopener">模板1</a> <a href="https://www.luogu.com.cn/problem/P3796" target="_blank" rel="noopener">模板2</a> <a href="https://www.luogu.com.cn/problem/P5357" target="_blank" rel="noopener">模板3</a></li><li>Manacher 算法 <a href="https://www.luogu.com.cn/problem/P3805" target="_blank" rel="noopener">模板</a></li></ul><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><ul><li>单调栈 <a href="https://www.luogu.com.cn/problem/P5788" target="_blank" rel="noopener">模板</a></li><li>单调队列 <a href="https://www.luogu.com.cn/problem/P1886" target="_blank" rel="noopener">模板</a></li><li>DFS 序 <a href="https://loj.ac/problem/144" target="_blank" rel="noopener">模板1</a> <a href="https://loj.ac/problem/145" target="_blank" rel="noopener">模板2</a> <a href="https://loj.ac/problem/146" target="_blank" rel="noopener">模板3</a> <a href="https://loj.ac/problem/147" target="_blank" rel="noopener">模板4</a></li><li>树的直径 <a href="">模板（在造）</a></li><li>树的重心 <a href="">模板（在造）</a></li><li>树上差分 <a href="https://loj.ac/problem/146" target="_blank" rel="noopener">模板</a></li><li>ST 表 <a href="https://www.luogu.com.cn/problem/P3865" target="_blank" rel="noopener">模板</a></li><li>LCA <a href="https://www.luogu.com.cn/problem/P3379" target="_blank" rel="noopener">模板</a></li><li>Huffman 树 <a href="https://www.luogu.com.cn/problem/P2168" target="_blank" rel="noopener">模板</a></li><li>左偏树、配对堆 <a href="https://www.luogu.com.cn/problem/P3377" target="_blank" rel="noopener">模板</a></li><li>并查集 <a href="https://loj.ac/problem/109" target="_blank" rel="noopener">模板</a></li><li>树状数组/线段树 <a href="https://loj.ac/problem/130" target="_blank" rel="noopener">模板1</a> <a href="https://loj.ac/problem/131" target="_blank" rel="noopener">模板2</a> <a href="https://loj.ac/problem/132" target="_blank" rel="noopener">模板3</a> <a href="https://loj.ac/problem/133" target="_blank" rel="noopener">模板4（二维）</a> <a href="https://loj.ac/problem/134" target="_blank" rel="noopener">模板5（二维）</a> <a href="https://loj.ac/problem/135" target="_blank" rel="noopener">模板6（二维）</a> <a href="https://www.luogu.com.cn/problem/P1908" target="_blank" rel="noopener">模板7（逆序对）</a> <a href="https://www.luogu.com.cn/problem/P5490" target="_blank" rel="noopener">模板8（扫描线）</a> </li><li>可持久化权值线段树 <a href="https://www.luogu.com.cn/problem/P3834" target="_blank" rel="noopener">模板</a></li><li>分块 <a href="https://loj.ac/problem/6277" target="_blank" rel="noopener">例题1</a> <a href="https://loj.ac/problem/6278" target="_blank" rel="noopener">例题2</a> <a href="https://loj.ac/problem/6279" target="_blank" rel="noopener">例题3</a> <a href="https://loj.ac/problem/6280" target="_blank" rel="noopener">例题4</a> <a href="https://loj.ac/problem/6281" target="_blank" rel="noopener">例题5</a> <a href="https://loj.ac/problem/6282" target="_blank" rel="noopener">例题6</a> <a href="https://loj.ac/problem/6283" target="_blank" rel="noopener">例题7</a> <a href="https://loj.ac/problem/6284" target="_blank" rel="noopener">例题8</a> <a href="https://loj.ac/problem/6285" target="_blank" rel="noopener">例题9</a> </li></ul>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 模板 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>「积分表」0-目录</title>
-      <link href="/2020/05/30/%E7%A7%AF%E5%88%86%E8%A1%A8/"/>
-      <url>/2020/05/30/%E7%A7%AF%E5%88%86%E8%A1%A8/</url>
-      
-        <content type="html"><![CDATA[<!--comment--><a id="more"></a><h2 id="有理函数"><a href="#有理函数" class="headerlink" title="有理函数"></a>有理函数</h2><h3 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h3><script type="math/tex; mode=display">\begin{aligned}&\int\frac{f'(x)}{f(x)}\ \mathrm dx=\ln|f(x)|+C\\&\int\frac1{x^2+a^2}\ \mathrm dx=\frac1a+\arctan\frac xa+C\\&\int\frac1{x^2-a^2}\ \mathrm dx=\frac1{2a}\ln\left|\frac{x-a}{x+a}\right|+C=    \begin{cases}    -\dfrac1a\ \operatorname{arctanh}\dfrac xa+C=\dfrac1{2a}\ln\frac{a-x}{a+x}+C\qquad(\text{for }|x|<|a|)\\    -\dfrac1a\ \operatorname{arccoth}\dfrac xa+C=\dfrac1{2a}    \end{cases}\end{aligned}</script>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 数学 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>OI中数学常见结论证明</title>
-      <link href="/2020/04/03/OI%E4%B8%AD%E6%95%B0%E5%AD%A6%E5%B8%B8%E8%A7%81%E7%BB%93%E8%AE%BA%E8%AF%81%E6%98%8E/"/>
-      <url>/2020/04/03/OI%E4%B8%AD%E6%95%B0%E5%AD%A6%E5%B8%B8%E8%A7%81%E7%BB%93%E8%AE%BA%E8%AF%81%E6%98%8E/</url>
-      
-        <content type="html"><![CDATA[<p>由于最近在复习数学，所以会看到很多省略证明的结论……</p><p>可是显然很多结论的我而言一点都不平凡 QAQ……</p><p>于是我打算整理一下。</p><a id="more"></a><p>下文中未经说明所有数的值域都为 $\N^+$。</p><h2 id="Dirichlet-卷积-amp-Mobius-反演"><a href="#Dirichlet-卷积-amp-Mobius-反演" class="headerlink" title="Dirichlet 卷积 &amp; Möbius 反演"></a>Dirichlet 卷积 &amp; Möbius 反演</h2><h3 id="varphi-ast1-mathrm-id"><a href="#varphi-ast1-mathrm-id" class="headerlink" title="$\varphi\ast1=\mathrm{id}$"></a>$\varphi\ast1=\mathrm{id}$</h3><p>即证 $\sum\limits_{d\mid n}\varphi(d)=n$。</p><p>设 $f(n)=\sum\limits_{d\mid n}\varphi(d)$，则 $f$ 为积性函数，因为：</p><p>设 $x,y$ 满足 $x\perp y$，则：</p><script type="math/tex; mode=display">\begin{aligned}&f(xy)=f(x)f(y)\\\Leftrightarrow&\sum\limits_{d\mid xy}\varphi(d)=\sum\limits_{d_1\mid x}\varphi(d_1)\sum\limits_{d_2\mid y}\varphi(d_2)\\\Leftrightarrow&\sum\limits_{d\mid xy}\varphi(d)=\sum\limits_{d_1\mid x}\sum\limits_{d_2\mid y}\varphi(d_1)\varphi(d_2)\\\Leftrightarrow&\sum\limits_{d\mid xy}\varphi(d)=\sum\limits_{d_1\mid x}\sum\limits_{d_2\mid y}\varphi(d_1d_2)\end{aligned}</script><p>容易知道若 $p$ 为素数，则 $f(p)=\varphi(1)+\varphi(p)=1+(p-1)=p$。</p><p>因为 $f(p^k)=\sum\limits_{i=0}^k\varphi(p^i)=\varphi(p^k)+f(p^{k-1})=p^k-p^{k-1}+f(p^{k-1})$，于是 $f(p^k)=p^k$。</p><p>对于合数，直接质因数分解，然后乘起来就好了。</p><p>证毕。</p><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="除法分块"><a href="#除法分块" class="headerlink" title="除法分块"></a>除法分块</h3><p>若 $\left\lfloor\dfrac{n}{x}\right\rfloor&lt; \left\lfloor\dfrac n{x-1}\right\rfloor$ 且 $x\geqslant \sqrt n$，则 $\left\lfloor\dfrac{n}{\left\lfloor\frac{n}{\left\lfloor\frac{n}{x}\right\rfloor}\right\rfloor}\right\rfloor=\left\lfloor\dfrac nx\right\rfloor$ 且 $\left\lfloor\dfrac{n}{\left\lfloor\frac{n}{\left\lfloor\frac{n}{x}\right\rfloor}\right\rfloor+1}\right\rfloor&lt;\left\lfloor\dfrac nx\right\rfloor$。</p><p>证明：</p><p>为方便表述，令 $y=\left\lfloor\dfrac nx\right\rfloor$。于是我们有</p><p>$y\leqslant\dfrac n{\left\lfloor\frac ny\right\rfloor}\Leftrightarrow\left\lfloor\dfrac ny\right\rfloor\leqslant \dfrac ny$</p><p>所以</p><script type="math/tex; mode=display">y\leqslant\left\lfloor\dfrac n{\left\lfloor\frac ny\right\rfloor}\right\rfloor</script><p>还有</p><script type="math/tex; mode=display">\left\lfloor\dfrac n{\left\lfloor\frac ny\right\rfloor+1}\right\rfloor<y\Leftrightarrow\dfrac ny<\left\lfloor\dfrac ny\right\rfloor+1</script><p>于是</p><script type="math/tex; mode=display">\left\lfloor\dfrac n{\left\lfloor\frac ny\right\rfloor+1}\right\rfloor<y\leqslant\left\lfloor\dfrac n{\left\lfloor\frac ny\right\rfloor}\right\rfloor</script><p>所以</p><script type="math/tex; mode=display">\left\lfloor\dfrac n{\left\lfloor\frac ny\right\rfloor+1}\right\rfloor<\left\lfloor\dfrac n{\left\lfloor\frac ny\right\rfloor}\right\rfloor</script><p>接着我们要证</p><script type="math/tex; mode=display">\left\lfloor\dfrac n{\left\lfloor\frac ny\right\rfloor}\right\rfloor=y</script><p>即证</p><script type="math/tex; mode=display">y+1>\dfrac n{\left\lfloor\frac ny\right\rfloor}</script><p>即证</p><script type="math/tex; mode=display">y\left\lfloor\dfrac ny\right\rfloor+\left\lfloor\dfrac ny\right\rfloor>n</script><p>即证</p><script type="math/tex; mode=display">\left\lfloor\dfrac ny\right\rfloor>n\bmod y</script><p>该命题的一个充分不必要条件为：</p><script type="math/tex; mode=display">\left\lfloor\dfrac ny\right\rfloor\geqslant y</script><p>若 $\left\lfloor\dfrac ny\right\rfloor&lt;y$，则：</p><script type="math/tex; mode=display">y\geqslant\left\lfloor\dfrac ny\right\rfloor+1>\dfrac ny</script><p>于是</p><script type="math/tex; mode=display">y>\sqrt n\Leftrightarrow\left\lfloor\dfrac nx\right\rfloor>\sqrt n\Leftrightarrow\dfrac nx>\sqrt n\Leftrightarrow x<\sqrt n</script><p>矛盾。</p><p>证毕。</p>]]></content>
-      
-      
+<search>
+  <entry>
+    <title>提高模板汇总</title>
+    <url>/2020/06/03/%E6%8F%90%E9%AB%98%E6%A8%A1%E6%9D%BF%E6%B1%87%E6%80%BB/</url>
+    <content><![CDATA[<!--comment-->
+<a id="more"></a>
+<h2 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h2><ul>
+<li>Miller-Rabin 试除法 <a href="https://loj.ac/problem/143" target="_blank" rel="noopener">模板</a></li>
+<li>埃氏筛、欧拉筛 <a href="https://www.luogu.com.cn/problem/P3383" target="_blank" rel="noopener">模板</a></li>
+<li>*Pollard-$\rho$ 算法 <a href="https://www.luogu.com.cn/problem/P4718" target="_blank" rel="noopener">模板</a></li>
+<li>整除分块 <a href="https://www.luogu.com.cn/problem/P2261" target="_blank" rel="noopener">模板</a></li>
+<li>欧拉函数 $\varphi$ <a href="https://www.luogu.com.cn/problem/P2158" target="_blank" rel="noopener">模板（线性筛）</a></li>
+<li>Bézout 定理（扩展 gcd）<a href="https://www.luogu.com.cn/problem/P4549" target="_blank" rel="noopener">模板</a></li>
+<li>乘法逆元  <a href="https://loj.ac/problem/2605" target="_blank" rel="noopener">模板1</a> <a href="https://loj.ac/problem/110" target="_blank" rel="noopener">模板2</a></li>
+<li>中国剩余定理 <a href="https://www.luogu.com.cn/problem/P1495" target="_blank" rel="noopener">模板1</a> <a href="https://www.luogu.com.cn/problem/P4777" target="_blank" rel="noopener">模板2（扩展 CRT）</a></li>
+<li>*BSGS 算法 <a href="">模板1（在造）</a> <a href="https://www.luogu.com.cn/problem/P4777" target="_blank" rel="noopener">**模板2（扩展 BSGS）</a></li>
+<li>Lucas 定理 <a href="https://www.luogu.com.cn/problem/P3807" target="_blank" rel="noopener">模板1</a> <a href="https://www.luogu.com.cn/problem/P3807" target="_blank" rel="noopener">模板2（扩展 Lucas）</a></li>
+<li>矩阵乘法 <a href="https://www.luogu.com.cn/problem/P3390" target="_blank" rel="noopener">模板1（矩阵快速幂）</a> <a href="https://www.luogu.com.cn/problem/P1939" target="_blank" rel="noopener">模板2（矩阵优化常系数齐次线性递推）</a></li>
+<li>高斯消元 <a href="https://www.luogu.com.cn/problem/P3389" target="_blank" rel="noopener">模板</a> </li>
+<li>线性基 <a href="https://www.luogu.com.cn/problem/P3812" target="_blank" rel="noopener">模板</a></li>
+<li>01 分数规划 <a href="">模板（在造）</a></li>
+</ul>
+<h2 id="基础算法"><a href="#基础算法" class="headerlink" title="基础算法"></a>基础算法</h2><ul>
+<li>A*，IDA*</li>
+<li>字符串 hash <a href="https://www.luogu.com.cn/problem/P3370" target="_blank" rel="noopener">模板</a></li>
+<li>KMP <a href="https://www.luogu.com.cn/problem/P3370" target="_blank" rel="noopener">模板</a></li>
+<li>Trie <a href="https://www.luogu.com.cn/problem/P2580" target="_blank" rel="noopener">模板</a></li>
+<li>*AC 自动机 <a href="https://www.luogu.com.cn/problem/P3808" target="_blank" rel="noopener">模板1</a> <a href="https://www.luogu.com.cn/problem/P3796" target="_blank" rel="noopener">模板2</a> <a href="https://www.luogu.com.cn/problem/P5357" target="_blank" rel="noopener">模板3</a></li>
+<li>Manacher 算法 <a href="https://www.luogu.com.cn/problem/P3805" target="_blank" rel="noopener">模板</a></li>
+</ul>
+<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><ul>
+<li>单调栈 <a href="https://www.luogu.com.cn/problem/P5788" target="_blank" rel="noopener">模板</a></li>
+<li>单调队列 <a href="https://www.luogu.com.cn/problem/P1886" target="_blank" rel="noopener">模板</a></li>
+<li>DFS 序 <a href="https://loj.ac/problem/144" target="_blank" rel="noopener">模板1</a> <a href="https://loj.ac/problem/145" target="_blank" rel="noopener">模板2</a> <a href="https://loj.ac/problem/146" target="_blank" rel="noopener">模板3</a> <a href="https://loj.ac/problem/147" target="_blank" rel="noopener">模板4</a></li>
+<li>树的直径 <a href="">模板（在造）</a></li>
+<li>树的重心 <a href="">模板（在造）</a></li>
+<li>树上差分 <a href="https://loj.ac/problem/146" target="_blank" rel="noopener">模板</a></li>
+<li>ST 表 <a href="https://www.luogu.com.cn/problem/P3865" target="_blank" rel="noopener">模板</a></li>
+<li>LCA <a href="https://www.luogu.com.cn/problem/P3379" target="_blank" rel="noopener">模板</a></li>
+<li>Huffman 树 <a href="https://www.luogu.com.cn/problem/P2168" target="_blank" rel="noopener">模板</a></li>
+<li>左偏树、配对堆 <a href="https://www.luogu.com.cn/problem/P3377" target="_blank" rel="noopener">模板</a></li>
+<li>并查集 <a href="https://loj.ac/problem/109" target="_blank" rel="noopener">模板</a></li>
+<li>树状数组/线段树 <a href="https://loj.ac/problem/130" target="_blank" rel="noopener">模板1</a> <a href="https://loj.ac/problem/131" target="_blank" rel="noopener">模板2</a> <a href="https://loj.ac/problem/132" target="_blank" rel="noopener">模板3</a> <a href="https://loj.ac/problem/133" target="_blank" rel="noopener">模板4（二维）</a> <a href="https://loj.ac/problem/134" target="_blank" rel="noopener">模板5（二维）</a> <a href="https://loj.ac/problem/135" target="_blank" rel="noopener">模板6（二维）</a> <a href="https://www.luogu.com.cn/problem/P1908" target="_blank" rel="noopener">模板7（逆序对）</a> <a href="https://www.luogu.com.cn/problem/P5490" target="_blank" rel="noopener">模板8（扫描线）</a> </li>
+<li>可持久化权值线段树 <a href="https://www.luogu.com.cn/problem/P3834" target="_blank" rel="noopener">模板</a></li>
+<li>分块 <a href="https://loj.ac/problem/6277" target="_blank" rel="noopener">例题1</a> <a href="https://loj.ac/problem/6278" target="_blank" rel="noopener">例题2</a> <a href="https://loj.ac/problem/6279" target="_blank" rel="noopener">例题3</a> <a href="https://loj.ac/problem/6280" target="_blank" rel="noopener">例题4</a> <a href="https://loj.ac/problem/6281" target="_blank" rel="noopener">例题5</a> <a href="https://loj.ac/problem/6282" target="_blank" rel="noopener">例题6</a> <a href="https://loj.ac/problem/6283" target="_blank" rel="noopener">例题7</a> <a href="https://loj.ac/problem/6284" target="_blank" rel="noopener">例题8</a> <a href="https://loj.ac/problem/6285" target="_blank" rel="noopener">例题9</a> </li>
+</ul>
+]]></content>
+      <tags>
+        <tag>模板</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>「积分表」0-目录</title>
+    <url>/2020/05/30/%E7%A7%AF%E5%88%86%E8%A1%A8/</url>
+    <content><![CDATA[<!--comment-->
+<a id="more"></a>
+<h2 id="有理函数"><a href="#有理函数" class="headerlink" title="有理函数"></a>有理函数</h2><h3 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h3><script type="math/tex; mode=display">
+\begin{aligned}
+&\int\frac{f'(x)}{f(x)}\ \mathrm dx=\ln|f(x)|+C\\
+&\int\frac1{x^2+a^2}\ \mathrm dx=\frac1a+\arctan\frac xa+C\\
+&\int\frac1{x^2-a^2}\ \mathrm dx=\frac1{2a}\ln\left|\frac{x-a}{x+a}\right|+C=
+    \begin{cases}
+    -\dfrac1a\ \operatorname{arctanh}\dfrac xa+C=\dfrac1{2a}\ln\frac{a-x}{a+x}+C\qquad(\text{for }|x|<|a|)\\
+    -\dfrac1a\ \operatorname{arccoth}\dfrac xa+C=\dfrac1{2a}
+    \end{cases}
+\end{aligned}</script>]]></content>
+      <tags>
+        <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>OI中数学常见结论证明</title>
+    <url>/2020/04/03/OI%E4%B8%AD%E6%95%B0%E5%AD%A6%E5%B8%B8%E8%A7%81%E7%BB%93%E8%AE%BA%E8%AF%81%E6%98%8E/</url>
+    <content><![CDATA[<p>由于最近在复习数学，所以会看到很多省略证明的结论……</p>
+<p>可是显然很多结论的我而言一点都不平凡 QAQ……</p>
+<p>于是我打算整理一下。</p>
+<a id="more"></a>
+<p>下文中未经说明所有数的值域都为 $\N^+$。</p>
+<h2 id="Dirichlet-卷积-amp-Mobius-反演"><a href="#Dirichlet-卷积-amp-Mobius-反演" class="headerlink" title="Dirichlet 卷积 &amp; Möbius 反演"></a>Dirichlet 卷积 &amp; Möbius 反演</h2><h3 id="varphi-ast1-mathrm-id"><a href="#varphi-ast1-mathrm-id" class="headerlink" title="$\varphi\ast1=\mathrm{id}$"></a>$\varphi\ast1=\mathrm{id}$</h3><p>即证 $\sum\limits_{d\mid n}\varphi(d)=n$。</p>
+<p>设 $f(n)=\sum\limits_{d\mid n}\varphi(d)$，则 $f$ 为积性函数，因为：</p>
+<p>设 $x,y$ 满足 $x\perp y$，则：</p>
+<script type="math/tex; mode=display">\begin{aligned}&f(xy)=f(x)f(y)\\\Leftrightarrow&\sum\limits_{d\mid xy}\varphi(d)=\sum\limits_{d_1\mid x}\varphi(d_1)\sum\limits_{d_2\mid y}\varphi(d_2)\\\Leftrightarrow&\sum\limits_{d\mid xy}\varphi(d)=\sum\limits_{d_1\mid x}\sum\limits_{d_2\mid y}\varphi(d_1)\varphi(d_2)\\\Leftrightarrow&\sum\limits_{d\mid xy}\varphi(d)=\sum\limits_{d_1\mid x}\sum\limits_{d_2\mid y}\varphi(d_1d_2)\end{aligned}</script><p>容易知道若 $p$ 为素数，则 $f(p)=\varphi(1)+\varphi(p)=1+(p-1)=p$。</p>
+<p>因为 $f(p^k)=\sum\limits_{i=0}^k\varphi(p^i)=\varphi(p^k)+f(p^{k-1})=p^k-p^{k-1}+f(p^{k-1})$，于是 $f(p^k)=p^k$。</p>
+<p>对于合数，直接质因数分解，然后乘起来就好了。</p>
+<p>证毕。</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="除法分块"><a href="#除法分块" class="headerlink" title="除法分块"></a>除法分块</h3><p>若 $\left\lfloor\dfrac{n}{x}\right\rfloor&lt; \left\lfloor\dfrac n{x-1}\right\rfloor$ 且 $x\geqslant \sqrt n$，则 $\left\lfloor\dfrac{n}{\left\lfloor\frac{n}{\left\lfloor\frac{n}{x}\right\rfloor}\right\rfloor}\right\rfloor=\left\lfloor\dfrac nx\right\rfloor$ 且 $\left\lfloor\dfrac{n}{\left\lfloor\frac{n}{\left\lfloor\frac{n}{x}\right\rfloor}\right\rfloor+1}\right\rfloor&lt;\left\lfloor\dfrac nx\right\rfloor$。</p>
+<p>证明：</p>
+<p>为方便表述，令 $y=\left\lfloor\dfrac nx\right\rfloor$。于是我们有</p>
+<p>$y\leqslant\dfrac n{\left\lfloor\frac ny\right\rfloor}\Leftrightarrow\left\lfloor\dfrac ny\right\rfloor\leqslant \dfrac ny$</p>
+<p>所以</p>
+<script type="math/tex; mode=display">y\leqslant\left\lfloor\dfrac n{\left\lfloor\frac ny\right\rfloor}\right\rfloor</script><p>还有</p>
+<script type="math/tex; mode=display">\left\lfloor\dfrac n{\left\lfloor\frac ny\right\rfloor+1}\right\rfloor<y\Leftrightarrow\dfrac ny<\left\lfloor\dfrac ny\right\rfloor+1</script><p>于是</p>
+<script type="math/tex; mode=display">\left\lfloor\dfrac n{\left\lfloor\frac ny\right\rfloor+1}\right\rfloor<y\leqslant\left\lfloor\dfrac n{\left\lfloor\frac ny\right\rfloor}\right\rfloor</script><p>所以</p>
+<script type="math/tex; mode=display">\left\lfloor\dfrac n{\left\lfloor\frac ny\right\rfloor+1}\right\rfloor<\left\lfloor\dfrac n{\left\lfloor\frac ny\right\rfloor}\right\rfloor</script><p>接着我们要证</p>
+<script type="math/tex; mode=display">\left\lfloor\dfrac n{\left\lfloor\frac ny\right\rfloor}\right\rfloor=y</script><p>即证</p>
+<script type="math/tex; mode=display">y+1>\dfrac n{\left\lfloor\frac ny\right\rfloor}</script><p>即证</p>
+<script type="math/tex; mode=display">y\left\lfloor\dfrac ny\right\rfloor+\left\lfloor\dfrac ny\right\rfloor>n</script><p>即证</p>
+<script type="math/tex; mode=display">\left\lfloor\dfrac ny\right\rfloor>n\bmod y</script><p>该命题的一个充分不必要条件为：</p>
+<script type="math/tex; mode=display">\left\lfloor\dfrac ny\right\rfloor\geqslant y</script><p>若 $\left\lfloor\dfrac ny\right\rfloor&lt;y$，则：</p>
+<script type="math/tex; mode=display">y\geqslant\left\lfloor\dfrac ny\right\rfloor+1>\dfrac ny</script><p>于是</p>
+<script type="math/tex; mode=display">y>\sqrt n\Leftrightarrow\left\lfloor\dfrac nx\right\rfloor>\sqrt n\Leftrightarrow\dfrac nx>\sqrt n\Leftrightarrow x<\sqrt n</script><p>矛盾。</p>
+<p>证毕。</p>
+]]></content>
       <categories>
-          
-          <category> 数学 </category>
-          
+        <category>数学</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 数学 </tag>
-            
-            <tag> 数论 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>C++运算符优先级</title>
-      <link href="/2020/02/05/operator_precedence_cpp/"/>
-      <url>/2020/02/05/operator_precedence_cpp/</url>
-      
-        <content type="html"><![CDATA[<p>为了防止忘记还是记下来吧~从cppreference搬来的~</p><a id="more"></a><p>由于 <code>|</code> 符号很难在表格里打出来，所以在打 <code>|</code> 的时候使用了公式来代替单行代码。</p><div class="table-container"><table><thead><tr><th style="text-align:center">优先等级</th><th style="text-align:center">运算符</th><th style="text-align:center">结合顺序</th></tr></thead><tbody><tr><td style="text-align:center">1</td><td style="text-align:center"><code>::</code></td><td style="text-align:center">从左到右</td></tr><tr><td style="text-align:center">2</td><td style="text-align:center"><code>var++</code>  <code>var--</code> <code>type()</code> <code>type{}</code> <code>func()</code> <code>arr[]</code> <code>.</code> <code>-&gt;</code></td><td style="text-align:center">从左到右</td></tr><tr><td style="text-align:center">3</td><td style="text-align:center"><code>++var</code> <code>--var</code> <code>+var</code> <code>-var</code> <code>!</code> <code>~</code> <code>(type)</code> <code>*ptr</code> <code>&amp;var</code> <code>sizeof</code> <code>co_await</code> <code>new</code> <code>new[]</code> <code>delete</code> <code>delete[]</code></td><td style="text-align:center"><strong>从右到左</strong></td></tr><tr><td style="text-align:center">4</td><td style="text-align:center"><code>.*</code> <code>-&gt;*</code></td><td style="text-align:center">从左到右</td></tr><tr><td style="text-align:center">5</td><td style="text-align:center"><code>var1*var2</code> <code>var1/var2</code> <code>var1%var2</code></td><td style="text-align:center">从左到右</td></tr><tr><td style="text-align:center">6</td><td style="text-align:center"><code>var1+var2</code> <code>var1-var2</code></td><td style="text-align:center">从左到右</td></tr><tr><td style="text-align:center">7</td><td style="text-align:center"><code>&lt;&lt;</code> <code>&gt;&gt;</code></td><td style="text-align:center">从左到右</td></tr><tr><td style="text-align:center">8</td><td style="text-align:center"><code>&lt;=&gt;</code></td><td style="text-align:center">从左到右</td></tr><tr><td style="text-align:center">9</td><td style="text-align:center"><code>&lt;</code> <code>&lt;=</code> <code>&gt;</code> <code>&gt;=</code></td><td style="text-align:center">从左到右</td></tr><tr><td style="text-align:center">10</td><td style="text-align:center"><code>==</code> <code>!=</code></td><td style="text-align:center">从左到右</td></tr><tr><td style="text-align:center">11</td><td style="text-align:center"><code>var1&amp;var2</code></td><td style="text-align:center">从左到右</td></tr><tr><td style="text-align:center">12</td><td style="text-align:center"><code>^</code></td><td style="text-align:center">从左到右</td></tr><tr><td style="text-align:center">13</td><td style="text-align:center">$\mid$</td><td style="text-align:center">从左到右</td></tr><tr><td style="text-align:center">14</td><td style="text-align:center"><code>&amp;&amp;</code></td><td style="text-align:center">从左到右</td></tr><tr><td style="text-align:center">15</td><td style="text-align:center">$\mid\mid$</td><td style="text-align:center">从左到右</td></tr><tr><td style="text-align:center">16</td><td style="text-align:center"><code>?:</code> <code>throw</code> <code>co_yield</code> <code>=</code> <code>+=</code> <code>-=</code> <code>*=</code> <code>/=</code> <code>%=</code> <code>&lt;&lt;=</code> <code>&gt;&gt;=</code> <code>&amp;=</code> $\mid=$ <code>^=</code></td><td style="text-align:center"><strong>从右到左</strong></td></tr><tr><td style="text-align:center">17</td><td style="text-align:center"><code>,</code></td><td style="text-align:center">从左到右</td></tr></tbody></table></div>]]></content>
-      
-      
+      <tags>
+        <tag>数学</tag>
+        <tag>数论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++运算符优先级</title>
+    <url>/2020/02/05/operator_precedence_cpp/</url>
+    <content><![CDATA[<p>为了防止忘记还是记下来吧~从cppreference搬来的~</p>
+<a id="more"></a>
+<p>由于 <code>|</code> 符号很难在表格里打出来，所以在打 <code>|</code> 的时候使用了公式来代替单行代码。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">优先等级</th>
+<th style="text-align:center">运算符</th>
+<th style="text-align:center">结合顺序</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center"><code>::</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center"><code>var++</code>  <code>var--</code> <code>type()</code> <code>type{}</code> <code>func()</code> <code>arr[]</code> <code>.</code> <code>-&gt;</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center"><code>++var</code> <code>--var</code> <code>+var</code> <code>-var</code> <code>!</code> <code>~</code> <code>(type)</code> <code>*ptr</code> <code>&amp;var</code> <code>sizeof</code> <code>co_await</code> <code>new</code> <code>new[]</code> <code>delete</code> <code>delete[]</code></td>
+<td style="text-align:center"><strong>从右到左</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center"><code>.*</code> <code>-&gt;*</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center"><code>var1*var2</code> <code>var1/var2</code> <code>var1%var2</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center"><code>var1+var2</code> <code>var1-var2</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center"><code>&lt;&lt;</code> <code>&gt;&gt;</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center"><code>&lt;=&gt;</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center"><code>&lt;</code> <code>&lt;=</code> <code>&gt;</code> <code>&gt;=</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center"><code>==</code> <code>!=</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">11</td>
+<td style="text-align:center"><code>var1&amp;var2</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">12</td>
+<td style="text-align:center"><code>^</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">13</td>
+<td style="text-align:center">$\mid$</td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">14</td>
+<td style="text-align:center"><code>&amp;&amp;</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">15</td>
+<td style="text-align:center">$\mid\mid$</td>
+<td style="text-align:center">从左到右</td>
+</tr>
+<tr>
+<td style="text-align:center">16</td>
+<td style="text-align:center"><code>?:</code> <code>throw</code> <code>co_yield</code> <code>=</code> <code>+=</code> <code>-=</code> <code>*=</code> <code>/=</code> <code>%=</code> <code>&lt;&lt;=</code> <code>&gt;&gt;=</code> <code>&amp;=</code> $\mid=$ <code>^=</code></td>
+<td style="text-align:center"><strong>从右到左</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">17</td>
+<td style="text-align:center"><code>,</code></td>
+<td style="text-align:center">从左到右</td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
       <categories>
-          
-          <category> C++ </category>
-          
+        <category>C++</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> C++ </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>用非旋 Treap 区间翻转</title>
-      <link href="/2020/02/03/use-fhq-treap-as-a-splay/"/>
-      <url>/2020/02/03/use-fhq-treap-as-a-splay/</url>
-      
-        <content type="html"><![CDATA[<p>非旋 Treap，是一种好写，常数小，可拓展性强的弱平衡的二叉搜索树。</p><a id="more"></a><p>非旋 Treap 的讲解在其他地方也能找到，这里主要讲她的其他用法，比如——序列操作。</p><h2 id="例题-文艺平衡树"><a href="#例题-文艺平衡树" class="headerlink" title="例题 文艺平衡树"></a>例题 <a href="https://loj.ac/problem/105" target="_blank" rel="noopener">文艺平衡树</a></h2><p>我们来试试拿 非旋 Treap 解决 Splay 模板题~</p><h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>给你一个长度为 $n$ 的序列，初始值为 $(1,2,\cdots,n-1,n)$，你需要执行 $m$ 次操作，每次操作给定一个区间 $[l,r]$，你需要翻转这个区间。举个例子，序列 $(1,2,3,4,5)$ 的 $[2,5]$ 翻转后会变为：$(1,5,4,3,2)$。</p><p>$1\leqslant n,m\leqslant 10^5$。</p><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>翻转的时候用一种“翻转懒标记”的东西来翻转，标记下传的时候就交换一下左右儿子，每次翻转区间 $[l,r]$ 就将原区间分成 $[1,l)$，$[l,r]$，$(r, n]$ 三部分，然后将中间那部分标记一下，最后 merge 到一起。</p><p>时间复杂度期望 $\Theta((n+m)\log n)$，空间复杂度 $\Theta(n)$。</p><p>具体细节见代码部分。</p><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;random&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;tuple&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> type, <span class="keyword">int</span> SIZE = <span class="number">100000</span>, <span class="keyword">int</span> seed = <span class="number">19260817</span>&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">class fhq_treap &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span>:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">class node &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span>:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> key, size, lchild, rchild; </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// key是随机权值，size是子树大小，lchild,rchild是左右儿子编号。</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">type data;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// 数据。</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">bool</span> reverse;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// 区间翻转lazy tag</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">&#125; tree[SIZE];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> count = <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::mt19937 myrand; <span class="comment">// [1-3]</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">update_size</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>&amp; x)</span> </span>&#123; <span class="comment">// 更新子树大小</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">tree[x].size = tree[tree[x].lchild].size + tree[tree[x].rchild].size +</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">   <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">push_down_reverse</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>&amp; x)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (tree[x].reverse) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">tree[x].lchild ^= tree[x].rchild ^= </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">  tree[x].lchild ^= tree[x].rchild; <span class="comment">// swap [4]</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (tree[x].lchild) &#123; <span class="comment">// 我们当然不想让tree[0]改来改去（虽然没有影响）</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">tree[tree[x].lchild].reverse ^= <span class="number">1</span>; <span class="comment">// [5]</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (tree[x].rchild) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">tree[tree[x].rchild].reverse ^= <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line">tree[x].reverse = <span class="literal">false</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">41</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span>:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">42</span></pre></td><td class="code"><pre><span class="line">fhq_treap(<span class="keyword">void</span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">43</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="function">mt19937 <span class="title">tmp</span><span class="params">(seed)</span></span>; <span class="comment">// 初始化种子</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">44</span></pre></td><td class="code"><pre><span class="line">myrand = tmp;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">45</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">46</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">47</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">build</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>&amp; x)</span> </span>&#123; <span class="comment">// build一个结点</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">48</span></pre></td><td class="code"><pre><span class="line">++count;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">49</span></pre></td><td class="code"><pre><span class="line">tree[count].data = x;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">50</span></pre></td><td class="code"><pre><span class="line">tree[count].size = <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">51</span></pre></td><td class="code"><pre><span class="line">tree[count].key = myrand(); <span class="comment">// 随机赋权值</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">52</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> count;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">53</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">54</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">55</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">merge</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>&amp; x, <span class="keyword">const</span> <span class="keyword">int</span>&amp; y)</span> </span>&#123; <span class="comment">// 返回x,y的子树合并后根的编号</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">56</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (x == <span class="number">0</span> || y == <span class="number">0</span>) &#123; <span class="comment">// 如果两棵树有空树</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">57</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> x + y; <span class="comment">// 如果两棵树都是空树，返回空树，否则返回非空的那棵树</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">58</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">59</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (tree[x].key &lt; tree[y].key) &#123; <span class="comment">// 如果x的随机权值比y小</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">60</span></pre></td><td class="code"><pre><span class="line">push_down_reverse(x);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">61</span></pre></td><td class="code"><pre><span class="line">tree[x].rchild = merge(tree[x].rchild, y); <span class="comment">// y和x右子树合并</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">62</span></pre></td><td class="code"><pre><span class="line">update_size(x); <span class="comment">// 更新x子树大小</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">63</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> x; <span class="comment">// 合并后x肯定为根</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">64</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">65</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">else</span> &#123; <span class="comment">// 同上</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">66</span></pre></td><td class="code"><pre><span class="line">push_down_reverse(y);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">67</span></pre></td><td class="code"><pre><span class="line">tree[y].lchild = merge(x, tree[y].lchild);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">68</span></pre></td><td class="code"><pre><span class="line">update_size(y);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">69</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> y;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">70</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">71</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">72</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">73</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// 关于tuple的知识，你可以去 [6-7] 查看。</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">74</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::tuple&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; split(<span class="keyword">const</span> <span class="keyword">int</span>&amp; root, <span class="keyword">const</span> <span class="keyword">int</span>&amp; k) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">75</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (root == <span class="number">0</span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">76</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="built_in">std</span>::make_tuple(<span class="number">0</span>, <span class="number">0</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">77</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">78</span></pre></td><td class="code"><pre><span class="line">push_down_reverse(root);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">79</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">80</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::tuple&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; res;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">81</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (tree[tree[root].lchild].size &lt; k) &#123; <span class="comment">// 左子树大小不够</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">82</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> oldres = split(tree[root].rchild,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">83</span></pre></td><td class="code"><pre><span class="line">k - tree[tree[root].lchild].size - <span class="number">1</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">84</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// 后一个参数的意思是去掉左子树和根的大小</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">85</span></pre></td><td class="code"><pre><span class="line">tree[root].rchild = <span class="built_in">std</span>::get&lt;<span class="number">0</span>&gt;(oldres); <span class="comment">// 更新右子树</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">86</span></pre></td><td class="code"><pre><span class="line">res = <span class="built_in">std</span>::make_tuple(root, <span class="built_in">std</span>::get&lt;<span class="number">1</span>&gt;(oldres));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">87</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">88</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">else</span> &#123; <span class="comment">// 左子树大小够</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">89</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> oldres = split(tree[root].lchild, k);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">90</span></pre></td><td class="code"><pre><span class="line">tree[root].lchild = <span class="built_in">std</span>::get&lt;<span class="number">1</span>&gt;(oldres);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">91</span></pre></td><td class="code"><pre><span class="line">res = <span class="built_in">std</span>::make_tuple(<span class="built_in">std</span>::get&lt;<span class="number">0</span>&gt;(oldres), root);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">92</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">93</span></pre></td><td class="code"><pre><span class="line">update_size(root); <span class="comment">// 更新子树大小</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">94</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> res;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">95</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">96</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">97</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>&amp; root)</span> </span>&#123; <span class="comment">// 中序遍历输出整棵树</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">98</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (root == <span class="number">0</span>) &#123; <span class="comment">// 如果是空树，返回。</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">99</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">100</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">101</span></pre></td><td class="code"><pre><span class="line">push_down_reverse(root); <span class="comment">// 翻转懒标记下传</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">102</span></pre></td><td class="code"><pre><span class="line">print(tree[root].lchild); <span class="comment">// 输出左子树</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">103</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">printf</span>(<span class="string">"%d "</span>, tree[root].data); <span class="comment">// 输出本身</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">104</span></pre></td><td class="code"><pre><span class="line">print(tree[root].rchild); <span class="comment">// 输出右子树</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">105</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">106</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">107</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">108</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">reverse</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>&amp; root)</span> </span>&#123; <span class="comment">// 翻转子树</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">109</span></pre></td><td class="code"><pre><span class="line">tree[root].reverse ^= <span class="number">1</span>; <span class="comment">// 标记一下</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">110</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span>; <span class="comment">// 搞定~</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">111</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">112</span></pre></td><td class="code"><pre><span class="line">&#125;;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">113</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">114</span></pre></td><td class="code"><pre><span class="line">fhq_treap&lt;<span class="keyword">int</span>, <span class="number">100010</span>&gt; tree;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">115</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">116</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">117</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n, m;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">118</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">119</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">120</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> root = <span class="number">0</span>; <span class="comment">// 树根</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">121</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">122</span></pre></td><td class="code"><pre><span class="line">root = tree.merge(root, tree.build(i)); <span class="comment">// 插入i</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">123</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">124</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">125</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">126</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> revl, revr; <span class="comment">// 翻转区间左右端点</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">127</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;revl, &amp;revr);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">128</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> tmp = tree.split(root, revl - <span class="number">1</span>); <span class="comment">// 拆分-1</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">129</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> tmp2 = tree.split(<span class="built_in">std</span>::get&lt;<span class="number">1</span>&gt;(tmp), revr - revl + <span class="number">1</span>); <span class="comment">// 拆分-2</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">130</span></pre></td><td class="code"><pre><span class="line">tree.reverse(<span class="built_in">std</span>::get&lt;<span class="number">0</span>&gt;(tmp2)); <span class="comment">// 翻转</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">131</span></pre></td><td class="code"><pre><span class="line">root = tree.merge(<span class="built_in">std</span>::get&lt;<span class="number">0</span>&gt;(tmp), tree.merge(<span class="built_in">std</span>::get&lt;<span class="number">0</span>&gt;(tmp2),</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">132</span></pre></td><td class="code"><pre><span class="line">   <span class="built_in">std</span>::get&lt;<span class="number">1</span>&gt;(tmp2))); </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">133</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// 合并</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">134</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">135</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">136</span></pre></td><td class="code"><pre><span class="line">tree.print(root); <span class="comment">// 输出</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">137</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">138</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">139</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">140</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// Tips:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">141</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// [1]: https://oi-wiki.org/misc/random/</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">142</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// [2]: https://zh.cppreference.com/w/cpp/numeric/random/mersenne_twister_engine</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">143</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// [3]: https://en.wikipedia.org/wiki/Mersenne_twister</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">144</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// [4]: 第一次见这种写法，你可能会被吓到：a ^= b ^= a ^= b真的能交换a和b的值？</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">145</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//这里将阐述这种做法的正确性。我们假设x和y分别是两个bool变量，</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">146</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//如果x ^= y ^= x ^= y能交换x和y的值，那我们对a和b的每一位拿出来做这个运算，</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">147</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//也能交换这两位，于是a和b的每一位都交换了，所以a和b的值也交换了。</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">148</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//我们枚举(x, y)的4种初始值(0, 0), (0, 1), (1, 0), (1, 1)，</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">149</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//观察在x ^= y ^= x ^= y的每一步之后(x, y)的变化情况（注意^=是右结合的）：</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">150</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//(0, 0) -&gt; (0, 0) -&gt; (0, 0) -&gt; (0, 0)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">151</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//(0, 1) -&gt; (1, 1) -&gt; (1, 0) -&gt; (1, 0)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">152</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//(1, 0) -&gt; (1, 0) -&gt; (1, 1) -&gt; (0, 1)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">153</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//(1, 1) -&gt; (0, 1) -&gt; (0, 1) -&gt; (1, 1)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">154</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//发现了吗？(x, y)经过操作之后一定会变为(y, x)。所以我们证明了该操作的正确性。</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">155</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// [5]: 对于bool变量x，x ^= 1等价于x = !x。</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">156</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//你可以通过枚举x分别为true和false的情况来证明这个操作的正确性。</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">157</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// [6]: https://zh.cppreference.com/w/cpp/header/tuple</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">158</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// [7]: https://zh.cppreference.com/w/cpp/utility/tuple</span></span></pre></td></tr></table></figure>]]></content>
-      
-      
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用非旋 Treap 区间翻转</title>
+    <url>/2020/02/03/use-fhq-treap-as-a-splay/</url>
+    <content><![CDATA[<p>非旋 Treap，是一种好写，常数小，可拓展性强的弱平衡的二叉搜索树。</p>
+<a id="more"></a>
+<p>非旋 Treap 的讲解在其他地方也能找到，这里主要讲她的其他用法，比如——序列操作。</p>
+<h2 id="例题-文艺平衡树"><a href="#例题-文艺平衡树" class="headerlink" title="例题 文艺平衡树"></a>例题 <a href="https://loj.ac/problem/105" target="_blank" rel="noopener">文艺平衡树</a></h2><p>我们来试试拿 非旋 Treap 解决 Splay 模板题~</p>
+<h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>给你一个长度为 $n$ 的序列，初始值为 $(1,2,\cdots,n-1,n)$，你需要执行 $m$ 次操作，每次操作给定一个区间 $[l,r]$，你需要翻转这个区间。举个例子，序列 $(1,2,3,4,5)$ 的 $[2,5]$ 翻转后会变为：$(1,5,4,3,2)$。</p>
+<p>$1\leqslant n,m\leqslant 10^5$。</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>翻转的时候用一种“翻转懒标记”的东西来翻转，标记下传的时候就交换一下左右儿子，每次翻转区间 $[l,r]$ 就将原区间分成 $[1,l)$，$[l,r]$，$(r, n]$ 三部分，然后将中间那部分标记一下，最后 merge 到一起。</p>
+<p>时间复杂度期望 $\Theta((n+m)\log n)$，空间复杂度 $\Theta(n)$。</p>
+<p>具体细节见代码部分。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;random&gt;</span></span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;tuple&gt;</span></span></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> type, <span class="keyword">int</span> SIZE = <span class="number">100000</span>, <span class="keyword">int</span> seed = <span class="number">19260817</span>&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">class fhq_treap &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">private</span>:</span></pre></td></tr><tr><td class="code"><pre><span class="line">	class node &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">public</span>:</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">int</span> key, size, lchild, rchild; </span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="comment">// key是随机权值，size是子树大小，lchild,rchild是左右儿子编号。</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">		type data;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="comment">// 数据。</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">bool</span> reverse;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="comment">// 区间翻转lazy tag</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125; tree[SIZE];</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">int</span> count = <span class="number">0</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="built_in">std</span>::mt19937 myrand; <span class="comment">// [1-3]</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">update_size</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>&amp; x)</span> </span>&#123; <span class="comment">// 更新子树大小</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">		tree[x].size = tree[tree[x].lchild].size + tree[tree[x].rchild].size +</span></pre></td></tr><tr><td class="code"><pre><span class="line">					   <span class="number">1</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">return</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">push_down_reverse</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>&amp; x)</span> </span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">if</span> (tree[x].reverse) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">			tree[x].lchild ^= tree[x].rchild ^= </span></pre></td></tr><tr><td class="code"><pre><span class="line">							  tree[x].lchild ^= tree[x].rchild; <span class="comment">// swap [4]</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">			<span class="keyword">if</span> (tree[x].lchild) &#123; <span class="comment">// 我们当然不想让tree[0]改来改去（虽然没有影响）</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">				tree[tree[x].lchild].reverse ^= <span class="number">1</span>; <span class="comment">// [5]</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">			&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">			<span class="keyword">if</span> (tree[x].rchild) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">				tree[tree[x].rchild].reverse ^= <span class="number">1</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">			&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">			tree[x].reverse = <span class="literal">false</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">return</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">public</span>:</span></pre></td></tr><tr><td class="code"><pre><span class="line">	fhq_treap(<span class="keyword">void</span>) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="built_in">std</span>::<span class="function">mt19937 <span class="title">tmp</span><span class="params">(seed)</span></span>; <span class="comment">// 初始化种子</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">		myrand = tmp;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">build</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>&amp; x)</span> </span>&#123; <span class="comment">// build一个结点</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">		++count;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		tree[count].data = x;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		tree[count].size = <span class="number">1</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		tree[count].key = myrand(); <span class="comment">// 随机赋权值</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">return</span> count;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">merge</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>&amp; x, <span class="keyword">const</span> <span class="keyword">int</span>&amp; y)</span> </span>&#123; <span class="comment">// 返回x,y的子树合并后根的编号</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">if</span> (x == <span class="number">0</span> || y == <span class="number">0</span>) &#123; <span class="comment">// 如果两棵树有空树</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">			<span class="keyword">return</span> x + y; <span class="comment">// 如果两棵树都是空树，返回空树，否则返回非空的那棵树</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">if</span> (tree[x].key &lt; tree[y].key) &#123; <span class="comment">// 如果x的随机权值比y小</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">			push_down_reverse(x);</span></pre></td></tr><tr><td class="code"><pre><span class="line">			tree[x].rchild = merge(tree[x].rchild, y); <span class="comment">// y和x右子树合并</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">			update_size(x); <span class="comment">// 更新x子树大小</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">			<span class="keyword">return</span> x; <span class="comment">// 合并后x肯定为根</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">else</span> &#123; <span class="comment">// 同上</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">			push_down_reverse(y);</span></pre></td></tr><tr><td class="code"><pre><span class="line">			tree[y].lchild = merge(x, tree[y].lchild);</span></pre></td></tr><tr><td class="code"><pre><span class="line">			update_size(y);</span></pre></td></tr><tr><td class="code"><pre><span class="line">			<span class="keyword">return</span> y;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="comment">// 关于tuple的知识，你可以去 [6-7] 查看。</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="built_in">std</span>::tuple&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; split(<span class="keyword">const</span> <span class="keyword">int</span>&amp; root, <span class="keyword">const</span> <span class="keyword">int</span>&amp; k) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">if</span> (root == <span class="number">0</span>) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">			<span class="keyword">return</span> <span class="built_in">std</span>::make_tuple(<span class="number">0</span>, <span class="number">0</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		push_down_reverse(root);</span></pre></td></tr><tr><td class="code"><pre><span class="line">		</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="built_in">std</span>::tuple&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; res;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">if</span> (tree[tree[root].lchild].size &lt; k) &#123; <span class="comment">// 左子树大小不够</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">			<span class="keyword">auto</span> oldres = split(tree[root].rchild,</span></pre></td></tr><tr><td class="code"><pre><span class="line">								k - tree[tree[root].lchild].size - <span class="number">1</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line">			<span class="comment">// 后一个参数的意思是去掉左子树和根的大小</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">			tree[root].rchild = <span class="built_in">std</span>::get&lt;<span class="number">0</span>&gt;(oldres); <span class="comment">// 更新右子树</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">			res = <span class="built_in">std</span>::make_tuple(root, <span class="built_in">std</span>::get&lt;<span class="number">1</span>&gt;(oldres));</span></pre></td></tr><tr><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">else</span> &#123; <span class="comment">// 左子树大小够</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">			<span class="keyword">auto</span> oldres = split(tree[root].lchild, k);</span></pre></td></tr><tr><td class="code"><pre><span class="line">			tree[root].lchild = <span class="built_in">std</span>::get&lt;<span class="number">1</span>&gt;(oldres);</span></pre></td></tr><tr><td class="code"><pre><span class="line">			res = <span class="built_in">std</span>::make_tuple(<span class="built_in">std</span>::get&lt;<span class="number">0</span>&gt;(oldres), root);</span></pre></td></tr><tr><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		update_size(root); <span class="comment">// 更新子树大小</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">return</span> res;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>&amp; root)</span> </span>&#123; <span class="comment">// 中序遍历输出整棵树</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">if</span> (root == <span class="number">0</span>) &#123; <span class="comment">// 如果是空树，返回。</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">			<span class="keyword">return</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		push_down_reverse(root); <span class="comment">// 翻转懒标记下传</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">		print(tree[root].lchild); <span class="comment">// 输出左子树</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="built_in">std</span>::<span class="built_in">printf</span>(<span class="string">"%d "</span>, tree[root].data); <span class="comment">// 输出本身</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">		print(tree[root].rchild); <span class="comment">// 输出右子树</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">return</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">reverse</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>&amp; root)</span> </span>&#123; <span class="comment">// 翻转子树</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">		tree[root].reverse ^= <span class="number">1</span>; <span class="comment">// 标记一下</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">return</span>; <span class="comment">// 搞定~</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">fhq_treap&lt;<span class="keyword">int</span>, <span class="number">100010</span>&gt; tree;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span> </span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">int</span> n, m;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="built_in">std</span>::<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m);</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">int</span> root = <span class="number">0</span>; <span class="comment">// 树根</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		root = tree.merge(root, tree.build(i)); <span class="comment">// 插入i</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">int</span> revl, revr; <span class="comment">// 翻转区间左右端点</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="built_in">std</span>::<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;revl, &amp;revr);</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">auto</span> tmp = tree.split(root, revl - <span class="number">1</span>); <span class="comment">// 拆分-1</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">auto</span> tmp2 = tree.split(<span class="built_in">std</span>::get&lt;<span class="number">1</span>&gt;(tmp), revr - revl + <span class="number">1</span>); <span class="comment">// 拆分-2</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">		tree.reverse(<span class="built_in">std</span>::get&lt;<span class="number">0</span>&gt;(tmp2)); <span class="comment">// 翻转</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">		root = tree.merge(<span class="built_in">std</span>::get&lt;<span class="number">0</span>&gt;(tmp), tree.merge(<span class="built_in">std</span>::get&lt;<span class="number">0</span>&gt;(tmp2),</span></pre></td></tr><tr><td class="code"><pre><span class="line">													   <span class="built_in">std</span>::get&lt;<span class="number">1</span>&gt;(tmp2))); </span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="comment">// 合并</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	tree.print(root); <span class="comment">// 输出</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">// Tips:</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">// [1]: https://oi-wiki.org/misc/random/</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">// [2]: https://zh.cppreference.com/w/cpp/numeric/random/mersenne_twister_engine</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">// [3]: https://en.wikipedia.org/wiki/Mersenne_twister</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">// [4]: 第一次见这种写法，你可能会被吓到：a ^= b ^= a ^= b真的能交换a和b的值？</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">//		这里将阐述这种做法的正确性。我们假设x和y分别是两个bool变量，</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">//		如果x ^= y ^= x ^= y能交换x和y的值，那我们对a和b的每一位拿出来做这个运算，</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">//		也能交换这两位，于是a和b的每一位都交换了，所以a和b的值也交换了。</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">//		我们枚举(x, y)的4种初始值(0, 0), (0, 1), (1, 0), (1, 1)，</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">//		观察在x ^= y ^= x ^= y的每一步之后(x, y)的变化情况（注意^=是右结合的）：</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">//		(0, 0) -&gt; (0, 0) -&gt; (0, 0) -&gt; (0, 0)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">//		(0, 1) -&gt; (1, 1) -&gt; (1, 0) -&gt; (1, 0)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">//		(1, 0) -&gt; (1, 0) -&gt; (1, 1) -&gt; (0, 1)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">//		(1, 1) -&gt; (0, 1) -&gt; (0, 1) -&gt; (1, 1)</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">//		发现了吗？(x, y)经过操作之后一定会变为(y, x)。所以我们证明了该操作的正确性。</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">// [5]: 对于bool变量x，x ^= 1等价于x = !x。</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">//		你可以通过枚举x分别为true和false的情况来证明这个操作的正确性。</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">// [6]: https://zh.cppreference.com/w/cpp/header/tuple</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">// [7]: https://zh.cppreference.com/w/cpp/utility/tuple</span></span></pre></td></tr></table></figure>
+]]></content>
       <categories>
-          
-          <category> 数据结构 </category>
-          
+        <category>数据结构</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 平衡树 </tag>
-            
-            <tag> 数据结构 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Sperner定理</title>
-      <link href="/2019/11/30/Sperners-theorem/"/>
-      <url>/2019/11/30/Sperners-theorem/</url>
-      
-        <content type="html"><![CDATA[<h2 id="定理内容"><a href="#定理内容" class="headerlink" title="定理内容"></a>定理内容</h2><p>Sperner定理：对于任意一个包含$n$个元素的集合$U$，我们最多能选择$\dbinom n {\left\lfloor\frac {n} 2\right\rfloor}$个子集，使得这些子集中没有包含关系。<br><a id="more"></a></p><h2 id="定理证明"><a href="#定理证明" class="headerlink" title="定理证明"></a>定理证明</h2><h3 id="引理-Lubell–Yamamoto–Meshalkin不等式"><a href="#引理-Lubell–Yamamoto–Meshalkin不等式" class="headerlink" title="引理 Lubell–Yamamoto–Meshalkin不等式"></a>引理 Lubell–Yamamoto–Meshalkin不等式</h3><p>对于包含 $n$ 个元素的集合 $U$，令 $A$ 为一个由 $U$ 的子集组成的集合，使得 $\forall A_1, A_2 \in A$，$A_1 \subsetneq A_2$ 和 $A_1 \supsetneq A_2$ 均不成立。设 $a_k$ 表示 $A$ 中大小为 $k$ 的集合的个数，则有：</p><p>$\sum\limits_{k=0}^n \dfrac{a_k}{\binom n k}\leqslant 1$</p><p>证明：</p><blockquote><p>对于 $S\in U$，我们构造一个 $1\sim n$ 的排列 $\sigma$，使得对于 $i\in S,j\not\in S$，有 $\sigma_i &lt; \sigma_j$。</p><p>譬如，对于 $U=\{1, 2, 3, 4\},S=\{2, 4\}$，$\{\sigma_1, \sigma_2, \sigma_3, \sigma_4\}$有以下$4$种可能：</p><p>$\begin{aligned}\{2, 4, 1, 3\}\\<br>\{2, 4, 3, 1\}\\<br>\{4, 2, 1, 3\}\\<br>\{4, 2, 3, 1\}\end{aligned}$</p><p>如果 $S\subseteq S’$ ，则必定存在一个 $1\sim n$ 的排列 $\tau$，使得 $S$ 和 $S’$ 都能构造出 $\tau$。</p><p>证明：</p><blockquote><p>$\tau$ 的构造由三部分组成：$\{S\}, \{\complement_{S’}S\}, \{\complement_{U}S’\}$。证毕。</p></blockquote><p>还有命题：如果存在一个 $1\sim n$ 的排列 $\tau$，使得 $S$ 和 $S’$ 都能构造出 $\tau$，则必有 $S\subseteq S’$ 或 $S’\subseteq S$。</p><p>证明：</p><blockquote><p>首先 $S$ 和 $S’$ 一定都是 $\{\tau\}$ 的一个前缀，然后 $|S|&lt;|S’|\Leftrightarrow S \subsetneq S’$，$|S|=|S’|\Leftrightarrow S = S’$，$|S|&gt;|S’|\Leftrightarrow S’ \subsetneq S$。证毕。</p></blockquote><p>由 $A$ 的性质得，由 $A$ 内的元素所构造的排列两两不同。</p><p>因为集合 $S$ 能够构造出 $|S|!\left(n-|S|\right)!$ 个不同的排列，所以对于 $S\in A$ 的所有$S$能够构造出的不同的排列的个数为：</p><p>$\sum\limits_{S\in A} |S|!\left(n - |S|\right)!$</p><p>因为它们两两不同，又因为$1\sim n$的排列个数只有$n!$种，所以：</p><p>$\sum\limits_{S\in A} |S|!\left(n - |S|\right)! \leqslant n!\quad\cdots(1)$</p><p>将$S$按照$|S|$整理得：</p><p>$\sum\limits_{S\in A} |S|!\left(n - |S|\right)! = \sum\limits_{k = 0}^n a_k k!(n-k)!\quad\cdots(2)$</p><p>联立$(1),(2)$得：</p><p>$\sum\limits_{k = 0}^n a_k k!(n-k)! \leqslant n!$</p><p>将$n!$除过去：</p><p>$\sum\limits_{k = 0}^n \dfrac{a_k}{\binom n k} \leqslant 1$</p><p>证毕！</p></blockquote><h3 id="Sperner定理证明"><a href="#Sperner定理证明" class="headerlink" title="Sperner定理证明"></a>Sperner定理证明</h3><blockquote><p>令$S$为一个由$U$的子集组成的集合，使得$\forall S_1, S_2 \in S$，$S_1 \subsetneq S_2$和$S_1 \supsetneq S_2$均不成立。令$s_k$表示$S$中包含$k$个元素的集合的个数。</p><p>$\because \forall 0\leqslant k \leqslant n$，有$\binom n {\left\lfloor \frac n 2 \right\rfloor} \geqslant \binom n k$，</p><p>$\therefore \dfrac {s_k} {\binom n {\left\lfloor \frac n 2 \right\rfloor}} \leqslant \dfrac {s_k} {\binom n k}$。</p><p>$\therefore \sum\limits_{k=0}^n\dfrac {s_k} {\binom n {\left\lfloor \frac n 2 \right\rfloor}\leqslant \sum\limits_{k=0}^n\dfrac {s_k} {\binom n k}}\leqslant 1 $。</p><p>$\therefore \sum\limits_{k=0}^n\dfrac {s_k} {\binom n {\left\lfloor \frac n 2 \right\rfloor}} \leqslant 1$。</p><p>$\therefore |S| = \sum\limits_{k = 0}^n s_k \leqslant \binom n {\left\lfloor \frac n 2 \right\rfloor}$。</p><p>证毕！</p></blockquote>]]></content>
-      
-      
+      <tags>
+        <tag>平衡树</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Sperner定理</title>
+    <url>/2019/11/30/Sperners-theorem/</url>
+    <content><![CDATA[<h2 id="定理内容"><a href="#定理内容" class="headerlink" title="定理内容"></a>定理内容</h2><p>Sperner定理：对于任意一个包含$n$个元素的集合$U$，我们最多能选择$\dbinom n {\left\lfloor\frac {n} 2\right\rfloor}$个子集，使得这些子集中没有包含关系。<br><a id="more"></a></p>
+<h2 id="定理证明"><a href="#定理证明" class="headerlink" title="定理证明"></a>定理证明</h2><h3 id="引理-Lubell–Yamamoto–Meshalkin不等式"><a href="#引理-Lubell–Yamamoto–Meshalkin不等式" class="headerlink" title="引理 Lubell–Yamamoto–Meshalkin不等式"></a>引理 Lubell–Yamamoto–Meshalkin不等式</h3><p>对于包含 $n$ 个元素的集合 $U$，令 $A$ 为一个由 $U$ 的子集组成的集合，使得 $\forall A_1, A_2 \in A$，$A_1 \subsetneq A_2$ 和 $A_1 \supsetneq A_2$ 均不成立。设 $a_k$ 表示 $A$ 中大小为 $k$ 的集合的个数，则有：</p>
+<p>$\sum\limits_{k=0}^n \dfrac{a_k}{\binom n k}\leqslant 1$</p>
+<p>证明：</p>
+<blockquote>
+<p>对于 $S\in U$，我们构造一个 $1\sim n$ 的排列 $\sigma$，使得对于 $i\in S,j\not\in S$，有 $\sigma_i &lt; \sigma_j$。</p>
+<p>譬如，对于 $U=\{1, 2, 3, 4\},S=\{2, 4\}$，$\{\sigma_1, \sigma_2, \sigma_3, \sigma_4\}$有以下$4$种可能：</p>
+<p>$\begin{aligned}\{2, 4, 1, 3\}\\<br>\{2, 4, 3, 1\}\\<br>\{4, 2, 1, 3\}\\<br>\{4, 2, 3, 1\}\end{aligned}$</p>
+<p>如果 $S\subseteq S’$ ，则必定存在一个 $1\sim n$ 的排列 $\tau$，使得 $S$ 和 $S’$ 都能构造出 $\tau$。</p>
+<p>证明：</p>
+<blockquote>
+<p>$\tau$ 的构造由三部分组成：$\{S\}, \{\complement_{S’}S\}, \{\complement_{U}S’\}$。证毕。</p>
+</blockquote>
+<p>还有命题：如果存在一个 $1\sim n$ 的排列 $\tau$，使得 $S$ 和 $S’$ 都能构造出 $\tau$，则必有 $S\subseteq S’$ 或 $S’\subseteq S$。</p>
+<p>证明：</p>
+<blockquote>
+<p>首先 $S$ 和 $S’$ 一定都是 $\{\tau\}$ 的一个前缀，然后 $|S|&lt;|S’|\Leftrightarrow S \subsetneq S’$，$|S|=|S’|\Leftrightarrow S = S’$，$|S|&gt;|S’|\Leftrightarrow S’ \subsetneq S$。证毕。</p>
+</blockquote>
+<p>由 $A$ 的性质得，由 $A$ 内的元素所构造的排列两两不同。</p>
+<p>因为集合 $S$ 能够构造出 $|S|!\left(n-|S|\right)!$ 个不同的排列，所以对于 $S\in A$ 的所有$S$能够构造出的不同的排列的个数为：</p>
+<p>$\sum\limits_{S\in A} |S|!\left(n - |S|\right)!$</p>
+<p>因为它们两两不同，又因为$1\sim n$的排列个数只有$n!$种，所以：</p>
+<p>$\sum\limits_{S\in A} |S|!\left(n - |S|\right)! \leqslant n!\quad\cdots(1)$</p>
+<p>将$S$按照$|S|$整理得：</p>
+<p>$\sum\limits_{S\in A} |S|!\left(n - |S|\right)! = \sum\limits_{k = 0}^n a_k k!(n-k)!\quad\cdots(2)$</p>
+<p>联立$(1),(2)$得：</p>
+<p>$\sum\limits_{k = 0}^n a_k k!(n-k)! \leqslant n!$</p>
+<p>将$n!$除过去：</p>
+<p>$\sum\limits_{k = 0}^n \dfrac{a_k}{\binom n k} \leqslant 1$</p>
+<p>证毕！</p>
+</blockquote>
+<h3 id="Sperner定理证明"><a href="#Sperner定理证明" class="headerlink" title="Sperner定理证明"></a>Sperner定理证明</h3><blockquote>
+<p>令$S$为一个由$U$的子集组成的集合，使得$\forall S_1, S_2 \in S$，$S_1 \subsetneq S_2$和$S_1 \supsetneq S_2$均不成立。令$s_k$表示$S$中包含$k$个元素的集合的个数。</p>
+<p>$\because \forall 0\leqslant k \leqslant n$，有$\binom n {\left\lfloor \frac n 2 \right\rfloor} \geqslant \binom n k$，</p>
+<p>$\therefore \dfrac {s_k} {\binom n {\left\lfloor \frac n 2 \right\rfloor}} \leqslant \dfrac {s_k} {\binom n k}$。</p>
+<p>$\therefore \sum\limits_{k=0}^n\dfrac {s_k} {\binom n {\left\lfloor \frac n 2 \right\rfloor}\leqslant \sum\limits_{k=0}^n\dfrac {s_k} {\binom n k}}\leqslant 1 $。</p>
+<p>$\therefore \sum\limits_{k=0}^n\dfrac {s_k} {\binom n {\left\lfloor \frac n 2 \right\rfloor}} \leqslant 1$。</p>
+<p>$\therefore |S| = \sum\limits_{k = 0}^n s_k \leqslant \binom n {\left\lfloor \frac n 2 \right\rfloor}$。</p>
+<p>证毕！</p>
+</blockquote>
+]]></content>
       <categories>
-          
-          <category> 数学 </category>
-          
+        <category>数学</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 数学 </tag>
-            
-            <tag> OI </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>CSP2019总结</title>
-      <link href="/2019/11/25/CSP2019-summary/"/>
-      <url>/2019/11/25/CSP2019-summary/</url>
-      
-        <content type="html"><![CDATA[<p>一个初二OIer的总结~</p><a id="more"></a><h2 id="CSP-J"><a href="#CSP-J" class="headerlink" title="CSP-J"></a>CSP-J</h2><h3 id="T1-数字游戏"><a href="#T1-数字游戏" class="headerlink" title="T1 数字游戏"></a>T1 数字游戏</h3><p>这道题是真的水题，要不是今年PJ难度降低了不少，不然觉得连做PJD1T1的难度都没有。。。</p><p>相信不用怎么讲的了，因为CCF保证输入文件没有任何多余行末空格或多余文件末换行，不用考虑奇怪的情况，比如假设CCF不保证，那么下面的代码就很容易被Hack：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">(<span class="keyword">signed</span> argc, <span class="keyword">char</span> **argv)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> ch;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> tot = <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (~(ch = <span class="built_in">std</span>::getchar())) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">tot += ch - <span class="string">'0'</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure><h3 id="T2-公交换乘"><a href="#T2-公交换乘" class="headerlink" title="T2 公交换乘"></a>T2 公交换乘</h3><p>实话说我对这道题究竟该怎么实现纠结了很久……本来想皮一下用<code>std::set</code>的，但是最后还是用了队列实现。。</p><p>不知道考场怎么想的，为了遍历队列，我手写了一个长达41行的队列……应该是过了吧</p><h3 id="T3-纪念品"><a href="#T3-纪念品" class="headerlink" title="T3 纪念品"></a>T3 纪念品</h3><p>成功爆炸……</p><p>大致思路是分段乱搞……如果<code>t==1</code>，那当然直接输出<code>m</code>啦，然后其他的点乱打，成功只拿到了<code>t==1</code>的点。</p><p>考场上本来应该能想到背包的……</p><h3 id="T4-加工零件"><a href="#T4-加工零件" class="headerlink" title="T4 加工零件"></a>T4 加工零件</h3><p>考试的时候当然想到了从1开始求最短路的方法，但是苦于不知道怎么处理奇偶的情况，然后在lg上40分……</p><p>个人觉得奇偶还挺好想的？</p><h2 id="CSP-S"><a href="#CSP-S" class="headerlink" title="CSP-S"></a>CSP-S</h2><h3 id="D1T1-格雷码"><a href="#D1T1-格雷码" class="headerlink" title="D1T1 格雷码"></a>D1T1 格雷码</h3><p>祖宗我总算见到你了！！！</p><p>显然我没有开<code>unsigned long long</code>，但是就算开了<code>unsigned long long</code>也不能保证万无一失，比如这是我考场的代码，就算<code>long long</code>全部改成<code>unsigned long long</code>也无济于事：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">code</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> &amp;n, <span class="keyword">const</span> <span class="keyword">long</span> <span class="keyword">long</span> &amp;m)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (n == <span class="number">1</span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">putchar</span>(m + <span class="string">'0'</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (m &lt; (<span class="number">1l</span>l &lt;&lt; (n - <span class="number">1</span>))) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">putchar</span>(<span class="string">'0'</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">code(n - <span class="number">1</span>, m);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">else</span> &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">putchar</span>(<span class="string">'1'</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">code(n - <span class="number">1</span>, (<span class="number">1l</span>l &lt;&lt; n) - <span class="number">1l</span>l - m);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure><p>为什么呢？因为<code>1ull &lt;&lt; 64</code>会爆<code>unsigned long long</code>。</p><h3 id="D1T2-括号树"><a href="#D1T2-括号树" class="headerlink" title="D1T2 括号树"></a>D1T2 括号树</h3><p>直接打链的情况，调了会之后在lg上75分。</p><p>对于每个结点，一路往上走，直到到根结点，然后记得维护前缀和，然后对于i和i的一个祖宗j，如果<code>S[i] &gt; S[j]</code>，那么直接不合法，跳出。否则如果<code>S[i] == S[j]</code>，<code>++ans[i]</code>。</p><h3 id="D1T3-树上的数"><a href="#D1T3-树上的数" class="headerlink" title="D1T3 树上的数"></a>D1T3 树上的数</h3><p><del>样例都没过，还想拿分？</del></p><p>在lg上成功爆0，大致讲讲思路吧</p><p>时间复杂度$O(n!)$，对于$1\sim n$的每个排列（使用<code>&lt;algorithm&gt;</code>里的<code>std::next_permutation</code>），都计算一遍当前字典序，然后看看最小的是什么。</p><h3 id="D2T1-Emiya家今天的饭"><a href="#D2T1-Emiya家今天的饭" class="headerlink" title="D2T1 Emiya家今天的饭"></a>D2T1 Emiya家今天的饭</h3><p>直接爆搜。lg上能跑32分，大概拿满爆搜分了吧……</p><p>按照烹饪方法枚举。</p><p>考场上居然忘记剪枝了，表示崩溃……</p><h3 id="D2T2-划分"><a href="#D2T2-划分" class="headerlink" title="D2T2 划分"></a>D2T2 划分</h3><p>真的不知道怎么打了。。。随便想了一种解法，看似没有问题，过了样例，然而只拿了8分的高分……</p><h3 id="D2T3-树的重心"><a href="#D2T3-树的重心" class="headerlink" title="D2T3 树的重心"></a>D2T3 树的重心</h3><p>连暴力都木有，直接一个<code>std::freopen</code>和<code>std::fclose</code>结束了程序。。。</p><h2 id="估分"><a href="#估分" class="headerlink" title="估分"></a>估分</h2><p>CSP-J 250~290</p><p>CSP-S 160~190</p>]]></content>
-      
-      
+      <tags>
+        <tag>数学</tag>
+        <tag>OI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSP2019总结</title>
+    <url>/2019/11/25/CSP2019-summary/</url>
+    <content><![CDATA[<p>一个初二OIer的总结~</p>
+<a id="more"></a>
+<h2 id="CSP-J"><a href="#CSP-J" class="headerlink" title="CSP-J"></a>CSP-J</h2><h3 id="T1-数字游戏"><a href="#T1-数字游戏" class="headerlink" title="T1 数字游戏"></a>T1 数字游戏</h3><p>这道题是真的水题，要不是今年PJ难度降低了不少，不然觉得连做PJD1T1的难度都没有。。。</p>
+<p>相信不用怎么讲的了，因为CCF保证输入文件没有任何多余行末空格或多余文件末换行，不用考虑奇怪的情况，比如假设CCF不保证，那么下面的代码就很容易被Hack：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">(<span class="keyword">signed</span> argc, <span class="keyword">char</span> **argv)</span> </span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">char</span> ch;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">int</span> tot = <span class="number">0</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">while</span> (~(ch = <span class="built_in">std</span>::getchar())) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		tot += ch - <span class="string">'0'</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h3 id="T2-公交换乘"><a href="#T2-公交换乘" class="headerlink" title="T2 公交换乘"></a>T2 公交换乘</h3><p>实话说我对这道题究竟该怎么实现纠结了很久……本来想皮一下用<code>std::set</code>的，但是最后还是用了队列实现。。</p>
+<p>不知道考场怎么想的，为了遍历队列，我手写了一个长达41行的队列……应该是过了吧</p>
+<h3 id="T3-纪念品"><a href="#T3-纪念品" class="headerlink" title="T3 纪念品"></a>T3 纪念品</h3><p>成功爆炸……</p>
+<p>大致思路是分段乱搞……如果<code>t==1</code>，那当然直接输出<code>m</code>啦，然后其他的点乱打，成功只拿到了<code>t==1</code>的点。</p>
+<p>考场上本来应该能想到背包的……</p>
+<h3 id="T4-加工零件"><a href="#T4-加工零件" class="headerlink" title="T4 加工零件"></a>T4 加工零件</h3><p>考试的时候当然想到了从1开始求最短路的方法，但是苦于不知道怎么处理奇偶的情况，然后在lg上40分……</p>
+<p>个人觉得奇偶还挺好想的？</p>
+<h2 id="CSP-S"><a href="#CSP-S" class="headerlink" title="CSP-S"></a>CSP-S</h2><h3 id="D1T1-格雷码"><a href="#D1T1-格雷码" class="headerlink" title="D1T1 格雷码"></a>D1T1 格雷码</h3><p>祖宗我总算见到你了！！！</p>
+<p>显然我没有开<code>unsigned long long</code>，但是就算开了<code>unsigned long long</code>也不能保证万无一失，比如这是我考场的代码，就算<code>long long</code>全部改成<code>unsigned long long</code>也无济于事：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">code</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> &amp;n, <span class="keyword">const</span> <span class="keyword">long</span> <span class="keyword">long</span> &amp;m)</span> </span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">if</span> (n == <span class="number">1</span>) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="built_in">std</span>::<span class="built_in">putchar</span>(m + <span class="string">'0'</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="keyword">return</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">if</span> (m &lt; (<span class="number">1l</span>l &lt;&lt; (n - <span class="number">1</span>))) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="built_in">std</span>::<span class="built_in">putchar</span>(<span class="string">'0'</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line">		code(n - <span class="number">1</span>, m);</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">else</span> &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		<span class="built_in">std</span>::<span class="built_in">putchar</span>(<span class="string">'1'</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line">		code(n - <span class="number">1</span>, (<span class="number">1l</span>l &lt;&lt; n) - <span class="number">1l</span>l - m);</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="keyword">return</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<p>为什么呢？因为<code>1ull &lt;&lt; 64</code>会爆<code>unsigned long long</code>。</p>
+<h3 id="D1T2-括号树"><a href="#D1T2-括号树" class="headerlink" title="D1T2 括号树"></a>D1T2 括号树</h3><p>直接打链的情况，调了会之后在lg上75分。</p>
+<p>对于每个结点，一路往上走，直到到根结点，然后记得维护前缀和，然后对于i和i的一个祖宗j，如果<code>S[i] &gt; S[j]</code>，那么直接不合法，跳出。否则如果<code>S[i] == S[j]</code>，<code>++ans[i]</code>。</p>
+<h3 id="D1T3-树上的数"><a href="#D1T3-树上的数" class="headerlink" title="D1T3 树上的数"></a>D1T3 树上的数</h3><p><del>样例都没过，还想拿分？</del></p>
+<p>在lg上成功爆0，大致讲讲思路吧</p>
+<p>时间复杂度$O(n!)$，对于$1\sim n$的每个排列（使用<code>&lt;algorithm&gt;</code>里的<code>std::next_permutation</code>），都计算一遍当前字典序，然后看看最小的是什么。</p>
+<h3 id="D2T1-Emiya家今天的饭"><a href="#D2T1-Emiya家今天的饭" class="headerlink" title="D2T1 Emiya家今天的饭"></a>D2T1 Emiya家今天的饭</h3><p>直接爆搜。lg上能跑32分，大概拿满爆搜分了吧……</p>
+<p>按照烹饪方法枚举。</p>
+<p>考场上居然忘记剪枝了，表示崩溃……</p>
+<h3 id="D2T2-划分"><a href="#D2T2-划分" class="headerlink" title="D2T2 划分"></a>D2T2 划分</h3><p>真的不知道怎么打了。。。随便想了一种解法，看似没有问题，过了样例，然而只拿了8分的高分……</p>
+<h3 id="D2T3-树的重心"><a href="#D2T3-树的重心" class="headerlink" title="D2T3 树的重心"></a>D2T3 树的重心</h3><p>连暴力都木有，直接一个<code>std::freopen</code>和<code>std::fclose</code>结束了程序。。。</p>
+<h2 id="估分"><a href="#估分" class="headerlink" title="估分"></a>估分</h2><p>CSP-J 250~290</p>
+<p>CSP-S 160~190</p>
+]]></content>
       <categories>
-          
-          <category> CSP2019 </category>
-          
+        <category>CSP2019</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> OI </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>CSP2019合辑</title>
-      <link href="/2019/11/20/CSP2019/"/>
-      <url>/2019/11/20/CSP2019/</url>
-      
-        <content type="html"><![CDATA[<ol><li><a href="/2019/11/18/CSP2019-diary">CSP2019游记</a></li><li><a href="/2019/11/25/CSP2019-summary">CSP2019总结</a></li><li><a href="/2019/11/30/CSP2019-solution">CSP2019题解</a>（鸽了，已隐藏）</li></ol>]]></content>
-      
-      
+      <tags>
+        <tag>OI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSP2019合辑</title>
+    <url>/2019/11/20/CSP2019/</url>
+    <content><![CDATA[<ol>
+<li><a href="/2019/11/18/CSP2019-diary">CSP2019游记</a></li>
+<li><a href="/2019/11/25/CSP2019-summary">CSP2019总结</a></li>
+<li><a href="/2019/11/30/CSP2019-solution">CSP2019题解</a>（鸽了，已隐藏）</li>
+</ol>
+]]></content>
       <categories>
-          
-          <category> CSP2019 </category>
-          
+        <category>CSP2019</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> OI </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>CSP2019游记</title>
-      <link href="/2019/11/18/CSP2019-diary/"/>
-      <url>/2019/11/18/CSP2019-diary/</url>
-      
-        <content type="html"><![CDATA[<p>一个蒟蒻OIer的游记……</p><a id="more"></a><p>前置信息：本人广东初二学生。</p><h2 id="2019-10-19-CSP-S-Round-1"><a href="#2019-10-19-CSP-S-Round-1" class="headerlink" title="2019.10.19 CSP-S Round 1"></a>2019.10.19 CSP-S Round 1</h2><p>前面的选择题严重影响了我对整张试卷难度的预测。。。然后车牌那道题我做了几百遍也没做出选项内答案，在写了十多分钟然而无果后，摔笔，瞎蒙，下一道。（2333）</p><p>距离考试还有 15 分钟的时候，下课铃响彻了整个二中，把考生都吓到了，然后铃声响完以后一个男声响起：“距离考试结束还有 15 分钟”……</p><p>然后由于低估了题目难度以及数量，导致留给最后一道题的时候只有五分钟了……半蒙半做地搞完了</p><p>出来的时候拿着 A 卷答案去和别人 B 卷答案对，感觉要凉</p><p>最后？77 分，GD分数线 71 分</p><p>lemon 拿到了 70.5 分，不幸与复赛无缘，荣获年度最佳人品称号！</p><p>后来分数线降到了 68 分。可是还是有一位神仙同学 $\sin$ 无缘复赛。</p><h2 id="2019-10-19-CSP-J-Round-1"><a href="#2019-10-19-CSP-J-Round-1" class="headerlink" title="2019.10.19 CSP-J Round 1"></a>2019.10.19 CSP-J Round 1</h2><p>本来由于上午的惨痛教训，我打算尽快完成试卷。后来想想还是算了，慢慢地品味试卷。</p><p>品味的时候看到上午那道阉割版车牌题，差点笑出了声</p><p>考试快结束的时候又是那个男声。。。</p><p>最后考了83分。至于分数线，那并不重要。（反正过了就对了 hhhh）</p><h2 id="2019-11-16-CSP-S-Round-2-Day-1"><a href="#2019-11-16-CSP-S-Round-2-Day-1" class="headerlink" title="2019.11.16 CSP-S Round 2 Day 1"></a>2019.11.16 CSP-S Round 2 Day 1</h2><p>本来以为会是 <code>JianGuo70Nian</code> 之类的，没想到是个……</p><p>首先是 D1T1 ，显然这种题就是 SB 题，但是我一开始很 SB 地写了 <code>int</code>……样例 #3 成功爆炸，于是重新看看代码……改成 <code>long long</code>后成功过了样例 #3，幸甚至哉，我在代码某一行写了一段注释：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// long time no see, my great great great great great great great great grandfather!</span></span></pre></td></tr></table></figure><p>出考场时：“蛤？要<code>unsigned long long</code>？？！”<strong>见祖宗啦——</strong></p><p>D1T2我就直接打了50分$O(n^2)$暴力，然后出考场的时候——</p><blockquote><p>啊？T2要异或和？我直接加起来了<br>——又是lemon</p></blockquote><p>2333……</p><p>D1T3没调出暴力，心态炸了</p><p>预估分数：$95+50+0=145$，见祖宗花了我$5$分……</p><p>话说我一开始一直在用垃圾Dev-C++，因为Notepad++在我眼里是最烂的编辑器，而Vim和Emacs明显不是我这种蒟蒻能够用的……考了一个半小时之后在桌面上看到了Sublime Text 3……</p><p>坐我右边那位大佬超爱Dev-C++的调试功能，只见一条红条和一条蓝条在屏幕上迅速移动……</p><h2 id="2019-11-16-CSP-J-Round-2"><a href="#2019-11-16-CSP-J-Round-2" class="headerlink" title="2019.11.16 CSP-J Round 2"></a>2019.11.16 CSP-J Round 2</h2><p>考试前为了放松身心，在二中楼梯上颓了好久的Rolling Sky。。。</p><p>有一个初一的陌生同学（他：我真的不是小学生！！！）一直盯着我玩，而且嘴里吐出了很多他们本来应该在下个学期生物课上才会学到的奇妙词语……</p><p>考试了，我看了看桌面，没有Sublime Text 3。找了半天没找到游戏，唉……</p><p>坐我左边的是一位大佬，他根本不知道压缩包可以压缩，于是他想要测样例的时候就先把文件拖出来，然后输密码，然后用写字板打开，从上往下划（不知道<code>Ctrl/Command+A</code>吗），然后丢到控制台里。</p><p>到T2的最后一个样例的时候，他本来打算故技重施的，结果尝试了一两分钟后发现还要好久……我以为他要全选的，结果并不！他把写字板调成一个屏幕能显示四五十页的，然后再次选择。。。</p><p>控制台那里粘贴了好久……</p><p>最后他把他自己的文件夹扔到了压缩包里，然后在文件夹内有一个叫<code>***的基本资料</code>的文件夹，里面是什么呢？一个把<code>CSP-J.pdf</code>更名为<code>***.pdf</code>的文件，然后他用记事本打开，在前面加了自己的信息。</p><p>做T3的时候我傻了，明明想到了正解但是因为只会证t==2时正确性，于是……</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// 骗分1</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// 骗分2</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (t == <span class="number">2</span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// 正解</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure><p>我冤啊……</p><p>（话说T1的样例#2还是<code>title.in</code>和<code>title.out</code>来着？不知道有多少人知道……</p><h2 id="2019-11-17-CSP-S-Round-2-Day-2"><a href="#2019-11-17-CSP-S-Round-2-Day-2" class="headerlink" title="2019.11.17 CSP-S Round 2 Day 2"></a>2019.11.17 CSP-S Round 2 Day 2</h2><p>看到D2T1，果断打暴力。</p><p>看到D2T2，犹豫了许久还是打了暴力。</p><p>看到D2T3，发现突然忘记树的重心怎么打了……于是懵逼……</p><p>反正还有一个小时，掏出桌面小程序，打开数字华容道……</p><p>颓了五局然后发现！右边的右边的右边的lemon还在打！我顿时觉得T3好像有分可夺，于是瞄了一眼……<strong>这链的情况不是在嘲讽人吗？？！</strong></p><p>最后因为只有三十分钟了，成功没有调出来……</p>]]></content>
-      
-      
+      <tags>
+        <tag>OI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSP2019游记</title>
+    <url>/2019/11/18/CSP2019-diary/</url>
+    <content><![CDATA[<p>一个蒟蒻OIer的游记……</p>
+<a id="more"></a>
+<p>前置信息：本人广东初二学生。</p>
+<h2 id="2019-10-19-CSP-S-Round-1"><a href="#2019-10-19-CSP-S-Round-1" class="headerlink" title="2019.10.19 CSP-S Round 1"></a>2019.10.19 CSP-S Round 1</h2><p>前面的选择题严重影响了我对整张试卷难度的预测。。。然后车牌那道题我做了几百遍也没做出选项内答案，在写了十多分钟然而无果后，摔笔，瞎蒙，下一道。（2333）</p>
+<p>距离考试还有 15 分钟的时候，下课铃响彻了整个二中，把考生都吓到了，然后铃声响完以后一个男声响起：“距离考试结束还有 15 分钟”……</p>
+<p>然后由于低估了题目难度以及数量，导致留给最后一道题的时候只有五分钟了……半蒙半做地搞完了</p>
+<p>出来的时候拿着 A 卷答案去和别人 B 卷答案对，感觉要凉</p>
+<p>最后？77 分，GD分数线 71 分</p>
+<p>lemon 拿到了 70.5 分，不幸与复赛无缘，荣获年度最佳人品称号！</p>
+<p>后来分数线降到了 68 分。可是还是有一位神仙同学 $\sin$ 无缘复赛。</p>
+<h2 id="2019-10-19-CSP-J-Round-1"><a href="#2019-10-19-CSP-J-Round-1" class="headerlink" title="2019.10.19 CSP-J Round 1"></a>2019.10.19 CSP-J Round 1</h2><p>本来由于上午的惨痛教训，我打算尽快完成试卷。后来想想还是算了，慢慢地品味试卷。</p>
+<p>品味的时候看到上午那道阉割版车牌题，差点笑出了声</p>
+<p>考试快结束的时候又是那个男声。。。</p>
+<p>最后考了83分。至于分数线，那并不重要。（反正过了就对了 hhhh）</p>
+<h2 id="2019-11-16-CSP-S-Round-2-Day-1"><a href="#2019-11-16-CSP-S-Round-2-Day-1" class="headerlink" title="2019.11.16 CSP-S Round 2 Day 1"></a>2019.11.16 CSP-S Round 2 Day 1</h2><p>本来以为会是 <code>JianGuo70Nian</code> 之类的，没想到是个……</p>
+<p>首先是 D1T1 ，显然这种题就是 SB 题，但是我一开始很 SB 地写了 <code>int</code>……样例 #3 成功爆炸，于是重新看看代码……改成 <code>long long</code>后成功过了样例 #3，幸甚至哉，我在代码某一行写了一段注释：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// long time no see, my great great great great great great great great grandfather!</span></span></pre></td></tr></table></figure>
+<p>出考场时：“蛤？要<code>unsigned long long</code>？？！”<strong>见祖宗啦——</strong></p>
+<p>D1T2我就直接打了50分$O(n^2)$暴力，然后出考场的时候——</p>
+<blockquote>
+<p>啊？T2要异或和？我直接加起来了<br>——又是lemon</p>
+</blockquote>
+<p>2333……</p>
+<p>D1T3没调出暴力，心态炸了</p>
+<p>预估分数：$95+50+0=145$，见祖宗花了我$5$分……</p>
+<p>话说我一开始一直在用垃圾Dev-C++，因为Notepad++在我眼里是最烂的编辑器，而Vim和Emacs明显不是我这种蒟蒻能够用的……考了一个半小时之后在桌面上看到了Sublime Text 3……</p>
+<p>坐我右边那位大佬超爱Dev-C++的调试功能，只见一条红条和一条蓝条在屏幕上迅速移动……</p>
+<h2 id="2019-11-16-CSP-J-Round-2"><a href="#2019-11-16-CSP-J-Round-2" class="headerlink" title="2019.11.16 CSP-J Round 2"></a>2019.11.16 CSP-J Round 2</h2><p>考试前为了放松身心，在二中楼梯上颓了好久的Rolling Sky。。。</p>
+<p>有一个初一的陌生同学（他：我真的不是小学生！！！）一直盯着我玩，而且嘴里吐出了很多他们本来应该在下个学期生物课上才会学到的奇妙词语……</p>
+<p>考试了，我看了看桌面，没有Sublime Text 3。找了半天没找到游戏，唉……</p>
+<p>坐我左边的是一位大佬，他根本不知道压缩包可以压缩，于是他想要测样例的时候就先把文件拖出来，然后输密码，然后用写字板打开，从上往下划（不知道<code>Ctrl/Command+A</code>吗），然后丢到控制台里。</p>
+<p>到T2的最后一个样例的时候，他本来打算故技重施的，结果尝试了一两分钟后发现还要好久……我以为他要全选的，结果并不！他把写字板调成一个屏幕能显示四五十页的，然后再次选择。。。</p>
+<p>控制台那里粘贴了好久……</p>
+<p>最后他把他自己的文件夹扔到了压缩包里，然后在文件夹内有一个叫<code>***的基本资料</code>的文件夹，里面是什么呢？一个把<code>CSP-J.pdf</code>更名为<code>***.pdf</code>的文件，然后他用记事本打开，在前面加了自己的信息。</p>
+<p>做T3的时候我傻了，明明想到了正解但是因为只会证t==2时正确性，于是……</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 骗分1</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">// 骗分2</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (t == <span class="number">2</span>) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	<span class="comment">// 正解</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<p>我冤啊……</p>
+<p>（话说T1的样例#2还是<code>title.in</code>和<code>title.out</code>来着？不知道有多少人知道……</p>
+<h2 id="2019-11-17-CSP-S-Round-2-Day-2"><a href="#2019-11-17-CSP-S-Round-2-Day-2" class="headerlink" title="2019.11.17 CSP-S Round 2 Day 2"></a>2019.11.17 CSP-S Round 2 Day 2</h2><p>看到D2T1，果断打暴力。</p>
+<p>看到D2T2，犹豫了许久还是打了暴力。</p>
+<p>看到D2T3，发现突然忘记树的重心怎么打了……于是懵逼……</p>
+<p>反正还有一个小时，掏出桌面小程序，打开数字华容道……</p>
+<p>颓了五局然后发现！右边的右边的右边的lemon还在打！我顿时觉得T3好像有分可夺，于是瞄了一眼……<strong>这链的情况不是在嘲讽人吗？？！</strong></p>
+<p>最后因为只有三十分钟了，成功没有调出来……</p>
+]]></content>
       <categories>
-          
-          <category> CSP2019 </category>
-          
+        <category>CSP2019</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> OI </tag>
-            
-            <tag> 游记 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>OI</tag>
+        <tag>游记</tag>
+      </tags>
+  </entry>
 </search>
