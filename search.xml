@@ -1,12 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>「陶哲轩实分析笔记」目录</title>
+    <url>/2021/01/05/%E3%80%8C%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0%E3%80%8D0.%E7%9B%AE%E5%BD%95/</url>
+    <content><![CDATA[<p>最近在拜读《陶哲轩实分析》（第 3 版，ISBN 978-7-115-48025-5），做点笔记。</p>
+<p>也是！</p>
+<a id="more"></a>
+<!--comment-->
+<h2 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h2><h3 id="第二章-从头开始：自然数"><a href="#第二章-从头开始：自然数" class="headerlink" title="第二章 从头开始：自然数"></a>第二章 从头开始：自然数</h3><h3 id="第三章-集合论"><a href="#第三章-集合论" class="headerlink" title="第三章 集合论"></a>第三章 集合论</h3><h3 id="第四章-整数和有理数"><a href="#第四章-整数和有理数" class="headerlink" title="第四章 整数和有理数"></a>第四章 整数和有理数</h3><h3 id="第五章-实数"><a href="#第五章-实数" class="headerlink" title="第五章 实数"></a>第五章 实数</h3><h3 id="第六章-序列的极限"><a href="#第六章-序列的极限" class="headerlink" title="第六章 序列的极限"></a>第六章 序列的极限</h3><h3 id="第七章-级数"><a href="#第七章-级数" class="headerlink" title="第七章 级数"></a>第七章 级数</h3><h3 id="第八章-无限集"><a href="#第八章-无限集" class="headerlink" title="第八章 无限集"></a>第八章 无限集</h3><h3 id="第九章-mathbb-R-上的连续函数"><a href="#第九章-mathbb-R-上的连续函数" class="headerlink" title="第九章 $\mathbb R$ 上的连续函数"></a>第九章 $\mathbb R$ 上的连续函数</h3><h3 id="第十章-函数的微分"><a href="#第十章-函数的微分" class="headerlink" title="第十章 函数的微分"></a>第十章 函数的微分</h3><h3 id="第十一章-黎曼积分"><a href="#第十一章-黎曼积分" class="headerlink" title="第十一章 黎曼积分"></a>第十一章 黎曼积分</h3><h2 id="第二部分"><a href="#第二部分" class="headerlink" title="第二部分"></a>第二部分</h2><h3 id="第十二章-度量空间"><a href="#第十二章-度量空间" class="headerlink" title="第十二章 度量空间"></a>第十二章 度量空间</h3><h3 id="第十三章-度量空间上的连续函数"><a href="#第十三章-度量空间上的连续函数" class="headerlink" title="第十三章 度量空间上的连续函数"></a>第十三章 度量空间上的连续函数</h3><h3 id="第十四章-一致收敛"><a href="#第十四章-一致收敛" class="headerlink" title="第十四章 一致收敛"></a>第十四章 一致收敛</h3><h3 id="第十五章-幂级数"><a href="#第十五章-幂级数" class="headerlink" title="第十五章 幂级数"></a>第十五章 幂级数</h3><h3 id="第十六章-傅里叶级数"><a href="#第十六章-傅里叶级数" class="headerlink" title="第十六章 傅里叶级数"></a>第十六章 傅里叶级数</h3><h3 id="第十七章-多元微分学"><a href="#第十七章-多元微分学" class="headerlink" title="第十七章 多元微分学"></a>第十七章 多元微分学</h3><h3 id="第十八章-勒贝格测度"><a href="#第十八章-勒贝格测度" class="headerlink" title="第十八章 勒贝格测度"></a>第十八章 勒贝格测度</h3><h3 id="第十九章-勒贝格积分"><a href="#第十九章-勒贝格积分" class="headerlink" title="第十九章 勒贝格积分"></a>第十九章 勒贝格积分</h3><h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="附录-A-数理逻辑基础"><a href="#附录-A-数理逻辑基础" class="headerlink" title="附录 A 数理逻辑基础"></a>附录 A 数理逻辑基础</h3><h3 id="附录-B-十进制"><a href="#附录-B-十进制" class="headerlink" title="附录 B 十进制"></a>附录 B 十进制</h3>]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>笔记</tag>
+        <tag>实分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>「陶哲轩实分析」第二章 从头开始：自然数</title>
+    <url>/2021/01/05/%E3%80%8C%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0%E3%80%8D%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E4%BB%8E%E5%A4%B4%E5%BC%80%E5%A7%8B%EF%BC%9A%E8%87%AA%E7%84%B6%E6%95%B0/</url>
+    <content><![CDATA[<!--comment-->
+<a id="more"></a>
+<h2 id="Peano-公理"><a href="#Peano-公理" class="headerlink" title="Peano 公理"></a>Peano 公理</h2>]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>笔记</tag>
+        <tag>实分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>「陶哲轩实分析笔记」目录</title>
+    <url>/2021/01/05/%E3%80%8C%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0%E3%80%8D%E7%9B%AE%E5%BD%95/</url>
+    <content><![CDATA[<p>最近在拜读《陶哲轩实分析》（第 3 版，ISBN 978-7-115-48025-5），做点笔记。</p>
+<h2 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h2><h3 id="第二章-从头开始：自然数"><a href="#第二章-从头开始：自然数" class="headerlink" title="第二章 从头开始：自然数"></a>第二章 从头开始：自然数</h3><ul>
+<li>笔记</li>
+<li>习题</li>
+</ul>
+<h3 id="第三章-集合论"><a href="#第三章-集合论" class="headerlink" title="第三章 集合论"></a>第三章 集合论</h3><h3 id="第四章-整数和有理数"><a href="#第四章-整数和有理数" class="headerlink" title="第四章 整数和有理数"></a>第四章 整数和有理数</h3><h3 id="第五章-实数"><a href="#第五章-实数" class="headerlink" title="第五章 实数"></a>第五章 实数</h3><h3 id="第六章-序列的极限"><a href="#第六章-序列的极限" class="headerlink" title="第六章 序列的极限"></a>第六章 序列的极限</h3><h3 id="第七章-级数"><a href="#第七章-级数" class="headerlink" title="第七章 级数"></a>第七章 级数</h3><h3 id="第八章-无限集"><a href="#第八章-无限集" class="headerlink" title="第八章 无限集"></a>第八章 无限集</h3><h3 id="第九章-mathbb-R-上的连续函数"><a href="#第九章-mathbb-R-上的连续函数" class="headerlink" title="第九章 $\mathbb R$ 上的连续函数"></a>第九章 $\mathbb R$ 上的连续函数</h3><h3 id="第十章-函数的微分"><a href="#第十章-函数的微分" class="headerlink" title="第十章 函数的微分"></a>第十章 函数的微分</h3><h3 id="第十一章-黎曼积分"><a href="#第十一章-黎曼积分" class="headerlink" title="第十一章 黎曼积分"></a>第十一章 黎曼积分</h3><h2 id="第二部分"><a href="#第二部分" class="headerlink" title="第二部分"></a>第二部分</h2><h3 id="第十二章-度量空间"><a href="#第十二章-度量空间" class="headerlink" title="第十二章 度量空间"></a>第十二章 度量空间</h3><h3 id="第十三章-度量空间上的连续函数"><a href="#第十三章-度量空间上的连续函数" class="headerlink" title="第十三章 度量空间上的连续函数"></a>第十三章 度量空间上的连续函数</h3><h3 id="第十四章-一致收敛"><a href="#第十四章-一致收敛" class="headerlink" title="第十四章 一致收敛"></a>第十四章 一致收敛</h3><h3 id="第十五章-幂级数"><a href="#第十五章-幂级数" class="headerlink" title="第十五章 幂级数"></a>第十五章 幂级数</h3><h3 id="第十六章-傅里叶级数"><a href="#第十六章-傅里叶级数" class="headerlink" title="第十六章 傅里叶级数"></a>第十六章 傅里叶级数</h3><h3 id="第十七章-多元微分学"><a href="#第十七章-多元微分学" class="headerlink" title="第十七章 多元微分学"></a>第十七章 多元微分学</h3><h3 id="第十八章-勒贝格测度"><a href="#第十八章-勒贝格测度" class="headerlink" title="第十八章 勒贝格测度"></a>第十八章 勒贝格测度</h3><h3 id="第十九章-勒贝格积分"><a href="#第十九章-勒贝格积分" class="headerlink" title="第十九章 勒贝格积分"></a>第十九章 勒贝格积分</h3><h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="附录-A-数理逻辑基础"><a href="#附录-A-数理逻辑基础" class="headerlink" title="附录 A 数理逻辑基础"></a>附录 A 数理逻辑基础</h3><h3 id="附录-B-十进制"><a href="#附录-B-十进制" class="headerlink" title="附录 B 十进制"></a>附录 B 十进制</h3>]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>笔记</tag>
+        <tag>实分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数学常用公式定理</title>
+    <url>/2020/12/21/%E6%95%B0%E5%AD%A6%E5%B8%B8%E7%94%A8%E5%AE%9A%E7%90%86%E3%80%81%E5%85%AC%E5%BC%8F/</url>
+    <content><![CDATA[<!--comment-->
+<a id="more"></a>
+<h2 id="三角恒等式"><a href="#三角恒等式" class="headerlink" title="三角恒等式"></a>三角恒等式</h2><h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><script type="math/tex; mode=display">
+\sin^2x+\cos^2x=1\\
+\tan x=\frac{\sin x}{\cos x}\\</script><h3 id="奇偶性"><a href="#奇偶性" class="headerlink" title="奇偶性"></a>奇偶性</h3><script type="math/tex; mode=display">
+\sin (-x)=-\sin x\\
+\cos (-x)=\cos x\\
+\tan x=-\tan x</script>]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>总结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>浅谈简单方程通解</title>
+    <url>/2020/11/22/%E6%B5%85%E8%B0%88%E7%AE%80%E5%8D%95%E6%96%B9%E7%A8%8B%E9%80%9A%E8%A7%A3/</url>
+    <content><![CDATA[<p>本文主要讨论一些较为简单的整式方程的通解，涉及的较高难度的内容均会有详细讲解，请放心阅读。</p>
+<a id="more"></a>
+<h2 id="一元整式方程"><a href="#一元整式方程" class="headerlink" title="一元整式方程"></a>一元整式方程</h2><p>本段所有方程若无特殊说明系数皆为实数。</p>
+<h3 id="一元一次方程"><a href="#一元一次方程" class="headerlink" title="一元一次方程"></a>一元一次方程</h3><script type="math/tex; mode=display">
+ax+b=0\quad(a\ne 0)</script><p>移项可知</p>
+<script type="math/tex; mode=display">
+x=-\dfrac ba</script><h3 id="一元二次方程"><a href="#一元二次方程" class="headerlink" title="一元二次方程"></a>一元二次方程</h3><script type="math/tex; mode=display">
+ax^2+bx+c=0\quad(a\ne 0)</script><p>最高项系数化为 $1$：</p>
+<script type="math/tex; mode=display">
+x^2+\dfrac bax+\dfrac ca=0</script><p>配方：</p>
+<script type="math/tex; mode=display">
+\left(x+\dfrac b{2a}\right)^2+\left(\dfrac ca-\dfrac{b^2}{4a^2}\right)=0</script><p>化简：</p>
+<script type="math/tex; mode=display">
+\left(x+\dfrac b{2a}\right)^2=\dfrac{b^2-4ac}{4a^2}\\
+x+\dfrac b{2a}=\dfrac{\pm\sqrt{b^2-4ac}}{|2a|}\\
+x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}</script><p>不妨设 $\Delta=b^2-4ac$，易得</p>
+<ul>
+<li>当 $\Delta&gt;0$ 时，方程有两个相异的实根；</li>
+<li>当 $\Delta=0$ 时，方程有一个二重实根；</li>
+<li>当 $\Delta&lt;0$ 时，方程有一对共轭复根。</li>
+</ul>
+<h3 id="一元三次方程"><a href="#一元三次方程" class="headerlink" title="一元三次方程"></a>一元三次方程</h3><script type="math/tex; mode=display">
+ax^3+bx^2+cx+d=0\quad(a\ne0)</script><p>最高项系数化为 $1$：</p>
+<script type="math/tex; mode=display">
+x^3+\dfrac bax^2+\dfrac cax+\dfrac da=0\\
+x^3+3\cdot\dfrac b{3a}x^2+3\cdot\dfrac {b^2}{9a^2}x+\dfrac {b^3}{27a^3}+\left(\dfrac ca-\dfrac{b^2}{9a^2}\right)x+\left(\dfrac da-\dfrac{b^3}{27a^3}\right)=0</script>]]></content>
+      <tags>
+        <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>贪心基础题选讲</title>
+    <url>/2020/07/29/%E8%B4%AA%E5%BF%83%E5%9F%BA%E7%A1%80%E9%A2%98%E9%80%89%E8%AE%B2/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>不基础的“基础类型”</title>
+    <url>/2020/07/25/%E4%B8%8D%E5%9F%BA%E7%A1%80%E7%9A%84%E2%80%9C%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%9E%8B%E2%80%9D/</url>
+    <content><![CDATA[<!--comment-->
+<a id="more"></a>
+<p>相信你在 C++ 入门的时候就已经接触到了基础类型这个概念，但是，你真的完全理解了基础类型吗？</p>
+<h2 id="布尔型"><a href="#布尔型" class="headerlink" title="布尔型"></a>布尔型</h2><p><code>bool</code> 非常简单，标准只要求它能存储 <code>true</code> 和 <code>false</code>。<code>sizeof(bool)</code> 由实现定义，可以不为 1。</p>
+<h2 id="整型与字符类型"><a href="#整型与字符类型" class="headerlink" title="整型与字符类型"></a>整型与字符类型</h2><p>首先有几个冷知识：</p>
+<ol>
+<li>整型的修饰符可以调换顺序。如 <code>unsigned long long int</code> 等价于 <code>long long unsigned int</code>、<code>long int long unsigned</code>。</li>
+<li><code>long long</code> 实际上在 C++11 里才写入标准中，尽管很多编译器并不需要开启 <code>-std=c++11</code> 或更高版本的编译选项都可认识 <code>long long</code>。</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">数据类型</th>
+<th style="text-align:center">最小长度/bit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>short</code></td>
+<td style="text-align:center">16</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>int</code></td>
+<td style="text-align:center">16</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>long</code></td>
+<td style="text-align:center">32</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>long long</code> [C++11 起]</td>
+<td style="text-align:center">64 [C++11 起]</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>char</code></td>
+<td style="text-align:center">无定义[C++14 前] / 8[C++14 起]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>C++ 标准还保证 <code>1 == sizeof(char) &lt;= sizeof(short) &lt;= sizeof(int) &lt;= sizeof(long) &lt;= sizeof(long long)</code>。</p>
+<h2 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h2><p>这才是本文的重点。</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://zh.cppreference.com/w/cpp/language/types" target="_blank" rel="noopener">https://zh.cppreference.com/w/cpp/language/types</a></p>
+]]></content>
+      <tags>
+        <tag>C++</tag>
+        <tag>语法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>三角函数奇妙公式</title>
+    <url>/2020/06/11/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E5%A5%87%E5%A6%99%E5%85%AC%E5%BC%8F/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>提高模板汇总</title>
     <url>/2020/06/03/%E6%8F%90%E9%AB%98%E6%A8%A1%E6%9D%BF%E6%B1%87%E6%80%BB/</url>
     <content><![CDATA[<!--comment-->
 <a id="more"></a>
 <h2 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h2><ul>
-<li>Miller-Rabin 试除法 <a href="https://loj.ac/problem/143" target="_blank" rel="noopener">模板</a></li>
+<li>**Miller-Rabin 试除法 <a href="https://loj.ac/problem/143" target="_blank" rel="noopener">模板</a></li>
 <li>埃氏筛、欧拉筛 <a href="https://www.luogu.com.cn/problem/P3383" target="_blank" rel="noopener">模板</a></li>
 <li>*Pollard-$\rho$ 算法 <a href="https://www.luogu.com.cn/problem/P4718" target="_blank" rel="noopener">模板</a></li>
 <li>整除分块 <a href="https://www.luogu.com.cn/problem/P2261" target="_blank" rel="noopener">模板</a></li>
@@ -14,36 +179,54 @@
 <li>Bézout 定理（扩展 gcd）<a href="https://www.luogu.com.cn/problem/P4549" target="_blank" rel="noopener">模板</a></li>
 <li>乘法逆元  <a href="https://loj.ac/problem/2605" target="_blank" rel="noopener">模板1</a> <a href="https://loj.ac/problem/110" target="_blank" rel="noopener">模板2</a></li>
 <li>中国剩余定理 <a href="https://www.luogu.com.cn/problem/P1495" target="_blank" rel="noopener">模板1</a> <a href="https://www.luogu.com.cn/problem/P4777" target="_blank" rel="noopener">模板2（扩展 CRT）</a></li>
-<li>*BSGS 算法 <a href="">模板1（在造）</a> <a href="https://www.luogu.com.cn/problem/P4777" target="_blank" rel="noopener">**模板2（扩展 BSGS）</a></li>
+<li>*BSGS 算法 <a href="https://www.luogu.com.cn/problem/P3846" target="_blank" rel="noopener">模板1（在造）</a> <a href="https://www.luogu.com.cn/problem/P4777" target="_blank" rel="noopener">模板2（扩展 BSGS）</a> <a href="https://loj.ac/problem/6542" target="_blank" rel="noopener">模板3（离散对数）</a></li>
 <li>Lucas 定理 <a href="https://www.luogu.com.cn/problem/P3807" target="_blank" rel="noopener">模板1</a> <a href="https://www.luogu.com.cn/problem/P3807" target="_blank" rel="noopener">模板2（扩展 Lucas）</a></li>
 <li>矩阵乘法 <a href="https://www.luogu.com.cn/problem/P3390" target="_blank" rel="noopener">模板1（矩阵快速幂）</a> <a href="https://www.luogu.com.cn/problem/P1939" target="_blank" rel="noopener">模板2（矩阵优化常系数齐次线性递推）</a></li>
 <li>高斯消元 <a href="https://www.luogu.com.cn/problem/P3389" target="_blank" rel="noopener">模板</a> </li>
 <li>线性基 <a href="https://www.luogu.com.cn/problem/P3812" target="_blank" rel="noopener">模板</a></li>
 <li>01 分数规划 <a href="">模板（在造）</a></li>
+<li>*FFT <a href="https://loj.ac/problem/108" target="_blank" rel="noopener">模板</a></li>
+<li>*NTT <a href="https://loj.ac/problem/108" target="_blank" rel="noopener">模板1</a> <a href="https://www.luogu.com.cn/problem/P4245" target="_blank" rel="noopener">**模板2（任意模数）</a></li>
 </ul>
 <h2 id="基础算法"><a href="#基础算法" class="headerlink" title="基础算法"></a>基础算法</h2><ul>
-<li>A*，IDA*</li>
+<li>* A*，IDA*</li>
 <li>字符串 hash <a href="https://www.luogu.com.cn/problem/P3370" target="_blank" rel="noopener">模板</a></li>
 <li>KMP <a href="https://www.luogu.com.cn/problem/P3370" target="_blank" rel="noopener">模板</a></li>
 <li>Trie <a href="https://www.luogu.com.cn/problem/P2580" target="_blank" rel="noopener">模板</a></li>
 <li>*AC 自动机 <a href="https://www.luogu.com.cn/problem/P3808" target="_blank" rel="noopener">模板1</a> <a href="https://www.luogu.com.cn/problem/P3796" target="_blank" rel="noopener">模板2</a> <a href="https://www.luogu.com.cn/problem/P5357" target="_blank" rel="noopener">模板3</a></li>
 <li>Manacher 算法 <a href="https://www.luogu.com.cn/problem/P3805" target="_blank" rel="noopener">模板</a></li>
+<li>*CDQ 分治 <a href="https://vjudge.net/problem/SPOJ-LIS2" target="_blank" rel="noopener">例题</a></li>
+<li>分块 <a href="https://loj.ac/problem/6277" target="_blank" rel="noopener">例题1</a> <a href="https://loj.ac/problem/6278" target="_blank" rel="noopener">例题2</a> <a href="https://loj.ac/problem/6279" target="_blank" rel="noopener">例题3</a> <a href="https://loj.ac/problem/6280" target="_blank" rel="noopener">例题4</a> <a href="https://loj.ac/problem/6281" target="_blank" rel="noopener">例题5</a> <a href="https://loj.ac/problem/6282" target="_blank" rel="noopener">例题6</a> <a href="https://loj.ac/problem/6283" target="_blank" rel="noopener">例题7</a> <a href="https://loj.ac/problem/6284" target="_blank" rel="noopener">例题8</a> <a href="https://loj.ac/problem/6285" target="_blank" rel="noopener">例题9</a> </li>
 </ul>
 <h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><ul>
 <li>单调栈 <a href="https://www.luogu.com.cn/problem/P5788" target="_blank" rel="noopener">模板</a></li>
 <li>单调队列 <a href="https://www.luogu.com.cn/problem/P1886" target="_blank" rel="noopener">模板</a></li>
-<li>DFS 序 <a href="https://loj.ac/problem/144" target="_blank" rel="noopener">模板1</a> <a href="https://loj.ac/problem/145" target="_blank" rel="noopener">模板2</a> <a href="https://loj.ac/problem/146" target="_blank" rel="noopener">模板3</a> <a href="https://loj.ac/problem/147" target="_blank" rel="noopener">模板4</a></li>
-<li>树的直径 <a href="">模板（在造）</a></li>
-<li>树的重心 <a href="">模板（在造）</a></li>
-<li>树上差分 <a href="https://loj.ac/problem/146" target="_blank" rel="noopener">模板</a></li>
 <li>ST 表 <a href="https://www.luogu.com.cn/problem/P3865" target="_blank" rel="noopener">模板</a></li>
-<li>LCA <a href="https://www.luogu.com.cn/problem/P3379" target="_blank" rel="noopener">模板</a></li>
 <li>Huffman 树 <a href="https://www.luogu.com.cn/problem/P2168" target="_blank" rel="noopener">模板</a></li>
 <li>左偏树、配对堆 <a href="https://www.luogu.com.cn/problem/P3377" target="_blank" rel="noopener">模板</a></li>
 <li>并查集 <a href="https://loj.ac/problem/109" target="_blank" rel="noopener">模板</a></li>
 <li>树状数组/线段树 <a href="https://loj.ac/problem/130" target="_blank" rel="noopener">模板1</a> <a href="https://loj.ac/problem/131" target="_blank" rel="noopener">模板2</a> <a href="https://loj.ac/problem/132" target="_blank" rel="noopener">模板3</a> <a href="https://loj.ac/problem/133" target="_blank" rel="noopener">模板4（二维）</a> <a href="https://loj.ac/problem/134" target="_blank" rel="noopener">模板5（二维）</a> <a href="https://loj.ac/problem/135" target="_blank" rel="noopener">模板6（二维）</a> <a href="https://www.luogu.com.cn/problem/P1908" target="_blank" rel="noopener">模板7（逆序对）</a> <a href="https://www.luogu.com.cn/problem/P5490" target="_blank" rel="noopener">模板8（扫描线）</a> </li>
 <li>可持久化权值线段树 <a href="https://www.luogu.com.cn/problem/P3834" target="_blank" rel="noopener">模板</a></li>
-<li>分块 <a href="https://loj.ac/problem/6277" target="_blank" rel="noopener">例题1</a> <a href="https://loj.ac/problem/6278" target="_blank" rel="noopener">例题2</a> <a href="https://loj.ac/problem/6279" target="_blank" rel="noopener">例题3</a> <a href="https://loj.ac/problem/6280" target="_blank" rel="noopener">例题4</a> <a href="https://loj.ac/problem/6281" target="_blank" rel="noopener">例题5</a> <a href="https://loj.ac/problem/6282" target="_blank" rel="noopener">例题6</a> <a href="https://loj.ac/problem/6283" target="_blank" rel="noopener">例题7</a> <a href="https://loj.ac/problem/6284" target="_blank" rel="noopener">例题8</a> <a href="https://loj.ac/problem/6285" target="_blank" rel="noopener">例题9</a> </li>
+<li>*线段树合并 <a href="https://www.luogu.com.cn/problem/P4556" target="_blank" rel="noopener">模板1</a> <a href="https://www.luogu.com.cn/problem/P3224" target="_blank" rel="noopener">模板2</a></li>
+<li>*线段树分裂 <a href="https://www.luogu.com.cn/problem/P5494" target="_blank" rel="noopener">模板</a></li>
+<li>莫队 <a href="https://www.luogu.com.cn/problem/P1494" target="_blank" rel="noopener">模板1</a> <a href="https://www.luogu.com.cn/problem/P1903" target="_blank" rel="noopener">例题2（带修）</a> </li>
+<li>点分治 <a href="https://www.luogu.com.cn/problem/P3806" target="_blank" rel="noopener">模板</a></li>
+<li>*边分治 <a href="https://www.luogu.com.cn/problem/P3806" target="_blank" rel="noopener">模板</a></li>
+<li>BST <a href="https://loj.ac/problem/104" target="_blank" rel="noopener">模板</a></li>
+<li>旋转 Treap <a href="https://loj.ac/problem/104" target="_blank" rel="noopener">模板</a></li>
+<li>非旋 Treap <a href="https://loj.ac/problem/104" target="_blank" rel="noopener">模板1</a> <a href="https://loj.ac/problem/104" target="_blank" rel="noopener">模板2</a></li>
+<li>Splay <a href="https://loj.ac/problem/104" target="_blank" rel="noopener">模板1</a> <a href="https://loj.ac/problem/104" target="_blank" rel="noopener">模板2</a></li>
+<li>树链剖分 <a href="https://loj.ac/problem/139" target="_blank" rel="noopener">模板</a></li>
+<li>*Link-Cut Tree <a href="https://www.luogu.com.cn/problem/P3690" target="_blank" rel="noopener">模板</a></li>
+<li>***仙人掌系列</li>
+</ul>
+<h2 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h2><ul>
+<li>LCA <a href="https://www.luogu.com.cn/problem/P3379" target="_blank" rel="noopener">模板</a></li>
+<li>树的直径 <a href="">模板（在造）</a></li>
+<li>树的重心 <a href="http://poj.org/problem?id=1655" target="_blank" rel="noopener">模板</a></li>
+<li>DFS 序 <a href="https://loj.ac/problem/144" target="_blank" rel="noopener">模板1</a> <a href="https://loj.ac/problem/145" target="_blank" rel="noopener">模板2</a> <a href="https://loj.ac/problem/146" target="_blank" rel="noopener">模板3</a> <a href="https://loj.ac/problem/147" target="_blank" rel="noopener">模板4</a></li>
+<li>树上差分 <a href="https://loj.ac/problem/146" target="_blank" rel="noopener">模板</a></li>
+<li></li>
 </ul>
 ]]></content>
       <tags>
@@ -51,19 +234,13 @@
       </tags>
   </entry>
   <entry>
-    <title>「积分表」0-目录</title>
+    <title>「积分表」0-目录、常用函数</title>
     <url>/2020/05/30/%E7%A7%AF%E5%88%86%E8%A1%A8/</url>
     <content><![CDATA[<!--comment-->
 <a id="more"></a>
-<h2 id="有理函数"><a href="#有理函数" class="headerlink" title="有理函数"></a>有理函数</h2><h3 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h3><script type="math/tex; mode=display">
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><h2 id="有利函数"><a href="#有利函数" class="headerlink" title="有利函数"></a>有利函数</h2><script type="math/tex; mode=display">
 \begin{aligned}
-&\int\frac{f'(x)}{f(x)}\ \mathrm dx=\ln|f(x)|+C\\
-&\int\frac1{x^2+a^2}\ \mathrm dx=\frac1a+\arctan\frac xa+C\\
-&\int\frac1{x^2-a^2}\ \mathrm dx=\frac1{2a}\ln\left|\frac{x-a}{x+a}\right|+C=
-    \begin{cases}
-    -\dfrac1a\ \operatorname{arctanh}\dfrac xa+C=\dfrac1{2a}\ln\frac{a-x}{a+x}+C\qquad(\text{for }|x|<|a|)\\
-    -\dfrac1a\ \operatorname{arccoth}\dfrac xa+C=\dfrac1{2a}
-    \end{cases}
+&\int a\ \mathrm dx
 \end{aligned}</script>]]></content>
       <tags>
         <tag>数学</tag>
@@ -292,8 +469,8 @@
         <category>数学</category>
       </categories>
       <tags>
-        <tag>数学</tag>
         <tag>OI</tag>
+        <tag>数学</tag>
       </tags>
   </entry>
   <entry>
@@ -403,8 +580,8 @@
         <category>CSP2019</category>
       </categories>
       <tags>
-        <tag>OI</tag>
         <tag>游记</tag>
+        <tag>OI</tag>
       </tags>
   </entry>
 </search>
