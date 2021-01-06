@@ -2,9 +2,8 @@
 <search>
   <entry>
     <title>「陶哲轩实分析笔记」目录</title>
-    <url>/2021/01/05/%E3%80%8C%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0%E3%80%8D0.%E7%9B%AE%E5%BD%95/</url>
+    <url>/2021/01/05/%E3%80%8C%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0%E3%80%8D%E7%9B%AE%E5%BD%95/</url>
     <content><![CDATA[<p>最近在拜读《陶哲轩实分析》（第 3 版，ISBN 978-7-115-48025-5），做点笔记。</p>
-<p>也是！</p>
 <a id="more"></a>
 <!--comment-->
 <h2 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h2><h3 id="第二章-从头开始：自然数"><a href="#第二章-从头开始：自然数" class="headerlink" title="第二章 从头开始：自然数"></a>第二章 从头开始：自然数</h3><h3 id="第三章-集合论"><a href="#第三章-集合论" class="headerlink" title="第三章 集合论"></a>第三章 集合论</h3><h3 id="第四章-整数和有理数"><a href="#第四章-整数和有理数" class="headerlink" title="第四章 整数和有理数"></a>第四章 整数和有理数</h3><h3 id="第五章-实数"><a href="#第五章-实数" class="headerlink" title="第五章 实数"></a>第五章 实数</h3><h3 id="第六章-序列的极限"><a href="#第六章-序列的极限" class="headerlink" title="第六章 序列的极限"></a>第六章 序列的极限</h3><h3 id="第七章-级数"><a href="#第七章-级数" class="headerlink" title="第七章 级数"></a>第七章 级数</h3><h3 id="第八章-无限集"><a href="#第八章-无限集" class="headerlink" title="第八章 无限集"></a>第八章 无限集</h3><h3 id="第九章-mathbb-R-上的连续函数"><a href="#第九章-mathbb-R-上的连续函数" class="headerlink" title="第九章 $\mathbb R$ 上的连续函数"></a>第九章 $\mathbb R$ 上的连续函数</h3><h3 id="第十章-函数的微分"><a href="#第十章-函数的微分" class="headerlink" title="第十章 函数的微分"></a>第十章 函数的微分</h3><h3 id="第十一章-黎曼积分"><a href="#第十一章-黎曼积分" class="headerlink" title="第十一章 黎曼积分"></a>第十一章 黎曼积分</h3><h2 id="第二部分"><a href="#第二部分" class="headerlink" title="第二部分"></a>第二部分</h2><h3 id="第十二章-度量空间"><a href="#第十二章-度量空间" class="headerlink" title="第十二章 度量空间"></a>第十二章 度量空间</h3><h3 id="第十三章-度量空间上的连续函数"><a href="#第十三章-度量空间上的连续函数" class="headerlink" title="第十三章 度量空间上的连续函数"></a>第十三章 度量空间上的连续函数</h3><h3 id="第十四章-一致收敛"><a href="#第十四章-一致收敛" class="headerlink" title="第十四章 一致收敛"></a>第十四章 一致收敛</h3><h3 id="第十五章-幂级数"><a href="#第十五章-幂级数" class="headerlink" title="第十五章 幂级数"></a>第十五章 幂级数</h3><h3 id="第十六章-傅里叶级数"><a href="#第十六章-傅里叶级数" class="headerlink" title="第十六章 傅里叶级数"></a>第十六章 傅里叶级数</h3><h3 id="第十七章-多元微分学"><a href="#第十七章-多元微分学" class="headerlink" title="第十七章 多元微分学"></a>第十七章 多元微分学</h3><h3 id="第十八章-勒贝格测度"><a href="#第十八章-勒贝格测度" class="headerlink" title="第十八章 勒贝格测度"></a>第十八章 勒贝格测度</h3><h3 id="第十九章-勒贝格积分"><a href="#第十九章-勒贝格积分" class="headerlink" title="第十九章 勒贝格积分"></a>第十九章 勒贝格积分</h3><h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="附录-A-数理逻辑基础"><a href="#附录-A-数理逻辑基础" class="headerlink" title="附录 A 数理逻辑基础"></a>附录 A 数理逻辑基础</h3><h3 id="附录-B-十进制"><a href="#附录-B-十进制" class="headerlink" title="附录 B 十进制"></a>附录 B 十进制</h3>]]></content>
@@ -22,25 +21,15 @@
     <url>/2021/01/05/%E3%80%8C%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0%E3%80%8D%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E4%BB%8E%E5%A4%B4%E5%BC%80%E5%A7%8B%EF%BC%9A%E8%87%AA%E7%84%B6%E6%95%B0/</url>
     <content><![CDATA[<!--comment-->
 <a id="more"></a>
-<h2 id="Peano-公理"><a href="#Peano-公理" class="headerlink" title="Peano 公理"></a>Peano 公理</h2>]]></content>
-      <categories>
-        <category>数学</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>笔记</tag>
-        <tag>实分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>「陶哲轩实分析笔记」目录</title>
-    <url>/2021/01/05/%E3%80%8C%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0%E3%80%8D%E7%9B%AE%E5%BD%95/</url>
-    <content><![CDATA[<p>最近在拜读《陶哲轩实分析》（第 3 版，ISBN 978-7-115-48025-5），做点笔记。</p>
-<h2 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h2><h3 id="第二章-从头开始：自然数"><a href="#第二章-从头开始：自然数" class="headerlink" title="第二章 从头开始：自然数"></a>第二章 从头开始：自然数</h3><ul>
-<li>笔记</li>
-<li>习题</li>
-</ul>
-<h3 id="第三章-集合论"><a href="#第三章-集合论" class="headerlink" title="第三章 集合论"></a>第三章 集合论</h3><h3 id="第四章-整数和有理数"><a href="#第四章-整数和有理数" class="headerlink" title="第四章 整数和有理数"></a>第四章 整数和有理数</h3><h3 id="第五章-实数"><a href="#第五章-实数" class="headerlink" title="第五章 实数"></a>第五章 实数</h3><h3 id="第六章-序列的极限"><a href="#第六章-序列的极限" class="headerlink" title="第六章 序列的极限"></a>第六章 序列的极限</h3><h3 id="第七章-级数"><a href="#第七章-级数" class="headerlink" title="第七章 级数"></a>第七章 级数</h3><h3 id="第八章-无限集"><a href="#第八章-无限集" class="headerlink" title="第八章 无限集"></a>第八章 无限集</h3><h3 id="第九章-mathbb-R-上的连续函数"><a href="#第九章-mathbb-R-上的连续函数" class="headerlink" title="第九章 $\mathbb R$ 上的连续函数"></a>第九章 $\mathbb R$ 上的连续函数</h3><h3 id="第十章-函数的微分"><a href="#第十章-函数的微分" class="headerlink" title="第十章 函数的微分"></a>第十章 函数的微分</h3><h3 id="第十一章-黎曼积分"><a href="#第十一章-黎曼积分" class="headerlink" title="第十一章 黎曼积分"></a>第十一章 黎曼积分</h3><h2 id="第二部分"><a href="#第二部分" class="headerlink" title="第二部分"></a>第二部分</h2><h3 id="第十二章-度量空间"><a href="#第十二章-度量空间" class="headerlink" title="第十二章 度量空间"></a>第十二章 度量空间</h3><h3 id="第十三章-度量空间上的连续函数"><a href="#第十三章-度量空间上的连续函数" class="headerlink" title="第十三章 度量空间上的连续函数"></a>第十三章 度量空间上的连续函数</h3><h3 id="第十四章-一致收敛"><a href="#第十四章-一致收敛" class="headerlink" title="第十四章 一致收敛"></a>第十四章 一致收敛</h3><h3 id="第十五章-幂级数"><a href="#第十五章-幂级数" class="headerlink" title="第十五章 幂级数"></a>第十五章 幂级数</h3><h3 id="第十六章-傅里叶级数"><a href="#第十六章-傅里叶级数" class="headerlink" title="第十六章 傅里叶级数"></a>第十六章 傅里叶级数</h3><h3 id="第十七章-多元微分学"><a href="#第十七章-多元微分学" class="headerlink" title="第十七章 多元微分学"></a>第十七章 多元微分学</h3><h3 id="第十八章-勒贝格测度"><a href="#第十八章-勒贝格测度" class="headerlink" title="第十八章 勒贝格测度"></a>第十八章 勒贝格测度</h3><h3 id="第十九章-勒贝格积分"><a href="#第十九章-勒贝格积分" class="headerlink" title="第十九章 勒贝格积分"></a>第十九章 勒贝格积分</h3><h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="附录-A-数理逻辑基础"><a href="#附录-A-数理逻辑基础" class="headerlink" title="附录 A 数理逻辑基础"></a>附录 A 数理逻辑基础</h3><h3 id="附录-B-十进制"><a href="#附录-B-十进制" class="headerlink" title="附录 B 十进制"></a>附录 B 十进制</h3>]]></content>
+<h2 id="Peano-公理-Peano-axioms"><a href="#Peano-公理-Peano-axioms" class="headerlink" title="Peano 公理 (Peano axioms)"></a>Peano 公理 (Peano axioms)</h2><ol>
+<li>$0$ 是自然数；</li>
+<li>每个确定的自然数 $n$ 都有一个确定的<strong>后继</strong>，记作 $n’$，$n’$ 也是自然数；</li>
+<li>不存在自然数 $n$ 使得 $n’=0$；</li>
+<li>对于任意自然数 $n$、$m$，如果 $n\ne m$，那么 $n’\ne m’$；</li>
+<li>任意关于自然数的命题，如果它对自然数 $0$ 是真的，而且如果它对自然数 $n$ 为真时，可以证明它对自然数 $n’$ 也为真。那么，命题对所有的自然数都为真。</li>
+</ol>
+<p>吐槽一下，书上说“为了与现代计算机语言相一致，我们用 $n++$ 来表示 $n$ 的增量或紧跟在 $n$ 之后的数”，这个记号真丑……</p>
+]]></content>
       <categories>
         <category>数学</category>
       </categories>
@@ -417,8 +406,8 @@ x^3+3\cdot\dfrac b{3a}x^2+3\cdot\dfrac {b^2}{9a^2}x+\dfrac {b^3}{27a^3}+\left(\d
         <category>数据结构</category>
       </categories>
       <tags>
-        <tag>平衡树</tag>
         <tag>数据结构</tag>
+        <tag>平衡树</tag>
       </tags>
   </entry>
   <entry>
