@@ -81,11 +81,11 @@
 
 <meta name="keywords" content="数学,笔记,实分析">
 <meta property="og:type" content="article">
-<meta property="og:title" content="「陶哲轩实分析」第二章 从头开始：自然数">
+<meta property="og:title" content="「陶哲轩实分析笔记」第二章 从头开始：自然数">
 <meta property="og:url" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;2021&#x2F;01&#x2F;05&#x2F;%E3%80%8C%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0%E3%80%8D%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E4%BB%8E%E5%A4%B4%E5%BC%80%E5%A7%8B%EF%BC%9A%E8%87%AA%E7%84%B6%E6%95%B0&#x2F;index.html">
 <meta property="og:site_name" content="Granger&#39;s Blog">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2021-01-05T14:49:17.239Z">
+<meta property="og:updated_time" content="2021-01-08T11:22:50.593Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -122,7 +122,7 @@
 
 
 
-  <title>「陶哲轩实分析」第二章 从头开始：自然数 | Granger's Blog</title>
+  <title>「陶哲轩实分析笔记」第二章 从头开始：自然数 | Granger's Blog</title>
   
 
 
@@ -321,7 +321,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">「陶哲轩实分析」第二章 从头开始：自然数</h1>
+          <h1 class="post-title" itemprop="name headline">「陶哲轩实分析笔记」第二章 从头开始：自然数</h1>
         
 
         <div class="post-meta">
@@ -395,14 +395,31 @@
       
         <!--comment-->
 <a id="more"></a>
-<h2 id="Peano-公理-Peano-axioms"><a href="#Peano-公理-Peano-axioms" class="headerlink" title="Peano 公理 (Peano axioms)"></a>Peano 公理 (Peano axioms)</h2><ol>
-<li>$0$ 是自然数；</li>
-<li>每个确定的自然数 $n$ 都有一个确定的<strong>后继</strong>，记作 $n’$，$n’$ 也是自然数；</li>
-<li>不存在自然数 $n$ 使得 $n’=0$；</li>
-<li>对于任意自然数 $n$、$m$，如果 $n\ne m$，那么 $n’\ne m’$；</li>
-<li>任意关于自然数的命题，如果它对自然数 $0$ 是真的，而且如果它对自然数 $n$ 为真时，可以证明它对自然数 $n’$ 也为真。那么，命题对所有的自然数都为真。</li>
-</ol>
-<p>吐槽一下，书上说“为了与现代计算机语言相一致，我们用 $n++$ 来表示 $n$ 的增量或紧跟在 $n$ 之后的数”，这个记号真丑……</p>
+<h2 id="Peano-公理-Peano-axioms"><a href="#Peano-公理-Peano-axioms" class="headerlink" title="Peano 公理 (Peano axioms)"></a>Peano 公理 (Peano axioms)</h2><p>公理 2.1<sup><a href="#fn_i" id="reffn_i">i</a></sup>： $0$ 是自然数；<br>公理 2.2： 每个确定的自然数 $n$ 都有一个确定的<strong>后继</strong>，记作 $n’$，$n’$ 也是自然数；<br>公理 2.3： 不存在自然数 $n$ 使得 $n’=0$；<br>公理 2.4： 对于任意自然数 $n$、$m$，如果 $n\ne m$，那么 $n’\ne m’$；<br>公理 2.5： 任意关于自然数的命题，如果它对自然数 $0$ 是真的，而且如果它对自然数 $n$ 为真时，可以证明它对自然数 $n’$ 也为真。那么，命题对所有的自然数都为真。（<strong>数学归纳法原理</strong>）</p>
+<p>公理 2.1~公理 2.5 被称为自然数的 <strong>Peano 公理</strong>。</p>
+<p>假设 2.6<sup><a href="#fn_ii" id="reffn_ii">ii</a></sup>：存在一个数系 $\mathbb N$，我们称 $\mathbb N$ 里的元素为<strong>自然数</strong>，而公理 2.1~公理 2.5 对 $\mathbb N$ 均成立。</p>
+<p>我们把假设 2.6 中所的数系 $\mathbb N$ 称为<strong>自然数系</strong>。</p>
+<h2 id="递归定义"><a href="#递归定义" class="headerlink" title="递归定义"></a>递归定义</h2><p>命题 2.1.16 设对于任意自然数 $n$，都存在某个从自然数系到自然数系的函数<sup><a href="#fn_iii" id="reffn_iii">iii</a></sup>$f_n:\mathbb N\rightarrow\mathbb N$，令 $c$ 为某个固定的自然数，那么对于任意自然数 $n$，都存在自然数 $a_n$，使得 $a_0=c$ 和 $a_{n’}=f_n(a_n)$ 恒成立。</p>
+<p>这个命题的表述不够严谨，在下一章的公理 3.7 将给出严谨的定义。</p>
+<blockquote>
+<p>证明<sup><a href="#fn_ii" id="reffn_ii">ii</a></sup>：</p>
+<p>使用归纳法证明。</p>
+<p>首先对于自然数 $0$，$a_0$ 被赋予了一个单一的值 $c$。（根据公理 2.3 可知，无论 $a_{n’}:=f_n(a_n)$<sup><a href="#fn_iv" id="reffn_iv">iv</a></sup> 是如何定义的，都无法改变 $a_0$ 的值）</p>
+<p>然后假设上述过程对于 $a_n$ 赋予了一个单一的值，那么必定对 $a_{n’}$ 也定义了一个单一的值。这是因为根据公理 2.4，无论其他 $a_{m’}:=f_m(a_m)$ 是如何定义的，都不能改变 $a_{n’}$ 的值。</p>
+<p>所以，对于任意的自然数 $n$，$a_n$ 都被赋予了一个单一的值。</p>
+<div align="right">$\square$</div>
+
+</blockquote>
+<hr>
+<blockquote id="fn_i">
+<sup>i</sup>. 为了方便，命题、定理、引理、假设等均沿用原文的编号。<a href="#reffn_i" title="Jump back to footnote [i] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_ii">
+<sup>ii</sup>. 这个定义/证明不够严谨，在原文中有标注“非正式的”。<a href="#reffn_ii" title="Jump back to footnote [ii] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_iii">
+<sup>iii</sup>. 这里用到了下一章才会给出定义的函数，但这并非循环论证，因为函数的定义并不需要用到 Peano 公理。<a href="#reffn_iii" title="Jump back to footnote [iii] in the text."> &#8617;</a>
+</blockquote>
 
       
     </div>
@@ -437,8 +454,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/12/21/%E6%95%B0%E5%AD%A6%E5%B8%B8%E7%94%A8%E5%AE%9A%E7%90%86%E3%80%81%E5%85%AC%E5%BC%8F/" rel="next" title="数学常用公式定理">
-                <i class="fa fa-chevron-left"></i> 数学常用公式定理
+              <a href="/2021/01/05/%E3%80%8C%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0%E3%80%8D%E7%9B%AE%E5%BD%95/" rel="next" title="「陶哲轩实分析笔记」目录">
+                <i class="fa fa-chevron-left"></i> 「陶哲轩实分析笔记」目录
               </a>
             
           </div>
@@ -446,10 +463,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2021/01/05/%E3%80%8C%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0%E3%80%8D%E7%9B%AE%E5%BD%95/" rel="prev" title="「陶哲轩实分析笔记」目录">
-                「陶哲轩实分析笔记」目录 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -600,7 +613,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Peano-公理-Peano-axioms"><span class="nav-number">1.</span> <span class="nav-text">Peano 公理 (Peano axioms)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Peano-公理-Peano-axioms"><span class="nav-number">1.</span> <span class="nav-text">Peano 公理 (Peano axioms)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归定义"><span class="nav-number">2.</span> <span class="nav-text">递归定义</span></a></li></ol></div>
             
 
           </div>
