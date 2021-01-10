@@ -1,36 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>「陶哲轩实分析笔记」第二章 从头开始：自然数</title>
-    <url>/2021/01/05/%E3%80%8C%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0%E3%80%8D%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E4%BB%8E%E5%A4%B4%E5%BC%80%E5%A7%8B%EF%BC%9A%E8%87%AA%E7%84%B6%E6%95%B0/</url>
-    <content><![CDATA[<!--comment-->
+    <title>「陶哲轩实分析笔记」目录</title>
+    <url>/2021/01/05/%E3%80%8C%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0%E3%80%8D%E7%9B%AE%E5%BD%95/</url>
+    <content><![CDATA[<p>最近在拜读《陶哲轩实分析》（第 3 版，ISBN 978-7-115-48025-5），做点笔记。</p>
 <a id="more"></a>
-<h2 id="Peano-公理-Peano-axioms"><a href="#Peano-公理-Peano-axioms" class="headerlink" title="Peano 公理 (Peano axioms)"></a>Peano 公理 (Peano axioms)</h2><p>公理 2.1<sup><a href="#fn_i" id="reffn_i">i</a></sup>： $0$ 是自然数；<br>公理 2.2： 每个确定的自然数 $n$ 都有一个确定的<strong>后继</strong>，记作 $n’$，$n’$ 也是自然数；<br>公理 2.3： 不存在自然数 $n$ 使得 $n’=0$；<br>公理 2.4： 对于任意自然数 $n$、$m$，如果 $n\ne m$，那么 $n’\ne m’$；<br>公理 2.5： 任意关于自然数的命题，如果它对自然数 $0$ 是真的，而且如果它对自然数 $n$ 为真时，可以证明它对自然数 $n’$ 也为真。那么，命题对所有的自然数都为真。（<strong>数学归纳法原理</strong>）</p>
-<p>公理 2.1~公理 2.5 被称为自然数的 <strong>Peano 公理</strong>。</p>
-<p>假设 2.6<sup><a href="#fn_ii" id="reffn_ii">ii</a></sup>：存在一个数系 $\mathbb N$，我们称 $\mathbb N$ 里的元素为<strong>自然数</strong>，而公理 2.1~公理 2.5 对 $\mathbb N$ 均成立。</p>
-<p>我们把假设 2.6 中所的数系 $\mathbb N$ 称为<strong>自然数系</strong>。</p>
-<h2 id="递归定义"><a href="#递归定义" class="headerlink" title="递归定义"></a>递归定义</h2><p>命题 2.1.16 设对于任意自然数 $n$，都存在某个从自然数系到自然数系的函数<sup><a href="#fn_iii" id="reffn_iii">iii</a></sup>$f_n:\mathbb N\rightarrow\mathbb N$，令 $c$ 为某个固定的自然数，那么对于任意自然数 $n$，都存在自然数 $a_n$，使得 $a_0=c$ 和 $a_{n’}=f_n(a_n)$ 恒成立。</p>
-<p>这个命题的表述不够严谨，在下一章的公理 3.7 将给出严谨的定义。</p>
-<blockquote>
-<p>证明<sup><a href="#fn_ii" id="reffn_ii">ii</a></sup>：</p>
-<p>使用归纳法证明。</p>
-<p>首先对于自然数 $0$，$a_0$ 被赋予了一个单一的值 $c$。（根据公理 2.3 可知，无论 $a_{n’}:=f_n(a_n)$<sup><a href="#fn_iv" id="reffn_iv">iv</a></sup> 是如何定义的，都无法改变 $a_0$ 的值）</p>
-<p>然后假设上述过程对于 $a_n$ 赋予了一个单一的值，那么必定对 $a_{n’}$ 也定义了一个单一的值。这是因为根据公理 2.4，无论其他 $a_{m’}:=f_m(a_m)$ 是如何定义的，都不能改变 $a_{n’}$ 的值。</p>
-<p>所以，对于任意的自然数 $n$，$a_n$ 都被赋予了一个单一的值。</p>
-<div align="right">$\square$</div>
-
-</blockquote>
-<hr>
-<blockquote id="fn_i">
-<sup>i</sup>. 为了方便，命题、定理、引理、假设等均沿用原文的编号。<a href="#reffn_i" title="Jump back to footnote [i] in the text."> &#8617;</a>
-</blockquote>
-<blockquote id="fn_ii">
-<sup>ii</sup>. 这个定义/证明不够严谨，在原文中有标注“非正式的”。<a href="#reffn_ii" title="Jump back to footnote [ii] in the text."> &#8617;</a>
-</blockquote>
-<blockquote id="fn_iii">
-<sup>iii</sup>. 这里用到了下一章才会给出定义的函数，但这并非循环论证，因为函数的定义并不需要用到 Peano 公理。<a href="#reffn_iii" title="Jump back to footnote [iii] in the text."> &#8617;</a>
-</blockquote>
-]]></content>
+<!--comment-->
+<h2 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h2><h3 id="第二章-从头开始：自然数"><a href="#第二章-从头开始：自然数" class="headerlink" title="第二章 从头开始：自然数"></a><a href="/2021/01/05/「陶哲轩实分析笔记」第二章%20从头开始：自然数/">第二章 从头开始：自然数</a></h3><h3 id="第三章-集合论"><a href="#第三章-集合论" class="headerlink" title="第三章 集合论"></a>第三章 集合论</h3><h3 id="第四章-整数和有理数"><a href="#第四章-整数和有理数" class="headerlink" title="第四章 整数和有理数"></a>第四章 整数和有理数</h3><h3 id="第五章-实数"><a href="#第五章-实数" class="headerlink" title="第五章 实数"></a>第五章 实数</h3><h3 id="第六章-序列的极限"><a href="#第六章-序列的极限" class="headerlink" title="第六章 序列的极限"></a>第六章 序列的极限</h3><h3 id="第七章-级数"><a href="#第七章-级数" class="headerlink" title="第七章 级数"></a>第七章 级数</h3><h3 id="第八章-无限集"><a href="#第八章-无限集" class="headerlink" title="第八章 无限集"></a>第八章 无限集</h3><h3 id="第九章-mathbb-R-上的连续函数"><a href="#第九章-mathbb-R-上的连续函数" class="headerlink" title="第九章 $\mathbb R$ 上的连续函数"></a>第九章 $\mathbb R$ 上的连续函数</h3><h3 id="第十章-函数的微分"><a href="#第十章-函数的微分" class="headerlink" title="第十章 函数的微分"></a>第十章 函数的微分</h3><h3 id="第十一章-黎曼积分"><a href="#第十一章-黎曼积分" class="headerlink" title="第十一章 黎曼积分"></a>第十一章 黎曼积分</h3><h2 id="第二部分"><a href="#第二部分" class="headerlink" title="第二部分"></a>第二部分</h2><h3 id="第十二章-度量空间"><a href="#第十二章-度量空间" class="headerlink" title="第十二章 度量空间"></a>第十二章 度量空间</h3><h3 id="第十三章-度量空间上的连续函数"><a href="#第十三章-度量空间上的连续函数" class="headerlink" title="第十三章 度量空间上的连续函数"></a>第十三章 度量空间上的连续函数</h3><h3 id="第十四章-一致收敛"><a href="#第十四章-一致收敛" class="headerlink" title="第十四章 一致收敛"></a>第十四章 一致收敛</h3><h3 id="第十五章-幂级数"><a href="#第十五章-幂级数" class="headerlink" title="第十五章 幂级数"></a>第十五章 幂级数</h3><h3 id="第十六章-傅里叶级数"><a href="#第十六章-傅里叶级数" class="headerlink" title="第十六章 傅里叶级数"></a>第十六章 傅里叶级数</h3><h3 id="第十七章-多元微分学"><a href="#第十七章-多元微分学" class="headerlink" title="第十七章 多元微分学"></a>第十七章 多元微分学</h3><h3 id="第十八章-勒贝格测度"><a href="#第十八章-勒贝格测度" class="headerlink" title="第十八章 勒贝格测度"></a>第十八章 勒贝格测度</h3><h3 id="第十九章-勒贝格积分"><a href="#第十九章-勒贝格积分" class="headerlink" title="第十九章 勒贝格积分"></a>第十九章 勒贝格积分</h3><h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="附录-A-数理逻辑基础"><a href="#附录-A-数理逻辑基础" class="headerlink" title="附录 A 数理逻辑基础"></a>附录 A 数理逻辑基础</h3><h3 id="附录-B-十进制"><a href="#附录-B-十进制" class="headerlink" title="附录 B 十进制"></a>附录 B 十进制</h3>]]></content>
       <categories>
         <category>数学</category>
       </categories>
@@ -41,12 +17,77 @@
       </tags>
   </entry>
   <entry>
-    <title>「陶哲轩实分析笔记」目录</title>
-    <url>/2021/01/05/%E3%80%8C%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0%E3%80%8D%E7%9B%AE%E5%BD%95/</url>
-    <content><![CDATA[<p>最近在拜读《陶哲轩实分析》（第 3 版，ISBN 978-7-115-48025-5），做点笔记。</p>
+    <title>「陶哲轩实分析笔记」第二章 从头开始：自然数</title>
+    <url>/2021/01/05/%E3%80%8C%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0%E3%80%8D%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E4%BB%8E%E5%A4%B4%E5%BC%80%E5%A7%8B%EF%BC%9A%E8%87%AA%E7%84%B6%E6%95%B0/</url>
+    <content><![CDATA[<!--comment-->
 <a id="more"></a>
-<!--comment-->
-<h2 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h2><h3 id="第二章-从头开始：自然数"><a href="#第二章-从头开始：自然数" class="headerlink" title="第二章 从头开始：自然数"></a><a href="/2021/01/05/「陶哲轩实分析笔记」第二章%20从头开始：自然数/">第二章 从头开始：自然数</a></h3><h3 id="第三章-集合论"><a href="#第三章-集合论" class="headerlink" title="第三章 集合论"></a>第三章 集合论</h3><h3 id="第四章-整数和有理数"><a href="#第四章-整数和有理数" class="headerlink" title="第四章 整数和有理数"></a>第四章 整数和有理数</h3><h3 id="第五章-实数"><a href="#第五章-实数" class="headerlink" title="第五章 实数"></a>第五章 实数</h3><h3 id="第六章-序列的极限"><a href="#第六章-序列的极限" class="headerlink" title="第六章 序列的极限"></a>第六章 序列的极限</h3><h3 id="第七章-级数"><a href="#第七章-级数" class="headerlink" title="第七章 级数"></a>第七章 级数</h3><h3 id="第八章-无限集"><a href="#第八章-无限集" class="headerlink" title="第八章 无限集"></a>第八章 无限集</h3><h3 id="第九章-mathbb-R-上的连续函数"><a href="#第九章-mathbb-R-上的连续函数" class="headerlink" title="第九章 $\mathbb R$ 上的连续函数"></a>第九章 $\mathbb R$ 上的连续函数</h3><h3 id="第十章-函数的微分"><a href="#第十章-函数的微分" class="headerlink" title="第十章 函数的微分"></a>第十章 函数的微分</h3><h3 id="第十一章-黎曼积分"><a href="#第十一章-黎曼积分" class="headerlink" title="第十一章 黎曼积分"></a>第十一章 黎曼积分</h3><h2 id="第二部分"><a href="#第二部分" class="headerlink" title="第二部分"></a>第二部分</h2><h3 id="第十二章-度量空间"><a href="#第十二章-度量空间" class="headerlink" title="第十二章 度量空间"></a>第十二章 度量空间</h3><h3 id="第十三章-度量空间上的连续函数"><a href="#第十三章-度量空间上的连续函数" class="headerlink" title="第十三章 度量空间上的连续函数"></a>第十三章 度量空间上的连续函数</h3><h3 id="第十四章-一致收敛"><a href="#第十四章-一致收敛" class="headerlink" title="第十四章 一致收敛"></a>第十四章 一致收敛</h3><h3 id="第十五章-幂级数"><a href="#第十五章-幂级数" class="headerlink" title="第十五章 幂级数"></a>第十五章 幂级数</h3><h3 id="第十六章-傅里叶级数"><a href="#第十六章-傅里叶级数" class="headerlink" title="第十六章 傅里叶级数"></a>第十六章 傅里叶级数</h3><h3 id="第十七章-多元微分学"><a href="#第十七章-多元微分学" class="headerlink" title="第十七章 多元微分学"></a>第十七章 多元微分学</h3><h3 id="第十八章-勒贝格测度"><a href="#第十八章-勒贝格测度" class="headerlink" title="第十八章 勒贝格测度"></a>第十八章 勒贝格测度</h3><h3 id="第十九章-勒贝格积分"><a href="#第十九章-勒贝格积分" class="headerlink" title="第十九章 勒贝格积分"></a>第十九章 勒贝格积分</h3><h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="附录-A-数理逻辑基础"><a href="#附录-A-数理逻辑基础" class="headerlink" title="附录 A 数理逻辑基础"></a>附录 A 数理逻辑基础</h3><h3 id="附录-B-十进制"><a href="#附录-B-十进制" class="headerlink" title="附录 B 十进制"></a>附录 B 十进制</h3>]]></content>
+<h2 id="Peano-公理-Peano-axioms"><a href="#Peano-公理-Peano-axioms" class="headerlink" title="Peano 公理 (Peano axioms)"></a>Peano 公理 (Peano axioms)</h2><p><strong>公理 2.1</strong><sup><a href="#fn_i" id="reffn_i">i</a></sup> $0$ 是自然数；<br><strong>公理 2.2</strong> 每个确定的自然数 $n$ 都有一个确定的<strong>后继</strong>，记作 $n’$，$n’$ 也是自然数；<br><strong>公理 2.3</strong> 不存在自然数 $n$ 使得 $n’=0$；<br><strong>公理 2.4</strong> 对于任意自然数 $n$、$m$，如果 $n\ne m$，那么 $n’\ne m’$；<br><strong>公理 2.5（数学归纳法原理）</strong> 任意关于自然数的命题，如果它对自然数 $0$ 是真的，而且如果它对自然数 $n$ 为真时，可以证明它对自然数 $n’$ 也为真。那么，命题对所有的自然数都为真。</p>
+<p>公理 2.1~公理 2.5 被称为自然数的 <strong>Peano 公理</strong>。</p>
+<p><strong>假设 2.6</strong><sup><a href="#fn_ii" id="reffn_ii">ii</a></sup> 存在一个数系 $\mathbb N$，我们称 $\mathbb N$ 里的元素为<strong>自然数</strong>，而公理 2.1~公理 2.5 对 $\mathbb N$ 均成立。</p>
+<p>我们把假设 2.6 中所的数系 $\mathbb N$ 称为<strong>自然数系</strong>。</p>
+<h2 id="递归定义"><a href="#递归定义" class="headerlink" title="递归定义"></a>递归定义</h2><p><strong>命题 2.1.16（递归定义）</strong> 设对于任意自然数 $n$，都存在某个从自然数系到自然数系的函数<sup><a href="#fn_iii" id="reffn_iii">iii</a></sup> $f_n:\mathbb N\rightarrow\mathbb N$，令 $c$ 为某个固定的自然数，那么对于任意自然数 $n$，都存在自然数 $a_n$，使得 $a_0=c$ 和 $a_{n’}=f_n(a_n)$ 恒成立。</p>
+<p>这个命题的表述不够严谨，在下一章的公理 3.7 将给出严谨的定义。</p>
+<blockquote>
+<p>证明<sup><a href="#fn_ii" id="reffn_ii">ii</a></sup>：</p>
+<p>使用归纳法证明。</p>
+<p>首先对于自然数 $0$，$a_0$ 被赋予了一个单一的值 $c$。（根据公理 2.3 可知，无论 $a_{n’}:=f_n(a_n)$<sup><a href="#fn_iv" id="reffn_iv">iv</a></sup> 是如何定义的，都无法改变 $a_0$ 的值）</p>
+<p>然后归纳地假设上述过程对于 $a_n$ 赋予了一个单一的值，那么必定对 $a_{n’}$ 也定义了一个单一的值。这是因为根据公理 2.4，无论其他 $a_{m’}:=f_m(a_m)$ 是如何定义的，都不能改变 $a_{n’}$ 的值。</p>
+<p>所以，对于任意的自然数 $n$，$a_n$ 都被赋予了一个单一的值。</p>
+<div align="right">$\square$</div>
+
+</blockquote>
+<h2 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p><strong>定义 2.2.1</strong> 令 $m$ 为一个自然数，定义 $m$ 加上 $0$ 为 $0+m:=m$。归纳地假设已经定义了 $m$ 加上 $n$ 的值，那么 $m$ 加上 $n’$ 为 $n’+m:=(n+m)’$。</p>
+<h3 id="加法交换律"><a href="#加法交换律" class="headerlink" title="加法交换律"></a>加法交换律</h3><p><strong>引理 2.2.2</strong> 对于任意自然数 $n$，有 $n+0=0+n$。</p>
+<blockquote>
+<p>证明：</p>
+<p>使用归纳法证明。</p>
+<p>当 $n=0$ 时，$0+0=0=0+0$。</p>
+<p>归纳地假设当 $n+0=0+n$，那么 $n’+0=(n+0)’=(0+n)’=n’=0+n’$。</p>
+<div align="right">$\square$</div>
+
+</blockquote>
+<p><strong>引理 2.2.3</strong> 对于任意自然数 $n$、$m$，有 $n+m’=(n+m)’$。</p>
+<blockquote>
+<p>证明：</p>
+<p>将 $m$ 视为定值，对 $n$ 使用归纳法。</p>
+<p>当 $n=0$ 时，$0+m’=0$。</p>
+<p>归纳地假设 $n+m’=(n+m)’$，那么 $n’+m’=(n+m’)’=(n+m)’’=(n’+m)’$。</p>
+<div align="right">$\square$</div>
+
+</blockquote>
+<p><strong>命题 2.2.4（加法是可交换的）</strong> 对于任意自然数 $n$、$m$，有 $n+m=m+n$。</p>
+<blockquote>
+<p>证明：</p>
+<p>将 $m$ 视为定值，对 $n$ 使用归纳法。</p>
+<p>当 $n=0$ 时，由引理 2.2.2 知，$0+m=m+0$。</p>
+<p>归纳地假设当 $n+m=m+n$，那么结合引理 2.2.3 可知，$n’+m=(n+m)’=(m+n)’=m+n’$。</p>
+<div align="right">$\square$</div>
+
+</blockquote>
+<h3 id="加法结合律"><a href="#加法结合律" class="headerlink" title="加法结合律"></a>加法结合律</h3><p><strong>命题 2.2.5（加法是可结合的）</strong> 对于任意自然数 $a$、$b$、$c$，有 $(a+b)+c=a+(b+c)$。</p>
+<blockquote>
+<p>证明：</p>
+<p>对 $b$ 使用归纳法。</p>
+<p>当 $b=0$ 时，结合引理 2.2.2，有 $(a+0)+c=(0+a)+c=a+(0+c)$。</p>
+<p>归纳地假设 $(a+b)+c=a+(b+c)$，结合引理 2.2.3 可知：$(a+b’)+c=(a+b)’+c=((a+b)+c)’=(a+(b+c))’=a+(b+c)’=a+(b’+c)$。</p>
+<div align="right">$\square$</div>
+
+
+</blockquote>
+<hr>
+<h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><blockquote id="fn_i">
+<sup>i</sup>. 为了方便，命题、定理、引理、假设等均沿用原文的编号。<a href="#reffn_i" title="Jump back to footnote [i] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_ii">
+<sup>ii</sup>. 这个定义/证明不够严谨，在原文中有标注“非正式的”。<a href="#reffn_ii" title="Jump back to footnote [ii] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_iii">
+<sup>iii</sup>. 这里用到了下一章才会给出定义的函数，但这并非循环论证，因为函数的定义并不需要用到 Peano 公理。<a href="#reffn_iii" title="Jump back to footnote [iii] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_iv">
+<sup>iv</sup>. 这里 $:=$ 是“定义为”的意思。<a href="#reffn_iv" title="Jump back to footnote [iv] in the text."> &#8617;</a>
+</blockquote>
+]]></content>
       <categories>
         <category>数学</category>
       </categories>
