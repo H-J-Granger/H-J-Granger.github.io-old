@@ -1,27 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>「陶哲轩实分析笔记」目录</title>
-    <url>/2021/01/05/%E3%80%8C%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0%E3%80%8D%E7%9B%AE%E5%BD%95/</url>
-    <content><![CDATA[<p>最近在拜读《陶哲轩实分析》（第 3 版，ISBN 978-7-115-48025-5），做点笔记。</p>
-<a id="more"></a>
-<!--comment-->
-<h2 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h2><h3 id="第二章-从头开始：自然数"><a href="#第二章-从头开始：自然数" class="headerlink" title="第二章 从头开始：自然数"></a><a href="/2021/01/05/「陶哲轩实分析笔记」第二章%20从头开始：自然数/">第二章 从头开始：自然数</a></h3><h3 id="第三章-集合论"><a href="#第三章-集合论" class="headerlink" title="第三章 集合论"></a>第三章 集合论</h3><h3 id="第四章-整数和有理数"><a href="#第四章-整数和有理数" class="headerlink" title="第四章 整数和有理数"></a>第四章 整数和有理数</h3><h3 id="第五章-实数"><a href="#第五章-实数" class="headerlink" title="第五章 实数"></a>第五章 实数</h3><h3 id="第六章-序列的极限"><a href="#第六章-序列的极限" class="headerlink" title="第六章 序列的极限"></a>第六章 序列的极限</h3><h3 id="第七章-级数"><a href="#第七章-级数" class="headerlink" title="第七章 级数"></a>第七章 级数</h3><h3 id="第八章-无限集"><a href="#第八章-无限集" class="headerlink" title="第八章 无限集"></a>第八章 无限集</h3><h3 id="第九章-mathbb-R-上的连续函数"><a href="#第九章-mathbb-R-上的连续函数" class="headerlink" title="第九章 $\mathbb R$ 上的连续函数"></a>第九章 $\mathbb R$ 上的连续函数</h3><h3 id="第十章-函数的微分"><a href="#第十章-函数的微分" class="headerlink" title="第十章 函数的微分"></a>第十章 函数的微分</h3><h3 id="第十一章-黎曼积分"><a href="#第十一章-黎曼积分" class="headerlink" title="第十一章 黎曼积分"></a>第十一章 黎曼积分</h3><h2 id="第二部分"><a href="#第二部分" class="headerlink" title="第二部分"></a>第二部分</h2><h3 id="第十二章-度量空间"><a href="#第十二章-度量空间" class="headerlink" title="第十二章 度量空间"></a>第十二章 度量空间</h3><h3 id="第十三章-度量空间上的连续函数"><a href="#第十三章-度量空间上的连续函数" class="headerlink" title="第十三章 度量空间上的连续函数"></a>第十三章 度量空间上的连续函数</h3><h3 id="第十四章-一致收敛"><a href="#第十四章-一致收敛" class="headerlink" title="第十四章 一致收敛"></a>第十四章 一致收敛</h3><h3 id="第十五章-幂级数"><a href="#第十五章-幂级数" class="headerlink" title="第十五章 幂级数"></a>第十五章 幂级数</h3><h3 id="第十六章-傅里叶级数"><a href="#第十六章-傅里叶级数" class="headerlink" title="第十六章 傅里叶级数"></a>第十六章 傅里叶级数</h3><h3 id="第十七章-多元微分学"><a href="#第十七章-多元微分学" class="headerlink" title="第十七章 多元微分学"></a>第十七章 多元微分学</h3><h3 id="第十八章-勒贝格测度"><a href="#第十八章-勒贝格测度" class="headerlink" title="第十八章 勒贝格测度"></a>第十八章 勒贝格测度</h3><h3 id="第十九章-勒贝格积分"><a href="#第十九章-勒贝格积分" class="headerlink" title="第十九章 勒贝格积分"></a>第十九章 勒贝格积分</h3><h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="附录-A-数理逻辑基础"><a href="#附录-A-数理逻辑基础" class="headerlink" title="附录 A 数理逻辑基础"></a>附录 A 数理逻辑基础</h3><h3 id="附录-B-十进制"><a href="#附录-B-十进制" class="headerlink" title="附录 B 十进制"></a>附录 B 十进制</h3>]]></content>
-      <categories>
-        <category>数学</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>笔记</tag>
-        <tag>实分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>「陶哲轩实分析笔记」第二章 从头开始：自然数</title>
-    <url>/2021/01/05/%E3%80%8C%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0%E3%80%8D%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E4%BB%8E%E5%A4%B4%E5%BC%80%E5%A7%8B%EF%BC%9A%E8%87%AA%E7%84%B6%E6%95%B0/</url>
+    <title>「陶哲轩实分析笔记」2.1 Peano 公理</title>
+    <url>/2021/01/05/tao-2-1/</url>
     <content><![CDATA[<!--comment-->
 <a id="more"></a>
-<h2 id="Peano-公理-Peano-axioms"><a href="#Peano-公理-Peano-axioms" class="headerlink" title="Peano 公理 (Peano axioms)"></a>Peano 公理 (Peano axioms)</h2><p><strong>公理 2.1</strong><sup><a href="#fn_i" id="reffn_i">i</a></sup> $0$ 是自然数；<br><strong>公理 2.2</strong> 每个确定的自然数 $n$ 都有一个确定的<strong>后继</strong>，记作 $n’$，$n’$ 也是自然数；<br><strong>公理 2.3</strong> 不存在自然数 $n$ 使得 $n’=0$；<br><strong>公理 2.4</strong> 对于任意自然数 $n$、$m$，如果 $n\ne m$，那么 $n’\ne m’$；<br><strong>公理 2.5（数学归纳法原理）</strong> 任意关于自然数的命题，如果它对自然数 $0$ 是真的，而且如果它对自然数 $n$ 为真时，可以证明它对自然数 $n’$ 也为真。那么，命题对所有的自然数都为真。</p>
+<p><strong>公理 2.1</strong><sup><a href="#fn_i" id="reffn_i">i</a></sup> $0$ 是自然数；<br><strong>公理 2.2</strong> 每个确定的自然数 $n$ 都有一个确定的<strong>后继</strong>，记作 $n’$，$n’$ 也是自然数；<br><strong>公理 2.3</strong> 不存在自然数 $n$ 使得 $n’=0$；<br><strong>公理 2.4</strong> 对于任意自然数 $n$、$m$，如果 $n\ne m$，那么 $n’\ne m’$；<br><strong>公理 2.5（数学归纳法原理）</strong> 任意关于自然数的命题，如果它对自然数 $0$ 是真的，而且如果它对自然数 $n$ 为真时，可以证明它对自然数 $n’$ 也为真。那么，命题对所有的自然数都为真。</p>
 <p>公理 2.1~公理 2.5 被称为自然数的 <strong>Peano 公理</strong>。</p>
 <p><strong>假设 2.6</strong><sup><a href="#fn_ii" id="reffn_ii">ii</a></sup> 存在一个数系 $\mathbb N$，我们称 $\mathbb N$ 里的元素为<strong>自然数</strong>，而公理 2.1~公理 2.5 对 $\mathbb N$ 均成立。</p>
 <p>我们把假设 2.6 中所的数系 $\mathbb N$ 称为<strong>自然数系</strong>。</p>
@@ -36,44 +20,187 @@
 <div align="right">$\square$</div>
 
 </blockquote>
-<h2 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p><strong>定义 2.2.1</strong> 令 $m$ 为一个自然数，定义 $m$ 加上 $0$ 为 $0+m:=m$。归纳地假设已经定义了 $m$ 加上 $n$ 的值，那么 $m$ 加上 $n’$ 为 $n’+m:=(n+m)’$。</p>
-<h3 id="加法交换律"><a href="#加法交换律" class="headerlink" title="加法交换律"></a>加法交换律</h3><p><strong>引理 2.2.2</strong> 对于任意自然数 $n$，有 $n+0=0+n$。</p>
-<blockquote>
-<p>证明：</p>
-<p>使用归纳法证明。</p>
-<p>当 $n=0$ 时，$0+0=0=0+0$。</p>
-<p>归纳地假设当 $n+0=0+n$，那么 $n’+0=(n+0)’=(0+n)’=n’=0+n’$。</p>
-<div align="right">$\square$</div>
-
+<hr>
+<h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><blockquote id="fn_i">
+<sup>i</sup>. 为了方便，命题、定理、引理、假设等均沿用原文的编号。<a href="#reffn_i" title="Jump back to footnote [i] in the text."> &#8617;</a>
 </blockquote>
-<p><strong>引理 2.2.3</strong> 对于任意自然数 $n$、$m$，有 $n+m’=(n+m)’$。</p>
-<blockquote>
-<p>证明：</p>
-<p>将 $m$ 视为定值，对 $n$ 使用归纳法。</p>
-<p>当 $n=0$ 时，$0+m’=0$。</p>
-<p>归纳地假设 $n+m’=(n+m)’$，那么 $n’+m’=(n+m’)’=(n+m)’’=(n’+m)’$。</p>
-<div align="right">$\square$</div>
-
+<blockquote id="fn_ii">
+<sup>ii</sup>. 这个定义/证明不够严谨，在原文中有标注“非正式的”。<a href="#reffn_ii" title="Jump back to footnote [ii] in the text."> &#8617;</a>
 </blockquote>
-<p><strong>命题 2.2.4（加法是可交换的）</strong> 对于任意自然数 $n$、$m$，有 $n+m=m+n$。</p>
-<blockquote>
-<p>证明：</p>
-<p>将 $m$ 视为定值，对 $n$ 使用归纳法。</p>
-<p>当 $n=0$ 时，由引理 2.2.2 知，$0+m=m+0$。</p>
-<p>归纳地假设当 $n+m=m+n$，那么结合引理 2.2.3 可知，$n’+m=(n+m)’=(m+n)’=m+n’$。</p>
-<div align="right">$\square$</div>
-
-</blockquote>
-<h3 id="加法结合律"><a href="#加法结合律" class="headerlink" title="加法结合律"></a>加法结合律</h3><p><strong>命题 2.2.5（加法是可结合的）</strong> 对于任意自然数 $a$、$b$、$c$，有 $(a+b)+c=a+(b+c)$。</p>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>笔记</tag>
+        <tag>实分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>「陶哲轩实分析笔记」2.2 加法</title>
+    <url>/2021/01/05/%E3%80%8C%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0%E3%80%8D%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E4%BB%8E%E5%A4%B4%E5%BC%80%E5%A7%8B%EF%BC%9A%E8%87%AA%E7%84%B6%E6%95%B0/</url>
+    <content><![CDATA[<!--comment-->
+<a id="more"></a>
+<p><strong>定义 2.2.1</strong> 令 $m$ 为一个自然数，定义 $m$ 加上 $0$ 为 $0+m:=m$。归纳地假设已经定义了 $m$ 加上 $n$ 的值，那么 $m$ 加上 $n’$ 为 $n’+m:=(n+m)’$。</p>
+<h2 id="加法交换律"><a href="#加法交换律" class="headerlink" title="加法交换律"></a>加法交换律</h2><p><strong>命题 2.2.4</strong> 对于任意自然数 $n$、$m$，有 $n+m=m+n$。</p>
+<h2 id="加法结合律"><a href="#加法结合律" class="headerlink" title="加法结合律"></a>加法结合律</h2><p><strong>命题 2.2.5</strong> 对于任意自然数 $a$、$b$、$c$，有 $(a+b)+c=a+(b+c)$。（对 $b$ 使用归纳法）</p>
+<h2 id="加法消去律"><a href="#加法消去律" class="headerlink" title="加法消去律"></a>加法消去律</h2><p><strong>命题 2.2.6</strong> 对于任何自然数 $a$、$b$、$c$，如果 $a+c=b+c$，那么 $a=b$。（对 $c$ 使用归纳法）</p>
+<h2 id="正自然数"><a href="#正自然数" class="headerlink" title="正自然数"></a>正自然数</h2><p><strong>定义 2.2.7</strong> 称一个自然数 $a$ 是正的，当且仅当它不等于 $0$。</p>
+<p><strong>命题 2.2.8</strong> 如果 $a$ 是一个正自然数并且 $b$ 是一个自然数，那么 $a+b$ 也是一个正自然数。（结合引理 2.2.3）</p>
+<h2 id="序"><a href="#序" class="headerlink" title="序"></a>序</h2><p><strong>定义 2.2.11</strong> 令 $n$、$m$ 为两个自然数，称 $n\ge m$ 或 $m\le n$，当且仅当存在自然数 $a$ 满足 $m+a=n$。称 $n&gt;m$ 或 $m&lt;n$，当且仅当 $n\ge m$ 并且 $n\ne m$。</p>
+<p><strong>命题 2.2.12（自然数序的基本性质）</strong> 令 $a$、$b$、$c$ 为任意自然数，那么：</p>
+<ol>
+<li>(a)（序是自反的）$a\ge a$。</li>
+<li>(b)（序是可传递的）如果 $a\ge b$ 并且 $b\ge c$，那么 $a\ge c$。</li>
+<li>(c)（序是反对称的）如果 $a\ge b$ 并且 $b\ge a$，那么 $a=b$。</li>
+<li>(d)（加法保持序不变）如果 $a\ge b$，那么 $a+c\ge b+c$。</li>
+<li>(e) $a&lt;b$，当且仅当 $a’\le b$。</li>
+<li>(f) $a&lt;b$，当且仅当存在正自然数 $d$ 使得 $b=a+d$。</li>
+</ol>
+<p><strong>命题 2.2.13（自然数的序的三歧性）</strong> 令 $a$、$b$ 为两个自然数，那么下面三种表述中恰有一个为真：$a&lt; b$，$a=b$，$a&gt;b$。</p>
+<p><strong>命题 2.2.14（强归纳法原理）</strong> 令 $m$ 为一个自然数，$P(m)$ 表示一个与自然数 $m$ 有关的性质。如果当对于任意 $m\ge m_0$，都有：如果 $P(n)$ 对于任意的 $m_0\le n&lt; m$ 都为真，那么 $P(m)$ 也为真。（注意当 $m=m_0$ 时 $P(m)$ 为真，因为此时自然数 $n$ 的取值范围为空）此时那么我们可以断定，$P(m)$ 对于任意 $m\ge m_0$ 都为真。</p>
+<h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2><p>习题 2.2.1 证明命题 2.2.5。</p>
+<p>命题 2.2.5：对于任意自然数 $a$、$b$、$c$，有 $(a+b)+c=a+(b+c)$。</p>
 <blockquote>
 <p>证明：</p>
 <p>对 $b$ 使用归纳法。</p>
-<p>当 $b=0$ 时，结合引理 2.2.2，有 $(a+0)+c=(0+a)+c=a+(0+c)$。</p>
-<p>归纳地假设 $(a+b)+c=a+(b+c)$，结合引理 2.2.3 可知：$(a+b’)+c=(a+b)’+c=((a+b)+c)’=(a+(b+c))’=a+(b+c)’=a+(b’+c)$。</p>
-<div align="right">$\square$</div>
-
+<p>当 $b=0$ 时，</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+(a+0)+c&=a+c&(2.2.2)\\
+&=a+(0+c)
+\end{aligned}</script><p>若 $(a+b)+c=a+(b+c)$，那么</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+(a+b')+c&=(a+b)'+c&(2.2.3)\\
+&=((a+b)+c)'\\
+&=(a+(b+c))'\\
+&=a+(b+c)'&(2.2.3)\\
+&=a+(b'+c)
+\end{aligned}</script> <div align="right">$\square$</div>
 
 </blockquote>
+<p>习题 2.2.2 证明引理 2.2.10。</p>
+<p>引理 2.2.10：若 $a$ 为一个正自然数，则恰有一个自然数 $b$ 使得 $b’=a$。</p>
+<blockquote>
+<p>证明：</p>
+<p>首先，如果存在自然数 $b$ 使得 $b’=a$，那么必定不存在另一个不同的自然数也满足这个条件。（根据公理 2.4）</p>
+<p>接下来运用归纳法证明“存在自然数 $b$ 使得 $b’=a+1$”对于任意自然数 $a$ 成立：</p>
+<p>首先当 $a=0$ 时，显然有 $b=0$ 满足条件。</p>
+<p>假设存在自然数 $b$ 使得 $b’=a+1$，那么有 $b’’=b’+1$，所以命题对 $a’$ 也成立。</p>
+<div align="right">$\square$</div>
+
+</blockquote>
+<p>习题 2.2.3 证明命题 2.2.12。</p>
+<p>命题 2.2.12：令 $a$、$b$、$c$ 为任意自然数，那么：</p>
+<ol>
+<li>(a) $a\ge a$。</li>
+<li>(b) 如果 $a\ge b$ 并且 $b\ge c$，那么 $a\ge c$。</li>
+<li>(c) 如果 $a\ge b$ 并且 $b\ge a$，那么 $a=b$。</li>
+<li>(d) 如果 $a\ge b$，那么 $a+c\ge b+c$。</li>
+<li>(e) $a&lt;b$，当且仅当 $a’\le b$。</li>
+<li>(f) $a&lt;b$，当且仅当存在正自然数 $d$ 使得 $b=a+d$。</li>
+</ol>
+<p>命题 (a)：</p>
+<blockquote>
+<p>证明：</p>
+<p>因为当 $b=0$ 时，有 $a+0=a$（引理 2.2.2），所以 $a\ge a$。</p>
+<div align="right">$\square$</div>
+
+</blockquote>
+<p>命题 (b)：</p>
+<blockquote>
+<p>证明：</p>
+<p>因为 $a\ge b$，所以存在自然数 $k_1$ 使得 $b+k_1=a$。因为 $b\ge c$，所以存在自然数 $k_2$ 使得 $c+k_2=b$。因为 $a=b+k_1=(c+k_2)+k_1=c+(k_2+k_1)$，所以 $c\ge a$。</p>
+<div align="right">$\square$</div>
+
+</blockquote>
+<p>命题 (c)：</p>
+<blockquote>
+<p>证明：</p>
+<p>因为 $a\ge b$，所以存在自然数 $d$ 使得 $b+d=a$，因为 $b\ge a$，所以存在自然数 $e$ 使得 $a+e=b$。所以 $b=a+e=(b+d)+e=b+(d+e)$，所以 $b+0=b+(d+e)$（引理 2.2.2），所以 $d+e=0$（命题 2.2.6），所以 $d=e=0$（推论 2.2.9），所以 $b=a+e=a+0=a$（引理 2.2.2）。</p>
+<div align="right">$\square$</div>
+
+</blockquote>
+<p>命题 (d)：</p>
+<blockquote>
+<p>证明：</p>
+<p>因为 $a\ge b$，所以存在自然数 $d$ 使得 $b+d=a$，所以</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+(b+c)+d&=b+(c+d)&(2.2.5)\\
+&=b+(d+c)&(2.2.4)\\
+&=(b+d)+c&(2.2.5)\\
+&=a+c
+\end{aligned}</script><p>所以 $a+c\ge b+c$。</p>
+<div align="right">$\square$</div>
+
+</blockquote>
+<p>命题 (e)：</p>
+<blockquote>
+<p>证明：</p>
+<p>首先证明 $a&lt;b$ 蕴含 $a’\le b$：</p>
+<p>因为 $a&lt;b$，所以 $a\le b$ 并且 $a\ne b$。所以存在自然数 $d$ 使得 $a+d=b$，但是当 $d=0$ 时 $a+d=a+0=a=b$ 与 $a\ne b$ 矛盾，所以 $d\ne 0$。根据引理 2.2.10，存在自然数 $e$ 使得 $e’=d$。所以 $a+e’=b$。所以 $a’+e=b$（引理 2.2.4），所以 $a’\le b$。</p>
+<p>然后证明 $a’\le b$ 蕴含 $a&lt;b$：</p>
+<p>因为 $a’\le b$，所以存在自然数 $d$ 使得 $a’+d=b$，所以有 $a+d’=b$（引理 2.2.4），因为 $d’\ne 0$（公理 2.3），所以 $b+a+d’\ne a+0=a$，所以 $a&lt;b$。</p>
+<div align="right">$\square$</div>
+
+</blockquote>
+<p>命题 (f)：</p>
+<blockquote>
+<p>证明：</p>
+<p>首先证明 $a&lt;b$ 蕴含存在正自然数 $d$ 使得 $a+d=b$：</p>
+<p>如果 $a&lt;b$，那么 $a\le b$ 并且 $a\ne b$。所以存在自然数 $e$ 使得 $a+e=b$。当 $e=0$ 时 $b=a+e=a+0=a$ 与 $a\ne b$ 矛盾，所以 $e\ne 0$，所以 $e$ 为正自然数。</p>
+<p>然后证明存在正自然数 $d$ 使得 $a+d=b$ 蕴含 $a&lt;b$：</p>
+<p>因为存在自然数 $d$ 使得 $a+d=b$，所以 $a\le b$。因为若 $a=b$ 则根据命题 2.2.6 有 $d=0$ 与 $d$ 为正自然数矛盾，故 $a\ne b$。所以 $a&lt;b$。</p>
+<div align="right">$\square$</div>
+
+</blockquote>
+<p>习题 2.2.4 证明以下三个命题：</p>
+<ol>
+<li>(a) 对于任意自然数 $b$，有 $0\le b$。</li>
+<li>(b) 对于任意自然数 $a$、$b$，如果 $a&gt;b$，那么 $a’&gt;b$。</li>
+<li>(c) 对于任意自然数 $a$、$b$，如果 $a=b$，那么 $a’&gt;b$。</li>
+</ol>
+<p>命题 (a)：</p>
+<blockquote>
+<p>证明：</p>
+<p>因为当 $m=b$ 时，$0+m=0+b=b$，所以 $0\le b$。</p>
+<div align="right">$\square$</div>
+
+</blockquote>
+<p>命题 (b)：</p>
+<blockquote>
+<p>证明：</p>
+<p>因为 $a&gt;b$，根据命题 2.2.12f，存在正自然数 $m$ 使得 $b+m=a$。因为 $a’=(b+m)’=b+m’$ 并且 $m’$ 为正自然数，所以根据命题 2.2.12f，$a’&gt;b$。</p>
+<div align="right">$\square$</div>
+
+</blockquote>
+<p>命题 (c)：</p>
+<blockquote>
+<p>证明：</p>
+<p>因为 $a=b$，所以当 $m=1$ 时有 $b+m=b+1=b+0’=(b+0)’=b’=a’$。因为 $m$ 为正自然数，所以 $a’&gt;b$。</p>
+<div align="right">$\square$</div>
+
+</blockquote>
+<p>习题 2.2.5 证明命题 2.2.14。</p>
+<p>命题 2.2.14：令 $m$ 为一个自然数，$P(m)$ 表示一个与自然数 $m$ 有关的性质。如果当对于任意 $m\ge m_0$，都有：如果 $P(n)$ 对于任意的 $m_0\le n&lt; m$ 都为真，那么 $P(m)$ 也为真。（注意当 $m=m_0$ 时 $P(m)$ 为真，因为此时自然数 $n$ 的取值范围为空）此时那么我们可以断定，$P(m)$ 对于任意 $m\ge m_0$ 都为真。</p>
+<blockquote>
+<p>证明：</p>
+<p>令 $Q(n)$ 表示如下关于自然数 $n$ 的性质：对于任意满足 $m_0\le m\le n$ 的自然数 $m$，均有 $P(m)$ 成立。（当 $n&lt;m_0$ 时 $Q(n)$ 恒为真，因为此时自然数 $m$ 的取值范围为空）</p>
+<p>那么首先因为 $P(m_0)$ 为真，所以 $Q(m_0)$ 也为真。</p>
+<p>当 $n\ge m_0$ 时，如果 $Q(n)$ 为真，那么根据 $P(m)$ 的定义，因为对于任意满足 $m_0\le m&lt; n’$ 的自然数 $m$ 都有 $P(m)$ 为真，所以 $P(n’)$ 也为真。所以对于任意满足 $m_0\le m\le n’$ 的自然数 $m$，均有 $P(m)$ 为真。所以 $Q(n’)$ 为真。</p>
+<p>用归纳法证明“当 $n$ 为正整数时，$Q(n+m_0)$ 为真”。</p>
+<p>当 $n=0$ 时，$Q(n+m_0)=Q(m_0)$ 为真。</p>
+<p>如果 $Q(n+m_0)$ 为真，那么 $Q(n’+m_0)=Q((n+m_0)’)$ 也为真。</p>
+<p>所以命题“$Q(n+m_0)$ 为真”对于任意自然数都成立。</p>
+<p>所以对于任意满足 $n\ge m_0$ 的自然数 $n$，都有 $Q(n)$ 成立。</p>
+<p>所以对于任意满足 $m\ge m_0$ 的自然数 $m$，都有 $P(m)$ 成立。</p>
+<div align="right">$\square$</div>
+
+</blockquote>
+<p>习题 2.2.6：</p>
 <hr>
 <h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><blockquote id="fn_i">
 <sup>i</sup>. 为了方便，命题、定理、引理、假设等均沿用原文的编号。<a href="#reffn_i" title="Jump back to footnote [i] in the text."> &#8617;</a>
@@ -88,6 +215,26 @@
 <sup>iv</sup>. 这里 $:=$ 是“定义为”的意思。<a href="#reffn_iv" title="Jump back to footnote [iv] in the text."> &#8617;</a>
 </blockquote>
 ]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>笔记</tag>
+        <tag>实分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>「陶哲轩实分析笔记」目录</title>
+    <url>/2021/01/05/tao/</url>
+    <content><![CDATA[<p>最近在拜读《陶哲轩实分析》（第 3 版，ISBN 978-7-115-48025-5），做点笔记。</p>
+<a id="more"></a>
+<!--comment-->
+<h2 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h2><h3 id="第二章-从头开始：自然数"><a href="#第二章-从头开始：自然数" class="headerlink" title="第二章 从头开始：自然数"></a>第二章 从头开始：自然数</h3><ul>
+<li>2.1 <a href="/2021/01/05/tao-2-1">Peano 公理</a></li>
+<li>2.2 <a href="/2021/01/05/tao-2-2">加法</a></li>
+</ul>
+<h3 id="第三章-集合论"><a href="#第三章-集合论" class="headerlink" title="第三章 集合论"></a>第三章 集合论</h3><h3 id="第四章-整数和有理数"><a href="#第四章-整数和有理数" class="headerlink" title="第四章 整数和有理数"></a>第四章 整数和有理数</h3><h3 id="第五章-实数"><a href="#第五章-实数" class="headerlink" title="第五章 实数"></a>第五章 实数</h3><h3 id="第六章-序列的极限"><a href="#第六章-序列的极限" class="headerlink" title="第六章 序列的极限"></a>第六章 序列的极限</h3><h3 id="第七章-级数"><a href="#第七章-级数" class="headerlink" title="第七章 级数"></a>第七章 级数</h3><h3 id="第八章-无限集"><a href="#第八章-无限集" class="headerlink" title="第八章 无限集"></a>第八章 无限集</h3><h3 id="第九章-mathbb-R-上的连续函数"><a href="#第九章-mathbb-R-上的连续函数" class="headerlink" title="第九章 $\mathbb R$ 上的连续函数"></a>第九章 $\mathbb R$ 上的连续函数</h3><h3 id="第十章-函数的微分"><a href="#第十章-函数的微分" class="headerlink" title="第十章 函数的微分"></a>第十章 函数的微分</h3><h3 id="第十一章-黎曼积分"><a href="#第十一章-黎曼积分" class="headerlink" title="第十一章 黎曼积分"></a>第十一章 黎曼积分</h3><h2 id="第二部分"><a href="#第二部分" class="headerlink" title="第二部分"></a>第二部分</h2><h3 id="第十二章-度量空间"><a href="#第十二章-度量空间" class="headerlink" title="第十二章 度量空间"></a>第十二章 度量空间</h3><h3 id="第十三章-度量空间上的连续函数"><a href="#第十三章-度量空间上的连续函数" class="headerlink" title="第十三章 度量空间上的连续函数"></a>第十三章 度量空间上的连续函数</h3><h3 id="第十四章-一致收敛"><a href="#第十四章-一致收敛" class="headerlink" title="第十四章 一致收敛"></a>第十四章 一致收敛</h3><h3 id="第十五章-幂级数"><a href="#第十五章-幂级数" class="headerlink" title="第十五章 幂级数"></a>第十五章 幂级数</h3><h3 id="第十六章-傅里叶级数"><a href="#第十六章-傅里叶级数" class="headerlink" title="第十六章 傅里叶级数"></a>第十六章 傅里叶级数</h3><h3 id="第十七章-多元微分学"><a href="#第十七章-多元微分学" class="headerlink" title="第十七章 多元微分学"></a>第十七章 多元微分学</h3><h3 id="第十八章-勒贝格测度"><a href="#第十八章-勒贝格测度" class="headerlink" title="第十八章 勒贝格测度"></a>第十八章 勒贝格测度</h3><h3 id="第十九章-勒贝格积分"><a href="#第十九章-勒贝格积分" class="headerlink" title="第十九章 勒贝格积分"></a>第十九章 勒贝格积分</h3><h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="附录-A-数理逻辑基础"><a href="#附录-A-数理逻辑基础" class="headerlink" title="附录 A 数理逻辑基础"></a>附录 A 数理逻辑基础</h3><h3 id="附录-B-十进制"><a href="#附录-B-十进制" class="headerlink" title="附录 B 十进制"></a>附录 B 十进制</h3>]]></content>
       <categories>
         <category>数学</category>
       </categories>
@@ -464,8 +611,8 @@ x^3+3\cdot\dfrac b{3a}x^2+3\cdot\dfrac {b^2}{9a^2}x+\dfrac {b^3}{27a^3}+\left(\d
         <category>数据结构</category>
       </categories>
       <tags>
-        <tag>数据结构</tag>
         <tag>平衡树</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
