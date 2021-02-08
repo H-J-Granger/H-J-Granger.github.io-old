@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="数学,总结," />
+  <meta name="keywords" content="数据结构,Treap,平衡树," />
 
 
 
@@ -79,14 +79,18 @@
 
 
 
-<meta name="keywords" content="数学,总结">
+<meta name="description" content="Treap 是一种平衡树，通过在 BST 的基础上对每个结点钦定一个随机的优先级并在保证对于 BST 的性质不变的情况下，优先级满足堆的性质。Treap 分为两种，旋转 Treap（通过左旋&#x2F;右旋操作维护性质）或者非旋 Treap（通过分裂&#x2F;合并的方式维护性质），这里主要讲解旋转 Treap。">
+<meta name="keywords" content="数据结构,Treap,平衡树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数学常用公式定理">
-<meta property="og:url" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;2020&#x2F;12&#x2F;21&#x2F;%E6%95%B0%E5%AD%A6%E5%B8%B8%E7%94%A8%E5%AE%9A%E7%90%86%E3%80%81%E5%85%AC%E5%BC%8F&#x2F;index.html">
+<meta property="og:title" content="用旋转 Treap 维护名次树">
+<meta property="og:url" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;2021&#x2F;02&#x2F;04&#x2F;Treap&#x2F;index.html">
 <meta property="og:site_name" content="Granger&#39;s Blog">
+<meta property="og:description" content="Treap 是一种平衡树，通过在 BST 的基础上对每个结点钦定一个随机的优先级并在保证对于 BST 的性质不变的情况下，优先级满足堆的性质。Treap 分为两种，旋转 Treap（通过左旋&#x2F;右旋操作维护性质）或者非旋 Treap（通过分裂&#x2F;合并的方式维护性质），这里主要讲解旋转 Treap。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-12-21T12:08:46.770Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;2021&#x2F;02&#x2F;04&#x2F;Treap&#x2F;pict&#x2F;Treap&#x2F;image-20210204234541058.png">
+<meta property="og:updated_time" content="2021-02-08T05:27:59.745Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;2021&#x2F;02&#x2F;04&#x2F;Treap&#x2F;pict&#x2F;Treap&#x2F;image-20210204234541058.png">
 
 
 
@@ -116,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://H-J-Granger.github.io/2020/12/21/数学常用定理、公式/"/>
+  <link rel="canonical" href="http://H-J-Granger.github.io/2021/02/04/Treap/"/>
 
 
 
 
 
-  <title>数学常用公式定理 | Granger's Blog</title>
+  <title>用旋转 Treap 维护名次树 | Granger's Blog</title>
   
 
 
@@ -304,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://H-J-Granger.github.io/2020/12/21/%E6%95%B0%E5%AD%A6%E5%B8%B8%E7%94%A8%E5%AE%9A%E7%90%86%E3%80%81%E5%85%AC%E5%BC%8F/">
+    <link itemprop="mainEntityOfPage" href="http://H-J-Granger.github.io/2021/02/04/Treap/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hermione Granger">
@@ -321,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">数学常用公式定理</h1>
+          <h1 class="post-title" itemprop="name headline">用旋转 Treap 维护名次树</h1>
         
 
         <div class="post-meta">
@@ -333,8 +337,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-12-21T00:00:00+08:00">
-                2020-12-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-02-04T00:00:00+08:00">
+                2021-02-04
               </time>
             
 
@@ -356,8 +360,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E5%AD%A6/" itemprop="url" rel="index">
-                    <span itemprop="name">数学</span>
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
                   </a>
                 </span>
 
@@ -393,14 +397,54 @@
       
 
       
-        <!--comment-->
+        <p>Treap 是一种平衡树，通过在 BST 的基础上对每个结点钦定一个随机的优先级并在保证对于 BST 的性质不变的情况下，优先级满足堆的性质。Treap 分为两种，旋转 Treap（通过左旋/右旋操作维护性质）或者非旋 Treap（通过分裂/合并的方式维护性质），这里主要讲解旋转 Treap。</p>
 <a id="more"></a>
-<h2 id="三角恒等式"><a href="#三角恒等式" class="headerlink" title="三角恒等式"></a>三角恒等式</h2><h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><script type="math/tex; mode=display">
-\sin^2x+\cos^2x=1\\
-\tan x=\frac{\sin x}{\cos x}\\</script><h3 id="奇偶性"><a href="#奇偶性" class="headerlink" title="奇偶性"></a>奇偶性</h3><script type="math/tex; mode=display">
-\sin (-x)=-\sin x\\
-\cos (-x)=\cos x\\
-\tan x=-\tan x</script>
+<h2 id="维护方式"><a href="#维护方式" class="headerlink" title="维护方式"></a>维护方式</h2><p>如果用旋转 Treap 维护名次树，每个结点需要维护以下信息：</p>
+<ul>
+<li>两个儿子（如果不存在，记为空结点）</li>
+<li>权值</li>
+<li>出现次数</li>
+<li>子树大小</li>
+<li>优先级</li>
+</ul>
+<p>同时还要维护整棵树的树根。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">int</span> l, r, cnt, val;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">long</span> <span class="keyword">long</span> pri;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">int</span> sze;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">&#125; tree[MAXN];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> size, root;</span></pre></td></tr></table></figure>
+<h3 id="旋转"><a href="#旋转" class="headerlink" title="旋转"></a>旋转</h3><p>如果我们按照 BST 的方式插入，因为新加入的结点一定是叶结点，难免会出现优先级不满足堆的性质的情况，所以我们要使用<strong>旋转</strong>的方式来在中序遍历不变的情况下对调某个结点和其父结点的父子关系。</p>
+<p>具体解释如下图：</p>
+<p><img src="pict/Treap/image-20210204234541058.png" alt="image-20210204234541058"></p>
+<p>左旋同理。易知旋转操作不改变整棵树的中序遍历（即不破坏 BST 性质）。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">rrotate</span><span class="params">(<span class="keyword">int</span> &amp;k)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">int</span> tmp = tree[k].l;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  tree[k].l = tree[tmp].r;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  tree[tmp].r = k;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  tree[k].sze = tree[tree[k].l].sze + tree[tree[k].r].sze + tree[k].cnt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  tree[tmp].sze = tree[tree[tmp].l].sze + tree[tree[tmp].r].sze + tree[tmp].cnt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">  k = tmp; <span class="comment">// 因为一般我们希</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">lrotate</span><span class="params">(<span class="keyword">int</span> &amp;k)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">int</span> tmp = tree[k].r;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">  tree[k].r = tree[tmp].l;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">  tree[tmp].l = k;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">  tree[k].sze = tree[tree[k].l].sze + tree[tree[k].r].sze + tree[k].cnt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">  tree[tmp].sze = tree[tree[tmp].l].sze + tree[tree[tmp].r].sze + tree[tmp].cnt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">  k = tmp;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><p>有了旋转，插入就很容易了。</p>
+<ul>
+<li>如果要插入到空树，直接新建结点。（无需维护父结点信息）</li>
+<li>如果插入的权值等于树根权值，出现次数 ++ 即可。</li>
+<li>如果以上条件皆不满足，根据权值与树根权值的关系判断应递归到左子树还是右子树继续插入（接下来以左子树为例继续讲解）。左子树插入完毕后（注意这里需要更新左儿子），如果左儿子的优先级与父亲优先级不满足堆性质，则将左儿子右旋至根。</li>
+</ul>
+<p>经过以上条件，可以大致明白：新插入的结点会从叶结点一路向上旋转，直到自己的优先级与其目前父亲的优先级满足堆性质。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> &amp;k, <span class="keyword">int</span> val)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">if</span> (k == <span class="number">0</span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    tree[++size] = &#123;<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, val, <span class="keyword">static_cast</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt;(random()), <span class="number">1</span>&#125;;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    k = size;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">if</span> (tree[k].val == val) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    tree[k].cnt++;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    tree[k].sze++;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (tree[k].val &lt; val) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    tree[k].sze++;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    insert(tree[k].r, val);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">if</span> (tree[tree[k].r].pri &lt; tree[k].pri) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">      lrotate(k);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">  &#125; <span class="keyword">else</span> &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    tree[k].sze++;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">    insert(tree[k].l, val);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">if</span> (tree[tree[k].l].pri &lt; tree[k].pri) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">      rrotate(k);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><ul>
+<li>如果树根的权值等于要删除的值：<ul>
+<li>如果树根出现次数 $&gt;1$，直接出现次数 — 即可。</li>
+<li>如果树根是叶子结点，将树置为空树即可。</li>
+<li>如果树根只有一个叶结点，将树置为其唯一的一棵子树即可。</li>
+<li>否则，比较左儿子与右儿子的优先级（以下假设左儿子优先级大于右儿子），并将左儿子右旋到根。接着递归处理当前树根的右儿子（即原先的树根，它的权值等于要删除的值）。</li>
+</ul>
+</li>
+<li>否则，比较树根的权值与要删除的值，递归处理。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">erase</span><span class="params">(<span class="keyword">int</span> &amp;k, <span class="keyword">int</span> val)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">if</span> (k == <span class="number">0</span>) &#123; <span class="keyword">return</span>; &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">if</span> (tree[k].val == val) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">if</span> (tree[k].cnt &gt; <span class="number">1</span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">      tree[k].cnt--;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">      tree[k].sze--;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">      <span class="keyword">return</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">if</span> (tree[k].l == <span class="number">0</span> &amp;&amp; tree[k].r == <span class="number">0</span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">      k = <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">      <span class="keyword">return</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">if</span> (tree[k].l != <span class="number">0</span> &amp;&amp; tree[k].r == <span class="number">0</span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">      k = tree[k].l;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">      <span class="keyword">return</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">if</span> (tree[k].l == <span class="number">0</span> &amp;&amp; tree[k].r != <span class="number">0</span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">      k = tree[k].r;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">      <span class="keyword">return</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">if</span> (tree[tree[k].l].pri &lt; tree[tree[k].r].pri) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">      rrotate(k);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">      erase(k, val);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">      <span class="keyword">return</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">    &#125; <span class="keyword">else</span> &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">      lrotate(k);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">      erase(k, val);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">      <span class="keyword">return</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">if</span> (tree[k].val &gt; val) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">    tree[k].sze--;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">    erase(tree[k].l, val);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">  &#125; <span class="keyword">else</span> &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line">    tree[k].sze--;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line">    erase(tree[k].r, val);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h3 id="排名"><a href="#排名" class="headerlink" title="排名"></a>排名</h3><p>利用子树大小判断该递归还是该返回即可。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query_rnk</span><span class="params">(<span class="keyword">int</span> k, <span class="keyword">int</span> val)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">if</span> (k == <span class="number">0</span>) &#123; <span class="keyword">return</span> <span class="number">0</span>; &#125; <span class="comment">// 如果找不到</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">if</span> (tree[k].val == val) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span> tree[tree[k].l].sze + <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">if</span> (tree[k].val &gt; val) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span> query_rnk(tree[k].l, val);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">  &#125; <span class="keyword">else</span> &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span> tree[tree[k].l].sze + tree[k].cnt + query_rnk(tree[k].r, val);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h3 id="第-k-大"><a href="#第-k-大" class="headerlink" title="第 k 大"></a>第 k 大</h3><p>与排名类似。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query_nth</span><span class="params">(<span class="keyword">int</span> k, <span class="keyword">int</span> val)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">if</span> (k == <span class="number">0</span>) &#123; <span class="keyword">return</span> <span class="number">0</span>; &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">if</span> (val &lt;= tree[tree[k].l].sze) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span> query_nth(tree[k].l, val);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (val &lt;= tree[tree[k].l].sze + tree[k].cnt) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span> tree[k].val;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">  &#125; <span class="keyword">else</span> &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span> query_nth(tree[k].r, val - tree[tree[k].l].sze - tree[k].cnt);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h3 id="前驱-后继"><a href="#前驱-后继" class="headerlink" title="前驱/后继"></a>前驱/后继</h3><p>可以用前四个函数实现（插入，查询排名，查询第 k 大，删除），不过常数太大。</p>
+<p>以前驱为例，一个结点的前驱一定是它作为右儿子的爸爸或者它左子树中序遍历的最后一个结点（即左儿子的右儿子的右儿子的右儿子……），所以：</p>
+<p>如果还没经过目标结点：</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://en.wikipedia.org/wiki/Treap" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Treap</a></li>
+<li></li>
+</ul>
+
       
     </div>
     
@@ -417,9 +461,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"># 数据结构</a>
           
-            <a href="/tags/%E6%80%BB%E7%BB%93/" rel="tag"># 总结</a>
+            <a href="/tags/Treap/" rel="tag"># Treap</a>
+          
+            <a href="/tags/%E5%B9%B3%E8%A1%A1%E6%A0%91/" rel="tag"># 平衡树</a>
           
         </div>
       
@@ -432,8 +478,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/11/22/%E6%B5%85%E8%B0%88%E7%AE%80%E5%8D%95%E6%96%B9%E7%A8%8B%E9%80%9A%E8%A7%A3/" rel="next" title="浅谈简单方程通解">
-                <i class="fa fa-chevron-left"></i> 浅谈简单方程通解
+              <a href="/2021/02/03/LOJ10129/" rel="next" title="LOJ10129. 「一本通 4.3 练习 3」维护序列">
+                <i class="fa fa-chevron-left"></i> LOJ10129. 「一本通 4.3 练习 3」维护序列
               </a>
             
           </div>
@@ -442,8 +488,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2021/01/05/%E3%80%8C%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0%E3%80%8D%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E4%BB%8E%E5%A4%B4%E5%BC%80%E5%A7%8B%EF%BC%9A%E8%87%AA%E7%84%B6%E6%95%B0/" rel="prev" title="「陶哲轩实分析笔记」2.2 加法">
-                「陶哲轩实分析笔记」2.2 加法 <i class="fa fa-chevron-right"></i>
+              <a href="/2021/02/04/LG4513/" rel="prev" title="LG4513. 小白逛公园">
+                LG4513. 小白逛公园 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -595,7 +641,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#三角恒等式"><span class="nav-number">1.</span> <span class="nav-text">三角恒等式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础"><span class="nav-number">1.1.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#奇偶性"><span class="nav-number">1.2.</span> <span class="nav-text">奇偶性</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#维护方式"><span class="nav-number">1.</span> <span class="nav-text">维护方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#旋转"><span class="nav-number">1.1.</span> <span class="nav-text">旋转</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插入"><span class="nav-number">1.2.</span> <span class="nav-text">插入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除"><span class="nav-number">1.3.</span> <span class="nav-text">删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排名"><span class="nav-number">1.4.</span> <span class="nav-text">排名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第-k-大"><span class="nav-number">1.5.</span> <span class="nav-text">第 k 大</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前驱-后继"><span class="nav-number">1.6.</span> <span class="nav-text">前驱/后继</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">2.</span> <span class="nav-text">Reference</span></a></li></ol></div>
             
 
           </div>

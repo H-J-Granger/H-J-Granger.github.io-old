@@ -21,8 +21,68 @@
       </categories>
       <tags>
         <tag>题解</tag>
-        <tag>线段树</tag>
         <tag>数据结构</tag>
+        <tag>线段树</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用旋转 Treap 维护名次树</title>
+    <url>/2021/02/04/Treap/</url>
+    <content><![CDATA[<p>Treap 是一种平衡树，通过在 BST 的基础上对每个结点钦定一个随机的优先级并在保证对于 BST 的性质不变的情况下，优先级满足堆的性质。Treap 分为两种，旋转 Treap（通过左旋/右旋操作维护性质）或者非旋 Treap（通过分裂/合并的方式维护性质），这里主要讲解旋转 Treap。</p>
+<a id="more"></a>
+<h2 id="维护方式"><a href="#维护方式" class="headerlink" title="维护方式"></a>维护方式</h2><p>如果用旋转 Treap 维护名次树，每个结点需要维护以下信息：</p>
+<ul>
+<li>两个儿子（如果不存在，记为空结点）</li>
+<li>权值</li>
+<li>出现次数</li>
+<li>子树大小</li>
+<li>优先级</li>
+</ul>
+<p>同时还要维护整棵树的树根。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">  <span class="keyword">int</span> l, r, cnt, val;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  <span class="keyword">long</span> <span class="keyword">long</span> pri;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  <span class="keyword">int</span> sze;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125; tree[MAXN];</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> size, root;</span></pre></td></tr></table></figure>
+<h3 id="旋转"><a href="#旋转" class="headerlink" title="旋转"></a>旋转</h3><p>如果我们按照 BST 的方式插入，因为新加入的结点一定是叶结点，难免会出现优先级不满足堆的性质的情况，所以我们要使用<strong>旋转</strong>的方式来在中序遍历不变的情况下对调某个结点和其父结点的父子关系。</p>
+<p>具体解释如下图：</p>
+<p><img src="pict/Treap/image-20210204234541058.png" alt="image-20210204234541058"></p>
+<p>左旋同理。易知旋转操作不改变整棵树的中序遍历（即不破坏 BST 性质）。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">rrotate</span><span class="params">(<span class="keyword">int</span> &amp;k)</span> </span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  <span class="keyword">int</span> tmp = tree[k].l;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  tree[k].l = tree[tmp].r;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  tree[tmp].r = k;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  tree[k].sze = tree[tree[k].l].sze + tree[tree[k].r].sze + tree[k].cnt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  tree[tmp].sze = tree[tree[tmp].l].sze + tree[tree[tmp].r].sze + tree[tmp].cnt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  k = tmp; <span class="comment">// 因为一般我们希</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">lrotate</span><span class="params">(<span class="keyword">int</span> &amp;k)</span> </span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  <span class="keyword">int</span> tmp = tree[k].r;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  tree[k].r = tree[tmp].l;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  tree[tmp].l = k;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  tree[k].sze = tree[tree[k].l].sze + tree[tree[k].r].sze + tree[k].cnt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  tree[tmp].sze = tree[tree[tmp].l].sze + tree[tree[tmp].r].sze + tree[tmp].cnt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  k = tmp;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><p>有了旋转，插入就很容易了。</p>
+<ul>
+<li>如果要插入到空树，直接新建结点。（无需维护父结点信息）</li>
+<li>如果插入的权值等于树根权值，出现次数 ++ 即可。</li>
+<li>如果以上条件皆不满足，根据权值与树根权值的关系判断应递归到左子树还是右子树继续插入（接下来以左子树为例继续讲解）。左子树插入完毕后（注意这里需要更新左儿子），如果左儿子的优先级与父亲优先级不满足堆性质，则将左儿子右旋至根。</li>
+</ul>
+<p>经过以上条件，可以大致明白：新插入的结点会从叶结点一路向上旋转，直到自己的优先级与其目前父亲的优先级满足堆性质。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> &amp;k, <span class="keyword">int</span> val)</span> </span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  <span class="keyword">if</span> (k == <span class="number">0</span>) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    tree[++size] = &#123;<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, val, <span class="keyword">static_cast</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt;(random()), <span class="number">1</span>&#125;;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    k = size;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">return</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  <span class="keyword">if</span> (tree[k].val == val) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    tree[k].cnt++;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    tree[k].sze++;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (tree[k].val &lt; val) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    tree[k].sze++;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    insert(tree[k].r, val);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">if</span> (tree[tree[k].r].pri &lt; tree[k].pri) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      lrotate(k);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &#125; <span class="keyword">else</span> &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    tree[k].sze++;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    insert(tree[k].l, val);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">if</span> (tree[tree[k].l].pri &lt; tree[k].pri) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      rrotate(k);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><ul>
+<li>如果树根的权值等于要删除的值：<ul>
+<li>如果树根出现次数 $&gt;1$，直接出现次数 — 即可。</li>
+<li>如果树根是叶子结点，将树置为空树即可。</li>
+<li>如果树根只有一个叶结点，将树置为其唯一的一棵子树即可。</li>
+<li>否则，比较左儿子与右儿子的优先级（以下假设左儿子优先级大于右儿子），并将左儿子右旋到根。接着递归处理当前树根的右儿子（即原先的树根，它的权值等于要删除的值）。</li>
+</ul>
+</li>
+<li>否则，比较树根的权值与要删除的值，递归处理。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">erase</span><span class="params">(<span class="keyword">int</span> &amp;k, <span class="keyword">int</span> val)</span> </span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  <span class="keyword">if</span> (k == <span class="number">0</span>) &#123; <span class="keyword">return</span>; &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  <span class="keyword">if</span> (tree[k].val == val) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">if</span> (tree[k].cnt &gt; <span class="number">1</span>) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      tree[k].cnt--;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      tree[k].sze--;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      <span class="keyword">return</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">if</span> (tree[k].l == <span class="number">0</span> &amp;&amp; tree[k].r == <span class="number">0</span>) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      k = <span class="number">0</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      <span class="keyword">return</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">if</span> (tree[k].l != <span class="number">0</span> &amp;&amp; tree[k].r == <span class="number">0</span>) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      k = tree[k].l;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      <span class="keyword">return</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">if</span> (tree[k].l == <span class="number">0</span> &amp;&amp; tree[k].r != <span class="number">0</span>) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      k = tree[k].r;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      <span class="keyword">return</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">if</span> (tree[tree[k].l].pri &lt; tree[tree[k].r].pri) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      rrotate(k);</span></pre></td></tr><tr><td class="code"><pre><span class="line">      erase(k, val);</span></pre></td></tr><tr><td class="code"><pre><span class="line">      <span class="keyword">return</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125; <span class="keyword">else</span> &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      lrotate(k);</span></pre></td></tr><tr><td class="code"><pre><span class="line">      erase(k, val);</span></pre></td></tr><tr><td class="code"><pre><span class="line">      <span class="keyword">return</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  <span class="keyword">if</span> (tree[k].val &gt; val) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    tree[k].sze--;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    erase(tree[k].l, val);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">return</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &#125; <span class="keyword">else</span> &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    tree[k].sze--;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    erase(tree[k].r, val);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">return</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h3 id="排名"><a href="#排名" class="headerlink" title="排名"></a>排名</h3><p>利用子树大小判断该递归还是该返回即可。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query_rnk</span><span class="params">(<span class="keyword">int</span> k, <span class="keyword">int</span> val)</span> </span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  <span class="keyword">if</span> (k == <span class="number">0</span>) &#123; <span class="keyword">return</span> <span class="number">0</span>; &#125; <span class="comment">// 如果找不到</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">  <span class="keyword">if</span> (tree[k].val == val) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">return</span> tree[tree[k].l].sze + <span class="number">1</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  <span class="keyword">if</span> (tree[k].val &gt; val) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">return</span> query_rnk(tree[k].l, val);</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &#125; <span class="keyword">else</span> &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">return</span> tree[tree[k].l].sze + tree[k].cnt + query_rnk(tree[k].r, val);</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h3 id="第-k-大"><a href="#第-k-大" class="headerlink" title="第 k 大"></a>第 k 大</h3><p>与排名类似。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query_nth</span><span class="params">(<span class="keyword">int</span> k, <span class="keyword">int</span> val)</span> </span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  <span class="keyword">if</span> (k == <span class="number">0</span>) &#123; <span class="keyword">return</span> <span class="number">0</span>; &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  <span class="keyword">if</span> (val &lt;= tree[tree[k].l].sze) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">return</span> query_nth(tree[k].l, val);</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (val &lt;= tree[tree[k].l].sze + tree[k].cnt) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">return</span> tree[k].val;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &#125; <span class="keyword">else</span> &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    <span class="keyword">return</span> query_nth(tree[k].r, val - tree[tree[k].l].sze - tree[k].cnt);</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h3 id="前驱-后继"><a href="#前驱-后继" class="headerlink" title="前驱/后继"></a>前驱/后继</h3><p>可以用前四个函数实现（插入，查询排名，查询第 k 大，删除），不过常数太大。</p>
+<p>以前驱为例，一个结点的前驱一定是它作为右儿子的爸爸或者它左子树中序遍历的最后一个结点（即左儿子的右儿子的右儿子的右儿子……），所以：</p>
+<p>如果还没经过目标结点：</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://en.wikipedia.org/wiki/Treap" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Treap</a></li>
+<li></li>
+</ul>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+        <tag>Treap</tag>
+        <tag>平衡树</tag>
       </tags>
   </entry>
   <entry>
@@ -47,28 +107,44 @@
       </categories>
       <tags>
         <tag>题解</tag>
-        <tag>线段树</tag>
         <tag>数据结构</tag>
+        <tag>线段树</tag>
       </tags>
   </entry>
   <entry>
-    <title>「陶哲轩实分析笔记」目录</title>
-    <url>/2021/01/05/tao/</url>
-    <content><![CDATA[<p>最近在拜读《陶哲轩实分析》（第 3 版，ISBN 978-7-115-48025-5），做点笔记。</p>
+    <title>初中化学易错点整理</title>
+    <url>/2021/02/02/%E5%8C%96%E5%AD%A6%E6%98%93%E9%94%99%E7%82%B9%E6%95%B4%E7%90%86/</url>
+    <content><![CDATA[<p>化学寒假作业……</p>
 <a id="more"></a>
-<!--comment-->
-<h2 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h2><h3 id="第二章-从头开始：自然数"><a href="#第二章-从头开始：自然数" class="headerlink" title="第二章 从头开始：自然数"></a>第二章 从头开始：自然数</h3><ul>
-<li>2.1 <a href="/2021/01/05/tao-2-1">Peano 公理</a></li>
-<li>2.2 <a href="/2021/01/05/tao-2-2">加法</a></li>
-</ul>
-<h3 id="第三章-集合论"><a href="#第三章-集合论" class="headerlink" title="第三章 集合论"></a>第三章 集合论</h3><h3 id="第四章-整数和有理数"><a href="#第四章-整数和有理数" class="headerlink" title="第四章 整数和有理数"></a>第四章 整数和有理数</h3><h3 id="第五章-实数"><a href="#第五章-实数" class="headerlink" title="第五章 实数"></a>第五章 实数</h3><h3 id="第六章-序列的极限"><a href="#第六章-序列的极限" class="headerlink" title="第六章 序列的极限"></a>第六章 序列的极限</h3><h3 id="第七章-级数"><a href="#第七章-级数" class="headerlink" title="第七章 级数"></a>第七章 级数</h3><h3 id="第八章-无限集"><a href="#第八章-无限集" class="headerlink" title="第八章 无限集"></a>第八章 无限集</h3><h3 id="第九章-mathbb-R-上的连续函数"><a href="#第九章-mathbb-R-上的连续函数" class="headerlink" title="第九章 $\mathbb R$ 上的连续函数"></a>第九章 $\mathbb R$ 上的连续函数</h3><h3 id="第十章-函数的微分"><a href="#第十章-函数的微分" class="headerlink" title="第十章 函数的微分"></a>第十章 函数的微分</h3><h3 id="第十一章-黎曼积分"><a href="#第十一章-黎曼积分" class="headerlink" title="第十一章 黎曼积分"></a>第十一章 黎曼积分</h3><h2 id="第二部分"><a href="#第二部分" class="headerlink" title="第二部分"></a>第二部分</h2><h3 id="第十二章-度量空间"><a href="#第十二章-度量空间" class="headerlink" title="第十二章 度量空间"></a>第十二章 度量空间</h3><h3 id="第十三章-度量空间上的连续函数"><a href="#第十三章-度量空间上的连续函数" class="headerlink" title="第十三章 度量空间上的连续函数"></a>第十三章 度量空间上的连续函数</h3><h3 id="第十四章-一致收敛"><a href="#第十四章-一致收敛" class="headerlink" title="第十四章 一致收敛"></a>第十四章 一致收敛</h3><h3 id="第十五章-幂级数"><a href="#第十五章-幂级数" class="headerlink" title="第十五章 幂级数"></a>第十五章 幂级数</h3><h3 id="第十六章-傅里叶级数"><a href="#第十六章-傅里叶级数" class="headerlink" title="第十六章 傅里叶级数"></a>第十六章 傅里叶级数</h3><h3 id="第十七章-多元微分学"><a href="#第十七章-多元微分学" class="headerlink" title="第十七章 多元微分学"></a>第十七章 多元微分学</h3><h3 id="第十八章-勒贝格测度"><a href="#第十八章-勒贝格测度" class="headerlink" title="第十八章 勒贝格测度"></a>第十八章 勒贝格测度</h3><h3 id="第十九章-勒贝格积分"><a href="#第十九章-勒贝格积分" class="headerlink" title="第十九章 勒贝格积分"></a>第十九章 勒贝格积分</h3><h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="附录-A-数理逻辑基础"><a href="#附录-A-数理逻辑基础" class="headerlink" title="附录 A 数理逻辑基础"></a>附录 A 数理逻辑基础</h3><h3 id="附录-B-十进制"><a href="#附录-B-十进制" class="headerlink" title="附录 B 十进制"></a>附录 B 十进制</h3>]]></content>
+<p>化学易错点整理</p>
+<ol>
+<li>冰水混合物是纯净物，不是混合物</li>
+<li>纯碱是盐不是碱</li>
+<li>空气中 $\rm O_2$ 的体积分数约占 $21\%$，而非质量分数</li>
+<li>$\rm CO_2$ 不属于空气污染物</li>
+<li>加热 $\rm KMnO_4$ 制取 $\rm O_2$ 时若用排水法收集应等待导管口有均匀、连续的气泡冒出后再收集</li>
+<li>测定空气中 $\rm O_2$ 的含量的装置内的红磷不能换成铁丝、木炭</li>
+<li>相对原子质量是无单位量</li>
+<li>不是所有金属元素都有金字旁，汞就没有</li>
+<li>由一种元素组成的物质不一定是纯净物，譬如木炭和钻石的混合物</li>
+<li>稀硫酸、稀盐酸与 $\rm Fe$ 反应都只生成 $\rm Fe^{2+}$ 而不生成 $\rm Fe^{3+}$。</li>
+<li>溶液中的粒子包括水分子</li>
+<li>除了 $\begin{matrix}\triangle\\\rm CO+CuO=!=!=CO_2+Cu\end{matrix}$ 以外，大多数初中化学的以 $\rm CO$ 或 $\rm C$ 做还原剂的还原反应都需要“高温”条件。</li>
+<li>炼铁炉中，焦炭不仅用于还原铁矿石，同时还为反应提供热量。</li>
+<li>在未给出温度的前提下比较两物的溶解度孰大孰小是无意义的</li>
+<li>$t ^\circ!\rm C$ 下某物的溶解度为 $a \rm g$ 是指在该温度下它的饱和溶液中溶剂（水）的质量为 $100 \rm g$ 时该物质的质量为 $a \rm g$，而非在该温度下它的 $100 \rm g$ 饱和溶液中该物质的质量为 $a \rm g$。</li>
+<li>催化剂在反应前后物理性质可能改变，但化学性质不会改变，质量也不会改变。</li>
+<li>原子并不是不可分割的，在核反应中原子也能再分（核裂变）</li>
+<li>加热 $\rm KMnO_4$ 制 $\rm O_2$（或将 $\rm KClO_3$ 与 $\rm MnO_2$ 共热制 $\rm O_2$）后一定要先撤导管后撤灯！</li>
+<li>$\rm NH_4NO_3$、$\rm KNO_3$、$\rm NH_4Cl$ 等溶解于水时吸热，会影响其溶解度</li>
+<li>若要探究浓硫酸与过量的某物进行的反应，要记得判断稀硫酸能否与该物质反应。</li>
+</ol>
+]]></content>
       <categories>
-        <category>数学</category>
+        <category>化学</category>
       </categories>
       <tags>
-        <tag>数学</tag>
-        <tag>笔记</tag>
-        <tag>实分析</tag>
+        <tag>化学</tag>
       </tags>
   </entry>
   <entry>
@@ -99,6 +175,26 @@
 <sup>ii</sup>. 这个定义/证明不够严谨，在原文中有标注“非正式的”。<a href="#reffn_ii" title="Jump back to footnote [ii] in the text."> &#8617;</a>
 </blockquote>
 ]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>笔记</tag>
+        <tag>实分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>「陶哲轩实分析笔记」目录</title>
+    <url>/2021/01/05/tao/</url>
+    <content><![CDATA[<p>最近在拜读《陶哲轩实分析》（第 3 版，ISBN 978-7-115-48025-5），做点笔记。</p>
+<a id="more"></a>
+<!--comment-->
+<h2 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h2><h3 id="第二章-从头开始：自然数"><a href="#第二章-从头开始：自然数" class="headerlink" title="第二章 从头开始：自然数"></a>第二章 从头开始：自然数</h3><ul>
+<li>2.1 <a href="/2021/01/05/tao-2-1">Peano 公理</a></li>
+<li>2.2 <a href="/2021/01/05/tao-2-2">加法</a></li>
+</ul>
+<h3 id="第三章-集合论"><a href="#第三章-集合论" class="headerlink" title="第三章 集合论"></a>第三章 集合论</h3><h3 id="第四章-整数和有理数"><a href="#第四章-整数和有理数" class="headerlink" title="第四章 整数和有理数"></a>第四章 整数和有理数</h3><h3 id="第五章-实数"><a href="#第五章-实数" class="headerlink" title="第五章 实数"></a>第五章 实数</h3><h3 id="第六章-序列的极限"><a href="#第六章-序列的极限" class="headerlink" title="第六章 序列的极限"></a>第六章 序列的极限</h3><h3 id="第七章-级数"><a href="#第七章-级数" class="headerlink" title="第七章 级数"></a>第七章 级数</h3><h3 id="第八章-无限集"><a href="#第八章-无限集" class="headerlink" title="第八章 无限集"></a>第八章 无限集</h3><h3 id="第九章-mathbb-R-上的连续函数"><a href="#第九章-mathbb-R-上的连续函数" class="headerlink" title="第九章 $\mathbb R$ 上的连续函数"></a>第九章 $\mathbb R$ 上的连续函数</h3><h3 id="第十章-函数的微分"><a href="#第十章-函数的微分" class="headerlink" title="第十章 函数的微分"></a>第十章 函数的微分</h3><h3 id="第十一章-黎曼积分"><a href="#第十一章-黎曼积分" class="headerlink" title="第十一章 黎曼积分"></a>第十一章 黎曼积分</h3><h2 id="第二部分"><a href="#第二部分" class="headerlink" title="第二部分"></a>第二部分</h2><h3 id="第十二章-度量空间"><a href="#第十二章-度量空间" class="headerlink" title="第十二章 度量空间"></a>第十二章 度量空间</h3><h3 id="第十三章-度量空间上的连续函数"><a href="#第十三章-度量空间上的连续函数" class="headerlink" title="第十三章 度量空间上的连续函数"></a>第十三章 度量空间上的连续函数</h3><h3 id="第十四章-一致收敛"><a href="#第十四章-一致收敛" class="headerlink" title="第十四章 一致收敛"></a>第十四章 一致收敛</h3><h3 id="第十五章-幂级数"><a href="#第十五章-幂级数" class="headerlink" title="第十五章 幂级数"></a>第十五章 幂级数</h3><h3 id="第十六章-傅里叶级数"><a href="#第十六章-傅里叶级数" class="headerlink" title="第十六章 傅里叶级数"></a>第十六章 傅里叶级数</h3><h3 id="第十七章-多元微分学"><a href="#第十七章-多元微分学" class="headerlink" title="第十七章 多元微分学"></a>第十七章 多元微分学</h3><h3 id="第十八章-勒贝格测度"><a href="#第十八章-勒贝格测度" class="headerlink" title="第十八章 勒贝格测度"></a>第十八章 勒贝格测度</h3><h3 id="第十九章-勒贝格积分"><a href="#第十九章-勒贝格积分" class="headerlink" title="第十九章 勒贝格积分"></a>第十九章 勒贝格积分</h3><h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="附录-A-数理逻辑基础"><a href="#附录-A-数理逻辑基础" class="headerlink" title="附录 A 数理逻辑基础"></a>附录 A 数理逻辑基础</h3><h3 id="附录-B-十进制"><a href="#附录-B-十进制" class="headerlink" title="附录 B 十进制"></a>附录 B 十进制</h3>]]></content>
       <categories>
         <category>数学</category>
       </categories>
@@ -714,8 +810,8 @@ x^3+3\cdot\dfrac b{3a}x^2+3\cdot\dfrac {b^2}{9a^2}x+\dfrac {b^3}{27a^3}+\left(\d
         <category>数学</category>
       </categories>
       <tags>
-        <tag>数学</tag>
         <tag>OI</tag>
+        <tag>数学</tag>
       </tags>
   </entry>
   <entry>
@@ -825,8 +921,8 @@ x^3+3\cdot\dfrac b{3a}x^2+3\cdot\dfrac {b^2}{9a^2}x+\dfrac {b^3}{27a^3}+\left(\d
         <category>CSP2019</category>
       </categories>
       <tags>
-        <tag>OI</tag>
         <tag>游记</tag>
+        <tag>OI</tag>
       </tags>
   </entry>
 </search>
