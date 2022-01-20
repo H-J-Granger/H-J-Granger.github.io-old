@@ -81,11 +81,11 @@
 
 <meta name="keywords" content="数学,笔记,实分析">
 <meta property="og:type" content="article">
-<meta property="og:title" content="「陶哲轩实分析笔记」2.1 Peano 公理">
+<meta property="og:title" content="「陶哲轩实分析」第2章-从头开始：自然数-笔记">
 <meta property="og:url" content="http:&#x2F;&#x2F;h-j-granger.github.io&#x2F;2021&#x2F;01&#x2F;05&#x2F;tao-2-1&#x2F;index.html">
 <meta property="og:site_name" content="Granger&#39;s Blog">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2021-01-22T14:44:03.206Z">
+<meta property="og:updated_time" content="2021-04-10T16:44:13.807Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -122,7 +122,7 @@
 
 
 
-  <title>「陶哲轩实分析笔记」2.1 Peano 公理 | Granger's Blog</title>
+  <title>「陶哲轩实分析」第2章-从头开始：自然数-笔记 | Granger's Blog</title>
   
 
 
@@ -321,7 +321,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">「陶哲轩实分析笔记」2.1 Peano 公理</h1>
+          <h1 class="post-title" itemprop="name headline">「陶哲轩实分析」第2章-从头开始：自然数-笔记</h1>
         
 
         <div class="post-meta">
@@ -395,27 +395,23 @@
       
         <!--comment-->
 <a id="more"></a>
-<p><strong>公理 2.1</strong><sup><a href="#fn_i" id="reffn_i">i</a></sup> $0$ 是自然数；<br><strong>公理 2.2</strong> 每个确定的自然数 $n$ 都有一个确定的<strong>后继</strong>，记作 $n’$，$n’$ 也是自然数；<br><strong>公理 2.3</strong> 不存在自然数 $n$ 使得 $n’=0$；<br><strong>公理 2.4</strong> 对于任意自然数 $n$、$m$，如果 $n\ne m$，那么 $n’\ne m’$；<br><strong>公理 2.5（数学归纳法原理）</strong> 任意关于自然数的命题，如果它对自然数 $0$ 是真的，而且如果它对自然数 $n$ 为真时，可以证明它对自然数 $n’$ 也为真。那么，命题对所有的自然数都为真。</p>
+<h2 id="Peano-公理"><a href="#Peano-公理" class="headerlink" title="Peano 公理"></a>Peano 公理</h2><p><strong>公理 2.1</strong><sup><a href="#fn_i" id="reffn_i">i</a></sup> $0$ 是自然数；<br><strong>公理 2.2</strong> 每个确定的自然数 $n$ 都有一个确定的<strong>后继</strong>，记作 $n’$，$n’$ 也是自然数；<br><strong>公理 2.3</strong> 不存在自然数 $n$ 使得 $n’=0$；<br><strong>公理 2.4</strong> 对于任意自然数 $n$、$m$，如果 $n\ne m$，那么 $n’\ne m’$；<br><strong>公理 2.5（数学归纳法原理）</strong> 任意关于自然数的命题，如果它对自然数 $0$ 是真的，而且如果它对自然数 $n$ 为真时，可以证明它对自然数 $n’$ 也为真。那么，命题对所有的自然数都为真。</p>
 <p>公理 2.1~公理 2.5 被称为自然数的 <strong>Peano 公理</strong>。</p>
-<p><strong>假设 2.6</strong><sup><a href="#fn_ii" id="reffn_ii">ii</a></sup> 存在一个数系 $\mathbb N$，我们称 $\mathbb N$ 里的元素为<strong>自然数</strong>，而公理 2.1~公理 2.5 对 $\mathbb N$ 均成立。</p>
+<p><strong>假设 2.6</strong><sup><a href="#fn_ii" id="reffn_ii">ii</a></sup> 存在一个数系<sup><a href="#fn_iii" id="reffn_iii">iii</a></sup> $\mathbb N$，我们称 $\mathbb N$ 里的元素为<strong>自然数</strong>，而公理 2.1~公理 2.5 对 $\mathbb N$ 均成立。</p>
 <p>我们把假设 2.6 中所的数系 $\mathbb N$ 称为<strong>自然数系</strong>。</p>
-<h2 id="递归定义"><a href="#递归定义" class="headerlink" title="递归定义"></a>递归定义</h2><p><strong>命题 2.1.16（递归定义）</strong> 设对于任意自然数 $n$，都存在某个从自然数系到自然数系的函数<sup><a href="#fn_iii" id="reffn_iii">iii</a></sup> $f_n:\mathbb N\rightarrow\mathbb N$，令 $c$ 为某个固定的自然数，那么对于任意自然数 $n$，都存在自然数 $a_n$，使得 $a_0=c$ 和 $a_{n’}=f_n(a_n)$ 恒成立。</p>
-<p>这个命题的表述不够严谨，在下一章的公理 3.7 将给出严谨的定义。</p>
-<blockquote>
-<p>证明<sup><a href="#fn_ii" id="reffn_ii">ii</a></sup>：</p>
-<p>使用归纳法证明。</p>
-<p>首先对于自然数 $0$，$a_0$ 被赋予了一个单一的值 $c$。（根据公理 2.3 可知，无论 $a_{n’}:=f_n(a_n)$<sup><a href="#fn_iv" id="reffn_iv">iv</a></sup> 是如何定义的，都无法改变 $a_0$ 的值）</p>
-<p>然后归纳地假设上述过程对于 $a_n$ 赋予了一个单一的值，那么必定对 $a_{n’}$ 也定义了一个单一的值。这是因为根据公理 2.4，无论其他 $a_{m’}:=f_m(a_m)$ 是如何定义的，都不能改变 $a_{n’}$ 的值。</p>
-<p>所以，对于任意的自然数 $n$，$a_n$ 都被赋予了一个单一的值。</p>
-<div align="right">$\square$</div>
-
-</blockquote>
-<hr>
+<h2 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h2><p><strong>定义 2.2.1</strong> 令 $m$ 为一个自然数，我们用归纳法定义<strong>加法</strong>：定义 $0+m:=m$<sup><a href="#fn_iv" id="reffn_iv">iv</a></sup>。归纳地假设我们已经定义了 $n+m$，那么我们定义 $n’+m:=(n+m)’$。</p>
+<h2 id="正自然数"><a href="#正自然数" class="headerlink" title="正自然数"></a>正自然数</h2><p><strong>定义 2.2.7</strong> 称一个自然数 $n$ 是<strong>正</strong>的，当且仅当它不等于 $0$。</p>
+<h2 id="序"><a href="#序" class="headerlink" title="序"></a>序</h2><p><strong>定义 2.2.11</strong> 令 $n$、$m$ 表示任意两个自然数。我们称 $n$ <strong>大于等于</strong> $m$，并且记作 $n\ge m$ 或者 $m\le n$，当且仅当 $\exist a:n=m+a$。我们称 $n$ <strong>严格大于</strong> $m$，并且记作 $n&gt;m$ 或 $n&lt;m$，当且仅当 $n\ge m$ 且 $n\ne m$。</p>
+<h2 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h2><p><strong>定义 2.3.1</strong> 令 $m$ 为一个自然数。我们用归纳法定义<strong>乘法</strong>：定义 $0\times m:=0$。归纳地假设我们已经定义了 $n\times m$，那么我们定义 $n’\times m:=(n\times m)+m$。</p>
+<h2 id="指数运算"><a href="#指数运算" class="headerlink" title="指数运算"></a>指数运算</h2><p><strong>定义 2.3.11</strong> 设 $m$ 是一个自然数，我们用归纳法定义<strong>指数运算</strong>：定义 $m^0:=1$。（注意这里将 $0^0$ 也定义为了 $1$）归纳地假设我们已经定义了 $m^n$，那么我们定义 $m^{n’}:=m^n\times n$。</p>
 <h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><blockquote id="fn_i">
 <sup>i</sup>. 为了方便，命题、定理、引理、假设等均沿用原文的编号。<a href="#reffn_i" title="Jump back to footnote [i] in the text."> &#8617;</a>
 </blockquote>
 <blockquote id="fn_ii">
 <sup>ii</sup>. 这个定义/证明不够严谨，在原文中有标注“非正式的”。<a href="#reffn_ii" title="Jump back to footnote [ii] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_iv">
+<sup>iv</sup>. 这里的“$:=$”是“被定义为”的意思。<a href="#reffn_iv" title="Jump back to footnote [iv] in the text."> &#8617;</a>
 </blockquote>
 
       
@@ -451,8 +447,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2021/01/05/tao/" rel="next" title="「陶哲轩实分析笔记」目录">
-                <i class="fa fa-chevron-left"></i> 「陶哲轩实分析笔记」目录
+              <a href="/2021/01/05/tao-2/" rel="next" title="「陶哲轩实分析」第2章-从头开始：自然数-笔记">
+                <i class="fa fa-chevron-left"></i> 「陶哲轩实分析」第2章-从头开始：自然数-笔记
               </a>
             
           </div>
@@ -543,7 +539,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -554,7 +550,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -565,7 +561,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -614,7 +610,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#递归定义"><span class="nav-number">1.</span> <span class="nav-text">递归定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Footnote"><span class="nav-number">2.</span> <span class="nav-text">Footnote</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Peano-公理"><span class="nav-number">1.</span> <span class="nav-text">Peano 公理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加法"><span class="nav-number">2.</span> <span class="nav-text">加法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正自然数"><span class="nav-number">3.</span> <span class="nav-text">正自然数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#序"><span class="nav-number">4.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#乘法"><span class="nav-number">5.</span> <span class="nav-text">乘法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指数运算"><span class="nav-number">6.</span> <span class="nav-text">指数运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Footnote"><span class="nav-number">7.</span> <span class="nav-text">Footnote</span></a></li></ol></div>
             
 
           </div>
@@ -634,7 +630,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

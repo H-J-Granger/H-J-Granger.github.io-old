@@ -1,6 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>中国古典文学笔记——唐诗四分法观念的形成</title>
+    <url>/2021/10/16/%E4%B8%AD%E5%9B%BD%E5%8F%A4%E5%85%B8%E6%96%87%E5%AD%A6%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E5%94%90%E8%AF%97%E5%9B%9B%E5%88%86%E6%B3%95%E8%A7%82%E5%BF%B5%E7%9A%84%E5%BD%A2%E6%88%90/</url>
+    <content><![CDATA[<p>在研究唐朝诗歌时，学者们往往会将唐朝划分为四个时期：初唐、盛唐、中唐、晚唐，称为“四分法”。“四分法”是什么时候出现的？是现代的学者们讨论得出的，还是古代的文人总结的？是一开始就是“初盛中晚”，还是经历了数代人的发展？</p>
+<a id="more"></a>
+<h2 id="唐诗"><a href="#唐诗" class="headerlink" title="唐诗"></a>唐诗</h2><p>要研究唐诗的时代划分，先得知道关于唐诗的一些基本信息。</p>
+<p>唐朝，从 618 年隋恭帝杨侑禅位唐高祖李渊算起，到 907 年唐哀帝李祚禅位后梁太祖朱温结束，国祚共历 289 年，21 位皇帝。</p>
+<p>《全唐诗》共有 49043 首，题材广泛，艺术形式成熟，流派颇多。故后人称唐为“诗歌鼎盛之时代”。</p>
+<p>在唐诗之前的朝代，从先秦时期到六朝（指晋宋齐梁陈隋）时期，诗歌的发展为唐朝诗歌的盛况奠定了基础。唐诗所谓“浪漫主义”“现实主义”早在先秦至秦汉就有出现：《诗三百》、汉乐府是写实派；《楚辞》是浪漫派。汉魏诗人讥刺时政、抒发理想的诗（如古诗十九首），提供了反映民生疾苦的经验。六朝时描写山水田园的诗的出现（如陶渊明的多数诗歌），以及运用声律、对偶的体裁（如“永明体”），也为唐代诗人提供了极其丰富的经验。由此可见，唐朝诗歌的盛况，绝不是突然出现的，而是前人的丰富经验、君主的提倡（以诗赋取士）造就的。</p>
+<p>前面提到，在齐梁时期的永明体已经开始运用声律、对偶了，而初唐四杰王勃、杨炯、卢照邻、骆宾王则在此基础上，开创了新诗风。同时期的陈子昂明确提出诗歌复古，不写六朝诗，反对六朝“浮靡之风”。最后在沈佺期、宋之问、杜审言对诗歌格律的探讨下，律诗这一新体裁才正式形成。</p>
+<h2 id="四分法的形成与发展"><a href="#四分法的形成与发展" class="headerlink" title="四分法的形成与发展"></a>四分法的形成与发展</h2><p>晚唐即有人开始对四分法分期。诗论家司空图（837-908）所著的《二十四书品》谈及二十四种诗风，有了唐代分期的萌芽。</p>
+<p>南宋严羽所著的《沧浪诗话》，将唐朝分为五个时期：唐初体（“犹袭陈、隋文体”）、盛唐体（代表为“景云之后，天宝、开元诸公”）、大历体（代表为“大历十才子”）、元和体（代表为元（稹）、白（居易）诸公）、晚唐体。</p>
+<p>方回（1227-1305）在《瀛荃律髓》中第一次建立了“中唐”观念。四分法的最终定型是在高棅的《唐诗品汇》里，他在总叙中叙述了初唐、盛唐、中唐、晚唐四分法。</p>
+]]></content>
+      <categories>
+        <category>文学</category>
+      </categories>
+      <tags>
+        <tag>古典文学</tag>
+        <tag>文学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CF102984K</title>
+    <url>/2021/08/11/CF102984K/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>「陶哲轩实分析」第3章-集合论-笔记</title>
+    <url>/2021/07/24/tao-3/</url>
+    <content><![CDATA[<p>集合论是现代数学分支理论的基石之一，在数学体系的建构中起到了至关重要的地步。</p>
+<a id="more"></a>
+<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><p>常用的集合论公理体系有 ZF 和 ZFC。为了帮助理解，本文将给出稍微偏多的公理。</p>
+<p><strong>公理 3.1</strong> 如果 $A$ 是一个集合，那么 $A$ 也是一个对象。特别地，给定两个集合 $A$ 和 $B$，问 $A$ 是不是 $B$ 中的元素是有意义的。</p>
+<blockquote>
+<p>注：有一种集合论将所有的对象视为集合，被称为“纯粹集合论”，譬如，$0:=\varnothing,1:=\{\varnothing\},2:=\{\varnothing,\{\varnothing\}\},\cdots,n’:=n\cup \{n\}$。在逻辑学角度上，这种集合论更加简单，因为人们只需处理集合而不需要处理其他对象；但是从概念的角度上，对非纯粹集合论的处理更为简单。</p>
+<p>事实上，这两种类型的理论是几乎等价的，所以我们这里姑且采用非纯粹集合论。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>笔记</tag>
+        <tag>实分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>线性基笔记</title>
+    <url>/2021/07/22/%E7%BA%BF%E6%80%A7%E5%9F%BA/</url>
+    <content><![CDATA[<p>基是线性代数中的一个概念，在 OI 有着广泛的用途。</p>
+<a id="more"></a>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>一个<strong>域</strong>是一个装备了两个二元运算 $+$、$\cdot$ 的集合 $F$，其中 $+:F\times F\to F$，$\cdot:F\times F\to F$，满足以下几个条件：</p>
+<ul>
+<li>加法满足结合律：$\forall a,b,c\in F:(a+b)+c=a+(b+c)$；</li>
+<li>加法满足交换律：$\forall a,b\in F:a+b=b+a$；</li>
+<li>乘法满足结合律：$\forall a,b,c\in F:(ab)c=a(bc)$；</li>
+<li>乘法满足交换律：$\forall a,b\in F:ab=ba$；</li>
+<li>乘法对加法满足分配律：$\forall a,b,c\in F:a(b+c)=ab+ac$；</li>
+<li>存在加法单位元：$\exist 0\in F:\forall a\in F:0+a=a$；</li>
+<li>存在乘法单位元：$\exist 1\in F,0\ne 1:\forall a\in F:1a=a$；（要求 $0\ne 1$ 是避免出现仅有一个元素的平凡域）</li>
+<li>存在加法逆元：$\forall a\in F:\exist (-a)\in F:a+(-a)=0$；</li>
+<li>非零元素存在乘法逆元：$\forall a\in F,a\ne 0:\exist a^{-1}\in F:a^{-1}a=1$.</li>
+</ul>
+<p>给定域 $F$，$F$ 上的<strong>向量空间</strong>是一个装备了两个二元运算的集合 $V$，其中 $+:V\times V\to V$，$\cdot:F\times V\to V$，满足以下几个条件：</p>
+<ul>
+<li>向量加法满足结合律：$\forall \mathbf u,\mathbf v,\mathbf w\in V:(\mathbf  u+\mathbf v)+\mathbf w=\mathbf u+(\mathbf v+\mathbf w)$；</li>
+<li>向量加法满足交换律：$\forall \mathbf u,\mathbf v\in V:\mathbf u+\mathbf v=\mathbf v+\mathbf u$；</li>
+<li>存在向量加法单位元：$\exist\mathbf 0\in V:\forall \mathbf v\in V:\mathbf v+\mathbf 0=\mathbf v$；</li>
+<li>存在向量加法逆元：$\forall \mathbf v\in V:\exist (-\mathbf v)\in V:\mathbf v+(-\mathbf v)=\mathbf 0$；</li>
+<li>标量乘法与标量的域乘法相容：$\forall a,b\in F,\mathbf v\in V:(ab)\mathbf v=a(b\mathbf  v)$；</li>
+<li>存在标量乘法单位元：$\exist 1\in F:\forall \mathbf v\in V:1\mathbf v=\mathbf v$；</li>
+<li>标量乘法对向量加法的分配律：$\forall a\in F,\mathbf u,\mathbf v\in V:a(\mathbf u+\mathbf v)=a\mathbf u+a\mathbf v$；</li>
+<li>标量乘法对域加法的分配律：$\forall a,b\in F,\mathbf v\in V:(a+b)\mathbf v=a\mathbf v+b\mathbf v$.</li>
+</ul>
+<p>对于域 $F$ 上的向量空间 $V$ 的一个有限子集 $S=\{\mathbf v_1,\cdots,\mathbf v_{|S|}\}$，称 $\mathbf v$ 是 $S$ 的一个<strong>线性组合</strong>，当且仅当 $\exist \lambda_1,\cdots\lambda_{|S|}\in F:\lambda_1\mathbf v_1+\cdots+\lambda_{|S|}\mathbf v_{|S|}=\mathbf v$。（规定：向量 $\mathbf 0$ 是空集的线性组合）</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>OI</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>「陶哲轩实分析」第2章-从头开始：自然数-习题解答</title>
+    <url>/2021/04/09/tao-hw-2/</url>
+    <content><![CDATA[<!--comment-->
+<!--comment-->
+<p>恕我吐槽一句，$n+!+$ 不丑吗…… $n’$ 不香吗……</p>
+<p><del>我真傻，真的。我单知道洛谷题解里有在公式里出现的 <code>++</code>，我不知道陶哲轩实分析也有。</del></p>
+<p>下文用 $n’$ 代替 $n+!+$。</p>
+<a id="more"></a>
+<h2 id="2-1-Peano-公理"><a href="#2-1-Peano-公理" class="headerlink" title="2.1 Peano 公理"></a>2.1 Peano 公理</h2><h2 id="2-2-加法"><a href="#2-2-加法" class="headerlink" title="2.2 加法"></a>2.2 加法</h2><h3 id="2-2-1"><a href="#2-2-1" class="headerlink" title="2.2.1"></a>2.2.1</h3><p>对 $c$ 使用归纳法。</p>
+<p>$P(c)$：$\forall a,b:(a+b)+c=a+(b+c)$；<br>$P(0)$：显然；<br>$P(c)\Rightarrow P(c’)$：$(a+b)+c’=[(a+b)+c]’=[a+(b+c)]’=a+(b+c)’=a+(b+c’)$。</p>
+<div align="right">$\square$</div>
+
+<h3 id="2-2-2"><a href="#2-2-2" class="headerlink" title="2.2.2"></a>2.2.2</h3><p><strong>存在性</strong>：</p>
+<p>使用归纳法证明 $P(a)=\forall a:\exist b:b’=a+1$。</p>
+<p>$P(0)$：$b=0$ 即可。<br>$P(a)\Rightarrow P(a’)$：$(b’)’=b’+1=(a+1)+1=a’+1$。</p>
+<p><strong>唯一性</strong>：</p>
+<p>由 Peano 公理立即得到。</p>
+<div align="right">$\square$</div>
+
+<h3 id="2-2-3"><a href="#2-2-3" class="headerlink" title="2.2.3"></a>2.2.3</h3><h4 id="a"><a href="#a" class="headerlink" title="(a)"></a>(a)</h4><p>$\forall a:a=0+a$.</p>
+<div align="right">$\square$</div>
+
+<h4 id="b"><a href="#b" class="headerlink" title="(b)"></a>(b)</h4><p>由于 $\exist m:a=m+b$，$\exist n:b=n+c$，所以 $a=m+b=m+(n+c)=(m+n)+c$。</p>
+<div align="right">$\square$</div>
+
+<h4 id="c"><a href="#c" class="headerlink" title="(c)"></a>(c)</h4><p>由于 $\exist m:a=m+b$，$\exist n:b=n+a$，所以 $a=m+b=m+(n+a)=(m+n)+a$。使用消去律立即得到。</p>
+<div align="right">$\square$</div>
+
+<h4 id="d"><a href="#d" class="headerlink" title="(d)"></a>(d)</h4><p>$a\ge b\Rightarrow a+c\ge b+c$：</p>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>实分析</tag>
+        <tag>数学分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>BBC 化学史笔记</title>
+    <url>/2021/02/08/BBC%E5%8C%96%E5%AD%A6%E5%8F%B2%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>又是化学寒假作业……</p>
+<a id="more"></a>
+<p>视频在 <a href="https://www.bilibili.com/video/BV1ss411H7wv" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1ss411H7wv</a></p>
+<ul>
+<li>1807 年，英国化学家 Davy（戴维）通过电解熔融的 $\rm KOH$ 的方式发现了 $\rm K$（化学方程式为 $\rm 4KOH\xrightarrow{通电}4K+2H_2O+O_2\uparrow$。</li>
+<li>瑞士医生、炼金术师 Paracelsus（帕拉塞尔苏斯）第一个反对古希腊四元素说和亚里士多德的四体液说。 </li>
+<li>1669 年，德国商人 Brand（波兰特）在蒸馏尿液的时候制得了白磷，第一个发现了磷元素。磷的发现被认为是标记着炼金术的结束，也标记着化学作为一门科学的开始。</li>
+<li>波义尔用磷和六倍质量的硫制出了火柴的雏形。 </li>
+<li>卡文迪什将金属置于酸中制得了 $\rm H_2$，并测得了 $\rm H_2$ 的密度；他还发现其能够和 $\rm O_2$ 反应，并测得了反应中 $\rm H_2$ 与 $\rm O_2$ 的体积比。这些成果在 1766 年发表。</li>
+<li>Priestley（普利斯特里）在 1777 年首次详细叙述了 $\rm O_2$ 的性质。</li>
+<li>拉瓦锡研究了普利斯特里的实验，提出了氧化学说以解释金属在空气中加热质量变大的现象。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>化学史</category>
+      </categories>
+      <tags>
+        <tag>化学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LG4513. 小白逛公园</title>
     <url>/2021/02/04/LG4513/</url>
     <content><![CDATA[<!--comment-->
@@ -21,8 +171,8 @@
       </categories>
       <tags>
         <tag>题解</tag>
-        <tag>数据结构</tag>
         <tag>线段树</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -107,8 +257,8 @@
       </categories>
       <tags>
         <tag>题解</tag>
-        <tag>数据结构</tag>
         <tag>线段树</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -148,31 +298,61 @@
       </tags>
   </entry>
   <entry>
-    <title>「陶哲轩实分析笔记」2.1 Peano 公理</title>
+    <title>「陶哲轩实分析」第2章-从头开始：自然数-笔记</title>
     <url>/2021/01/05/tao-2-1/</url>
     <content><![CDATA[<!--comment-->
 <a id="more"></a>
-<p><strong>公理 2.1</strong><sup><a href="#fn_i" id="reffn_i">i</a></sup> $0$ 是自然数；<br><strong>公理 2.2</strong> 每个确定的自然数 $n$ 都有一个确定的<strong>后继</strong>，记作 $n’$，$n’$ 也是自然数；<br><strong>公理 2.3</strong> 不存在自然数 $n$ 使得 $n’=0$；<br><strong>公理 2.4</strong> 对于任意自然数 $n$、$m$，如果 $n\ne m$，那么 $n’\ne m’$；<br><strong>公理 2.5（数学归纳法原理）</strong> 任意关于自然数的命题，如果它对自然数 $0$ 是真的，而且如果它对自然数 $n$ 为真时，可以证明它对自然数 $n’$ 也为真。那么，命题对所有的自然数都为真。</p>
+<h2 id="Peano-公理"><a href="#Peano-公理" class="headerlink" title="Peano 公理"></a>Peano 公理</h2><p><strong>公理 2.1</strong><sup><a href="#fn_i" id="reffn_i">i</a></sup> $0$ 是自然数；<br><strong>公理 2.2</strong> 每个确定的自然数 $n$ 都有一个确定的<strong>后继</strong>，记作 $n’$，$n’$ 也是自然数；<br><strong>公理 2.3</strong> 不存在自然数 $n$ 使得 $n’=0$；<br><strong>公理 2.4</strong> 对于任意自然数 $n$、$m$，如果 $n\ne m$，那么 $n’\ne m’$；<br><strong>公理 2.5（数学归纳法原理）</strong> 任意关于自然数的命题，如果它对自然数 $0$ 是真的，而且如果它对自然数 $n$ 为真时，可以证明它对自然数 $n’$ 也为真。那么，命题对所有的自然数都为真。</p>
 <p>公理 2.1~公理 2.5 被称为自然数的 <strong>Peano 公理</strong>。</p>
-<p><strong>假设 2.6</strong><sup><a href="#fn_ii" id="reffn_ii">ii</a></sup> 存在一个数系 $\mathbb N$，我们称 $\mathbb N$ 里的元素为<strong>自然数</strong>，而公理 2.1~公理 2.5 对 $\mathbb N$ 均成立。</p>
+<p><strong>假设 2.6</strong><sup><a href="#fn_ii" id="reffn_ii">ii</a></sup> 存在一个数系<sup><a href="#fn_iii" id="reffn_iii">iii</a></sup> $\mathbb N$，我们称 $\mathbb N$ 里的元素为<strong>自然数</strong>，而公理 2.1~公理 2.5 对 $\mathbb N$ 均成立。</p>
 <p>我们把假设 2.6 中所的数系 $\mathbb N$ 称为<strong>自然数系</strong>。</p>
-<h2 id="递归定义"><a href="#递归定义" class="headerlink" title="递归定义"></a>递归定义</h2><p><strong>命题 2.1.16（递归定义）</strong> 设对于任意自然数 $n$，都存在某个从自然数系到自然数系的函数<sup><a href="#fn_iii" id="reffn_iii">iii</a></sup> $f_n:\mathbb N\rightarrow\mathbb N$，令 $c$ 为某个固定的自然数，那么对于任意自然数 $n$，都存在自然数 $a_n$，使得 $a_0=c$ 和 $a_{n’}=f_n(a_n)$ 恒成立。</p>
-<p>这个命题的表述不够严谨，在下一章的公理 3.7 将给出严谨的定义。</p>
-<blockquote>
-<p>证明<sup><a href="#fn_ii" id="reffn_ii">ii</a></sup>：</p>
-<p>使用归纳法证明。</p>
-<p>首先对于自然数 $0$，$a_0$ 被赋予了一个单一的值 $c$。（根据公理 2.3 可知，无论 $a_{n’}:=f_n(a_n)$<sup><a href="#fn_iv" id="reffn_iv">iv</a></sup> 是如何定义的，都无法改变 $a_0$ 的值）</p>
-<p>然后归纳地假设上述过程对于 $a_n$ 赋予了一个单一的值，那么必定对 $a_{n’}$ 也定义了一个单一的值。这是因为根据公理 2.4，无论其他 $a_{m’}:=f_m(a_m)$ 是如何定义的，都不能改变 $a_{n’}$ 的值。</p>
-<p>所以，对于任意的自然数 $n$，$a_n$ 都被赋予了一个单一的值。</p>
-<div align="right">$\square$</div>
-
-</blockquote>
-<hr>
+<h2 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h2><p><strong>定义 2.2.1</strong> 令 $m$ 为一个自然数，我们用归纳法定义<strong>加法</strong>：定义 $0+m:=m$<sup><a href="#fn_iv" id="reffn_iv">iv</a></sup>。归纳地假设我们已经定义了 $n+m$，那么我们定义 $n’+m:=(n+m)’$。</p>
+<h2 id="正自然数"><a href="#正自然数" class="headerlink" title="正自然数"></a>正自然数</h2><p><strong>定义 2.2.7</strong> 称一个自然数 $n$ 是<strong>正</strong>的，当且仅当它不等于 $0$。</p>
+<h2 id="序"><a href="#序" class="headerlink" title="序"></a>序</h2><p><strong>定义 2.2.11</strong> 令 $n$、$m$ 表示任意两个自然数。我们称 $n$ <strong>大于等于</strong> $m$，并且记作 $n\ge m$ 或者 $m\le n$，当且仅当 $\exist a:n=m+a$。我们称 $n$ <strong>严格大于</strong> $m$，并且记作 $n&gt;m$ 或 $n&lt;m$，当且仅当 $n\ge m$ 且 $n\ne m$。</p>
+<h2 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h2><p><strong>定义 2.3.1</strong> 令 $m$ 为一个自然数。我们用归纳法定义<strong>乘法</strong>：定义 $0\times m:=0$。归纳地假设我们已经定义了 $n\times m$，那么我们定义 $n’\times m:=(n\times m)+m$。</p>
+<h2 id="指数运算"><a href="#指数运算" class="headerlink" title="指数运算"></a>指数运算</h2><p><strong>定义 2.3.11</strong> 设 $m$ 是一个自然数，我们用归纳法定义<strong>指数运算</strong>：定义 $m^0:=1$。（注意这里将 $0^0$ 也定义为了 $1$）归纳地假设我们已经定义了 $m^n$，那么我们定义 $m^{n’}:=m^n\times n$。</p>
 <h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><blockquote id="fn_i">
 <sup>i</sup>. 为了方便，命题、定理、引理、假设等均沿用原文的编号。<a href="#reffn_i" title="Jump back to footnote [i] in the text."> &#8617;</a>
 </blockquote>
 <blockquote id="fn_ii">
 <sup>ii</sup>. 这个定义/证明不够严谨，在原文中有标注“非正式的”。<a href="#reffn_ii" title="Jump back to footnote [ii] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_iv">
+<sup>iv</sup>. 这里的“$:=$”是“被定义为”的意思。<a href="#reffn_iv" title="Jump back to footnote [iv] in the text."> &#8617;</a>
+</blockquote>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>笔记</tag>
+        <tag>实分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>「陶哲轩实分析」第2章-从头开始：自然数-笔记</title>
+    <url>/2021/01/05/tao-2/</url>
+    <content><![CDATA[<!--comment-->
+<a id="more"></a>
+<h2 id="Peano-公理"><a href="#Peano-公理" class="headerlink" title="Peano 公理"></a>Peano 公理</h2><p><strong>公理 2.1</strong><sup><a href="#fn_i" id="reffn_i">i</a></sup> $0$ 是自然数；<br><strong>公理 2.2</strong> 每个确定的自然数 $n$ 都有一个确定的<strong>后继</strong>，记作 $n’$，$n’$ 也是自然数；<br><strong>公理 2.3</strong> 不存在自然数 $n$ 使得 $n’=0$；<br><strong>公理 2.4</strong> 对于任意自然数 $n$、$m$，如果 $n\ne m$，那么 $n’\ne m’$；<br><strong>公理 2.5（数学归纳法原理）</strong> 任意关于自然数的命题，如果它对自然数 $0$ 是真的，而且如果它对自然数 $n$ 为真时，可以证明它对自然数 $n’$ 也为真。那么，命题对所有的自然数都为真。</p>
+<p>公理 2.1~公理 2.5 被称为自然数的 <strong>Peano 公理</strong>。</p>
+<p><strong>假设 2.6</strong><sup><a href="#fn_ii" id="reffn_ii">ii</a></sup> 存在一个数系<sup><a href="#fn_iii" id="reffn_iii">iii</a></sup> $\mathbb N$，我们称 $\mathbb N$ 里的元素为<strong>自然数</strong>，而公理 2.1~公理 2.5 对 $\mathbb N$ 均成立。</p>
+<p>我们把假设 2.6 中所的数系 $\mathbb N$ 称为<strong>自然数系</strong>。</p>
+<h2 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h2><p><strong>定义 2.2.1</strong> 令 $m$ 为一个自然数，我们用归纳法定义<strong>加法</strong>：定义 $0+m:=m$<sup><a href="#fn_iv" id="reffn_iv">iv</a></sup>。归纳地假设我们已经定义了 $n+m$，那么我们定义 $n’+m:=(n+m)’$。</p>
+<p><strong>命题 2.2.14</strong>（强归纳法原理） 令 $m_0$ 表示一个自然数，$P(m)$ 表示与任意自然数 $m$ 有关的性质。如果 $\forall m\ge m_0:((\forall m_0\le m’&lt; m:P(m’))\Rightarrow P(m))$，那么 $\forall m\ge m_0:P(m)$。</p>
+<h2 id="正自然数"><a href="#正自然数" class="headerlink" title="正自然数"></a>正自然数</h2><p><strong>定义 2.2.7</strong> 称一个自然数 $n$ 是<strong>正</strong>的，当且仅当它不等于 $0$。</p>
+<h2 id="序"><a href="#序" class="headerlink" title="序"></a>序</h2><p><strong>定义 2.2.11</strong> 令 $n$、$m$ 表示任意两个自然数。我们称 $n$ <strong>大于等于</strong> $m$，并且记作 $n\ge m$ 或者 $m\le n$，当且仅当 $\exist a:n=m+a$。我们称 $n$ <strong>严格大于</strong> $m$，并且记作 $n&gt;m$ 或 $n&lt;m$，当且仅当 $n\ge m$ 且 $n\ne m$。</p>
+<h2 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h2><p><strong>定义 2.3.1</strong> 令 $m$ 为一个自然数。我们用归纳法定义<strong>乘法</strong>：定义 $0\times m:=0$。归纳地假设我们已经定义了 $n\times m$，那么我们定义 $n’\times m:=(n\times m)+m$。</p>
+<h2 id="指数运算"><a href="#指数运算" class="headerlink" title="指数运算"></a>指数运算</h2><p><strong>定义 2.3.11</strong> 设 $m$ 是一个自然数，我们用归纳法定义<strong>指数运算</strong>：定义 $m^0:=1$。（注意这里将 $0^0$ 也定义为了 $1$）归纳地假设我们已经定义了 $m^n$，那么我们定义 $m^{n’}:=m^n\times n$。</p>
+<h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><blockquote id="fn_i">
+<sup>i</sup>. 为了方便，命题、定理、引理、假设等均沿用原文的编号。<a href="#reffn_i" title="Jump back to footnote [i] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_ii">
+<sup>ii</sup>. 这个定义/证明不够严谨，在原文中有标注“非正式的”。<a href="#reffn_ii" title="Jump back to footnote [ii] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_iv">
+<sup>iv</sup>. 这里的“$:=$”是“被定义为”的意思。<a href="#reffn_iv" title="Jump back to footnote [iv] in the text."> &#8617;</a>
 </blockquote>
 ]]></content>
       <categories>
@@ -810,8 +990,8 @@ x^3+3\cdot\dfrac b{3a}x^2+3\cdot\dfrac {b^2}{9a^2}x+\dfrac {b^3}{27a^3}+\left(\d
         <category>数学</category>
       </categories>
       <tags>
-        <tag>OI</tag>
         <tag>数学</tag>
+        <tag>OI</tag>
       </tags>
   </entry>
   <entry>
