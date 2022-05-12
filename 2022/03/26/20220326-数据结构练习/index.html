@@ -1,37 +1,1256 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+  
 
 
-{% block content %}
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="数据结构,专题练习," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="数据结构练习，持续更新中。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构练习">
+<meta property="og:url" content="http://h-j-granger.github.io/2022/03/26/20220326-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%BB%83%E4%B9%A0/index.html">
+<meta property="og:site_name" content="Mirai&#39;s Blog">
+<meta property="og:description" content="数据结构练习，持续更新中。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-03-25T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-05-09T14:45:50.000Z">
+<meta property="article:author" content="Kuriyama Mirai">
+<meta property="article:tag" content="数据结构">
+<meta property="article:tag" content="专题练习">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://H-J-Granger.github.io/2022/03/26/20220326-数据结构练习/"/>
+
+
+
+
+
+  <title>数据结构练习 | Mirai's Blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a target="_blank" rel="noopener" href="https://github.com/h-j-granger/h-j-granger.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#ffc0cb; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mirai's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            Sitemap
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" target="_self" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://H-J-Granger.github.io/2022/03/26/20220326-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%BB%83%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mirai's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">数据结构练习</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-03-26T00:00:00+08:00">
+                2022-03-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>数据结构练习，持续更新中。</p>
+<span id="more"></span>
+<h2 id="LOJ2492-「BJOI2018」二进制"><a href="#LOJ2492-「BJOI2018」二进制" class="headerlink" title="LOJ2492.「BJOI2018」二进制"></a>LOJ2492.「BJOI2018」二进制</h2><h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>维护一个长为 $n$ 的 $01$ 串，维护：</p>
+<ul>
+<li>单点修改；</li>
+<li>给定 $[L,R]$，统计其满足“重排列后能够成为二进制下 $(11)_2$ 的倍数”的子区间 $[l,r]$ 个数。</li>
+</ul>
+<p>$n,q\le 10^5$，TL 2s。</p>
+<p>link: <a target="_blank" rel="noopener" href="https://loj.ac/p/2492">https://loj.ac/p/2492</a></p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>首先观察条件的等价命题。</p>
+<p>注意到是否成立仅与区间内 $1$ 的个数 $s_1$ 与 $0$ 的个数 $s_0$ 有关：</p>
+<ul>
+<li>如果 $s_1$ 为偶数，显然可以构造 $(0\cdots01\cdots1)_2$；</li>
+<li><p>否则若 $s_1=1$ 则显然不行，否则：</p>
+<ul>
+<li>若 $s_0\ge2$，则可构造 $(0\cdots01\cdots110101)_2$；</li>
+<li>否则若 $s_0=0$ 显然不行，若 $s_0=1$ 则因为长为 $l$ 的 $(1\cdots 1)_2\equiv0\pmod3$，不可能通过置一位为 $0$ 来得到 $3$ 的倍数。</li>
+</ul>
+<p>考虑不成立的充要条件：</p>
+</li>
+<li><p>$s_1=1$；</p>
+</li>
+<li>$2\nmid s_1$ 且 $s_0\le 1$。</li>
+</ul>
+<p>考虑用线段树维护 $01$ 段：维护每个点所在段的左右端点。</p>
+<p>接着考虑用线段树维护 $[L,R]$​ 中满足以上条件的区间个数。</p>
+<p>假设我们将 $[L,R]$ 分割为 $[L,mid]$ 与 $[mid+1,R]$ 两部分，那么只需考虑跨过 $mid+0.5$ 的区间个数即可。</p>
+<h4 id="第一个条件"><a href="#第一个条件" class="headerlink" title="第一个条件"></a>第一个条件</h4><p>先考虑 $1$ 在左儿子的情况：右儿子提供一个全 $0$ 前缀，左儿子提供一个恰包含一个 $1$ 的后缀。</p>
+<p>维护每个区间最长全 $0$ 后缀的长度 $R<em>{01}$ 及最长仅含一个 $1$ 的后缀长度 $R</em>{11}$，以及最长全 $0$ 前缀的长度 $L<em>{01}$，最长仅含一个 $1$ 的前缀 $L</em>{11}$。</p>
+<p>$1$ 在左儿子的答案为 $rs.L<em>{01}\times (ls.R</em>{11}-ls.R_{01})$，右儿子同理。</p>
+<h4 id="第二个条件"><a href="#第二个条件" class="headerlink" title="第二个条件"></a>第二个条件</h4><p>对于 $s<em>0=0$，直接维护最长全 $1$ 前缀/后缀 $L</em>{00}$/$R<em>{00}$ 即可。分别讨论左儿子和右儿子谁贡献奇数，答案为 $\lceil ls.R</em>{00}/2\rceil\lfloor rs.L<em>{00}/2\rfloor+\lfloor ls.R</em>{00}/2\rfloor\lceil rs.R_{00}/2\rceil$.</p>
+<p>对于 $s<em>0=1$，则同理维护最长仅含一个 $0$ 前缀/后缀 $L</em>{10}$/$R<em>{10}$。若 $ls.R</em>{00}$ 为偶数，则删去左儿子的 $R_{00}$ 后缀后可类似上式计算；否则也类似上式，但两项的取整方向相同。</p>
+<h4 id="同时满足两个条件"><a href="#同时满足两个条件" class="headerlink" title="同时满足两个条件"></a>同时满足两个条件</h4><p>仅有三个串：$01$、$10$、$1$。</p>
+<p>$1$ 仅会在叶节点出现，叶节点考虑是平凡的。</p>
+<p>剩下的两个仅会在合并时出现，且仅有一种可能：$a<em>{mid}\ne a</em>{mid+1}$。特判 $-1$ 即可。</p>
+<h4 id="维护-L-、-R"><a href="#维护-L-、-R" class="headerlink" title="维护 $L$、$R$"></a>维护 $L$、$R$</h4><p>大多数情况下，$L\gets ls.L$，不过也有例外，譬如左儿子的 $0$/$1$ 过少（少于 $2$），那么需要开始用 $rs.L$。如何判断左儿子 $0$/$1$ 是否过少？一个简单的方法是多维护 $cnt_{0/1}$。</p>
+<p>时间复杂度 $O(m\log n)$。</p>
+<h2 id="LOJ3325-「SNOI2020」区间和"><a href="#LOJ3325-「SNOI2020」区间和" class="headerlink" title="LOJ3325. 「SNOI2020」区间和"></a>LOJ3325. 「SNOI2020」区间和</h2><h3 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h3><p>给定一个长为 $n$ 的整数序列，维护两种操作：</p>
+<ul>
+<li>区间 $&lt;k$ 的数设为 $k$；</li>
+<li>求一个区间内的最大子段和。</li>
+</ul>
+<p>$n\le 10^5$，$q\le 2\times 10^5$，$|a_i|,|k|\le 10^9$，TL 3s。</p>
+<p>link: <a target="_blank" rel="noopener" href="https://loj.ac/p/3325">https://loj.ac/p/3325</a></p>
+<h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>对于修改，看上去要用 Segment Tree Beats 维护。</p>
+<p>查询根据经典套路，维护每个结点的最大前缀和最大后缀。</p>
+<p>我们知道 ST Beats 的思想是仅处理仅会修改最小值的区间，其他的暴力递归，不过增加最小值对答案的影响是什么呢？乍一看最大前缀的区间不会修改，但是仔细考虑后会发现：$[3,-10,2,-10]$，如果将 $-10$ 全部改为 $1$，那么最大前缀的右端点会右移。</p>
+<p>观察后会发现，最大前缀后移是因为有些前缀修改前的和较小但其包含了许多的最小值，当最小值增加 $\Delta$ 时它的和的增量非常大。容易发现存在一个阈值 $\max\Delta$，当答案小于这个数的时候区间一定不会变动。</p>
+<p>假设有一个前缀被我们认为是“可能的未来最大前缀”，设其和为 $s’$，包含最小值 $c’$ 次，而目前的和为 $s$，包含最小值 $c$ 次。容易知道，当 $s&lt; s’+(c’-c)\Delta$ 时，“彼可取而代之”，否则不行。移项得到 $\Delta&gt;\dfrac{s-s’}{c’-c}$。如果我们的阈值小于所有的 $\dfrac{s-s’}{c’-c}$，那就一定不会导致区间的修改。</p>
+<p>问题是，有可能存在很多的这样区间。考虑交给左右儿子分别处理。如果先令 $\max\Delta\gets\min{\max\Delta_l,\max\Delta_r}$，那么不难发现，若 $\Delta&lt;\max\Delta$，那么左右儿子的最大前缀区间都不会改变。此时的“可能未来最大前缀”就只有一个，就是当实际最大前缀是左儿子的最大前缀时的右儿子最大前缀加上左儿子的全部区间。（注意到若取代了，$c’$ 必然大于 $c$，因此区间只会右移）</p>
+<p>还有一个小细节需要注意：如果有多个最大前缀区间可以选择，选择最长的。如果选择最短的可能会导致不断的右移导致复杂度错误。</p>
+<p>于是我们需要额外维护每个结点的阈值、最大前（后）缀包含的最小值数目、最小值出现次数。</p>
+<p>时间复杂度据说是 $O(n\log^2n+q\log n)$，但我不会证。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>link: <a target="_blank" rel="noopener" href="https://loj.ac/s/1429985">https://loj.ac/s/1429985</a></p>
+<h2 id="CF1322E-Median-Mountain-Range"><a href="#CF1322E-Median-Mountain-Range" class="headerlink" title="CF1322E Median Mountain Range"></a>CF1322E Median Mountain Range</h2><h3 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h3><p>给定一个序列 $a_n$，可以对它进行如下操作（设操作后的序列为 $a_n’$）：</p>
+<ul>
+<li>$a_n’=a_n$，$a_1’=a_1$；</li>
+<li>$a<em>i’=\operatorname{medium}{a</em>{i-1},a<em>i,a</em>{i+1}},i\in[2,n-1]$，其中 $\operatorname{medium} S$ 表示 $S$ 的中位数。</li>
+</ul>
+<p>可以证明无论初始序列为多少，对整个序列操作有限多次后一定将变为一个经过操作之后不变的序列。问最少需要多少次操作才能使初始序列变为这种序列，并给出最终序列。</p>
+<p>$n\le 5\times 10^5$，TL 2s。</p>
+<p>link: <a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1322/E">https://codeforces.com/problemset/problem/1322/E</a></p>
+<h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h3><p>首先考虑 $01$ 序列怎么处理。容易知道，相邻的两项是永远不会改变的，因而改变的仅有 $1010101010\cdots$ 串。观察一个极大 $01$ 交替串，这样的串修改一次会将其除了两端以外的所有值翻转。因此最多操作次数为最长 $01$ 交替串长度减 $1$ 除以 $2$ 向下取整。</p>
+<p>考虑将原序列转化为 $01$ 序列：钦定一个定值 $k$，$\ge k$ 的修为 $1$，$&lt; k$ 的修为 $0$。容易知道，序列转化后再操作和操作后再转化得到的是同样的 $01$ 序列，于是这个转化是合理的。容易知道任何时刻序列中的数都一定在原序列中出现过，于是我们钦定的 $k$ 只需要在原序列中取即可。当转化后的 $01$ 序列趋于稳定，说明不会存在一个数从 $\ge k$ 变为 $&lt; k$，也不会反过来变回去。原序列的操作次数就是所有的 $k$ 的次数的 $\max$。容易知道序列在任何时刻都不会有初始序列没有出现过的元素，因此 $k$ 的个数是 $O(n)$ 的。</p>
+<p>考虑大到小枚举 $k$，每次会有若干个数从 $0$ 变为 $1$。使用 <code>std::set</code> 维护极大 $01$ 交替串，每次将一个 $0$ 修改为 $1$ 只会影响其周围的 $O(1)$ 个串（可以在 $O(\log n)$ 的时间内定位到这些串），修改区间是 $O(\log n)$ 的，而 $0\to 1$ 的次数为 $O(n)$ 的，所以时间复杂度是 $O(n\log n)$ 的。</p>
+<p>如何求出最终序列？注意到一个位置在最终序列为 $x$ 的充要条件为其在以 $x$ 为定值构建的 $01$ 序列中最终为 $1$ 且在以 $x+1$ 为定值构建的 $01$ 序列中最终为 $0$。我们用 <code>std::set</code> 维护当前在序列中最终为 $0$ 的位置，每次更改极大 $01$ 交替串的时候会有 $O(1)$ 个区间的最终答案升为 $1$，在 <code>std::set</code> 中找到区间内的数删除并打标记即可。时间复杂度还是 $O(n\log n)$ 的。</p>
+<p>这道题放在数据结构练习里是因为有一个复杂的线段树实现。</p>
+<p>事实上，还有一个 $O(n)$ 的做法，详见 <a target="_blank" rel="noopener" href="https://codeforces.com/blog/entry/74148?#comment-587403">https://codeforces.com/blog/entry/74148?#comment-587403</a>。</p>
+<h2 id="UOJ612「JOISC-2021」Day1-フードコート-Food-Court-饮食区"><a href="#UOJ612「JOISC-2021」Day1-フードコート-Food-Court-饮食区" class="headerlink" title="UOJ612「JOISC 2021」Day1 フードコート | Food Court | 饮食区"></a>UOJ612「JOISC 2021」Day1 フードコート | Food Court | 饮食区</h2><h3 id="题意-3"><a href="#题意-3" class="headerlink" title="题意"></a>题意</h3><p>有 $n$ 个队列，请维护以下三种操作：</p>
+<ul>
+<li>将编号在 $[l,r]$ 内的队列全部 push $k$ 个 $c$。</li>
+<li>将编号在 $[l,r]$ 内的队列全部 pop $k$ 次，如果大小小于 $k$ 就清空。</li>
+<li>求队列从前往后第 $b$ 个数，或者判定如果大小小于 $b$。</li>
+</ul>
+<p>$n,q,c\le 2.5\times10^5$，$b\le 10^{15}$，$k\le 10^9$，TL 1s。</p>
+<p>link: <a target="_blank" rel="noopener" href="https://uoj.ac/problem/612">https://uoj.ac/problem/612</a></p>
+<h3 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h3><p>如果没有 pop 怎么处理？</p>
+<p>先把询问离线下来，每个结点从小到大挂上一个询问值的 <code>std::vector</code>。建一棵线段树，初始每个位置的值为 vector 内的最小值。区间 push 相当于区间减，当一个区间被减成 $\le 0$ 的时候答案就是这次修改的 $c$。（当然，要判断这个修改与询问孰先孰后）处理完这个询问再把下一个询问挂在这个位置。</p>
+<p>加上 pop 怎么处理？假设我们知道这个位置上总计 pop 了 $k$ 个数，那么判断有没有减成 $\le 0$ 的时候把下限减小一点即可。</p>
+<p>怎么维护一个位置 pop 的个数？这是等于这个位置目前的长度减去其 push 的个数即可。</p>
+<p>push 的个数就是区间加单点查，维护是平凡的；</p>
+<p>目前的长度需要维护三种操作：</p>
+<ul>
+<li>区间加；</li>
+<li>区间减；</li>
+<li>区间对 $0$ 取 $\max$（被减完后需进行）。</li>
+</ul>
+<p>直接 Segment Tree Beats。    </p>
+<p>时间复杂度 $O((n+q)\log n)$。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"># 数据结构</a>
+          
+            <a href="/tags/%E4%B8%93%E9%A2%98%E7%BB%83%E4%B9%A0/" rel="tag"># 专题练习</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/03/25/20220325-GD%E7%9C%81%E9%80%89%E7%9C%9F%E9%A2%98%E7%BB%83%E4%B9%A0/" rel="next" title="GD省选真题练习">
+                <i class="fa fa-chevron-left"></i> GD省选真题练习
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/03/26/20220326-%E4%BC%98%E7%A7%80%E5%8D%9A%E5%AE%A2%E6%94%B6%E8%97%8F/" rel="prev" title="优秀博客收藏">
+                优秀博客收藏 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
 
     <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+      
     </div>
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+          </div>
+          
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+
+          
+
+  
+  
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/H-J-Granger" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:Hermione_Granger@foxmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#LOJ2492-%E3%80%8CBJOI2018%E3%80%8D%E4%BA%8C%E8%BF%9B%E5%88%B6"><span class="nav-number">1.</span> <span class="nav-text">LOJ2492.「BJOI2018」二进制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-number">1.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.2.</span> <span class="nav-text">思路</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%9D%A1%E4%BB%B6"><span class="nav-number">1.2.1.</span> <span class="nav-text">第一个条件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E4%B8%AA%E6%9D%A1%E4%BB%B6"><span class="nav-number">1.2.2.</span> <span class="nav-text">第二个条件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%8C%E6%97%B6%E6%BB%A1%E8%B6%B3%E4%B8%A4%E4%B8%AA%E6%9D%A1%E4%BB%B6"><span class="nav-number">1.2.3.</span> <span class="nav-text">同时满足两个条件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%B4%E6%8A%A4-L-%E3%80%81-R"><span class="nav-number">1.2.4.</span> <span class="nav-text">维护 $L$、$R$</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LOJ3325-%E3%80%8CSNOI2020%E3%80%8D%E5%8C%BA%E9%97%B4%E5%92%8C"><span class="nav-number">2.</span> <span class="nav-text">LOJ3325. 「SNOI2020」区间和</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-1"><span class="nav-number">2.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-1"><span class="nav-number">2.2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">2.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CF1322E-Median-Mountain-Range"><span class="nav-number">3.</span> <span class="nav-text">CF1322E Median Mountain Range</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-2"><span class="nav-number">3.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-2"><span class="nav-number">3.2.</span> <span class="nav-text">思路</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UOJ612%E3%80%8CJOISC-2021%E3%80%8DDay1-%E3%83%95%E3%83%BC%E3%83%89%E3%82%B3%E3%83%BC%E3%83%88-Food-Court-%E9%A5%AE%E9%A3%9F%E5%8C%BA"><span class="nav-number">4.</span> <span class="nav-text">UOJ612「JOISC 2021」Day1 フードコート | Food Court | 饮食区</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-3"><span class="nav-number">4.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-3"><span class="nav-number">4.2.</span> <span class="nav-text">思路</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kuriyama Mirai</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+ <script src="/js/src/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: 'blog-comment',
+      owner: '',
+      admin: ['['H-J-Granger']'],
+      id: md5(location.pathname),
+      distractionFreeMode: 'false'
+    })
+    gitalk.render('gitalk-container')
+  </script>
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
