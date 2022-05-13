@@ -87,7 +87,7 @@
 <meta property="og:description" content="从课件库里翻出来的线段树、平衡树练习。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-04-08T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-05-12T03:17:48.000Z">
+<meta property="article:modified_time" content="2022-05-13T05:06:58.000Z">
 <meta property="article:author" content="Kuriyama Mirai">
 <meta property="article:tag" content="线段树">
 <meta property="article:tag" content="数据结构">
@@ -455,6 +455,47 @@
 <h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路 2"></a>思路 2</h3><p>同上，但是使用平衡树维护，查询查 rank。</p>
 <p>时间复杂度 $O(n\log n)$。</p>
 <h3 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h3><p>思路 1：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/75564611">https://www.luogu.com.cn/record/75564611</a></p>
+<h2 id="Luogu-1471-方差"><a href="#Luogu-1471-方差" class="headerlink" title="Luogu 1471 方差"></a>Luogu 1471 方差</h2><h3 id="题意-4"><a href="#题意-4" class="headerlink" title="题意"></a>题意</h3><p>维护一个序列，支持以下操作：</p>
+<ul>
+<li>区间加；</li>
+<li>求区间和；</li>
+<li>求区间方差。</li>
+</ul>
+<p>长度 $n\le 10^5$，操作 $m\le 10^5$，ML 125MB。</p>
+<h3 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h3><p>根据方差的定义，</p>
+<script type="math/tex; mode=display">
+s^2=\dfrac 1n\sum(x-\bar x)^2=\dfrac 1n\sum x^2+\bar x^2</script><p>于是我们只需要维护区间和和区间平方和。区间平方和的 lazy tag 修改用完全平方公式即可。注意区间平方和要先于区间和更新。</p>
+<p>时间复杂度 $O(n+m\log n)$。</p>
+<h3 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h3><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/75581392">https://www.luogu.com.cn/record/75581392</a></p>
+<h2 id="CDQZ-OpenJudge-DS-Challenge-4"><a href="#CDQZ-OpenJudge-DS-Challenge-4" class="headerlink" title="CDQZ OpenJudge DS Challenge 4"></a>CDQZ OpenJudge DS Challenge 4</h2><h3 id="题意-5"><a href="#题意-5" class="headerlink" title="题意"></a>题意</h3><p>维护一个序列，支持以下操作：</p>
+<ul>
+<li>单点修改；</li>
+<li>求区间内相邻两数乘积和；</li>
+<li>求区间内两两乘积和。</li>
+</ul>
+<p>对 $10^9+7$ 取模，长度 $n\le 10^5$，操作 $m\le 10^5$，ML 256MB.</p>
+<p>link: <a target="_blank" rel="noopener" href="http://cdqz.openjudge.cn/ds/1004">http://cdqz.openjudge.cn/ds/1004</a></p>
+<h3 id="思路-1-1"><a href="#思路-1-1" class="headerlink" title="思路 1"></a>思路 1</h3><p>建立线段树，维护每个结点的两个询问的答案，合并的时候只需要计算多的答案。</p>
+<p>对于相邻两数乘积，多的答案为左儿子的最右端的值乘上右儿子的最左端的值；</p>
+<p>对于两两乘积，多的答案为左儿子的和乘上右儿子的和。</p>
+<p>维护两个询问的答案、区间和、区间左右端点值即可。</p>
+<p>时间复杂度 $O(n+m\log n)$。</p>
+<h3 id="思路-2-1"><a href="#思路-2-1" class="headerlink" title="思路 2"></a>思路 2</h3><p>注意到区间内两两乘积的值为 $\dfrac12\left((\sum x)^2-\sum x^2\right)$，因此可以通过维护区间平方和和区间和来维护区间两两乘积和。</p>
+<p>时间复杂度 $O(n+m\log n)$。</p>
+<h3 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h3><p><a target="_blank" rel="noopener" href="http://cdqz.openjudge.cn/ds/solution/34362522">http://cdqz.openjudge.cn/ds/solution/34362522</a></p>
+<h2 id="Luogu-4198-楼房重建"><a href="#Luogu-4198-楼房重建" class="headerlink" title="Luogu 4198 楼房重建"></a>Luogu 4198 楼房重建</h2><h3 id="题意-6"><a href="#题意-6" class="headerlink" title="题意"></a>题意</h3><p>有 $n$ 个平面上的线段，每条线段垂直于 $x$ 轴，且第 $i$ 条线段的下端点为 $(i,0)$。称第 $i$ 条线段“能被看到”当且仅当如果视线段可以遮挡光线，则第 $i$ 条线段有无限多个点能够被位于 $(0,0)$ 的点光源射出的光线照射到。</p>
+<p>有 $m$ 次操作，每次操作更改一条线段的长度，每次操作后问目前有多少条线段“能被看到”。</p>
+<p>$n,m\le 10^5$，上端点 $x\in[1,10^9]\cap\mathbb Z$，ML 125MB.</p>
+<p>link: <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4198">https://www.luogu.com.cn/problem/P4198</a></p>
+<h3 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h3><p>注意到答案仅跟斜率有关，设斜率为 $k_1,\dots,k_n$，则询问即求“大于所有前面的数”的数的个数。</p>
+<p>建立线段树，维护每个结点的仅考虑当前区间的数的答案以及最大斜率。</p>
+<p>设目前需要合并 $u$ 结点的答案。注意到 $ls(u)$ 的所有能看到的线段都会贡献给 $u$，但是 $rs(u)$ 的 $&lt; ls(u).max$ 的答案无法贡献。分类讨论：</p>
+<ul>
+<li>如果 $ls(rs(u)).max \le ls(u).max$，那么 $ls(rs(u))$ 一定全部被遮挡住，递归到 $rs(rs(u))$ 计算；</li>
+<li>如果 $ls(rs(u)).max &gt; ls(u).max$，那么 $ls(rs(u))$ 对 $rs(rs(u))$ 的限制强于 $ls(u)$ 的限制，因此只要统计 $rs(rs(u))$ 有多少个数贡献给了 $rs(u)$（通过 $rs(u).ans-ls(u).ans$ 得到），然后递归到 $ls(rs(u))$ 计算即可。</li>
+</ul>
+<p>每次 pushup 需要递归 $O(\log n)$ 个结点，每次修改有 $O(\log n)$ 次 pushup，因此时间复杂度 $O(n+m\log^2 n)$。</p>
+<h3 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h3><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/39317529">https://www.luogu.com.cn/record/39317529</a></p>
 
       
     </div>
@@ -648,7 +689,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#LOJ-10129-%E3%80%8C%E4%B8%80%E6%9C%AC%E9%80%9A-4-3-%E7%BB%83%E4%B9%A0-3%E3%80%8D%E7%BB%B4%E6%8A%A4%E5%BA%8F%E5%88%97"><span class="nav-number">1.</span> <span class="nav-text">LOJ 10129 「一本通 4.3 练习 3」维护序列</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-number">1.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">1.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Luogu-4513-%E5%B0%8F%E7%99%BD%E9%80%9B%E5%85%AC%E5%9B%AD"><span class="nav-number">2.</span> <span class="nav-text">Luogu 4513 小白逛公园</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-1"><span class="nav-number">2.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-1"><span class="nav-number">2.2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-1"><span class="nav-number">2.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NOI-2005-%E7%BB%B4%E6%8A%A4%E6%95%B0%E5%88%97"><span class="nav-number">3.</span> <span class="nav-text">NOI 2005 维护数列</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-2"><span class="nav-number">3.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-2"><span class="nav-number">3.2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-2"><span class="nav-number">3.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JLOI-2011-%E4%B8%8D%E7%AD%89%E5%BC%8F%E7%BB%84"><span class="nav-number">4.</span> <span class="nav-text">JLOI 2011 不等式组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-3"><span class="nav-number">4.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-1"><span class="nav-number">4.2.</span> <span class="nav-text">思路 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-2"><span class="nav-number">4.3.</span> <span class="nav-text">思路 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-3"><span class="nav-number">4.4.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#LOJ-10129-%E3%80%8C%E4%B8%80%E6%9C%AC%E9%80%9A-4-3-%E7%BB%83%E4%B9%A0-3%E3%80%8D%E7%BB%B4%E6%8A%A4%E5%BA%8F%E5%88%97"><span class="nav-number">1.</span> <span class="nav-text">LOJ 10129 「一本通 4.3 练习 3」维护序列</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-number">1.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">1.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Luogu-4513-%E5%B0%8F%E7%99%BD%E9%80%9B%E5%85%AC%E5%9B%AD"><span class="nav-number">2.</span> <span class="nav-text">Luogu 4513 小白逛公园</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-1"><span class="nav-number">2.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-1"><span class="nav-number">2.2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-1"><span class="nav-number">2.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NOI-2005-%E7%BB%B4%E6%8A%A4%E6%95%B0%E5%88%97"><span class="nav-number">3.</span> <span class="nav-text">NOI 2005 维护数列</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-2"><span class="nav-number">3.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-2"><span class="nav-number">3.2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-2"><span class="nav-number">3.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JLOI-2011-%E4%B8%8D%E7%AD%89%E5%BC%8F%E7%BB%84"><span class="nav-number">4.</span> <span class="nav-text">JLOI 2011 不等式组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-3"><span class="nav-number">4.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-1"><span class="nav-number">4.2.</span> <span class="nav-text">思路 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-2"><span class="nav-number">4.3.</span> <span class="nav-text">思路 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-3"><span class="nav-number">4.4.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Luogu-1471-%E6%96%B9%E5%B7%AE"><span class="nav-number">5.</span> <span class="nav-text">Luogu 1471 方差</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-4"><span class="nav-number">5.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-3"><span class="nav-number">5.2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-4"><span class="nav-number">5.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CDQZ-OpenJudge-DS-Challenge-4"><span class="nav-number">6.</span> <span class="nav-text">CDQZ OpenJudge DS Challenge 4</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-5"><span class="nav-number">6.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-1-1"><span class="nav-number">6.2.</span> <span class="nav-text">思路 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-2-1"><span class="nav-number">6.3.</span> <span class="nav-text">思路 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-5"><span class="nav-number">6.4.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Luogu-4198-%E6%A5%BC%E6%88%BF%E9%87%8D%E5%BB%BA"><span class="nav-number">7.</span> <span class="nav-text">Luogu 4198 楼房重建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-6"><span class="nav-number">7.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-4"><span class="nav-number">7.2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-6"><span class="nav-number">7.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></div>
             
 
           </div>
