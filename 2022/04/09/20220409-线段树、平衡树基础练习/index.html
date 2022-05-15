@@ -87,7 +87,7 @@
 <meta property="og:description" content="从课件库里翻出来的线段树、平衡树练习。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-04-08T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-05-13T12:44:32.000Z">
+<meta property="article:modified_time" content="2022-05-15T14:34:16.000Z">
 <meta property="article:author" content="Kuriyama Mirai">
 <meta property="article:tag" content="线段树">
 <meta property="article:tag" content="数据结构">
@@ -401,7 +401,8 @@
       
         <p>从课件库里翻出来的线段树、平衡树练习。</p>
 <span id="more"></span>
-<h2 id="LOJ-10129-「一本通-4-3-练习-3」维护序列"><a href="#LOJ-10129-「一本通-4-3-练习-3」维护序列" class="headerlink" title="LOJ 10129 「一本通 4.3 练习 3」维护序列"></a>LOJ 10129 「一本通 4.3 练习 3」维护序列</h2><h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><ul>
+<h2 id="LOJ-10129-「一本通-4-3-练习-3」维护序列"><a href="#LOJ-10129-「一本通-4-3-练习-3」维护序列" class="headerlink" title="LOJ 10129 「一本通 4.3 练习 3」维护序列"></a>LOJ 10129 「一本通 4.3 练习 3」维护序列</h2><p>线段树如果有多个懒标记，下传顺序可能很重要。</p>
+<h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><ul>
 <li>区间全部 $\times k$；</li>
 <li>区间全部 $+k$；</li>
 <li>求区间和 $\bmod m$。</li>
@@ -411,7 +412,8 @@
 <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>维护懒标记为一个函数 $x\to kx+b$，下传标记时根据目前区间长度以及目前区间和，计算出新和是平凡的；标记合并直接函数复合。</p>
 <p>时间复杂度 $\Theta(n+q\log n)$。</p>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p><a target="_blank" rel="noopener" href="https://loj.ac/s/1436978">https://loj.ac/s/1436978</a></p>
-<h2 id="Luogu-4513-小白逛公园"><a href="#Luogu-4513-小白逛公园" class="headerlink" title="Luogu 4513 小白逛公园"></a>Luogu 4513 小白逛公园</h2><h3 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h3><ul>
+<h2 id="Luogu-4513-小白逛公园"><a href="#Luogu-4513-小白逛公园" class="headerlink" title="Luogu 4513 小白逛公园"></a>Luogu 4513 小白逛公园</h2><p>线段树经典的维护“跨过 mid”的答案思想的运用。</p>
+<h3 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h3><ul>
 <li>单点修改；</li>
 <li>区间查最大子段和。</li>
 </ul>
@@ -420,13 +422,14 @@
 <h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>考虑在线段树上维护，那么仅需考虑跨过 $mid$ 的区间。容易知道这是由一个左儿子的后缀和一个右儿子的前缀拼成的。额外维护最大前缀和与最大后缀和即可。</p>
 <p>时间复杂度 $\Theta(n+q\log n)$。</p>
 <h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/46114702">https://www.luogu.com.cn/record/46114702</a></p>
-<h2 id="NOI-2005-维护数列"><a href="#NOI-2005-维护数列" class="headerlink" title="NOI 2005 维护数列"></a>NOI 2005 维护数列</h2><h3 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h3><p>维护一个数列，支持以下六种操作：</p>
+<h2 id="NOI-2005-维护数列"><a href="#NOI-2005-维护数列" class="headerlink" title="NOI 2005 维护数列"></a>NOI 2005 维护数列</h2><p>使用 Splay 维护序列树的模板。</p>
+<h3 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h3><p>维护一个数列，支持以下六种操作：</p>
 <ul>
 <li>在下标 $pos$ 后插入 $m$ 个数 $v_1,\dots,v_m$；</li>
 <li>删除下标 $[l,r]$ 的所有数；</li>
 <li>将下标 $[l,r]$ 统一修改为 $c$；</li>
 <li>翻转 $[l,r]$；</li>
-<li>求 $[l,r]$ 内和；</li>
+<li>求 $[l,r]$ 和；</li>
 <li>求全局最大子段和。</li>
 </ul>
 <p>保证操作合法，任何时候数列最多含有 $5\times 10^5$ 个数，插入数字总数不超过 $4\times 10^6$，值域 $[-10^3,10^3]$，操作数 $M\le 2\times 10^4$, ML 128MB.</p>
@@ -436,7 +439,8 @@
 <p>维护信息：子树大小（找到第 $k$ 位）、区间和、区间最大前缀和、区间最大后缀和、区间最大子段和（常规查询）。</p>
 <p>时间复杂度 $O(q\log |S|)$。</p>
 <h3 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h3><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/75554664">https://www.luogu.com.cn/record/75554664</a></p>
-<h2 id="JLOI-2011-不等式组"><a href="#JLOI-2011-不等式组" class="headerlink" title="JLOI 2011 不等式组"></a>JLOI 2011 不等式组</h2><h3 id="题意-3"><a href="#题意-3" class="headerlink" title="题意"></a>题意</h3><p>维护一个不等式组，支持以下操作：</p>
+<h2 id="JLOI-2011-不等式组"><a href="#JLOI-2011-不等式组" class="headerlink" title="JLOI 2011 不等式组"></a>JLOI 2011 不等式组</h2><p>简单的不等式转化。</p>
+<h3 id="题意-3"><a href="#题意-3" class="headerlink" title="题意"></a>题意</h3><p>维护一个不等式组，支持以下操作：</p>
 <ul>
 <li>向组内添加 $ax+b&gt;c$；</li>
 <li>删除添加的第 $i$ 条不等式；</li>
@@ -455,7 +459,8 @@
 <h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路 2"></a>思路 2</h3><p>同上，但是使用平衡树维护，查询查 rank。</p>
 <p>时间复杂度 $O(n\log n)$。</p>
 <h3 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h3><p>思路 1：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/75564611">https://www.luogu.com.cn/record/75564611</a></p>
-<h2 id="Luogu-1471-方差"><a href="#Luogu-1471-方差" class="headerlink" title="Luogu 1471 方差"></a>Luogu 1471 方差</h2><h3 id="题意-4"><a href="#题意-4" class="headerlink" title="题意"></a>题意</h3><p>维护一个序列，支持以下操作：</p>
+<h2 id="Luogu-1471-方差"><a href="#Luogu-1471-方差" class="headerlink" title="Luogu 1471 方差"></a>Luogu 1471 方差</h2><p>常规的维护区间和、区间平方和以计算区间内二次式。相关的题还有 <a target="_blank" rel="noopener" href="https://loj.ac/p/2005">SDOI 2017 相关分析</a>。</p>
+<h3 id="题意-4"><a href="#题意-4" class="headerlink" title="题意"></a>题意</h3><p>维护一个序列，支持以下操作：</p>
 <ul>
 <li>区间加；</li>
 <li>求区间和；</li>
@@ -467,7 +472,8 @@
 s^2=\dfrac 1n\sum(x-\bar x)^2=\dfrac 1n\sum x^2+\bar x^2</script><p>于是我们只需要维护区间和和区间平方和。区间平方和的 lazy tag 修改用完全平方公式即可。注意区间平方和要先于区间和更新。</p>
 <p>时间复杂度 $O(n+m\log n)$。</p>
 <h3 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h3><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/75581392">https://www.luogu.com.cn/record/75581392</a></p>
-<h2 id="CDQZ-OpenJudge-DS-Challenge-4"><a href="#CDQZ-OpenJudge-DS-Challenge-4" class="headerlink" title="CDQZ OpenJudge DS Challenge 4"></a>CDQZ OpenJudge DS Challenge 4</h2><h3 id="题意-5"><a href="#题意-5" class="headerlink" title="题意"></a>题意</h3><p>维护一个序列，支持以下操作：</p>
+<h2 id="CDQZ-OpenJudge-DS-Challenge-4"><a href="#CDQZ-OpenJudge-DS-Challenge-4" class="headerlink" title="CDQZ OpenJudge DS Challenge 4"></a>CDQZ OpenJudge DS Challenge 4</h2><p>维护跨过 mid 的答案，或是维护二次方和。</p>
+<h3 id="题意-5"><a href="#题意-5" class="headerlink" title="题意"></a>题意</h3><p>维护一个序列，支持以下操作：</p>
 <ul>
 <li>单点修改；</li>
 <li>求区间内相邻两数乘积和；</li>
@@ -483,7 +489,8 @@ s^2=\dfrac 1n\sum(x-\bar x)^2=\dfrac 1n\sum x^2+\bar x^2</script><p>于是我们
 <h3 id="思路-2-1"><a href="#思路-2-1" class="headerlink" title="思路 2"></a>思路 2</h3><p>注意到区间内两两乘积的值为 $\dfrac12\left((\sum x)^2-\sum x^2\right)$，因此可以通过维护区间平方和和区间和来维护区间两两乘积和。</p>
 <p>时间复杂度 $O(n+m\log n)$。</p>
 <h3 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h3><p><a target="_blank" rel="noopener" href="http://cdqz.openjudge.cn/ds/solution/34362522">http://cdqz.openjudge.cn/ds/solution/34362522</a></p>
-<h2 id="Luogu-4198-楼房重建"><a href="#Luogu-4198-楼房重建" class="headerlink" title="Luogu 4198 楼房重建"></a>Luogu 4198 楼房重建</h2><h3 id="题意-6"><a href="#题意-6" class="headerlink" title="题意"></a>题意</h3><p>有 $n$ 个平面上的线段，每条线段垂直于 $x$ 轴，且第 $i$ 条线段的下端点为 $(i,0)$。称第 $i$ 条线段“能被看到”当且仅当如果视线段可以遮挡光线，则第 $i$ 条线段有无限多个点能够被位于 $(0,0)$ 的点光源射出的光线照射到。</p>
+<h2 id="Luogu-4198-楼房重建"><a href="#Luogu-4198-楼房重建" class="headerlink" title="Luogu 4198 楼房重建"></a>Luogu 4198 楼房重建</h2><p>一道有趣的序列题。</p>
+<h3 id="题意-6"><a href="#题意-6" class="headerlink" title="题意"></a>题意</h3><p>有 $n$ 个平面上的线段，每条线段垂直于 $x$ 轴，且第 $i$ 条线段的下端点为 $(i,0)$。称第 $i$ 条线段“能被看到”当且仅当如果视线段可以遮挡光线，则第 $i$ 条线段有无限多个点能够被位于 $(0,0)$ 的点光源射出的光线照射到。</p>
 <p>有 $m$ 次操作，每次操作更改一条线段的长度，每次操作后问目前有多少条线段“能被看到”。</p>
 <p>$n,m\le 10^5$，上端点 $x\in[1,10^9]\cap\mathbb Z$，ML 125MB.</p>
 <p>link: <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4198">https://www.luogu.com.cn/problem/P4198</a></p>
@@ -496,7 +503,8 @@ s^2=\dfrac 1n\sum(x-\bar x)^2=\dfrac 1n\sum x^2+\bar x^2</script><p>于是我们
 </ul>
 <p>每次 pushup 需要递归 $O(\log n)$ 个结点，每次修改有 $O(\log n)$ 次 pushup，因此时间复杂度 $O(n+m\log^2 n)$。</p>
 <h3 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h3><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/39317529">https://www.luogu.com.cn/record/39317529</a></p>
-<h2 id="JSOI-2008-火星人"><a href="#JSOI-2008-火星人" class="headerlink" title="JSOI 2008 火星人"></a>JSOI 2008 火星人</h2><h3 id="题意-7"><a href="#题意-7" class="headerlink" title="题意"></a>题意</h3><p>给定一个长为 $n$ 的字符串，维护以下操作：</p>
+<h2 id="JSOI-2008-火星人"><a href="#JSOI-2008-火星人" class="headerlink" title="JSOI 2008 火星人"></a>JSOI 2008 火星人</h2><p>因为字符串 hash 需要大量的区间查询，使用线段树很容易维护。</p>
+<h3 id="题意-7"><a href="#题意-7" class="headerlink" title="题意"></a>题意</h3><p>给定一个长为 $n$ 的字符串，维护以下操作：</p>
 <ul>
 <li>修改第 $i$ 位的字符为 ch；</li>
 <li>在第 $i$ 位字符后添加 ch 这一字符（若 $i=0$ 表示在串首添加）；</li>
@@ -507,7 +515,8 @@ s^2=\dfrac 1n\sum(x-\bar x)^2=\dfrac 1n\sum x^2+\bar x^2</script><p>于是我们
 <h3 id="思路-5"><a href="#思路-5" class="headerlink" title="思路"></a>思路</h3><p>用字符串 hash 判断字符串相等。因为要插入，所以使用 Splay 维护区间树。仅需额外维护每个结点的 hash 值。</p>
 <p>查询的时候二分答案即可。时间复杂度 $O(l_0+m_1\log l+m_2\log^2 l)$。</p>
 <h3 id="代码-7"><a href="#代码-7" class="headerlink" title="代码"></a>代码</h3><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/75648169">https://www.luogu.com.cn/record/75648169</a></p>
-<h2 id="Luogu-3792-由乃与大母神原型和偶像崇拜"><a href="#Luogu-3792-由乃与大母神原型和偶像崇拜" class="headerlink" title="Luogu 3792 由乃与大母神原型和偶像崇拜"></a>Luogu 3792 由乃与大母神原型和偶像崇拜</h2><h3 id="题意-8"><a href="#题意-8" class="headerlink" title="题意"></a>题意</h3><p>（实际上是 <a target="_blank" rel="noopener" href="https://darkbzoj.cc/problem/4373">BZOJ 4373 算术天才⑨与等差数列</a> 的弱化版）</p>
+<h2 id="Luogu-3792-由乃与大母神原型和偶像崇拜"><a href="#Luogu-3792-由乃与大母神原型和偶像崇拜" class="headerlink" title="Luogu 3792 由乃与大母神原型和偶像崇拜"></a>Luogu 3792 由乃与大母神原型和偶像崇拜</h2><p>特征值比对的思想应用很广。维护“前一个值与自己相等的下标”在颜色段题里面很常见。</p>
+<h3 id="题意-8"><a href="#题意-8" class="headerlink" title="题意"></a>题意</h3><p>（实际上是 <a target="_blank" rel="noopener" href="https://darkbzoj.cc/problem/4373">BZOJ 4373 算术天才⑨与等差数列</a> 的弱化版）</p>
 <p>维护一个序列，支持以下操作：</p>
 <ul>
 <li>单点修改；</li>
