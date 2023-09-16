@@ -1,0 +1,17 @@
+current directory: /home/mirai/blog/al-folio/vendor/bundle/ruby/3.0.0/gems/mini_racer-0.8.0/ext/mini_racer_extension
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20230911-259337-b9rbn5.rb extconf.rb
+checking for -lpthread... yes
+checking for whether -Wl,--exclude-libs=ALL  is accepted as LDFLAGS... yes
+creating Makefile
+
+current directory: /home/mirai/blog/al-folio/vendor/bundle/ruby/3.0.0/gems/mini_racer-0.8.0/ext/mini_racer_extension
+make DESTDIR\= clean
+
+current directory: /home/mirai/blog/al-folio/vendor/bundle/ruby/3.0.0/gems/mini_racer-0.8.0/ext/mini_racer_extension
+make DESTDIR\=
+compiling mini_racer_extension.cc
+linking shared-object mini_racer_extension.so
+
+current directory: /home/mirai/blog/al-folio/vendor/bundle/ruby/3.0.0/gems/mini_racer-0.8.0/ext/mini_racer_extension
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 mini_racer_extension.so ./.gem.20230911-259337-g76bel

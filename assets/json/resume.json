@@ -1,0 +1,134 @@
+{
+  // "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "栗山未来",
+    "label": "学生",
+    "image": "",
+    "email": "kuriyama.mirai@mail.ustc.edu.cn",
+    "phone": "",
+    "url": "h.ooj.ac.cn",
+    "summary": "一名中国科学技术大学少年班学院的大一学生，兴趣方向是数学、计算机科学。",
+    // "summary_": "Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinal!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!",
+    "location": {
+      "address": "金寨路96号",
+      "postalCode": "230026",
+      "city": "合肥市",
+      "countryCode": "CN",
+      "region": "安徽"
+    },
+    "profiles": []
+  },
+  "work": [],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "中国科学技术大学",
+      "url": "https://www.ustc.edu.cn/",
+      "area": "数学与应用数学",
+      "studyType": "本科生",
+      "startDate": "2023-09-02",
+      "endDate": "",
+      "score": "",
+      "courses": [
+        "001356 - 代数学基础",
+        "MATH1006 - 数学分析(B1)",
+        "PHYS1001A - 力学A",
+        "CS1001A - 计算机程序设计A",
+        "FL1007 - 英语交流进阶I",
+        "FL1010 - 英语读写进阶I"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "全国青少年信息学奥林匹克联赛一等奖",
+      "date": "2022-12-03",
+      "awarder": "中国计算机学会",
+      "summary": ""
+    }
+  ],
+  // "publications": [
+  //   {
+  //     "name": "Video compression for 3d media",
+  //     "publisher": "Hooli",
+  //     "releaseDate": "2014-10-01",
+  //     "url": "http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)",
+  //     "summary": "Innovative middle-out compression algorithm that changes the way we store data."
+  //   }
+  // ],
+  // "skills": [
+  //   {
+  //     "name": "算法竞赛",
+  //     "level": "中等",
+  //     "keywords": [
+  //       "初等数论",
+  //       "Graph Theory",
+  //       ""
+  //     ]
+  //   },
+  //   {
+  //     "name": "Compression",
+  //     "level": "Master",
+  //     "keywords": [
+  //       "Mpeg",
+  //       "MP4",
+  //       "GIF"
+  //     ]
+  //   }
+  // ],
+  "languages": [
+    {
+      "language": "汉语",
+      "fluency": "母语者"
+    },
+    {
+      "language": "英语",
+      "fluency": "流利"
+    }
+  ],
+  // "interests": [
+  //   {
+  //     "name": "Wildlife",
+  //     "keywords": [
+  //       "Ferrets",
+  //       "Unicorns"
+  //     ]
+  //   }
+  // ],
+  // "references": [
+  //   {
+  //     "name": "Erlich Bachman",
+  //     "reference": "It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company."
+  //   }
+  // ],
+  // "projects": [
+  //   {
+  //     "name": "Miss Direction",
+  //     "description": "A mapping engine that misguides you",
+  //     "highlights": [
+  //       "Won award at AIHacks 2016",
+  //       "Built by all women team of newbie programmers",
+  //       "Using modern technologies such as GoogleMaps, Chrome Extension and Javascript"
+  //     ],
+  //     "keywords": [
+  //       "GoogleMaps",
+  //       "Chrome Extension",
+  //       "Javascript"
+  //     ],
+  //     "startDate": "2016-08-24",
+  //     "endDate": "2016-08-24",
+  //     "url": "missdirection.example.com",
+  //     "roles": [
+  //       "Team lead",
+  //       "Designer"
+  //     ],
+  //     "entity": "Smoogle",
+  //     "type": "application"
+  //   }
+  // ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2017-12-24T15:53:00"
+  }
+}
