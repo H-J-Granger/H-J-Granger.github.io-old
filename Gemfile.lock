@@ -133,7 +133,7 @@ GEM
     minitest (5.20.0)
     multi_xml (0.6.0)
     namae (1.1.1)
-    nokogiri (1.16.5-x86_64-linux)
+    nokogiri (1.18.3-x86_64-linux-gnu)
       racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
